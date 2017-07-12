@@ -1,0 +1,14 @@
+@mixin title {
+	font-family: $font-family-titles;
+	font-weight: 600;
+	color: $typo0;
+	margin-bottom: $spacing-unit / 2;
+}
+
+@mixin plainText {
+	font-family: $font-family-base;
+	font-weight: 400;
+	color: $typo0;
+	letter-spacing: normal;
+	margin-bottom: $spacing-unit / 2;
+}

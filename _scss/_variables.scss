@@ -1,0 +1,43 @@
+// Variables
+// --------------------------------------------------
+
+// Layout
+
+$layout-tablet: 800px;
+$layout-mobile: 400px;
+
+$spacing-unit: 8px;
+
+// Colors
+$red: #F24440;
+$navy: #162945;
+$blue: #1785FB;
+$purple: #8364C5;
+$green: #73C86B;
+$grey: #647083;
+
+// Typo Scale
+$typo0: #2E3C43;
+$typo1: #162945;
+$typo2: #647083;
+$typo3: #B1B8C1;
+$typo4: #FFF;
+$link: $blue;
+
+// Structure
+$white: #FFF;
+$softgrey: #F9F9F9;
+
+// Lines
+$line1: rgba($navy,.1);
+$line2: rgba($navy,.2);
+$line3: rgba($navy,.3);
+
+///// Font
+$font-weight-base: 400;
+$font-size-base: 13px;
+$line-height-base: 20px;
+$font-family-base: "Open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-titles: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$text-color: $typo1;
+$background-color: $navy;

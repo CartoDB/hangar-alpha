@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  background-color: $white;
+}
+body {
+  background-color: $white;
+  text-rendering: optimizeLegibility;
+  -webkit-text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: $typo2;
+  font-weight: $font-weight-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-family: $font-family-base;
+}
+a {
+  color: $blue;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+strong {
+  font-weight: 600;
+}
+em {
+  font-style: italic;
+}
+abbr {
+  border-bottom: 1px dotted #ddd;
+}
+button {
+  margin: 0;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  font-family: $font-family-base;
+}
+img,
+iframe {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+pre,
+code {
+  font-family: 'PT Mono', monospace;
+  border: 1px solid $line1;
+  border-radius: 4px;
+}
+code {
+  padding: 1px 5px;
+}
+pre {
+  padding: 16px;
+  font-size: 14px;
+  line-height: 24px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  tab-size: 2;
+
+  @media (max-width: $layout-mobile) {
+    font-size: 16px;
+  }
+
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+input {
+  outline: none;
+}
+td.gutter.gl {
+  padding-right: 20px;
+}
+sup {
+  font-size: 85%;
+  position: relative;
+  top: -6px;
+}
