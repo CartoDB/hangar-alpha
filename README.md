@@ -1,2 +1,2 @@
 # hangar-alpha
-Share frontend assets between different CARTO web repositories
+Share frontend assets between different web repositories
