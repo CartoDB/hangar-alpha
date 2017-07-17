@@ -1,9 +1,5 @@
 // New typography for CARTO
-h1, h2, h3,
-p, blockquote, pre,
-ul, ol, dl, figure {
-  margin-top: 0;
-}
+
 .text {
 	font-family: $font-family-base;
 	font-weight: 400;
@@ -14,72 +10,37 @@ ul, ol, dl, figure {
 	font-weight: 600;
 }
 
-.text--jumbo {
+.is-jumbo {
 	font-size: 80px;
 	line-height: 96px;
 }
 
-.text--display {
+.is-display {
 	font-size: 64px;
 	line-height: 80px;
 }
 
-.text--title {
+.is-title {
 	font-size: 48px;
 	line-height: 64px;
 }
 
-.text--subheader {
+.is-subheader {
 	font-size: 32px;
 	line-height: 48px;
 }
 
-.text--body {
+.is-body {
 	font-size: 20px;
 	line-height: 32px;
 }
 
-.text--caption {
+.is-caption {
 	font-size: 16px;
 	line-height: 24px;
 }
 
-.text--small {
-	font-size: 12px;
-	line-height: 16px;
-}
-
-.title--jumbo {
-	font-size: 80px;
-	line-height: 96px;
-}
-
-.title--display {
-	font-size: 64px;
-	line-height: 80px;
-}
-
-.title--title {
-	font-size: 48px;
-	line-height: 64px;
-}
-
-.title--subheader {
-	font-size: 32px;
-	line-height: 48px;
-}
-
-.title--body {
-	font-size: 20px;
-	line-height: 32px;
-}
-
-.title--caption {
-	font-size: 16px;
-	line-height: 24px;
-}
-
-.title--small {
+.is-small {
 	font-size: 12px;
 	line-height: 16px;
 }
