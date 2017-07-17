@@ -68,7 +68,7 @@
 .Navbar-link,
 .Breadcrumbs-link {
   display: inline-block;
-  // font-weight: 600;
+  font-weight: 600;
   line-height: 1;
   color: $typo4;
   transition: all .2s;
@@ -99,16 +99,16 @@
     align-items: center;
   }
   span {
-  //   padding: 9px 11px;
-  //   // background-color: $blue;
-  //   text-transform: uppercase;
-  //   border-radius: 4px;
-  //   color: #fff;
-  //   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
-  //   border: 2px solid white;
-  //   transition: all .2s ease;
-  //   font-weight: 600;
-  //   letter-spacing: 1px;
+    padding: 9px 11px;
+    background-color: $blue;
+    text-transform: uppercase;
+    border-radius: 4px;
+    color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+    border: 2px solid white;
+    transition: all .2s ease;
+    font-weight: 600;
+    letter-spacing: 1px;
   }
   &:hover span {
     border: 1px solid rgba(0,0,0,0.1);
