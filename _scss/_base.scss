@@ -1,22 +1,27 @@
 * {
   box-sizing: border-box;
 }
+
 html,
 body {
-  height: 100%;
   background-color: $white;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
+
 body {
   background-color: $white;
-  text-rendering: optimizeLegibility;
-  -webkit-text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   color: $typo2;
-  font-weight: $font-weight-base;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
   font-family: $font-family-base;
+  font-size: $font-size-base;
+  -webkit-font-smoothing: antialiased;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  -webkit-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
 }
+
 a {
   color: $blue;
   text-decoration: none;
@@ -25,27 +30,33 @@ a {
     text-decoration: underline;
   }
 }
+
 strong {
   font-weight: 600;
 }
+
 em {
   font-style: italic;
 }
+
 abbr {
   border-bottom: 1px dotted #ddd;
 }
+
 button {
-  margin: 0;
   border: 0;
-  outline: none;
   cursor: pointer;
   font-family: $font-family-base;
+  margin: 0;
+  outline: none;
 }
+
 img,
 iframe {
   max-width: 100%;
   vertical-align: bottom;
 }
+
 li {
   > ul,
   > ol {
@@ -55,20 +66,22 @@ li {
 
 pre,
 code {
-  font-family: 'PT Mono', monospace;
   border: 1px solid $line1;
   border-radius: 4px;
+  font-family: 'PT Mono', monospace;
 }
+
 code {
   padding: 1px 5px;
 }
+
 pre {
-  padding: 16px;
   font-size: 14px;
   line-height: 24px;
   overflow-x: auto;
-  white-space: pre-wrap;
+  padding: 16px;
   tab-size: 2;
+  white-space: pre-wrap;
 
   @media (max-width: $layout-mobile) {
     font-size: 16px;
@@ -76,16 +89,15 @@ pre {
 
   > code {
     border: 0;
-    padding-right: 0;
     padding-left: 0;
+    padding-right: 0;
   }
 }
+
 input {
   outline: none;
 }
-td.gutter.gl {
-  padding-right: 20px;
-}
+
 sup {
   font-size: 85%;
   position: relative;
