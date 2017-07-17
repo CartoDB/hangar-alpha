@@ -4,87 +4,85 @@ p, blockquote, pre,
 ul, ol, dl, figure {
   margin-top: 0;
 }
+.text {
+	font-family: $font-family-base;
+	font-weight: 400;
+	color: $typo0;
+	letter-spacing: normal;
+}
+
+.title {
+	font-family: $font-family-titles;
+	font-weight: 600;
+	color: $typo0;
+}
 
 .text--jumbo {
-	@include plainText;
 	font-size: 80px;
 	line-height: 96px;
 }
 
 .text--display {
-	@include plainText;
 	font-size: 64px;
 	line-height: 80px;
 }
 
 .text--title {
-	@include plainText;
 	font-size: 48px;
 	line-height: 64px;
 }
 
 .text--subheader {
-	@include plainText;
 	font-size: 32px;
 	line-height: 48px;
 }
 
 .text--body {
-	@include plainText;
 	font-size: 20px;
 	line-height: 32px;
 }
 
 .text--caption {
-	@include plainText;
 	font-size: 16px;
 	line-height: 24px;
 }
 
 .text--small {
-	@include plainText;
 	font-size: 12px;
 	line-height: 16px;
 }
 
 .title--jumbo {
-	@include title;
 	font-size: 80px;
 	line-height: 96px;
 }
 
 .title--display {
-	@include title;
 	font-size: 64px;
 	line-height: 80px;
 }
 
 .title--title {
-	@include title;
 	font-size: 48px;
 	line-height: 64px;
 }
 
 .title--subheader {
-	@include title;
 	font-size: 32px;
 	line-height: 48px;
 }
 
 .title--body {
-	@include title;
 	font-size: 20px;
 	line-height: 32px;
 }
 
 .title--caption {
-	@include title;
 	font-size: 16px;
 	line-height: 24px;
 }
 
 .title--small {
-	@include title;
 	font-size: 12px;
 	line-height: 16px;
 }

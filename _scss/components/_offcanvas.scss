@@ -1,0 +1,85 @@
+// Offcanvas
+// --------------------------------------------------
+.Offcanvas {
+  background-color: $grey;
+  overflow: hidden;
+}
+.Offcanvas-inner {
+  background-color: $white;
+}
+.Offcanvas-inner--home {
+  background-color: $softgrey;
+}
+.Offcanvas--full,
+.Offcanvas-inner--full {
+  height: 100vh;
+  @media (max-width: $layout-mobile) {
+    overflow: visible;
+  }
+}
+
+@media (max-width: $layout-mobile) {
+  .Offcanvas-inner {
+    position: relative;
+    right: 0;
+    width: 100%;
+    transition: all .2s ease;
+
+    &.is-active {
+      right: 80%;
+
+      .Navbar-inner {
+        display: block;
+        width: 100%;
+      }
+      .Navbar-inner--buttons {
+        border-top: 1px solid rgba($white, .1);
+        margin-top: 16px;
+        padding-top: 16px;
+      }
+      .Navbar-item {
+        display: block;
+        margin: 0 0 8px 0;
+      }
+      .Navbar-item--button {
+        margin-top: 12px;
+      }
+      .Navbar-item--button {
+        span {
+          background: #fff;
+          color: $grey;
+        }
+      }
+      .Navbar-link--signup {
+        &:hover {
+          color: $typo2;
+        }
+      }
+      .Dropdown-inner {
+        display: block;
+        position: relative;
+        top: 0;
+        right: 0;
+        min-width: 0;
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        display: none;
+        &.is-active {
+          display: block;
+        }
+
+        &:before,
+        &:after {
+          display: none;
+        }
+      }
+      .Dropdown-content {
+        padding: 0;
+      }
+      .Dropdown-arrow {
+        margin-left: 4px;
+      }
+    }
+  }
+}

@@ -23,11 +23,11 @@ module.exports = function (grunt) {
     concat: {
       distCss: {
         src: ['.tmp/_scss/**/*.css'], 
-        dest: 'dist/css/main.css'
+        dest: 'dist/css/hangaralpha.css'
       },
       distJs: {
-        src: ['_js/components/*.js'], 
-        dest: 'dist/js/index.js'
+        src: ['_js/*.js', '_js/components/*.js'], 
+        dest: 'dist/js/hangaralpha.js'
       }
     },
 
@@ -45,6 +45,18 @@ module.exports = function (grunt) {
       }
     },
 
+    copy: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'node_modules/perfect-scrollbar/src/css/',
+          src: '*.scss',
+          dest: '_scss/vendor/perfect-scrollbar/'
+        }]
+      }
+
+    },
+
     sass: {
       dist: {
         options: {
@@ -59,6 +71,19 @@ module.exports = function (grunt) {
         }]
       }
     },
+
+    svgmin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '_img',
+          src: '**/*.svg',
+          dest: 'dist/img'
+        }]
+      }
+    },
+
+
 
     watch: {
       scss: {
@@ -81,13 +106,18 @@ module.exports = function (grunt) {
     }
 
 
+
+
+
   });
   /* End initConfig */
 
   var baseTasks = [
     'clean',
+    'copy',
     'sass',
-    'concat'
+    'concat',
+    'svgmin'
   ];
 
   var devTasks = baseTasks.concat([
