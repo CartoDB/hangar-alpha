@@ -1,55 +1,92 @@
 // New typography for CARTO
 
 .text {
-	font-family: $font-family-base;
-	font-weight: 400;
+  font-family: $font-family-base;
+  font-weight: 400;
 }
 
 .title {
-	font-family: $font-family-titles;
-	font-weight: 600;
+  font-family: $font-family-titles;
+  font-weight: 600;
 }
 
 .is-jumbo {
-	font-size: 80px;
-	line-height: 96px;
+  font-size: 80px;
+  line-height: 96px;
 }
 
 .is-display {
-	font-size: 64px;
-	line-height: 80px;
+  font-size: 64px;
+  line-height: 80px;
 }
 
 .is-title {
-	font-size: 48px;
-	line-height: 64px;
+  font-size: 48px;
+  line-height: 64px;
 }
 
 .is-subheader {
-	font-size: 32px;
-	line-height: 48px;
+  font-size: 32px;
+  line-height: 48px;
 }
 
-.is-body {
-	font-size: 20px;
-	line-height: 32px;
+.is-body,
+.is-subtitle {
+  font-size: 20px;
+  line-height: 32px;
 }
 
 .is-caption {
-	font-size: 16px;
-	line-height: 24px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .is-small {
-	font-size: 12px;
-	line-height: 16px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
-.title--overTitle {
-	font-family: $font-family-titles;
-	font-weight: $font-weight-base;
-	color: $typo0;
-	text-decoration: uppercase;
-	font-size: 20px;
-	line-height: 32px;
+// New Colors
+
+.is-CartoRed {
+  color: $carto-red;
 }
+
+.is-SolutionsRed {
+  color: $solutions-red;
+}
+
+.is-BuilderBlue {
+  color: $builder-blue;
+}
+
+.is-EngineBlue {
+  color: $engine-blue;
+}
+
+.is-IntegrationsBlue {
+  color: $integrations-blue;
+}
+
+.is-DataPurple {
+  color: $data-purple;
+}
+
+.is-LearnPurple {
+  color: $learn-purple;
+}
+
+.is-TutorialsPurple {
+  color: $tutorials-purple;
+}
+
+.is-DocsPurple {
+  color: $docs-purple;
+}
+
+.is-BaseGrey {
+  color: $base-grey;
+}
+
+// End New Colors
+
