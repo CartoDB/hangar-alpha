@@ -1,3 +1,9 @@
+@mixin outline($color) {
+  border: 2px solid $color;
+  color: $color;
+}
+
+
 .button {
   display: inline-block;
   border-radius: 4px;
@@ -25,9 +31,20 @@
     background-color: $turquoise;
     color: $typo4;
   }
+    &.is-turquoiseOutline {
+      @include outline($turqouise);
+    }
+
+  &.is-red {
+    background-color: $carto-red;
+    color: $typo4;
+  }
+    &.is-redOutline {
+      @include outline($carto-red);
+    }
+
 
   &.is-negative {
-    background-color: $carto-red;
     color: $typo4;
     border: 2px solid white;
   }
