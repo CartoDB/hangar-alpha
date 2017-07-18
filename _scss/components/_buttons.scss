@@ -1,9 +1,8 @@
-.Button {
+.button {
 	display: inline-block;
+	border-radius: 4px;
 
-	> a span {
-		border: 3px solid white;
-		border-radius: 4px;
+	> span {
 		display: block;
 		font-family: $font-family-titles;
 		font-size: 12px;
@@ -11,11 +10,42 @@
 		letter-spacing: 1px;
 		line-height: 16px;
 		min-width: 140px;
-		padding: 8px 16px;
+		padding: 16px 24px;
 		text-align: center;
 		text-transform: uppercase;
 		transition: all .2s ease;
 		white-space: nowrap;
-		// box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
+	}
+
+	&.is-baseGrey {
+		background-color: $base-grey;
+		color: $typo4;
+	}
+
+	&.is-baseGreyNeutral {
+		background-color: $white;
+		color: $typo0;
+		border: 2px solid white;
+	}
+
+	&.is-turquoise {
+		background-color: $turquoise;
+		color: $typo4;
+	}
+
+	&.is-turquoiseNeutral {
+		background-color: $turquoise;
+		color: $typo4;
+	  border: 2px solid white;
+	}
+
+	&.is-cartoRedNeutral {
+		background-color: $carto-red;
+		color: $typo4;
+	  border: 2px solid white;
+	}
+
+	&:hover {
+		text-decoration: none;
 	}
 }
