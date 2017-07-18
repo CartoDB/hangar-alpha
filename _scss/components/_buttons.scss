@@ -7,6 +7,8 @@
 .button {
   display: inline-block;
   border-radius: 4px;
+  position: relative;
+  overflow: hidden;
 
   > span {
     display: block;
@@ -20,15 +22,18 @@
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
+    position: relative;
   }
 
   &.is-baseGrey {
     background-color: $base-grey;
+    border: 2px solid $base-grey;
     color: $typo4;
   }
 
   &.is-turquoise {
     background-color: $turquoise;
+    border: 2px solid $turquoise;
     color: $typo4;
   }
     &.is-turquoiseOutline {
@@ -37,6 +42,7 @@
 
   &.is-red {
     background-color: $carto-red;
+    border: 2px solid $carto-red;
     color: $typo4;
   }
     &.is-redOutline {
