@@ -3,7 +3,7 @@
 .text {
   font-family: $font-family-base;
   font-weight: 400;
-  color: $base-grey;
+  // color: $base-grey;
 }
 
 .title {
@@ -12,85 +12,82 @@
   color: $base-grey;
 }
 
-.text,
-.title {
-  .is-jumbo {
-    font-size: 80px;
-    line-height: 96px;
-  }
+.is-jumbo {
+  font-size: 80px;
+  line-height: 96px;
+}
 
-  .is-display {
-    font-size: 64px;
-    line-height: 80px;
-  }
+.is-display {
+  font-size: 64px;
+  line-height: 80px;
+}
 
-  .is-title {
-    font-size: 48px;
-    line-height: 64px;
-  }
+.is-title {
+  font-size: 48px;
+  line-height: 64px;
+}
 
-  .is-subheader {
-    font-size: 32px;
-    line-height: 48px;
-  }
+.is-subheader {
+  font-size: 32px;
+  line-height: 48px;
+}
 
-  .is-body,
-  .is-subtitle {
-    font-size: 20px;
-    line-height: 32px;
-  }
+.is-body,
+.is-subtitle {
+  font-size: 20px;
+  line-height: 32px;
+}
 
-  .is-caption {
-    font-size: 16px;
-    line-height: 24px;
-  }
+.is-caption {
+  font-size: 16px;
+  line-height: 24px;
+}
 
-  .is-small {
-    font-size: 12px;
-    line-height: 16px;
-  }
+.is-small {
+  font-size: 12px;
+  line-height: 16px;
+}
 
-  // New Colors
+// New Colors
 
-  .is-white {
-    color: $white;
-  }
+.is-white {
+  color: $white;
+}
 
-  .is-cartoRed {
-    color: $carto-red;
-  }
+.is-cartoRed {
+  color: $carto-red;
+}
 
-  .is-solutionsRed {
-    color: $solutions-red;
-  }
+.is-solutionsRed {
+  color: $solutions-red;
+}
 
-  .is-builderBlue {
-    color: $builder-blue;
-  }
+.is-builderBlue {
+  color: $builder-blue;
+}
 
-  .is-engineBlue {
-    color: $engine-blue;
-  }
+.is-engineBlue {
+  color: $engine-blue;
+}
 
-  .is-integrationsBlue {
-    color: $integrations-blue;
-  }
+.is-integrationsBlue {
+  color: $integrations-blue;
+}
 
-  .is-dataPurple {
-    color: $data-purple;
-  }
+.is-dataPurple {
+  color: $data-purple;
+}
 
-  .is-learnPurple {
-    color: $learn-purple;
-  }
+.is-learnPurple {
+  color: $learn-purple;
+}
 
-  .is-tutorialsPurple {
-    color: $tutorials-purple;
-  }
+.is-tutorialsPurple {
+  color: $tutorials-purple;
+}
 
-  .is-docsPurple {
-    color: $docs-purple;
-  }
+.is-docsPurple {
+  color: $docs-purple;
 }
 
 // End New Colors
