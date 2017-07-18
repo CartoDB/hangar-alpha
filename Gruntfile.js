@@ -3,7 +3,7 @@ module.exports = function (grunt) {
 
   var config = {}
 
-  /* End initConfig */
+  /* Start initConfig */
   grunt.initConfig({
 
     clean: {
