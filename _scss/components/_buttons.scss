@@ -1,51 +1,38 @@
 .button {
-	display: inline-block;
-	border-radius: 4px;
+  display: inline-block;
+  border-radius: 4px;
 
-	> span {
-		display: block;
-		font-family: $font-family-titles;
-		font-size: 12px;
-		font-weight: 600;
-		letter-spacing: 1px;
-		line-height: 16px;
-		min-width: 140px;
-		padding: 16px 24px;
-		text-align: center;
-		text-transform: uppercase;
-		transition: all .2s ease;
-		white-space: nowrap;
-	}
+  > span {
+    display: block;
+    font-family: $font-family-titles;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 16px;
+    min-width: 140px;
+    padding: 16px 24px;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
 
-	&.is-baseGrey {
-		background-color: $base-grey;
-		color: $typo4;
-	}
+  &.is-baseGrey {
+    background-color: $base-grey;
+    color: $typo4;
+  }
 
-	&.is-baseGreyNeutral {
-		background-color: $white;
-		color: $typo0;
-		border: 2px solid white;
-	}
+  &.is-turquoise {
+    background-color: $turquoise;
+    color: $typo4;
+  }
 
-	&.is-turquoise {
-		background-color: $turquoise;
-		color: $typo4;
-	}
+  &.is-negative {
+    background-color: $carto-red;
+    color: $typo4;
+    border: 2px solid white;
+  }
 
-	&.is-turquoiseNeutral {
-		background-color: $turquoise;
-		color: $typo4;
-	    border: 2px solid white;
-	}
-
-	&.is-cartoRedNeutral {
-		background-color: $carto-red;
-		color: $typo4;
-	    border: 2px solid white;
-	}
-
-	&:hover {
-		text-decoration: none;
-	}
+  &:hover {
+    text-decoration: none;
+  }
 }
