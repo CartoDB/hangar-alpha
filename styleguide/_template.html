@@ -1,6 +1,8 @@
 <head>
   <link href='../css/hangaralpha.css' type='text/css' rel='stylesheet'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
   <style>
     .box {
       display: inline-block;
@@ -49,28 +51,28 @@
 </script>
 
 <div id="styleguide-menu">
-	<ul>
-	{{#each menu}}
-		<li>
-			{{#if headings.0.name}}
+    <ul>
+    {{#each menu}}
+        <li>
+            {{#if headings.0.name}}
                 <a class="submenulink" href="#" data-section="{{name}}">{{name}}</a>
                 <ul class="submenu" data-submenu="{{../name}}">
                 {{#each headings}}
                     <li><a href="#{{id}}">{{name}}</a></li>
                 {{/each}}
                 </ul>
-			{{/if}}
+            {{/if}}
             {{#unless headings.0.name}}
                 <a class="sectionlink" href="#" data-section="{{name}}">{{name}}</a>
             {{/unless}}
-		</li>
-	{{/each}}
-	</ul>
+        </li>
+    {{/each}}
+    </ul>
 </div>
 
 <div id="styleguide">
-	{{#each sections}}
-		<div class="section" id="{{id}}" data-section="{{section}}" data-heading="{{heading}}">
+    {{#each sections}}
+        <div class="section" id="{{id}}" data-section="{{section}}" data-heading="{{heading}}">
 
             <div class="comment">
                 <h1>{{section}}{{#if heading}}/{{heading}}{{/if}}</h1>
@@ -91,6 +93,6 @@
                 </div>
             {{/if}}
 
-		</div>
-	{{/each}}
+        </div>
+    {{/each}}
 </div>
