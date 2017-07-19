@@ -72,6 +72,12 @@ module.exports = function (grunt) {
       }
     },
 
+    shell: {
+      style: {
+        command: 'styleguide'
+      }
+    },
+
     svgmin: {
       dist: {
         files: [{
@@ -117,13 +123,18 @@ module.exports = function (grunt) {
     'copy',
     'sass',
     'concat',
-    'svgmin'
+    'svgmin',
+    'shell'
   ];
 
   var devTasks = baseTasks.concat([
     'connect',
     'watch'
   ]);
+
+  grunt.event.on('watch', function (action, filepath) {
+    grunt.task.run('shell:style');
+  });
 
   grunt.registerTask('dev', devTasks);
   grunt.registerTask('build', baseTasks);
