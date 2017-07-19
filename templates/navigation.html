@@ -1,0 +1,134 @@
+{% assign products = false %}
+{% for products_item in site.products %}
+  {% if page.url == industry_item.url %}
+    {% assign products = true %}
+  {% endif %}
+{% endfor %}
+
+{% assign solutions = false %}
+{% for solutions_item in site.solutions %}
+  {% if page.url == industry_item.url %}
+    {% assign solutions = true %}
+  {% endif %}
+{% endfor %}
+
+{% assign resources = false %}
+{% for resources_item in site.resources %}
+  {% if page.url == industry_item.url %}
+    {% assign resources = true %}
+  {% endif %}
+{% endfor %}
+
+<!-- {% assign discover = false %}
+{% if page.url == '/gallery/' %}
+  {% assign discover = true %}
+{% endif %}
+
+{% assign learn = false %}
+{% if page.url == '/resources/' or page.url == '/webinars/' %}
+  {% assign learn = true %}
+{% endif %} -->
+
+{% assign pricing = false %}
+{% if page.url == '/pricing/' or page.url == '/pricing-features/' %}
+  {% assign pricing = true %}
+{% endif %}
+
+<nav class="Navbar Blabla js-Navbar {% if page.url == '/engine/' %}u-positive{% endif %}">
+  <div class="u-inner u-inner--20">
+    <div class="Navbar-header">
+      <a class="Logo " href="/"></a>
+      <div class="mobile">
+        <a href="#/menu" class="NewNavbar-button js-Navbar-button"></a>
+      </div>
+    </div>
+
+    <div class="Navbar-collapse">
+      <ul class="Navbar-inner Navbar-inner--left">
+        <li class="Navbar-item Navbar-item--menu {% if products %}is-active{% endif %}">
+          <span class="Dropdown js-Dropdown">
+            <a href="#/products" class="Navbar-link js-Dropdown-target js-Action--NAVproducts">
+              <span>Products <i class="Icon Icon--caretDown Icon--s3 Dropdown-arrow u-malign"></i></span>
+            </a>
+
+            <div class="Dropdown-inner js-Dropdown-inner">
+              <div class="Dropdown-content">
+                <ul>
+                  {% for products_item in site.data.menu.products %}
+                    <li class="Dropdown-item"><a href="{{ products_item.url }}" class="Dropdown-link js-Dropdown-link {% if products_item.url == page.url %}is-active{% endif %}">{{ products_item.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </span>
+        </li>
+
+        <li class="Navbar-item Navbar-item--menu {% if solutions %}is-active{% endif %}">
+          <span class="Dropdown js-Dropdown">
+            <a href="#/solutions" class="Navbar-link js-Dropdown-target js-Action--NAVsolutions">
+              <span>Solutions <i class="Icon Icon--caretDown Icon--s3 Dropdown-arrow u-malign"></i></span>
+            </a>
+
+            <div class="Dropdown-inner js-Dropdown-inner">
+              <div class="Dropdown-content">
+                <ul>
+                  {% for solutions_item in site.data.menu.solutions %}
+                    <li class="Dropdown-item"><a href="{{ solutions_item.url }}" class="Dropdown-link js-Dropdown-link {% if solutions_item.url == page.url %}is-active{% endif %}">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </span>
+        </li>
+
+        <li class="Navbar-item Navbar-item--menu {% if resources %}is-active{% endif %}">
+          <span class="Dropdown js-Dropdown">
+            <a href="#/resources" class="Navbar-link js-Dropdown-target js-Action--NAVproducts">
+              <span>Resources <i class="Icon Icon--caretDown Icon--s3 Dropdown-arrow u-malign"></i></span>
+            </a>
+
+            <div class="Dropdown-inner js-Dropdown-inner">
+              <div class="Dropdown-content">
+                <ul>
+                  {% for resources_item in site.data.menu.resources %}
+                    <li class="Dropdown-item"><a href="{{ resources_item.url }}" class="Dropdown-link js-Dropdown-link {% if resources_item.url == page.url %}is-active{% endif %}">{{ resources_item.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </span>
+        </li>
+
+        <li class="Navbar-item Navbar-item--menu {% if pricing %}is-active{% endif %}">
+          <a href="/pricing/" class="Navbar-link js-Action--NAVpricing">
+            <span>Pricing</span>
+          </a>
+        </li>
+
+        <li class="Navbar-item Navbar-item--menu">
+          <a href="/blog/" class="Navbar-link js-Action--NAVblog">
+            <span>Blog</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="Navbar-inner Navbar-inner--right Navbar-inner--buttons">
+        <li class="Navbar-item">
+          <a href="/login" class="Navbar-link js-Action--NAVlogin">
+            <span>Login</span>
+          </a>
+        </li>
+        <li class="Navbar-item">
+          <a href="/signup/" class="Navbar-link js-Action--NAVcontact">
+            <span>Sign up</span>
+          </a>
+        </li>
+        <li class="Navbar-item Button">
+          <a href="/request-live-demo/" class="Navbar-link js-Action--NAVdemo">
+            <span>Request a Demo</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
