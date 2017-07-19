@@ -1,9 +1,19 @@
+// Colors Button
+$button-colors: (
+  is-turquoise: $turquoise,
+  is-red: $carto-red,
+  is-baseGrey: $base-grey
+);
+
+
 @mixin outline($color) {
   border: 2px solid $color;
   color: $color;
-  padding: 14px 24px;
 }
 
+@mixin paddingButton($pH, $pV) {
+  padding: $pH $pV;
+}
 
 .button {
   display: inline-block;
@@ -19,34 +29,38 @@
     position: relative;
   }
 
-  &.is-baseGrey {
-    background-color: $base-grey;
-    color: $typo4;
-  }
-
-  &.is-turquoise {
-    background-color: $turquoise;
-    color: $typo4;
-  }
-    &.is-turquoiseOutline {
-      @include outline($turquoise);
+  @each $name, $color in $button-colors {
+    &.#{$name} {
+      background-color: $color;
+      color: $typo4;
     }
-
-  &.is-red {
-    background-color: $carto-red;
-    color: $typo4;
-  }
-    &.is-redOutline {
-      @include outline($carto-red);
+    &.#{$name}Outline {
+      @include outline($color);
+      @include paddingButton(14px, 24px);
     }
-
+  }
 
   &.is-negative {
     color: $typo4;
-    border: 2px solid white;
+    border: 2px solid $white;
   }
-
   &:hover {
     text-decoration: none;
   }
 }
+
+.button--small {
+  min-width: 120px;
+  padding: 8px 12px;
+
+  @each $name, $color in $button-colors {
+    &.#{$name}Outline {
+      @include paddingButton(6px, 10px);
+    }
+  }
+}
+
+.button--large {
+  font: 600 16px/24px $font-family-titles;
+}
+
