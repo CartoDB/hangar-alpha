@@ -10,6 +10,9 @@
   font-family: $font-family-titles;
   font-weight: 600;
   color: $base-grey;
+  &.is-regular {
+    font-weight: 400;
+  }
 }
 
 .is-jumbo {
