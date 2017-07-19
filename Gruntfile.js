@@ -52,10 +52,23 @@ module.exports = function (grunt) {
           cwd: 'node_modules/perfect-scrollbar/src/css/',
           src: '*.scss',
           dest: '_scss/vendor/perfect-scrollbar/'
+        },{
+          expand: true,
+          cwd: '_templates',
+          src: '*.html',
+          dest: 'dist/templates/'
         }]
       }
 
     },
+
+    'gh-pages': {
+      options: {
+        base: 'dist'
+      },
+      src: ['**/*']
+    },
+
 
     sass: {
       dist: {
@@ -139,5 +152,6 @@ module.exports = function (grunt) {
   grunt.registerTask('dev', devTasks);
   grunt.registerTask('build', baseTasks);
   grunt.registerTask('default', baseTasks);
+  grunt.registerTask('publish', ['build', 'gh-pages']);
 
 }
