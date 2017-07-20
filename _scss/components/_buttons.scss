@@ -119,6 +119,11 @@ $button-colors: (
     color: $typo4;
     border: 2px solid $white;
   }
+
+  &.is-block {
+    display:block
+  }
+
   &:hover {
     text-decoration: none;
   }

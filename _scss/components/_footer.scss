@@ -1,0 +1,35 @@
+// Footer
+footer {
+  padding-bottom: 96px;
+  background-color: $white;
+
+  @media (max-width: $layout-mobile) {
+    padding-bottom: 48px;
+  }
+}
+
+.Footer {
+  padding-top: 96px;
+
+  .FooterElement {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  .FooterLink {
+    color: $typo2;
+    transition: all .2s ease;
+
+    &:hover {
+    color: $link;
+    text-decoration: none;
+    }
+  }
+
+  @media (max-width: $layout-mobile) {
+    padding-top: 48px;
+  }
+}

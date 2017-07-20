@@ -72,3 +72,22 @@
 }
 
 // End New Colors
+
+
+
+// Display in desktop or mobile
+.mobile {
+  display: none;
+
+  @media (max-width: $layout-mobile) {
+    display: block;
+  }
+}
+
+.desktop {
+  display: block;
+
+  @media (max-width: $layout-mobile) {
+    display: none;
+  }
+}
