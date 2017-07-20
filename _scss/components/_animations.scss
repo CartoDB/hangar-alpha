@@ -39,6 +39,10 @@
     &.is-shadow {
       background: rgba(0, 0, 0, 0.1);
     }
+
+    &.is-download {
+      z-index: 1;
+    }
   }
 }
 
