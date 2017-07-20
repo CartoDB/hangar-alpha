@@ -30,12 +30,21 @@
     &.is-jade {
       background: rgba(#00BFC8, 0.92);
     }
+      &.is-jade-light {
+        background: rgba(#00BFC8, 0.1);
+      }
     &.is-yellow {
       background: rgba(#FFB900, 0.92);
     }
+      &.is-yellow-light {
+        background: rgba(#FFB900, 0.1);
+      }
     &.is-green {
       background: rgba(#80E000, 0.92);
     }
+      &.is-green-light {
+        background: rgba(#80E000, 0.1);
+      }
     &.is-shadow {
       background: rgba(0, 0, 0, 0.1);
     }
