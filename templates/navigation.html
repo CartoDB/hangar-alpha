@@ -1,41 +1,5 @@
-{% assign products = false %}
-{% for products_item in site.products %}
-  {% if page.url == industry_item.url %}
-    {% assign products = true %}
-  {% endif %}
-{% endfor %}
-
-{% assign solutions = false %}
-{% for solutions_item in site.solutions %}
-  {% if page.url == industry_item.url %}
-    {% assign solutions = true %}
-  {% endif %}
-{% endfor %}
-
-{% assign resources = false %}
-{% for resources_item in site.resources %}
-  {% if page.url == industry_item.url %}
-    {% assign resources = true %}
-  {% endif %}
-{% endfor %}
-
-<!-- {% assign discover = false %}
-{% if page.url == '/gallery/' %}
-  {% assign discover = true %}
-{% endif %}
-
-{% assign learn = false %}
-{% if page.url == '/resources/' or page.url == '/webinars/' %}
-  {% assign learn = true %}
-{% endif %} -->
-
-{% assign pricing = false %}
-{% if page.url == '/pricing/' or page.url == '/pricing-features/' %}
-  {% assign pricing = true %}
-{% endif %}
-
-<nav class="Navbar Blabla js-Navbar {% if page.url == '/engine/' %}u-positive{% endif %}">
-  <div class="u-inner u-inner--20">
+<nav class="Navbar {% if page.url == '/engine/' %}u-positive{% endif %} js-Navbar js-Navbar--fixed ">
+  <div class="u-inner u-inner--20 u-flex">
     <div class="Navbar-header">
       <a class="Logo " href="/"></a>
       <div class="mobile">
@@ -44,13 +8,13 @@
     </div>
 
     <div class="Navbar-collapse">
-      <ul class="Navbar-inner Navbar-inner--left">
-        <li class="Navbar-item Navbar-item--menu {% if products %}is-active{% endif %}">
+      <ul class="Navbar-list">
+        <li class="Navbar-item">
           <span class="Dropdown js-Dropdown">
             <a href="#/products" class="Navbar-link js-Dropdown-target js-Action--NAVproducts">
-              <span>Products <i class="Icon Icon--caretDown Icon--s3 Dropdown-arrow u-malign"></i></span>
+              Products
+              <svg class="Navbar-icon js-navbarCaret" width="6" height="3" viewBox="0 0 6 3" xmlns="http://www.w3.org/2000/svg"><path stroke="#FFF" stroke-width="1.2" d="M1 1l2 1 2-1" fill="none" fill-rule="evenodd" stroke-linecap="square"/></svg>
             </a>
-
             <div class="Dropdown-inner js-Dropdown-inner">
               <div class="Dropdown-content">
                 <ul>
@@ -63,10 +27,11 @@
           </span>
         </li>
 
-        <li class="Navbar-item Navbar-item--menu {% if solutions %}is-active{% endif %}">
+        <li class="Navbar-item">
           <span class="Dropdown js-Dropdown">
             <a href="#/solutions" class="Navbar-link js-Dropdown-target js-Action--NAVsolutions">
-              <span>Solutions <i class="Icon Icon--caretDown Icon--s3 Dropdown-arrow u-malign"></i></span>
+              Solutions
+              <svg class="Navbar-icon js-navbarCaret" width="6" height="3" viewBox="0 0 6 3" xmlns="http://www.w3.org/2000/svg"><path stroke="#FFF" stroke-width="1.2" d="M1 1l2 1 2-1" fill="none" fill-rule="evenodd" stroke-linecap="square"/></svg>
             </a>
 
             <div class="Dropdown-inner js-Dropdown-inner">
@@ -81,10 +46,11 @@
           </span>
         </li>
 
-        <li class="Navbar-item Navbar-item--menu {% if resources %}is-active{% endif %}">
+        <li class="Navbar-item">
           <span class="Dropdown js-Dropdown">
-            <a href="#/resources" class="Navbar-link js-Dropdown-target js-Action--NAVproducts">
-              <span>Resources <i class="Icon Icon--caretDown Icon--s3 Dropdown-arrow u-malign"></i></span>
+            <a href="{{site.url}}/resources" class="Navbar-link js-Dropdown-target js-Action--NAVproducts">
+              Resources
+              <svg class="Navbar-icon js-navbarCaret" width="6" height="3" viewBox="0 0 6 3" xmlns="http://www.w3.org/2000/svg"><path stroke="#FFF" stroke-width="1.2" d="M1 1l2 1 2-1" fill="none" fill-rule="evenodd" stroke-linecap="square"/></svg>
             </a>
 
             <div class="Dropdown-inner js-Dropdown-inner">
@@ -99,20 +65,20 @@
           </span>
         </li>
 
-        <li class="Navbar-item Navbar-item--menu {% if pricing %}is-active{% endif %}">
+        <li class="Navbar-item">
           <a href="/pricing/" class="Navbar-link js-Action--NAVpricing">
             <span>Pricing</span>
           </a>
         </li>
 
-        <li class="Navbar-item Navbar-item--menu">
+        <li class="Navbar-item">
           <a href="/blog/" class="Navbar-link js-Action--NAVblog">
             <span>Blog</span>
           </a>
         </li>
       </ul>
 
-      <ul class="Navbar-inner Navbar-inner--right Navbar-inner--buttons">
+      <ul class="Navbar-list">
         <li class="Navbar-item">
           <a href="/login" class="Navbar-link js-Action--NAVlogin">
             <span>Login</span>
@@ -123,9 +89,9 @@
             <span>Sign up</span>
           </a>
         </li>
-        <li class="Navbar-item Button">
-          <a href="/request-live-demo/" class="Navbar-link js-Action--NAVdemo">
-            <span>Request a Demo</span>
+        <li class="Navbar-item">
+          <a href="/request-live-demo/" class="button button--small is-negative Navbar-link js-Action--NAVdemo">
+            Request a Demo
           </a>
         </li>
       </ul>
