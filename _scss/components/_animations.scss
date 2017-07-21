@@ -100,7 +100,7 @@
   overflow: hidden;
 
   &:hover {
-    div {
+    &:after {
       animation: showCircle 350ms ease-out forwards ;
       cursor: pointer;
     }
@@ -110,7 +110,8 @@
     content: "";
     width: 100%;
   }
-  > div {
+  &:after {
+    content: '';
     position: absolute;
     top: -66%;
     left: 0;

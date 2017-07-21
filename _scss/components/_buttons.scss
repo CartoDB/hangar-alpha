@@ -3,22 +3,35 @@
 ```
   <!-- normal buttons -->
   <a href="#" class="button is-turquoiseOutline">
-    <div></div>
     <span>Download all</span>
   </a>
 
   <a href="#" class="button is-redOutline">
-    <div></div>
+    <span>Download all</span>
+  </a>
+
+  <a href="#" class="button is-navyOutline">
+    <span>Download all</span>
+  </a>
+
+  <a href="#" class="button is-baseGreyOutline">
     <span>Download all</span>
   </a>
 
   <a href="#" class="button is-red">
-    <div></div>
     <span>Download all</span>
   </a>
 
   <a href="#" class="button is-turquoise">
-    <div></div>
+    <span>Download all</span>
+  </a>
+
+
+  <a href="#" class="button is-navy">
+    <span>Download all</span>
+  </a>
+
+  <a href="#" class="button is-baseGrey">
     <span>Download all</span>
   </a>
 
@@ -26,22 +39,30 @@
 
   <!-- small buttons -->
   <a href="#" class="button button--small is-turquoiseOutline">
-    <div></div>
     <span>Download all</span>
   </a>
 
   <a href="#" class="button button--small is-redOutline ">
-    <div></div>
+    <span>Download all</span>
+  </a>
+
+  <a href="#" class="button button--small is-navyOutline ">
+    <span>Download all</span>
+  </a>
+
+  <a href="#" class="button button--small is-baseGreyOutline ">
     <span>Download all</span>
   </a>
 
   <a href="#" class="button button--small is-red">
-    <div></div>
     <span>Download all</span>
   </a>
 
-  <a href="#" class="button button--small is-turquoise">
-    <div></div>
+  <a href="#" class="button button--small is-navy">
+    <span>Download all</span>
+  </a>
+
+  <a href="#" class="button button--small is-baseGrey">
     <span>Download all</span>
   </a>
 
@@ -49,24 +70,38 @@
 
   <!-- large buttons -->
   <a href="#" class="button button--large is-turquoiseOutline">
-    <div></div>
     <span>Download all</span>
   </a>
 
   <a href="#" class="button button--large is-redOutline">
-    <div></div>
+    <span>Download all</span>
+  </a>
+
+  <a href="#" class="button button--large is-navyOutline ">
+    <span>Download all</span>
+  </a>
+
+  <a href="#" class="button button--large is-baseGreyOutline ">
     <span>Download all</span>
   </a>
 
   <a href="#" class="button button--large is-red">
-    <div></div>
     <span>Download all</span>
   </a>
 
   <a href="#" class="button button--large is-turquoise">
-    <div></div>
     <span>Download all</span>
   </a>
+
+
+  <a href="#" class="button button--large is-navy">
+    <span>Download all</span>
+  </a>
+
+  <a href="#" class="button button--large is-baseGrey">
+    <span>Download all</span>
+  </a>
+
 ```
 */
 
@@ -101,21 +136,24 @@ $button-colors: (
 
   > span {
     position: relative;
+    z-index: 2;
   }
 
   @each $name, $color in $button-colors {
     &.#{$name} {
       background-color: $color;
       color: $typo4;
-      > div{
-          background: rgba(lighten($color, 40%), 0.24)
+      &:after {
+        content: '';
+        background: rgba(lighten($color, 40%), 0.24)
       }
     }
     &.#{$name}Outline {
       @include outline($color);
       @include paddingButton(14px, 24px);
-      > div{
-          background: rgba($color, 0.08)
+      &:after {
+        content: '';
+        background: rgba($color, 0.08)
       }
     }
   }
