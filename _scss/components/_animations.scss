@@ -1,11 +1,55 @@
+/* SG
+# Animations
+```
+  <div class="box is-bgCartoRed circle-animation u-flex u-flex--hcenter" style="display: flex;">
+    <div class="circle-animationContent is-turquoise is-download">
+    </div>
+    <div class="circle-animationContentInfo">
+      <p class="circle-animationContentText title is-body is-white u-upper">Click to Download</p>
+    </div>
+  </div>
+```
+*/
+
+.circle-animationContentInfo {
+  opacity: 0;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-animationContentConfirmation {
+  opacity: 0;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .circle-animation,
 .button {
   position: relative;
   overflow: hidden;
 
-  &:hover .circle-animationContent {
-    animation: showCircle 400ms ease-out forwards;
-    cursor: pointer;
+  &:hover {
+    .circle-animationContentInfo {
+      animation: showText 500ms both 300ms;
+    }
+    .circle-animationContent {
+      animation: showCircle 400ms ease-out forwards ;
+      cursor: pointer;
+    }
   }
   &:before {
     display: block;
@@ -27,23 +71,45 @@
     align-items: center;
     justify-content: center;
     /* move to vars */
-    &.is-jade {
+    &.is-turquoise {
       background: rgba(#00BFC8, 0.92);
     }
+      &.is-turquoise-light {
+        background: rgba(#00BFC8, 0.1);
+      }
     &.is-yellow {
       background: rgba(#FFB900, 0.92);
     }
+      &.is-yellow-light {
+        background: rgba(#FFB900, 0.1);
+      }
     &.is-green {
       background: rgba(#80E000, 0.92);
     }
+      &.is-green-light {
+        background: rgba(#80E000, 0.1);
+      }
     &.is-shadow {
       background: rgba(0, 0, 0, 0.1);
+    }
+
+    &.is-download {
+      z-index: 1;
     }
   }
 }
 
 
-
+@keyframes showText {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 
 
 @keyframes showCircle {
@@ -51,8 +117,13 @@
     transform: scale(2) translateX(-75%) translateY(70%);
     opacity: 0;
   }
+  99% {
+    transform: scale(2) translateX(0) translateY(0);
+    opacity: 1;
+  }
   100% {
     transform: scale(2) translateX(0) translateY(0);
     opacity: 1;
+    top: 0;
   }
 }
