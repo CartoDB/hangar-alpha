@@ -46,7 +46,7 @@
       animation: showText 500ms both 300ms;
     }
     .circle-animationContent {
-      animation: showCircle 400ms ease-out forwards ;
+      animation: showCircle 350ms ease-out forwards ;
       cursor: pointer;
     }
   }
@@ -69,31 +69,60 @@
     align-items: center;
     justify-content: center;
     /* move to vars */
-    &.is-turquoise {
-      background: rgba(#00BFC8, 0.92);
-    }
-      &.is-turquoise-light {
-        background: rgba(#00BFC8, 0.1);
-      }
-    &.is-yellow {
-      background: rgba(#FFB900, 0.92);
-    }
-      &.is-yellow-light {
-        background: rgba(#FFB900, 0.1);
-      }
-    &.is-green {
-      background: rgba(#80E000, 0.92);
-    }
-      &.is-green-light {
-        background: rgba(#80E000, 0.1);
-      }
-    &.is-shadow {
-      background: rgba(0, 0, 0, 0.1);
-    }
+    // &.is-turquoise {
+    //   background: rgba(#00BFC8, 0.92);
+    // }
+    //   &.is-turquoise-light {
+    //     background: rgba(#00BFC8, 0.1);
+    //   }
+    // &.is-yellow {
+    //   background: rgba(#FFB900, 0.92);
+    // }
+    //   &.is-yellow-light {
+    //     background: rgba(#FFB900, 0.1);
+    //   }
+    // &.is-green {
+    //   background: rgba(#80E000, 0.92);
+    // }
+    //   &.is-green-light {
+    //     background: rgba(#80E000, 0.1);
+    //   }
 
-    &.is-download {
-      z-index: 1;
+    // &.is-download {
+    //   z-index: 1;
+    // }
+  }
+}
+
+
+.button{
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    div {
+      animation: showCircle 350ms ease-out forwards ;
+      cursor: pointer;
     }
+  }
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+  }
+  > div {
+    position: absolute;
+    top: -66%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    transform: scale(2) translateX(-75%) translateY(75%);
+    transform-origin: center center;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
