@@ -10,10 +10,6 @@
     <span>Download all</span>
   </a>
 
-  <a href="#" class="button is-navyOutline">
-    <span>Download all</span>
-  </a>
-
   <a href="#" class="button is-baseGreyOutline">
     <span>Download all</span>
   </a>
@@ -23,11 +19,6 @@
   </a>
 
   <a href="#" class="button is-turquoise">
-    <span>Download all</span>
-  </a>
-
-
-  <a href="#" class="button is-navy">
     <span>Download all</span>
   </a>
 
@@ -46,19 +37,11 @@
     <span>Download all</span>
   </a>
 
-  <a href="#" class="button button--small is-navyOutline ">
-    <span>Download all</span>
-  </a>
-
   <a href="#" class="button button--small is-baseGreyOutline ">
     <span>Download all</span>
   </a>
 
   <a href="#" class="button button--small is-red">
-    <span>Download all</span>
-  </a>
-
-  <a href="#" class="button button--small is-navy">
     <span>Download all</span>
   </a>
 
@@ -77,10 +60,6 @@
     <span>Download all</span>
   </a>
 
-  <a href="#" class="button button--large is-navyOutline ">
-    <span>Download all</span>
-  </a>
-
   <a href="#" class="button button--large is-baseGreyOutline ">
     <span>Download all</span>
   </a>
@@ -90,11 +69,6 @@
   </a>
 
   <a href="#" class="button button--large is-turquoise">
-    <span>Download all</span>
-  </a>
-
-
-  <a href="#" class="button button--large is-navy">
     <span>Download all</span>
   </a>
 
@@ -109,8 +83,7 @@
 $button-colors: (
   is-turquoise: $turquoise,
   is-red: $carto-red,
-  is-baseGrey: $base-grey,
-  is-navy: $navy
+  is-baseGrey: $base-grey
 );
 
 @mixin outline($color) {
