@@ -37,8 +37,7 @@
   justify-content: center;
 }
 
-.circle-animation,
-.button {
+.circle-animation {
   position: relative;
   overflow: hidden;
 
@@ -56,8 +55,7 @@
     content: "";
     width: 100%;
   }
-  .circle-animationContent,
-  .button-animationContent {
+  .circle-animationContent {
     position: absolute;
     top: -66%;
     left: 0;
