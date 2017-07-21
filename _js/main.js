@@ -10,7 +10,10 @@ HangarAlpha.Views.Main = Backbone.View.extend({
 	el: 'body',
 
   events: {
-    'click': '_closeDropdowns'
+    'click': '_closeDropdowns',
+    'click .js-ContactLink': '_onClickContactLink',
+    'click .js-ReadMore': '_onClickReadMore',
+    'keydown': '_onKeyDown'
   },
 
 
@@ -20,10 +23,9 @@ HangarAlpha.Views.Main = Backbone.View.extend({
 
   _initViews: function () {
   	this._initDropdowns();
-  	this.navbar_fixed = new HangarAlpha.Views.NavbarFixed({
-      el: this.$('.js-Navbar--fixed'),
-      $header: this.$('.js-Header')
-    });
+    // this.navbar_fixed = new HangarAlpha.Views.NavbarFixed({
+    //    el: this.$('.js-Navbar--fixed'),
+    //  });
   },
 
 

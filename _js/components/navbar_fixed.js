@@ -17,10 +17,10 @@ HangarAlpha.Views.NavbarFixed = Backbone.View.extend({
 
     if (scrollNumber >= headerHeight) {
       this.$el.addClass('is-active');
-      this.$el.addClass('bgWhite u-positive Navbar--fixed');
+      this.$el.addClass('bgWhite Navbar--fixed');
     } else {
       this.$el.removeClass('is-active');
-      this.$el.removeClass('bgWhite u-positive Navbar--fixed')
+      this.$el.removeClass('bgWhite Navbar--fixed')
     }
   },
 
