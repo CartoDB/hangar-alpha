@@ -129,6 +129,16 @@ $button-colors: (
         background: rgba($color, 0.08)
       }
     }
+
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+    }
+    &:after {
+      content: '';
+      @include circle;
+    }
   }
 
   &.is-negative {
