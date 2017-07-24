@@ -11,18 +11,18 @@
   justify-content: center;
 }
 
-.circle-animationContentConfirmation {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  opacity: 0;
-}
-
 .box-content,
 .button {
   position: relative;
   overflow: hidden;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+  }
 
   &:hover {
     cursor: pointer;
@@ -35,17 +35,18 @@
       cursor: pointer;
     }
   }
+
   &:before {
     display: block;
     content: "";
     width: 100%;
   }
+
   &:after {
     content: '';
     @include circle;
   }
 }
-
 
 @keyframes fadeIn {
   0% {
@@ -55,7 +56,6 @@
     opacity: 1;
   }
 }
-
 
 @keyframes fadeOutDown {
   0% {
@@ -67,7 +67,6 @@
   }
 }
 
-
 @keyframes showText {
   0% {
     opacity: 0;
@@ -78,7 +77,6 @@
     transform: none;
   }
 }
-
 
 @keyframes showCircle {
   0% {
