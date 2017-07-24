@@ -28,8 +28,8 @@ $learn-purple: #7D30F4;
 $tutorials-purple: #6E14DC;
 $docs-purple: #530FCC;
 $base-grey: #2E3C43;
-
-$turquoise: #00B9BF;
+$light-grey: rgba($base-grey, 0.02);
+$jade: #00B9BF;
 $typo0: #2E3C43;
 //End New Colors
 
@@ -57,3 +57,23 @@ $font-family-base: "Open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-titles: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $text-color: $typo1;
 $background-color: $navy;
+
+
+
+
+///// Arrays
+$colors: (
+  CartoRed: $carto-red,
+  SolutionsRed: $solutions-red,
+  BuilderBlue: $builder-blue,
+  EngineBlue: $engine-blue,
+  IntegrationsBlue: $integrations-blue,
+  DataPurple: $data-purple,
+  LearnPurple: $learn-purple,
+  TutorialsPurple: $tutorials-purple,
+  DocsPurple: $docs-purple,
+  BaseGrey: $base-grey,
+  Jade: $jade,
+  White: $white,
+  LightGrey: $light-grey
+);
