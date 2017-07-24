@@ -64,6 +64,10 @@
   background: $carto-red;
 }
 
+.is-bgTurquoise {
+  background: $turquoise;
+}
+
 .is-bgSolutionsRed {
   background: $solutions-red;
 }
@@ -101,6 +105,12 @@
 }
 
 
+.is-bgWhite {
+  background: $white;
+  &.is-border {
+    border: 1px solid 
+  }
+}
 
 
 // New Colors Texts
