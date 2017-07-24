@@ -86,7 +86,7 @@ module.exports = function (grunt) {
     },
 
     scss_to_json: {
-      your_target: {
+      dist: {
         src: '_scss/_variables.scss',
         dest: 'dist/variables/hangaralpha.json'
       }
