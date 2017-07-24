@@ -3,7 +3,7 @@
 ```
   <div style="width: 300px">
     <div class="box is-bgCartoRed is-jade u-vspace--24">
-      <a href="https://s3.amazonaws.com/cartodb/static/brand/CARTO-logo-positive.zip" class="box-content u-flex u-flex--hcenter circle-animation js-boxContent">
+      <a href="https://s3.amazonaws.com/cartodb/static/brand/CARTO-logo-positive.zip" class="box-content u-flex u-flex--hcenter js-boxContent">
         <div class="circle-animationContentInfo">
           <p class="circle-animationContentText title is-body u-upper">Click to Download</p>
           <svg class="circle-animationContentConfirmation" width="21px" height="15px" viewBox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -17,7 +17,7 @@
 
   <div style="width: 300px">
     <div class="box is-white is-jade u-vspace--24">
-      <a href="https://s3.amazonaws.com/cartodb/static/brand/CARTO-logo-positive.zip" class="box-content u-flex u-flex--hcenter circle-animation js-boxContent">
+      <a href="https://s3.amazonaws.com/cartodb/static/brand/CARTO-logo-positive.zip" class="box-content u-flex u-flex--hcenter js-boxContent">
         <div class="circle-animationContentInfo">
           <p class="circle-animationContentText title is-body u-upper">Click to Download</p>
           <svg class="circle-animationContentConfirmation" width="21px" height="15px" viewBox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -31,7 +31,7 @@
 
   <div style="width: 300px">
     <div class="box is-white is-red u-vspace--24">
-      <a href="https://s3.amazonaws.com/cartodb/static/brand/CARTO-logo-positive.zip" class="box-content u-flex u-flex--hcenter circle-animation js-boxContent">
+      <a href="https://s3.amazonaws.com/cartodb/static/brand/CARTO-logo-positive.zip" class="box-content u-flex u-flex--hcenter js-boxContent">
         <div class="circle-animationContentInfo">
           <p class="circle-animationContentText title is-body u-upper">Click to Download</p>
           <svg class="circle-animationContentConfirmation" width="21px" height="15px" viewBox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -69,7 +69,7 @@ $card-colors: (
 
   @each $name, $color in $card-colors {
     &.#{$name} {
-      .circle-animation:after {
+      .box-content:after {
         content: '';
         background: rgba($color, .92);
       }
