@@ -2,162 +2,71 @@
 # Colors
 ```
   <!-- texts -->
-  <h1 class="title is-title is-cartoRed">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtCartoRed">The precipitating manner in which</h1>
   <br/>
-  <h1 class="title is-title is-solutionsRed">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtSolutionsRed">The precipitating manner in which</h1>
   <br/>
-  <h1 class="title is-title is-builderBlue">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtBuilderBlue">The precipitating manner in which</h1>
   <br/>
-  <h1 class="title is-title is-engineBlue">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtEngineBlue">The precipitating manner in which</h1>
   <br/>
-  <h1 class="title is-title is-integrationsBlue">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtIntegrationsBlue">The precipitating manner in which</h1>
   <br/>
-  <h1 class="title is-title is-dataPurple">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtDataPurple">The precipitating manner in which</h1>
   <br/>
-  <h1 class="title is-title is-learnPurple">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtLearnPurple">The precipitating manner in which</h1>
   <br/>
-  <h1 class="title is-title is-tutorialsPurple">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtTutorialsPurple">The precipitating manner in which</h1>
   <br/>
-  <h1 class="title is-title is-docsPurple">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtDocsPurple">The precipitating manner in which</h1>
   <br/>
-  <h1 class="title is-title is-baseGrey">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtBaseGrey">The precipitating manner in which</h1>
   <br/>
   <br/>
   <br/>
   
   <!-- box -->
-  <div class="box is-bgCartoRed">
+  <div class="block is-bgCartoRed">
 
   </div>
-  <div class="box is-bgSolutionsRed">
+  <div class="block is-bgSolutionsRed">
 
   </div>
-  <div class="box is-bgBuilderBlue">
+  <div class="block is-bgBuilderBlue">
 
   </div>
-  <div class="box is-bgEngineBlue">
+  <div class="block is-bgEngineBlue">
 
   </div>
-  <div class="box is-bgIntegrationsBlue">
+  <div class="block is-bgIntegrationsBlue">
 
   </div>
-  <div class="box is-bgDataPurple">
+  <div class="block is-bgDataPurple">
 
   </div>
-  <div class="box is-bgLearnPurple">
+  <div class="block is-bgLearnPurple">
 
   </div>
-  <div class="box is-bgTutorialsPurple">
+  <div class="block is-bgTutorialsPurple">
 
   </div>
-  <div class="box is-bgDocsPurple">
+  <div class="block is-bgDocsPurple">
 
   </div>
-  <div class="box is-bgBaseGrey">
+  <div class="block is-bgBaseGrey">
 
   </div>
 ```
 */
 
 
-.is-bgCartoRed {
-  background: $carto-red;
-}
-
-.is-bgTurquoise {
-  background: $turquoise;
-}
-
-.is-bgSolutionsRed {
-  background: $solutions-red;
-}
-
-.is-bgBuilderBlue {
-  background: $builder-blue;
-}
-
-.is-bgEngineBlue {
-  background: $engine-blue;
-}
-
-.is-bgIntegrationsBlue {
-  background: $integrations-blue;
-}
-
-.is-bgDataPurple {
-  background: $data-purple;
-}
-
-.is-bgLearnPurple {
-  background: $learn-purple;
-}
-
-.is-bgTutorialsPurple {
-  background: $tutorials-purple;
-}
-
-.is-bgDocsPurple {
-  background: $docs-purple;
-}
-
-.is-bgBaseGrey {
-  background: $base-grey;
-}
-
-
-.is-bgWhite {
-  background: $white;
-  &.is-border {
-    border: 1px solid 
+@each $name, $color in $colors {
+  .is-bg#{$name} {
+    background: $color;
+  }
+  .is-txt#{$name} {
+    color: $color;
   }
 }
-
-
-// New Colors Texts
-
-.is-white {
-  color: $white;
-}
-
-.is-cartoRed {
-  color: $carto-red;
-}
-
-.is-solutionsRed {
-  color: $solutions-red;
-}
-
-.is-builderBlue {
-  color: $builder-blue;
-}
-
-.is-engineBlue {
-  color: $engine-blue;
-}
-
-.is-integrationsBlue {
-  color: $integrations-blue;
-}
-
-.is-dataPurple {
-  color: $data-purple;
-}
-
-.is-learnPurple {
-  color: $learn-purple;
-}
-
-.is-tutorialsPurple {
-  color: $tutorials-purple;
-}
-
-.is-docsPurple {
-  color: $docs-purple;
-}
-
-.is-baseGrey {
-  color: $base-grey;
-}
-
 
 

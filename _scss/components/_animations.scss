@@ -1,4 +1,4 @@
-.circle-animationContentInfo {
+.circle-content {
   opacity: 0;
   z-index: 2;
   position: absolute;
@@ -11,23 +11,23 @@
   justify-content: center;
 }
 
-.circle-animationContentConfirmation {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  opacity: 0;
-}
-
-.circle-animation,
+.box,
 .button {
   position: relative;
   overflow: hidden;
 
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+  }
+
   &:hover {
     cursor: pointer;
 
-    .circle-animationContentInfo {
+    .circle-content {
       animation: showText 500ms both 300ms;
     }
     &:after {
@@ -35,17 +35,18 @@
       cursor: pointer;
     }
   }
+
   &:before {
     display: block;
     content: "";
     width: 100%;
   }
+
   &:after {
     content: '';
     @include circle;
   }
 }
-
 
 @keyframes fadeIn {
   0% {
@@ -56,18 +57,15 @@
   }
 }
 
-
 @keyframes fadeOutDown {
   0% {
     opacity: 1;
   }
-
   100% {
     opacity: 0;
     transform: translate3d(0, 100%, 0);
   }
 }
-
 
 @keyframes showText {
   0% {
@@ -79,7 +77,6 @@
     transform: none;
   }
 }
-
 
 @keyframes showCircle {
   0% {

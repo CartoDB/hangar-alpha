@@ -2,7 +2,7 @@
 # Buttons
 ```
   <!-- normal buttons -->
-  <a href="#" class="button is-turquoiseOutline">
+  <a href="#" class="button is-jadeOutline">
     <span>Download all</span>
   </a>
 
@@ -18,7 +18,7 @@
     <span>Download all</span>
   </a>
 
-  <a href="#" class="button is-turquoise">
+  <a href="#" class="button is-jade">
     <span>Download all</span>
   </a>
 
@@ -29,7 +29,7 @@
   <br/>
 
   <!-- small buttons -->
-  <a href="#" class="button button--small is-turquoiseOutline">
+  <a href="#" class="button button--small is-jadeOutline">
     <span>Download all</span>
   </a>
 
@@ -52,7 +52,7 @@
   <br/>  
 
   <!-- large buttons -->
-  <a href="#" class="button button--large is-turquoiseOutline">
+  <a href="#" class="button button--large is-jadeOutline">
     <span>Download all</span>
   </a>
 
@@ -68,7 +68,7 @@
     <span>Download all</span>
   </a>
 
-  <a href="#" class="button button--large is-turquoise">
+  <a href="#" class="button button--large is-jade">
     <span>Download all</span>
   </a>
 
@@ -81,7 +81,7 @@
 
 // Colors Button
 $button-colors: (
-  is-turquoise: $turquoise,
+  is-jade: $jade,
   is-red: $carto-red,
   is-baseGrey: $base-grey
 );
@@ -150,7 +150,6 @@ $button-colors: (
   &:hover{
     text-decoration: none;
   }
-
 }
 
 .button--small {
