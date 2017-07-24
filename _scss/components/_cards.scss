@@ -3,7 +3,7 @@
 ```
 
   <div style="width: 300px">
-    <a href="#" class="box is-bgCartoRed box-animationJade u-vspace--24 js-boxContent">
+    <a href="#" class="box box-bgCartoRed box-animationJade u-vspace--24 js-boxContent">
       <div class="circle-content">
         <p>Click to Download</p>
         <svg width="21px" height="15px" viewBox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -15,7 +15,7 @@
   </div>
 
   <div style="width: 300px">
-    <a href="#" class="box is-bgBuilderBlue box-animationCartoRed u-vspace--24 js-boxContent">
+    <a href="#" class="box box-bgBuilderBlue box-animationCartoRed u-vspace--24 js-boxContent">
       <div class="circle-content">
         <p>Click to Download</p>
         <svg width="21px" height="15px" viewBox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -27,7 +27,7 @@
   </div>
 
   <div style="width: 300px">
-    <a href="#" class="box is-bgBaseGrey box-animationCartoRed u-vspace--24 js-boxContent">
+    <a href="#" class="box box-bgBaseGrey box-animationCartoRed u-vspace--24 js-boxContent">
       <div class="circle-content">
         <p>Click to Download</p>
         <svg width="21px" height="15px" viewBox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -39,7 +39,7 @@
   </div>
 
   <div style="width: 300px">
-    <a href="#" class="box is-bgLightGrey box-animationCartoRed  u-vspace--24 js-boxContent">
+    <a href="#" class="box box-bgLightGrey box-animationCartoRed  u-vspace--24 js-boxContent">
       <div class="circle-content">
         <p>Click to Download</p>
         <svg width="21px" height="15px" viewBox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -51,7 +51,7 @@
   </div>
 
   <div style="width: 300px">
-    <a href="#" class="box is-bgWhite box-animationBaseGrey u-vspace--24 js-boxContent">
+    <a href="#" class="box box-bgWhite box-animationBaseGrey u-vspace--24 js-boxContent">
       <div class="circle-content">
         <p>Click to Download</p>
         <svg width="21px" height="15px" viewBox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -64,7 +64,7 @@
 
 
   <div style="width: 300px">
-    <div class="box box--padding is-bgCartoRed box-animationJade u-vspace--24 js-boxContent">
+    <div class="box box--padding box-bgCartoRed box-animationJade u-vspace--24 js-boxContent">
       <div class="circle-content">
         <p>Click to Copy</p>
         <svg width="21px" height="15px" viewBox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -89,13 +89,12 @@
 
 
   @each $name, $color in $colors {
-    &.is-bg#{$name} {
+    &.box-bg#{$name} {
       background: $color;
     }
   }
 
-  &.is-bgWhite {
-    background: $white;
+  &.box-bgWhite {
     border: 1px solid $light-grey;
   }
 
