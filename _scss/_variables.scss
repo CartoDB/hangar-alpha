@@ -57,24 +57,3 @@ $font-family-base: "Open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-titles: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $text-color: $typo1;
 $background-color: $navy;
-
-
-
-
-///// Arrays
-$colors: (
-  CartoRed: $carto-red,
-  SolutionsRed: $solutions-red,
-  BuilderBlue: $builder-blue,
-  EngineBlue: $engine-blue,
-  IntegrationsBlue: $integrations-blue,
-  DataPurple: $data-purple,
-  LearnPurple: $learn-purple,
-  TutorialsPurple: $tutorials-purple,
-  DocsPurple: $docs-purple,
-  BaseGrey: $base-grey,
-  Jade: $jade,
-  White: $white,
-  LightGrey: $light-grey,
-  NavyBlue: $navy
-);
