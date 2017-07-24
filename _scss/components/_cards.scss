@@ -2,7 +2,7 @@
 # Cards
 ```
   <div style="width: 300px">
-    <div class="box is-bgCartoRed is-turquoise u-vspace--24">
+    <div class="box is-bgCartoRed is-jade u-vspace--24">
       <a href="https://s3.amazonaws.com/cartodb/static/brand/CARTO-logo-positive.zip" class="box-content u-flex u-flex--hcenter circle-animation js-boxContent">
         <div class="circle-animationContentInfo">
           <p class="circle-animationContentText title is-body u-upper">Click to Download</p>
@@ -16,7 +16,7 @@
   </div>
 
   <div style="width: 300px">
-    <div class="box is-white is-turquoise u-vspace--24">
+    <div class="box is-white is-jade u-vspace--24">
       <a href="https://s3.amazonaws.com/cartodb/static/brand/CARTO-logo-positive.zip" class="box-content u-flex u-flex--hcenter circle-animation js-boxContent">
         <div class="circle-animationContentInfo">
           <p class="circle-animationContentText title is-body u-upper">Click to Download</p>
@@ -48,8 +48,8 @@
 
 // Colors Cards
 $card-colors: (
-  is-turquoise: $turquoise,
-  is-red: $carto-red,
+  is-jade: $jade,
+  is-red: $carto-red
 );
 
 .box {
