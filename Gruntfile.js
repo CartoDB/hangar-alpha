@@ -57,6 +57,11 @@ module.exports = function (grunt) {
           cwd: '_templates',
           src: '*.html',
           dest: 'dist/templates/'
+        },{
+          expand: true,
+          cwd: '_scss',
+          src: '**/*.scss',
+          dest: 'dist/scss/'
         }]
       }
 
@@ -84,13 +89,6 @@ module.exports = function (grunt) {
         }]
       }
     },
-
-    scss_to_json: {
-      dist: {
-        src: '_scss/_variables.scss',
-        dest: 'dist/variables/hangaralpha.json'
-      }
-   },
 
     shell: {
       style: {
@@ -141,7 +139,6 @@ module.exports = function (grunt) {
   var baseTasks = [
     'clean',
     'copy',
-    'scss_to_json',
     'sass',
     'concat',
     'svgmin',
@@ -149,7 +146,6 @@ module.exports = function (grunt) {
   ];
 
   var devTasks = baseTasks.concat([
-    'scss_to_json',
     'connect',
     'watch'
   ]);

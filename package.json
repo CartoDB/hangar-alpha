@@ -29,7 +29,6 @@
     "grunt-contrib-watch": "0.6.1",
     "grunt-gh-pages": "1.0.0",
     "grunt-sass": "2.0.0",
-    "grunt-scss-to-json": "^1.0.1",
     "grunt-shell": "1.1.2",
     "grunt-svgmin": "^2.0.1",
     "highlight.js": "~9.1.0",
