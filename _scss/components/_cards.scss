@@ -98,6 +98,8 @@
   align-items: center;
   justify-content: center;
 
+
+
   @each $name, $color in $colors {
     &.box--bg#{$name} {
       background: $color;
@@ -142,6 +144,11 @@
   }
   @media (max-width: $layout-mobile) {
     box-shadow: 0 1px 24px 0 rgba(0,0,0,0.16);
+    pointer-events: none;
+    
+    &.box--linkActive {
+      pointer-events: all;
+    }
   }
 }
 

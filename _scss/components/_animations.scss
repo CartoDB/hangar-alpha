@@ -54,6 +54,15 @@
   }
 }
 
+.box {
+  @media (max-width: $layout-mobile) {
+    pointer-events: none;
+  }
+  &.box--linkActive {
+    pointer-events: all;
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
