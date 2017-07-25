@@ -106,6 +106,9 @@
 
   &.box--bgWhite {
     border: 1px solid rgba($base-grey, 0.20);
+    @media (max-width: $layout-mobile) {
+      border: 0;
+    }
   }
 
   &:before {
@@ -136,6 +139,9 @@
     .circle-content > svg {
       animation: fadeIn 300ms both 200ms;
     }
+  }
+  @media (max-width: $layout-mobile) {
+    box-shadow: 0 1px 24px 0 rgba(0,0,0,0.16);
   }
 }
 

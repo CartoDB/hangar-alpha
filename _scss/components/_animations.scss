@@ -9,7 +9,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
+  @media (max-width: $layout-mobile) {
+    display: none;
+  }
+ }
 
 .box,
 .button {
@@ -45,6 +48,9 @@
   &:after {
     content: '';
     @include circle;
+    @media (max-width: $layout-mobile) {
+      display: none;
+    }
   }
 }
 
