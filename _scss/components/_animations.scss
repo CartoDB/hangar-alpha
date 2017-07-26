@@ -31,7 +31,7 @@
     cursor: pointer;
 
     .circle-content {
-      animation: showText 500ms both 300ms;
+      animation: showText 500ms both 200ms;
     }
     &:after {
       animation: showCircle 350ms ease-out forwards ;

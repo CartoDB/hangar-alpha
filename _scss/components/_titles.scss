@@ -63,7 +63,7 @@
   @media (max-width: $layout-mobile) {
     font-size: 48px;
     line-height: 56px;
-    &.--mobile {
+    &.is-jumbo--mobile {
       font-size: 80px;
       line-height: 96px;
     }
@@ -74,9 +74,9 @@
   font-size: 64px;
   line-height: 80px;
   @media (max-width: $layout-mobile) {
-    font-size: 32px;
-    line-height: 40px;
-    &.--mobile {
+    font-size: 40px;
+    line-height: 48px;
+    &.is-display--mobile {
       font-size: 64px;
       line-height: 80px;
     }
@@ -87,9 +87,9 @@
   font-size: 48px;
   line-height: 64px;
   @media (max-width: $layout-mobile) {
-    font-size: 24px;
-    line-height: 32px;
-    &.--mobile {
+    font-size: 32px;
+    line-height: 40px;
+    &.is-title--mobile {
       font-size: 48px;
       line-height: 64px;
     }
@@ -102,7 +102,7 @@
   @media (max-width: $layout-mobile) {
     font-size: 20px;
     line-height: 24px;
-    &.--mobile {
+    &.is-subheader--mobile {
       font-size: 32px;
       line-height: 48px;
     }
@@ -116,7 +116,8 @@
   @media (max-width: $layout-mobile) {
     font-size: 16px;
     line-height: 24px;
-    &.--mobile {
+    &.is-body--mobile {
+    &.is-subtitle--mobile {
       font-size: 20px;
       line-height: 32px;
     }
@@ -129,7 +130,7 @@
   @media (max-width: $layout-mobile) {
     font-size: 12px;
     line-height: 16px;
-    &.--mobile {
+    &.is-caption--mobile {
       font-size: 16px;
       line-height: 24px;
     }
