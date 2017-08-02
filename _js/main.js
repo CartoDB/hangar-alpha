@@ -10,7 +10,7 @@ HangarAlpha.Views.Main = Backbone.View.extend({
 	el: 'body',
 
   events: {
-    'click': '_closeDropdowns',
+    // 'click': '_closeDropdowns',
     'click .js-ContactLink': '_onClickContactLink',
     'click .js-ReadMore': '_onClickReadMore',
     'keydown': '_onKeyDown'
@@ -22,43 +22,43 @@ HangarAlpha.Views.Main = Backbone.View.extend({
   },
 
   _initViews: function () {
-  	this._initDropdowns();
+  	//this._initDropdowns();
     // this.navbar_fixed = new HangarAlpha.Views.NavbarFixed({
     //    el: this.$('.js-Navbar--fixed'),
     //  });
   },
 
 
-	_initDropdowns: function () {
-    var _this = this;
+	// _initDropdowns: function () {
+ //    var _this = this;
 
-    _.each(this.$('.js-Dropdown'), function (el) {
-      var dropdown = new HangarAlpha.Views.Dropdown({
-        el: $(el)
-      })
+ //    _.each(this.$('.js-Dropdown'), function (el) {
+ //      var dropdown = new HangarAlpha.Views.Dropdown({
+ //        el: $(el)
+ //      })
 
-      dropdown.bind('onclickdropdownlink', function () {
-        _this._closeDropdowns()
-      })
+ //      dropdown.bind('onclickdropdownlink', function () {
+ //        _this._closeDropdowns()
+ //      })
 
-      _this.bind('closedropdowns', function () {
-        dropdown.close()
-      })
-    })
-  },
+ //      _this.bind('closedropdowns', function () {
+ //        dropdown.close()
+ //      })
+ //    })
+ //  },
 
   _onKeyDown: function (e) {
     switch (e.which) {
       // esc
       case 27 :
-        this._closeDropdowns()
+        // this._closeDropdowns()
         break
     }
-  },
+  }//,
   
-  _closeDropdowns: function () {
-    this.trigger('closedropdowns')
-  }
+  // _closeDropdowns: function () {
+  //   this.trigger('closedropdowns')
+  // }
 })
 
 
