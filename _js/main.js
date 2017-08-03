@@ -55,7 +55,7 @@ HangarAlpha.Views.Main = Backbone.View.extend({
         this._closeDropdowns()
         break
     }
-  }//,
+  },
   
   _closeDropdowns: function () {
     this.trigger('closedropdowns')
