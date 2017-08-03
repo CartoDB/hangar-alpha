@@ -1,80 +1,62 @@
-<nav class="Navbar js-Navbar--fixed {% if page.url == '/engine/' %}u-positive{% endif %}">
-  <div class="u-inner u-inner--20 u-flex">
+<nav class="Navbar js-Navbar js-Navbar--fixed {% if page.url == '/engine/' %}u-positive{% endif %}">
+  <div class="Navbar-inner u-inner">
     <div class="Navbar-header">
-      <a class="Logo " href="/">
-
-      </a>
-      <div class="mobile">
-        <a href="#/menu" class="Navbar-buttonMenu js-Navbar-button"></a>
+      <a class="Logo" href="/"></a>
+      <div class="Navbar-buttonMenu js-Navbar-button">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
 
-    <div class="Navbar-collapse">
+    <div class="Navbar-collapse js-Navbar-collapse">
       <ul class="Navbar-list">
-        <li class="Navbar-item">
-          <span class="Dropdown js-Dropdown">
-            <a href="#/products" class="Navbar-link js-Dropdown-target js-Action--NAVproducts">
-              Products
-              <svg class="Navbar-icon js-navbarCaret" width="6" height="3" viewBox="0 0 6 3" xmlns="http://www.w3.org/2000/svg"><path stroke="#FFF" stroke-width="1.2" d="M1 1l2 1 2-1" fill="none" fill-rule="evenodd" stroke-linecap="square"/></svg>
-            </a>
-            <div class="Dropdown-inner js-Dropdown-inner">
-              <div class="Dropdown-content">
-                <ul>
-                  {% for products_item in site.data.menu.products %}
-                    <li class="Dropdown-item"><a href="{{ products_item.url }}" class="Dropdown-link js-Dropdown-link {% if products_item.url == page.url %}is-active{% endif %}">{{ products_item.title }}</a></li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </div>
-          </span>
+        <li class="Navbar-item Dropdown js-Dropdown">
+          <a href="#/products" class="Navbar-link title is-regular is-small js-Dropdown-target js-Action--NAVproducts">
+            Products
+            <svg class="Navbar-icon js-navbarCaret" width="6" height="3" viewBox="0 0 6 3" xmlns="http://www.w3.org/2000/svg"><path stroke="#FFF" stroke-width="1.2" d="M1 1l2 1 2-1" fill="none" fill-rule="evenodd" stroke-linecap="square"/></svg>
+          </a>
+
+          <ul class="Dropdown-inner js-Dropdown-inner">
+            {% for products_item in site.data.menu.products %}
+              <li class="Dropdown-item"><a href="{{ products_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if products_item.url == page.url %}is-active{% endif %}">{{ products_item.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+
+        <li class="Navbar-item Dropdown js-Dropdown">
+          <a href="#/solutions" class="Navbar-link title is-regular is-small js-Dropdown-target js-Action--NAVsolutions">
+            Solutions
+            <svg class="Navbar-icon js-navbarCaret" width="6" height="3" viewBox="0 0 6 3" xmlns="http://www.w3.org/2000/svg"><path stroke="#FFF" stroke-width="1.2" d="M1 1l2 1 2-1" fill="none" fill-rule="evenodd" stroke-linecap="square"/></svg>
+          </a>
+          <ul class="Dropdown-inner js-Dropdown-inner">
+            {% for solutions_item in site.data.menu.solutions %}
+              <li class="Dropdown-item"><a href="{{ solutions_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if solutions_item.url == page.url %}is-active{% endif %}">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+
+        <li class="Navbar-item js-Dropdown Dropdown">
+          <a href="/resources/" class="Navbar-link title is-regular is-small js-Dropdown-target">
+            Resources
+            <svg class="Navbar-icon js-navbarCaret" width="6" height="3" viewBox="0 0 6 3" xmlns="http://www.w3.org/2000/svg"><path stroke="#FFF" stroke-width="1.2" d="M1 1l2 1 2-1" fill="none" fill-rule="evenodd" stroke-linecap="square"/></svg>
+          </a>
+          <ul class="Dropdown-inner js-Dropdown-inner">
+            {% for resources_item in site.data.menu.resources %}
+              <li class="Dropdown-item"><a href="{{ resources_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if resources_item.url == page.url %}is-active{% endif %}">{{ resources_item.title }}</a></li>
+            {% endfor %}
+          </ul>
         </li>
 
         <li class="Navbar-item">
-          <span class="Dropdown js-Dropdown">
-            <a href="#/solutions" class="Navbar-link js-Dropdown-target js-Action--NAVsolutions">
-              Solutions
-              <svg class="Navbar-icon js-navbarCaret" width="6" height="3" viewBox="0 0 6 3" xmlns="http://www.w3.org/2000/svg"><path stroke="#FFF" stroke-width="1.2" d="M1 1l2 1 2-1" fill="none" fill-rule="evenodd" stroke-linecap="square"/></svg>
-            </a>
-
-            <div class="Dropdown-inner js-Dropdown-inner">
-              <div class="Dropdown-content">
-                <ul>
-                  {% for solutions_item in site.data.menu.solutions %}
-                    <li class="Dropdown-item"><a href="{{ solutions_item.url }}" class="Dropdown-link js-Dropdown-link {% if solutions_item.url == page.url %}is-active{% endif %}">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</a></li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </div>
-          </span>
-        </li>
-
-        <li class="Navbar-item">
-          <span class="Dropdown js-Dropdown">
-            <a href="{{site.url}}/resources" class="Navbar-link js-Dropdown-target js-Action--NAVproducts">
-              Resources
-              <svg class="Navbar-icon js-navbarCaret" width="6" height="3" viewBox="0 0 6 3" xmlns="http://www.w3.org/2000/svg"><path stroke="#FFF" stroke-width="1.2" d="M1 1l2 1 2-1" fill="none" fill-rule="evenodd" stroke-linecap="square"/></svg>
-            </a>
-
-            <div class="Dropdown-inner js-Dropdown-inner">
-              <div class="Dropdown-content">
-                <ul>
-                  {% for resources_item in site.data.menu.resources %}
-                    <li class="Dropdown-item"><a href="{{ resources_item.url }}" class="Dropdown-link js-Dropdown-link {% if resources_item.url == page.url %}is-active{% endif %}">{{ resources_item.title }}</a></li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </div>
-          </span>
-        </li>
-
-        <li class="Navbar-item">
-          <a href="/pricing/" class="Navbar-link js-Action--NAVpricing">
+          <a href="/pricing/" class="Navbar-link title is-regular is-small js-Action--NAVpricing">
             <span>Pricing</span>
           </a>
         </li>
 
         <li class="Navbar-item">
-          <a href="/blog/" class="Navbar-link js-Action--NAVblog">
+          <a href="/blog/" class="Navbar-link title is-regular is-small js-Action--NAVblog">
             <span>Blog</span>
           </a>
         </li>
@@ -82,21 +64,85 @@
 
       <ul class="Navbar-list">
         <li class="Navbar-item">
-          <a href="/login" class="Navbar-link js-Action--NAVlogin">
+          <a href="/login" class="Navbar-link title is-regular is-small js-Action--NAVlogin">
             <span>Login</span>
           </a>
         </li>
         <li class="Navbar-item">
-          <a href="/signup/" class="Navbar-link js-Action--NAVcontact">
+          <a href="/signup/" class="Navbar-link title is-regular is-small js-Action--NAVcontact">
             <span>Sign up</span>
           </a>
         </li>
         <li class="Navbar-item">
-          <a href="/request-live-demo/" class="button button--small is-negative is-block Navbar-link js-Action--NAVdemo">
-            Request a Demo
+          <a href="/request-live-demo/" class="button button--small is-negative Navbar-link Navbar-button js-Action--NAVdemo"><span>Request a Demo</span>
+          </a>
+          <a href="/request-live-demo/" class="button button--small is-baseGreyOutline Navbar-link Navbar-buttonFixed js-Action--NAVdemo">
+            <span>Request a Demo</span>
           </a>
         </li>
       </ul>
+    </div>
+  </div>
+
+  <div class="NavbarMobile js-Navbar js-Navbar-mobile">
+    <ul class="NavbarMobile-collapse">
+      <li class="Navbar-item">
+        <a href="/products" class="Navbar-link">
+          <span class="title u-negative">Products</span>
+        </a>
+      </li>
+      <li class="Navbar-item NavbarMobile-list">
+        <ul>
+          <li class="Navbar-subitem">
+            <a href="/builder/" class="Navbar-link"><span class="text">Builder</span></a>
+          </li>
+          <li class="Navbar-subitem">
+            <a href="/engine/" class="Navbar-link"><span class="text">Engine</span></a>
+          </li>
+          <li class="Navbar-subitem">
+            <a href="/engine/mobile/" class="Navbar-link"><span class="text">Mobile SDK</span></a>
+          </li>
+          <li class="Navbar-subitem">
+            <a href="/data-observatory/" class="Navbar-link"><span class="text">Data Observatory</span></a>
+          </li>
+        </ul>
+        </li>
+      <li class="Navbar-item">
+        <a href="/solutions/" class="Navbar-link">
+          <span class="title u-negative">Solutions</span>
+        </a>
+      </li>
+      <li class="Navbar-item NavbarMobile--tablet NavbarMobile-list">
+        <ul class="NavbarMobile--tabletList">
+        {% for solutions_item in site.data.menu.solutions %}
+          <li class="Navbar-subitem">
+            <a href="{{ solutions_item.url }}" class="Navbar-link">
+              <span class="text">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</span>
+            </a>
+          </li>
+        {% endfor %}
+          </ul>
+      </li>
+      <li class="Navbar-item">
+        <a href="/resources" class="Navbar-link">
+          <span class="title u-negative">Resources</span>
+        </a>
+      </li>
+      <li class="Navbar-item">
+        <a href="/pricing" class="Navbar-link">
+          <span class="title u-negative">Pricing</span>
+        </a>
+      </li>
+      <li class="Navbar-item">
+        <a href="/blog" class="Navbar-link">
+          <span class="title u-negative">Blog</span>
+        </a>
+      </li>
+    </ul>
+    <div class="Navbar-item">
+      <a href="#" class="button is-jade">
+        <span>Request a demo</span>
+      </a>
     </div>
   </div>
 </nav>
