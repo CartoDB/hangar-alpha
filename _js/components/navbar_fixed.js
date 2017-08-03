@@ -1,12 +1,10 @@
 HangarAlpha.Views.NavbarFixed = Backbone.View.extend({
 
-  el: this.$('.js-Navbar--fixed'),
-  header: this.$('.js-Header'),
-
   initialize: function(options) {
     this.options = options;
 
-    this.$header = this.header;
+    this.$header = this.options.$header;
+    this.$navbarButton = this.$('.js-Navbar-button')
 
     this._initBindings();
   },
@@ -16,11 +14,9 @@ HangarAlpha.Views.NavbarFixed = Backbone.View.extend({
     var scrollNumber = document.body.scrollTop;
 
     if (scrollNumber >= headerHeight) {
-      this.$el.addClass('is-active');
-      this.$el.addClass('bgWhite Navbar--fixed');
+      this.$el.addClass('Navbar--fixed is-active');
     } else {
-      this.$el.removeClass('is-active');
-      this.$el.removeClass('bgWhite Navbar--fixed')
+      this.$el.removeClass('Navbar--fixed is-active');
     }
   },
 

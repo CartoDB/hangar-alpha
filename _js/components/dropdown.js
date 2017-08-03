@@ -1,42 +1,40 @@
 HangarAlpha.Views.Dropdown = Backbone.View.extend({
 
-  // events: {
-  //   'click': '_onClickDropdown',
-  //   'click .js-Dropdown-target': '_onClickDropdownLink'
-  // },
+  events: {
+    'mouseenter': '_displayDropdown',
+    'mouseleave' : '_hideDropdown',
+    'touchstart .js-Dropdown-target': '_onTouch',
+    'click .js-Dropdown-inner': 'close'
+  },
 
-  // initialize: function() {
-  //   this.$dropdown = this.$('.js-Dropdown-inner');
+  initialize: function() {
+    this.$dropdown = this.$('.js-Dropdown-inner');
+    this.model = new Backbone.Model({ hidden: true });
+  },
 
-  //   this.model = new Backbone.Model({ hidden: true });
+  _displayDropdown: function() {
+    this.close();
+    this.$dropdown.show();
+    this._toggleHidden();
+  },
 
-  //   this.model.on("change:hidden", this._toggleDropdown, this);
-  // },
+  _hideDropdown: function() {
+    this.$dropdown.hide();
+    this._toggleHidden();
+  },
 
-  // _onClickDropdown: function(e) {
-  //   if (!$(e.target).hasClass('js-Dropdown-link')) {
-  //     e.preventDefault();
-  //     e.stopPropagation();
-  //   }
-  // },
+  _onTouch: function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    this.model.get('hidden') ? this._displayDropdown() : this._hideDropdown();
+  },
 
-  // close: function() {
-  //   if (!this.model.get('hidden')) {
-  //     this.model.set('hidden', true);
-  //   }
-  // },
+  _toggleHidden() {
+    this.model.set('hidden', !this.model.get('hidden'));
+  },
 
-  // _onClickDropdownLink: function(e) {
-  //   e.preventDefault();
-
-  //   if (this.model.get('hidden')) {
-  //     this.trigger('onclickdropdownlink');
-  //   }
-
-  //   this.model.set('hidden', !this.model.get('hidden'));
-  // },
-
-  // _toggleDropdown: function() {
-  //   this.$dropdown.toggleClass('is-active', !this.model.get('hidden'));
-  // }
+  close: function() {
+    $('.js-Dropdown-inner').hide();
+    this._toggleHidden();
+  }
 });
