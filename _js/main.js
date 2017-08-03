@@ -22,11 +22,11 @@ HangarAlpha.Views.Main = Backbone.View.extend({
   },
 
   _initViews: function () {
-  	this._initDropdowns();
     this.navbar = new HangarAlpha.Views.Navbar()
     this.navbar_fixed = new HangarAlpha.Views.NavbarFixed({
        el: this.$('.js-Navbar--fixed'),
      });
+    this._initDropdowns();
   },
 
 
