@@ -35,7 +35,8 @@ HangarAlpha.Views.Main = Backbone.View.extend({
 
     _.each(this.$('.js-Dropdown'), function (el) {
       var dropdown = new HangarAlpha.Views.Dropdown({
-        el: $(el)
+        el: $(el),
+        $header: this.$('.js-Header')
       })
 
       // dropdown.bind('onclickdropdownlink', function () {
