@@ -28,6 +28,10 @@ HangarAlpha.Views.Main = Backbone.View.extend({
       $header: this.$('.js-Header')
      });
     this._initDropdowns();
+
+    this.card = new HangarAlpha.Views.Card({
+      el: this.$('.js-downloadCard')
+    })
   },
 
 
