@@ -1,42 +1,40 @@
 HangarAlpha.Views.Dropdown = Backbone.View.extend({
 
   events: {
-    'click': '_onClickDropdown',
-    'click .js-Dropdown-target': '_onClickDropdownLink'
+    'mouseenter': '_displayDropdown',
+    'mouseleave' : '_hideDropdown',
+    'touchstart .js-Dropdown-target': '_onTouch',
+    'click .js-Dropdown-inner': 'close'
   },
 
   initialize: function() {
     this.$dropdown = this.$('.js-Dropdown-inner');
-
     this.model = new Backbone.Model({ hidden: true });
-
-    this.model.on("change:hidden", this._toggleDropdown, this);
   },
 
-  _onClickDropdown: function(e) {
-    if (!$(e.target).hasClass('js-Dropdown-link')) {
-      e.preventDefault();
-      e.stopPropagation();
-    }
+  _displayDropdown: function() {
+    this.close();
+    this.$dropdown.show();
+    this._toggleHidden();
   },
 
-  close: function() {
-    if (!this.model.get('hidden')) {
-      this.model.set('hidden', true);
-    }
+  _hideDropdown: function() {
+    this.$dropdown.hide();
+    this._toggleHidden();
   },
 
-  _onClickDropdownLink: function(e) {
+  _onTouch: function(e) {
     e.preventDefault();
+    e.stopPropagation();
+    this.model.get('hidden') ? this._displayDropdown() : this._hideDropdown();
+  },
 
-    if (this.model.get('hidden')) {
-      this.trigger('onclickdropdownlink');
-    }
-
+  _toggleHidden: function() {
     this.model.set('hidden', !this.model.get('hidden'));
   },
 
-  _toggleDropdown: function() {
-    this.$dropdown.toggleClass('is-active', !this.model.get('hidden'));
+  close: function() {
+    $('.js-Dropdown-inner').hide();
+    this._toggleHidden();
   }
 });

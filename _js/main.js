@@ -22,10 +22,16 @@ HangarAlpha.Views.Main = Backbone.View.extend({
   },
 
   _initViews: function () {
-  	this._initDropdowns();
-    // this.navbar_fixed = new HangarAlpha.Views.NavbarFixed({
-    //    el: this.$('.js-Navbar--fixed'),
-    //  });
+    this.navbar = new HangarAlpha.Views.Navbar()
+    this.navbar_fixed = new HangarAlpha.Views.NavbarFixed({
+      el: this.$('.js-Navbar--fixed'),
+      $header: this.$('.js-Header')
+     });
+    this._initDropdowns();
+
+    this.card = new HangarAlpha.Views.Card({
+      el: this.$('.js-downloadCard')
+    })
   },
 
 
@@ -37,9 +43,9 @@ HangarAlpha.Views.Main = Backbone.View.extend({
         el: $(el)
       })
 
-      dropdown.bind('onclickdropdownlink', function () {
-        _this._closeDropdowns()
-      })
+      // dropdown.bind('onclickdropdownlink', function () {
+      //   _this._closeDropdowns()
+      // })
 
       _this.bind('closedropdowns', function () {
         dropdown.close()
