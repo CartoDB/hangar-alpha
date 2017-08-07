@@ -20,12 +20,7 @@
 .u-inner--80 {
   z-index: 80;
 }
-// .u-inner--wide {
-//   max-width: $layout-xl + 1;
-// }
-// .u-inner--s1100 {
-//  max-width: $layout-1140;
-// }
+
 .u-inner--nopadding {
  padding-right: 0;
  padding-left: 0;
@@ -152,22 +147,6 @@ $sizes: (0, 4, 8, 10, 12, 16, 20, 24, 28, 32, 36, 40, 48, 60, 64, 72, 80, 96, 10
     margin-left: #{$size}px;
   }
 }
-
-// .u-block--desktop--sLarge {
-//   display: none;
-
-//   @media (min-width: $layout-xxl - 40) {
-//     display: block;
-//   }
-// }
-// .u-hide--desktop--sLarge {
-//   display: block;
-
-//   @media (min-width: $layout-xxl - 40) {
-//     display: none;
-//   }
-// }
-
 
 @media (max-width: $layout-tablet) {
   .u-tablet-hide,
