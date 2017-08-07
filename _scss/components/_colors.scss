@@ -62,11 +62,10 @@
 
 @each $name, $color in $colors {
   .is-bg#{$name} {
-    background: $color;
+    background: #{$color};
   }
   .is-txt#{$name} {
-    color: $color;
+    color: #{$color};
   }
 }
-
 
