@@ -17,7 +17,7 @@
 }
 
 .Navbar-inner {
-  z-index: 200;
+  z-index: 2;
   display: flex;
 }
 
@@ -75,7 +75,7 @@
   bottom: 0;
   left: 0;
   background-color: rgba($base-grey, 0.96);
-  z-index: 100;
+  z-index: 1;
   text-align: center;
   display: none;
   @media (max-width: $layout-tablet) {
