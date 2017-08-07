@@ -13,7 +13,11 @@
     "node": ">= 0.8.0"
   },
   "files": [
-    "dist"
+    "dist",
+    "_scss",
+    "_js",
+    "_img",
+    "_templates"
   ],
   "style": "dist/css/main.css",
   "sass": "_scss/main.scss",
