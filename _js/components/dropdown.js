@@ -29,7 +29,7 @@ HangarAlpha.Views.Dropdown = Backbone.View.extend({
     this.model.get('hidden') ? this._displayDropdown() : this._hideDropdown();
   },
 
-  _toggleHidden() {
+  _toggleHidden: function() {
     this.model.set('hidden', !this.model.get('hidden'));
   },
 
