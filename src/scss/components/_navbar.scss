@@ -97,11 +97,10 @@
 
   .NavbarMobile-collapse {
     width: 100%;
-    height: calc(100% - 120px);
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: block;
+    flex: 1;
+    margin-top: 68px;
+
   }
 
   .Navbar-item {
@@ -115,6 +114,9 @@
     font-size: 12px;
     line-height: 16px;
     padding: 8px 0;
+    @media (max-width: $layout-mobile) {
+      height: 48px;
+    }
   }
 
   .NavbarMobile-list {
@@ -123,14 +125,14 @@
 
   .NavbarMobile--tablet {
     display: block;
-    @media (max-width: $layout-mobile) {
-      display: none;
-    }
   }
 
   .NavbarMobile--tabletList {
     column-count: 2;
     padding: 0 30%;
+    @media (max-width: $layout-mobile) {
+      padding: 0 10%;
+    }
   }
 }
 /* End Navbar Mobile */
