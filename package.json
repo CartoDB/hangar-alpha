@@ -14,14 +14,11 @@
   },
   "files": [
     "dist",
-    "_scss",
-    "_js",
-    "_img",
-    "_templates"
+    "src"
   ],
-  "style": "dist/css/main.css",
-  "sass": "_scss/main.scss",
-  "main": "dist/js/index.js",
+  "style": "dist/css/hangaralpha.css",
+  "sass": "src/scss/main.scss",
+  "main": "dist/js/hangaralpha.js",
   "devDependencies": {
     "backbone": "^1.3.3",
     "grunt": "~0.4.5",
