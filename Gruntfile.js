@@ -54,7 +54,7 @@ module.exports = function (grunt) {
           dest: 'src/scss/vendor/perfect-scrollbar/'
         },{
           expand: true,
-          cwd: '_templates',
+          cwd: 'src/templates',
           src: '*.html',
           dest: 'dist/templates/'
         },{
