@@ -10,7 +10,7 @@
       </div>
     </div>
 
-    <div class="Navbar-collapse js-Navbar-collapse">
+    <div class="Navbar-collapse">
       <ul class="Navbar-list">
         <li class="Navbar-item Dropdown js-Dropdown">
           <a href="#/products" class="Navbar-link title is-regular is-small js-Dropdown-target js-Action--NAVproducts">
@@ -91,22 +91,22 @@
   </div>
 
   <div class="NavbarMobile js-Navbar js-Navbar-mobile">
-    <ul class="NavbarMobile-collapse">
+    <ul class="NavbarMobile-collapse js-ScrollbarY">
       <li class="Navbar-item">
-        <a href="/products" class="Navbar-link">
+        <a href="#/products" class="Navbar-link">
           <span class="title u-negative">Products</span>
         </a>
       </li>
       <li class="Navbar-item NavbarMobile-list">
         <ul>
           <li class="Navbar-subitem">
-            <a href="/builder/" class="Navbar-link"><span class="text">Builder</span></a>
+            <a href="/builder/" class="Navbar-link"><span class="text is-small">Builder</span></a>
           </li>
           <li class="Navbar-subitem">
-            <a href="/engine/" class="Navbar-link"><span class="text">Engine</span></a>
+            <a href="/engine/" class="Navbar-link"><span class="text is-small">Engine</span></a>
           </li>
           <li class="Navbar-subitem">
-            <a href="/engine/mobile/" class="Navbar-link"><span class="text">Mobile SDK</span></a>
+            <a href="/engine/mobile/" class="Navbar-link"><span class="text is-small">Mobile SDK</span></a>
           </li>
           <li class="Navbar-subitem">
             <a href="/data-observatory/" class="Navbar-link"><span class="text">Data Observatory</span></a>
@@ -114,16 +114,16 @@
         </ul>
         </li>
       <li class="Navbar-item">
-        <a href="/solutions/" class="Navbar-link">
+        <a href="#/solutions" class="Navbar-link">
           <span class="title u-negative">Solutions</span>
         </a>
       </li>
-      <li class="Navbar-item NavbarMobile--tablet NavbarMobile-list">
+      <li class="Navbar-item NavbarMobile-list">
         <ul class="NavbarMobile--tabletList">
         {% for solutions_item in site.data.menu.solutions %}
           <li class="Navbar-subitem">
             <a href="{{ solutions_item.url }}" class="Navbar-link">
-              <span class="text">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</span>
+              <span class="text is-small">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</span>
             </a>
           </li>
         {% endfor %}
