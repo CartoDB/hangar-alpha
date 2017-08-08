@@ -170,8 +170,8 @@
       color: $base-grey;
     }
     .Navbar-icon {
-      path {
-        stroke: $base-grey;
+      polygon {
+        fill: $base-grey;
       }
     }
     .Navbar-button {

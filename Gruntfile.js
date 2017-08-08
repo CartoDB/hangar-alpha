@@ -26,7 +26,7 @@ module.exports = function (grunt) {
         dest: 'dist/css/hangaralpha.css'
       },
       distJs: {
-        src: ['_js/*.js', '_js/components/*.js'], 
+        src: ['src/js/*.js', 'src/js/components/*.js'],
         dest: 'dist/js/hangaralpha.js'
       }
     },
@@ -51,7 +51,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: 'node_modules/perfect-scrollbar/src/css/',
           src: '*.scss',
-          dest: '_scss/vendor/perfect-scrollbar/'
+          dest: 'src/scss/vendor/perfect-scrollbar/'
         },{
           expand: true,
           cwd: '_templates',
@@ -59,7 +59,7 @@ module.exports = function (grunt) {
           dest: 'dist/templates/'
         },{
           expand: true,
-          cwd: '_scss',
+          cwd: 'src/scss',
           src: '**/*.scss',
           dest: 'dist/scss/'
         }]
@@ -100,7 +100,7 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '_img',
+          cwd: 'src/img',
           src: '**/*.svg',
           dest: 'dist/img'
         }]
@@ -112,7 +112,7 @@ module.exports = function (grunt) {
     watch: {
       scss: {
         files: [
-          '_scss/**/*.scss'
+          'src/scss/**/*.scss'
         ],
         tasks: [
           'sass',
@@ -124,7 +124,7 @@ module.exports = function (grunt) {
         }
       },
       js: {
-        files: ['_js/**/*.js'],
+        files: ['src/js/**/*.js'],
         tasks: ['concat']
       },
     }
