@@ -22,7 +22,7 @@ module.exports = function (grunt) {
 
     concat: {
       distCss: {
-        src: ['.tmp/_scss/**/*.css'], 
+        src: ['.tmp/css/*.css'],
         dest: 'dist/css/hangaralpha.css'
       },
       distJs: {
@@ -83,8 +83,9 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          src: ['_scss/main.scss'],
-          dest: '.tmp',
+          cwd: 'src/scss',
+          src: 'main.scss',
+          dest: '.tmp/css/',
           ext: '.css'
         }]
       }
