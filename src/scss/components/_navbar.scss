@@ -120,7 +120,6 @@
     padding: 8px 0;
     @media (max-width: $layout-mobile) {
       height: 48px;
-      text-align: left;
     }
   }
 
@@ -135,11 +134,14 @@
   .NavbarMobile--tabletList {
     column-count: 2;
     padding: 0 30%;
+    .Navbar-subitem {
+      text-align: left;
+    }
+    :nth-child(-n+5){
+        text-align: right;
+    }
     @media (max-width: $layout-mobile) {
       padding: 0 10%;
-      :nth-child(-n+5){
-        text-align: right;
-      }
     }
   }
 }
