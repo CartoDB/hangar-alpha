@@ -41,9 +41,10 @@ HangarAlpha.Views.Navbar = Backbone.View.extend({
       e.preventDefault();
     };
     if (bool === true) {
-        document.body.addEventListener("touchmove", freezeVp, false);
+      document.body.removeEventListener("touchmove", freezeVp, true);
     } else {
-        document.body.removeEventListener("touchmove", freezeVp, true);
+      document.body.addEventListener("touchmove", freezeVp, true);
+
     }
   }
 
