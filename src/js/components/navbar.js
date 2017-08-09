@@ -27,7 +27,7 @@ HangarAlpha.Views.Navbar = Backbone.View.extend({
       $('body').addClass("u-overflow");
       this.$navMobile.addClass('is-active');
       $('.Announcement').hide();
-      this._stopBodyScrolling(false)
+      this._stopBodyScrolling(true)
     }
   },
 
