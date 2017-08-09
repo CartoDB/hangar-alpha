@@ -35,6 +35,5 @@ HangarAlpha.Views.Dropdown = Backbone.View.extend({
 
   close: function() {
     $('.js-Dropdown-inner').hide();
-    this._toggleHidden();
   }
 });
