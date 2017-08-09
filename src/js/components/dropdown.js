@@ -26,7 +26,7 @@ HangarAlpha.Views.Dropdown = Backbone.View.extend({
   _onTouch: function(e) {
     e.preventDefault();
     e.stopPropagation();
-    this.model.get('hidden') ? this._displayDropdown() : this._hideDropdown();
+    this.model.get('hidden') ? this._hideDropdown() : this._displayDropdown();
   },
 
   _toggleHidden: function() {

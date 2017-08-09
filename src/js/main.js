@@ -11,6 +11,7 @@ HangarAlpha.Views.Main = Backbone.View.extend({
 
   events: {
     'click': '_closeDropdowns',
+    'touchstart': '_closeDropdowns',
     'click .js-ContactLink': '_onClickContactLink',
     'click .js-ReadMore': '_onClickReadMore',
     'keydown': '_onKeyDown'
