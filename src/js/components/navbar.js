@@ -9,6 +9,7 @@ HangarAlpha.Views.Navbar = Backbone.View.extend({
   initialize: function() {
     this.$navMobile = this.$('.js-Navbar-mobile');
     this.$navButton = this.$('.js-Navbar-button');
+    this.$navLogo = this.$('.js-Navbar-logo');
     this.model = new Backbone.Model({ hidden: true });
     this.model.on("change:hidden", this._toggleNavbar, this);
   },
@@ -26,6 +27,7 @@ HangarAlpha.Views.Navbar = Backbone.View.extend({
       this._toggleViewportScrolling(false)
     } else {
        //Open menu
+
       this.$navMobile.addClass('is-active');
       $('body').addClass("u-overflow");
       $('.Announcement').hide();
@@ -36,6 +38,7 @@ HangarAlpha.Views.Navbar = Backbone.View.extend({
   _openMobileMenu: function() {
     console.log('open/close', this.model.get('hidden'));
     this.$navButton.toggleClass('open');
+    this.$navLogo.toggleClass('open');
     this._onClickNavbarButton();
   },
 
