@@ -216,24 +216,24 @@
       display: block
     }
     @media (max-width: $layout-tablet) {
-    .Navbar-link {
-      color: $white;
-    }
-    .Navbar-icon {
-      polygon {
-        fill: $white;
-      }
-    }
 
-    .Navbar-buttonMenu {
-      span {
-        background: $base-grey;
-      }
-      &.open span {
-        background: $white;
-      }
+     .Navbar-link {
+       color: $white;
+     }
+     .Navbar-icon {
+       polygon {
+         fill: $white;
+       }
+     }
+     .Navbar-buttonMenu {
+       span {
+         background: $base-grey;
+       }
+       &.open span {
+         background: $white;
+       }
+     }
     }
-  }
 
   }
 }
