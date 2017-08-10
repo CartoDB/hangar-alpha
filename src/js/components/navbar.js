@@ -22,12 +22,12 @@ HangarAlpha.Views.Navbar = Backbone.View.extend({
       $('body').removeClass("u-overflow");
       this.$navMobile.removeClass('is-active');
       $('.Announcement').show();
-      this._stopBodyScrolling(true)
+      // this._stopBodyScrolling(false)
     } else {
       $('body').addClass("u-overflow");
       this.$navMobile.addClass('is-active');
       $('.Announcement').hide();
-      this._stopBodyScrolling(false)
+      // this._stopBodyScrolling(true)
     }
   },
 
@@ -41,7 +41,7 @@ HangarAlpha.Views.Navbar = Backbone.View.extend({
       e.preventDefault();
     };
     if (bool === true) {
-      document.body.removeEventListener("touchmove", freezeVp, true);
+      document.body.addEventListener("touchmove", freezeVp, false);
     } else {
       document.body.addEventListener("touchmove", freezeVp, true);
 
