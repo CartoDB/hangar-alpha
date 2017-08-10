@@ -204,6 +204,17 @@
     .Navbar-link {
       color: $base-grey;
     }
+    .Navbar-icon {
+      polygon {
+        fill: $base-grey;
+      }
+    }
+    .Navbar-button {
+      display: none;
+    }
+    .Navbar-buttonFixed {
+      display: block
+    }
     // @media (max-width: $layout-tablet) {
     //   display: none;
     // }
@@ -216,12 +227,7 @@
         fill: $white;
       }
     }
-    .Navbar-button {
-      display: none;
-    }
-    .Navbar-buttonFixed {
-      display: block
-    }
+
     .Navbar-buttonMenu {
       span {
         background: $base-grey;
