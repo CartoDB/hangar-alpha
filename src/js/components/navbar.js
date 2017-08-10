@@ -34,6 +34,7 @@ HangarAlpha.Views.Navbar = Backbone.View.extend({
   },
 
   _openMobileMenu: function() {
+    console.log('open/close', this.model.get('hidden'));
     this.$navButton.toggleClass('open');
     this._onClickNavbarButton();
   },
