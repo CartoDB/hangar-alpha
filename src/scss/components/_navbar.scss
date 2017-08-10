@@ -169,9 +169,8 @@
   }
 }
 
-/* Navbar fixed or navbar u-positive  */
+/* Navbar fixed  */
 .Navbar {
-  &.u-positive, 
   &.Navbar--fixed.is-active {
     top: 0;
     opacity: 1;
@@ -196,17 +195,53 @@
 }
 /* End Navbar fixed */
 
+/* Navbar u-positive */
+.Navbar {
+  &.u-positive {
+    display: block;
+    top: 0;
+    opacity: 1;
+    @media (max-width: $layout-tablet) {
+      display: none;
+    }
+    .Navbar-link {
+      color: $white;
+    }
+    .Navbar-icon {
+      polygon {
+        fill: $white;
+      }
+    }
+    .Navbar-buttonFixed {
+      display: block
+    }
+    .Navbar-buttonMenu {
+      span {
+        background: $base-grey;
+      }
+      &.open span {
+        background: $white;
+      }
+    }
+
+  }
+}
+/* End Navbar u-positive */
+
 
 /* Navbar open/close button */
 /* Icon 1 */
 @media (max-width: $layout-tablet) {
 	.Navbar-buttonMenu  {
-	  width: 22px;
-	  height: 16px;
-	  position: relative;
-	  transform: rotate(0deg);
-	  transition: 250ms ease-in-out;
-	  cursor: pointer;
+    width: 46px;
+    height: 40px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: 250ms ease-in-out;
+    cursor: pointer;
+    border: 12px solid transparent;
+    display: block;
+    margin-right: -12px;
 	}
 
 	.Navbar-buttonMenu span {
