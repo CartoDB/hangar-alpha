@@ -135,6 +135,10 @@ $button-colors: (
   position: relative;
   overflow: hidden;
 
+  &:hover {
+    text-decoration: none;
+  }
+
   > span {
     position: relative;
     z-index: 2;

@@ -9,6 +9,7 @@ HangarAlpha.Views.Navbar = Backbone.View.extend({
   initialize: function() {
     this.$navMobile = this.$('.js-Navbar-mobile');
     this.$navButton = this.$('.js-Navbar-button');
+    this.$navLogo = this.$('.js-Navbar-logo');
     this.model = new Backbone.Model({ hidden: true });
     this.model.on("change:hidden", this._toggleNavbar, this);
   },
@@ -19,32 +20,35 @@ HangarAlpha.Views.Navbar = Backbone.View.extend({
 
   _toggleNavbar: function() {
     if (this.model.get('hidden')) {
-      $('body').removeClass("u-overflow");
+      //Close menu
       this.$navMobile.removeClass('is-active');
+      $('body').removeClass("u-overflow");
       $('.Announcement').show();
-      this._stopBodyScrolling(false)
+      this._toggleViewportScrolling(false)
     } else {
-      $('body').addClass("u-overflow");
+       //Open menu
       this.$navMobile.addClass('is-active');
+      $('body').addClass("u-overflow");
       $('.Announcement').hide();
-      this._stopBodyScrolling(true)
+      this._toggleViewportScrolling(true)
     }
   },
 
   _openMobileMenu: function() {
     this.$navButton.toggleClass('open');
+    this.$navLogo.toggleClass('open');
     this._onClickNavbarButton();
   },
 
-  _stopBodyScrolling: function(bool) {
-    var freezeVp = function(e) {
-      e.preventDefault();
-    };
+  _toggleViewportScrolling: function(bool) {
     if (bool === true) {
-        document.body.addEventListener("touchmove", freezeVp, false);
+      document.body.ontouchmove = function(e) {
+        e.preventDefault();
+      }
     } else {
-        document.body.removeEventListener("touchmove", freezeVp, false);
+      document.body.ontouchmove = function(e) {
+        return true;
+      }
     }
   }
-
 });

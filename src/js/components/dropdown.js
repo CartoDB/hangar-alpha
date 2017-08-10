@@ -3,7 +3,7 @@ HangarAlpha.Views.Dropdown = Backbone.View.extend({
   events: {
     'mouseenter': '_displayDropdown',
     'mouseleave' : '_hideDropdown',
-    'touchstart .js-Dropdown-target': '_onTouch',
+    'click .js-Dropdown-target': '_onTouch',
     'click .js-Dropdown-inner': 'close'
   },
 
@@ -26,7 +26,7 @@ HangarAlpha.Views.Dropdown = Backbone.View.extend({
   _onTouch: function(e) {
     e.preventDefault();
     e.stopPropagation();
-    this.model.get('hidden') ? this._hideDropdown() : this._displayDropdown();
+    this.model.get('hidden') ? this._displayDropdown() : this._hideDropdown();
   },
 
   _toggleHidden: function() {
@@ -35,6 +35,5 @@ HangarAlpha.Views.Dropdown = Backbone.View.extend({
 
   close: function() {
     $('.js-Dropdown-inner').hide();
-    this._toggleHidden();
   }
 });
