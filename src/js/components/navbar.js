@@ -19,15 +19,17 @@ HangarAlpha.Views.Navbar = Backbone.View.extend({
 
   _toggleNavbar: function() {
     if (this.model.get('hidden')) {
-      $('body').removeClass("u-overflow");
+      //Close menu
       this.$navMobile.removeClass('is-active');
+      $('body').removeClass("u-overflow");
       $('.Announcement').show();
-      // this._stopBodyScrolling(false)
+      this._toggleViewportScrolling(false)
     } else {
-      $('body').addClass("u-overflow");
+       //Open menu
       this.$navMobile.addClass('is-active');
+      $('body').addClass("u-overflow");
       $('.Announcement').hide();
-      // this._stopBodyScrolling(true)
+      this._toggleViewportScrolling(true)
     }
   },
 
@@ -36,16 +38,15 @@ HangarAlpha.Views.Navbar = Backbone.View.extend({
     this._onClickNavbarButton();
   },
 
-  _stopBodyScrolling: function(bool) {
+  _toggleViewportScrolling: function(bool) {
     var freezeVp = function(e) {
       e.preventDefault();
     };
     if (bool === true) {
-      document.body.addEventListener("touchmove", freezeVp, false);
+        body.addEventListener("touchmove", freezeVp, false);
     } else {
-      document.body.addEventListener("touchmove", freezeVp, true);
-
+        body.removeEventListener("touchmove", freezeVp, false);
     }
-  }
+}
 
 });
