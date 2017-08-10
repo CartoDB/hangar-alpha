@@ -201,9 +201,10 @@
     display: block;
     top: 0;
     opacity: 1;
+    // @media (max-width: $layout-tablet) {
+    //   display: none;
+    // }
     @media (max-width: $layout-tablet) {
-      display: none;
-    }
     .Navbar-link {
       color: $white;
     }
@@ -223,6 +224,7 @@
         background: $white;
       }
     }
+  }
 
   }
 }
