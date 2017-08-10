@@ -201,6 +201,9 @@
     display: block;
     top: 0;
     opacity: 1;
+    .Navbar-link {
+      color: $base-grey;
+    }
     // @media (max-width: $layout-tablet) {
     //   display: none;
     // }
@@ -212,6 +215,9 @@
       polygon {
         fill: $white;
       }
+    }
+    .Navbar-button {
+      display: none;
     }
     .Navbar-buttonFixed {
       display: block
