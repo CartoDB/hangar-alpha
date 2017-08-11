@@ -184,13 +184,9 @@ $button-colors: (
     color: $typo4;
     border: 2px solid $white;
     &:after {
-      content: '';
-      @include circle;
       background: rgba($white, 0.24);
     }
   }
-  
-
 }
 
 
