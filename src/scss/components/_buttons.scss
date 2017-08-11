@@ -26,6 +26,13 @@
     <span>Download all</span>
   </a>
 
+  <span style="padding: 40px; background: red; display: block;">
+    <a href="#" class="button is-negative">
+      <span>Download all</span>
+    </a>
+  </span>
+
+
   <a href="#" class="buttonLink is-jade">
     <svg width="8px" height="7px" viewBox="0 0 8 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -176,6 +183,11 @@ $button-colors: (
   &.is-negative {
     color: $typo4;
     border: 2px solid $white;
+    &:after {
+      content: '';
+      @include circle;
+      background: rgba($white, 0.24);
+    }
   }
   
 
