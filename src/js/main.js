@@ -10,11 +10,11 @@ HangarAlpha.Views.Main = Backbone.View.extend({
 	el: 'body',
 
   events: {
-    'click': '_closeDropdowns',
-    'touchstart': '_closeDropdowns',
+    // 'click': '_closeDropdowns',
+    // 'touchstart': '_closeDropdowns',
     'click .js-ContactLink': '_onClickContactLink',
-    'click .js-ReadMore': '_onClickReadMore',
-    'keydown': '_onKeyDown'
+    'click .js-ReadMore': '_onClickReadMore'//,
+    // 'keydown': '_onKeyDown'
   },
 
 
@@ -48,24 +48,13 @@ HangarAlpha.Views.Main = Backbone.View.extend({
       //   _this._closeDropdowns()
       // })
 
-      _this.bind('closedropdowns', function () {
-        dropdown.close()
-      })
+      // _this.bind('closedropdowns', function () {
+      //   dropdown.close()
+      // })
     })
-  },
-
-  _onKeyDown: function (e) {
-    switch (e.which) {
-      // esc
-      case 27 :
-        this._closeDropdowns()
-        break
-    }
-  },
-  
-  _closeDropdowns: function () {
-    this.trigger('closedropdowns')
   }
+  
+
 })
 
 
