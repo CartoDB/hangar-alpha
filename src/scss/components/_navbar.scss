@@ -135,12 +135,19 @@
     padding: 0 10%;
     display: flex;
     flex-wrap: wrap;
+    @media (max-width: $layout-mobile) {
+      padding: 0 5%;
+    }
     .Navbar-subitem {
       text-align: right;
       flex: 50%;
       max-width: 50%;
       padding-right: 20px;
       padding-left: 20px;
+      @media (max-width: $layout-mobile) {
+        padding-right: 10px;
+        padding-left: 10px;s
+      }
       &:nth-child(even) {
         text-align: left;
       }
