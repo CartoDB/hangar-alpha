@@ -1,0 +1,27 @@
+//Utilities
+
+// Display in desktop, tablet or mobile
+.mobile {
+  display: none;
+
+  @media (max-width: $layout-mobile) {
+    display: block;
+  }
+}
+
+.tablet {
+  display: none;
+
+  @media (max-width: $layout-tablet) {
+    display: block;
+  }
+}
+
+
+.desktop {
+  display: block;
+
+  @media (max-width: $layout-mobile) {
+    display: none;
+  }
+}
