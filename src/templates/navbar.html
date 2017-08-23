@@ -21,7 +21,7 @@
           </a>
 
           <ul class="Dropdown-inner js-Dropdown-inner">
-            {% for products_item in site.data.menu.products %}
+            {% for products_item in site.data.hangaralpha.navbar.products %}
               <li class="Dropdown-item"><a href="{{ products_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if products_item.url == page.url %}is-active{% endif %}">{{ products_item.title }}</a></li>
             {% endfor %}
           </ul>
@@ -35,7 +35,7 @@
             </svg>
           </a>
           <ul class="Dropdown-inner js-Dropdown-inner">
-            {% for solutions_item in site.data.menu.solutions %}
+            {% for solutions_item in site.data.hangaralpha.navbar.solutions %}
               <li class="Dropdown-item"><a href="{{ solutions_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if solutions_item.url == page.url %}is-active{% endif %}">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</a></li>
             {% endfor %}
           </ul>
@@ -49,7 +49,7 @@
             </svg>
           </a>
           <ul class="Dropdown-inner js-Dropdown-inner">
-            {% for resources_item in site.data.menu.resources %}
+            {% for resources_item in site.data.hangaralpha.navbar.resources %}
               <li class="Dropdown-item"><a href="{{ resources_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if resources_item.url == page.url %}is-active{% endif %}">{{ resources_item.title }}</a></li>
             {% endfor %}
           </ul>
@@ -114,13 +114,13 @@
         </ul>
         </li>
       <li class="Navbar-item">
-        <a href="#/solutions" class="Navbar-link">
+        <a href="/solutions/" class="Navbar-link">
           <span class="title u-negative">Solutions</span>
         </a>
       </li>
       <li class="Navbar-item NavbarMobile-list">
         <ul class="NavbarMobile--tabletList">
-        {% for solutions_item in site.data.menu.solutions %}
+        {% for solutions_item in site.data.hangaralpha.navbar.solutions %}
           <li class="Navbar-subitem">
             <a href="{{ solutions_item.url }}" class="Navbar-link">
               <span class="text is-small">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</span>
