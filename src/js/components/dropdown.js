@@ -3,8 +3,8 @@ HangarAlpha.Views.Dropdown = Backbone.View.extend({
   events: {
     'mouseenter': '_displayDropdown',
     'mouseleave' : '_hideDropdown',
-    'click .js-Dropdown-target': '_checkDevice',
-    'click .js-Dropdown-inner': 'close'
+    'click .js-Dropdown-target': '_checkDevice'//,
+    // 'click .js-Dropdown-inner': 'close'
   },
 
   initialize: function() {
