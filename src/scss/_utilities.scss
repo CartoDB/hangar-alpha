@@ -49,3 +49,13 @@ $sizes: (0, 4, 8, 10, 12, 16, 20, 24, 28, 32, 36, 40, 48, 60, 64, 72, 80, 96, 10
     margin-left: #{$size}px;
   }
 }
+
+//More utilities
+
+.u-linkBlue {
+  &:hover {
+    color: $link;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
