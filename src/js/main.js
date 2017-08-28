@@ -13,7 +13,6 @@ HangarAlpha.Views.Main = Backbone.View.extend({
     'click .js-ContactLink': '_onClickContactLink'
   },
 
-
 	initialize: function () {
     this._initViews();
   },
