@@ -13,16 +13,20 @@ HangarAlpha.Views.Dropdown = Backbone.View.extend({
   },
 
   _checkDevice: function(event) {
-   //  if (Modernizr.touch === true) {
-   //    this._onTouch(e);
-   // }
+    if (this._checkTouch()) {
+      this._onTouch(e);
+    }
+  },
+
+  _checkTouch: function() {
     try { 
-       document.createEvent("TouchEvent"); 
-       // return true; 
-       this._onTouch(event);
+      document.createEvent("TouchEvent");
+      return true;
     }
-    catch(e) { 
+      catch(e) {
+      return false;
     }
+
   },
 
   _displayDropdown: function() {
