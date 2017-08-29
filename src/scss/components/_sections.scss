@@ -5,11 +5,11 @@
   background: #fff;
   overflow: hidden;
 
-  @media (max-width: $layout-m) {
+  @media (max-width: $layout-mobile) {
     padding: $spacing-unit * 6 0;
   }
 
-  @media (max-width: $layout-l) {
+  @media (max-width: $layout-tablet) {
     padding: $spacing-unit * 6 0;
   }
 }
@@ -25,7 +25,7 @@
 .Section--preOveflow {
   padding-bottom: 144px;
 
-  @media (max-width: $layout-m) {
+  @media (max-width: $layout-mobile) {
     padding-bottom: 96px;
   }
 }
