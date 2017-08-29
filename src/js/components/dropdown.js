@@ -12,8 +12,9 @@ HangarAlpha.Views.Dropdown = Backbone.View.extend({
     this.model = new Backbone.Model({ hidden: true });
   },
 
-  _checkDevice: function(event) {
-    if (this._checkTouch()) {
+  _checkDevice: function(e) {
+    var touch = this._checkTouch()
+    if (touch) {
       this._onTouch(e);
     }
   },
@@ -26,7 +27,6 @@ HangarAlpha.Views.Dropdown = Backbone.View.extend({
       catch(e) {
       return false;
     }
-
   },
 
   _displayDropdown: function() {
