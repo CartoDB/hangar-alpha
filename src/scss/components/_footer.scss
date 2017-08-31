@@ -81,12 +81,7 @@
 ```
 */
 footer {
-  padding-bottom: 96px;
   background-color: $white;
-
-  @media (max-width: $layout-mobile) {
-    padding-bottom: 48px;
-  }
 }
 
 .Footer {
@@ -112,5 +107,20 @@ footer {
 
   @media (max-width: $layout-mobile) {
     padding-top: 48px;
+  }
+}
+
+.Footer-social {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  @media (max-width: $layout-mobile) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .Footer-socialIcons {
+    @media (max-width: $layout-mobile) {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 }
