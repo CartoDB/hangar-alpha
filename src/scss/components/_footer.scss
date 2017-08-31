@@ -117,10 +117,4 @@ footer {
     padding-top: 48px;
     padding-bottom: 48px;
   }
-  .Footer-socialIcons {
-    @media (max-width: $layout-mobile) {
-      display: flex;
-      justify-content: flex-end;
-    }
-  }
 }
