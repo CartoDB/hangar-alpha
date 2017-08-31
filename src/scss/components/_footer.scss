@@ -111,9 +111,11 @@ footer {
 }
 
 .Footer-social {
+  padding-top: 64px;
+  padding-bottom: 64px;
   @media (max-width: $layout-mobile) {
-    height: 100px;
     align-items: center;
+    height: 100px;
     margin-top: 40px;
     border-top: 1px solid $light-grey;
   }
