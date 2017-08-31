@@ -1,47 +1,47 @@
 <footer class=Footer-container>
   <div class="grid Footer mobile--flex u-inner">
     <div class="grid-cell grid-cell--col12 u-vspace--8">
-      <p class="title6">Products</p>
+      <p class="title is-small">Products</p>
     </div>
     <ul class="grid-cell grid-cell--col6">
       {% for item in site.data.hangaralpha.footer.products | limit: 4 %}
-        <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks">{{ item.title }}</a></li>
+        <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks text is-small">{{ item.title }}</a></li>
       {% endfor %}
     </ul>
     <ul class="grid-cell grid-cell--col6">
       {% for item in site.data.hangaralpha.footer.products | offset: 4 %}
-        <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks">{{ item.title }}</a></li>
+        <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks text is-small">{{ item.title }}</a></li>
       {% endfor %}
     </ul>
 
 
     <div class="grid-cell grid-cell--col12 u-tspace--32 u-vspace--8">
-      <p class="title6">Resources</p>
+      <p class="title is-small">Resources</p>
     </div>
     <ul class="grid-cell grid-cell--col6">
       {% for item in site.data.hangaralpha.footer.resources | limit: 4 %}
-        <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks">{{ item.title }}</a></li>
+        <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks text is-small">{{ item.title }}</a></li>
       {% endfor %}
     </ul>
     <ul class="grid-cell grid-cell--col6">
       {% for item in site.data.hangaralpha.footer.resources | offset: 4 %}
-        <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks">{{ item.title }}</a></li>
+        <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks text is-small">{{ item.title }}</a></li>
       {% endfor %}
         <li class="FooterElement"><a href="https://github.com/CartoDB/cartodb" title="Source Code" class="FooterLink">Source Code</a></li>
     </ul>
 
 
     <div class="grid-cell grid-cell--col12 u-tspace--32 u-vspace--8 ">
-      <p class="title6">About us</p>
+      <p class="title is-small">About us</p>
     </div>
     <ul class="grid-cell grid-cell--col6">
       {% for item in site.data.hangaralpha.footer.about | limit: 4 %}
-        <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks">{{ item.title }}</a></li>
+        <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks text is-small">{{ item.title }}</a></li>
       {% endfor %}
     </ul>
     <ul class="grid-cell grid-cell--col6">
       {% for item in site.data.hangaralpha.footer.about | offset: 4 %}
-        <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks">{{ item.title }}</a></li>
+        <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks text is-small">{{ item.title }}</a></li>
       {% endfor %}
     </ul>
   </div>
@@ -52,24 +52,24 @@
     </div>
 
     <ul class="grid-cell grid-cell--col2 grid-cell--col3--tablet">
-      <li class="FooterElement title6">Products</li>
+      <li class="FooterElement title is-small">Products</li>
       {% for item in site.data.hangaralpha.footer.products %}
-      <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks">{{ item.title }}</a></li>
+      <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks text is-small">{{ item.title }}</a></li>
       {% endfor %}
     </ul>
 
     <ul class="grid-cell grid-cell--col2 grid-cell--col3--tablet">
-      <li class="FooterElement title6">Resources</li>
+      <li class="FooterElement title is-small">Resources</li>
       {% for resources_item in site.data.hangaralpha.footer.resources %}
-      <li class="FooterElement"><a href="{{ resources_item.url }}" class="FooterLink js-Action--Footerlinks">{{ resources_item.title }}</a></li>
+      <li class="FooterElement"><a href="{{ resources_item.url }}" class="FooterLink js-Action--Footerlinks text is-small">{{ resources_item.title }}</a></li>
       {% endfor %}
       <li class="FooterElement"><a href="https://github.com/CartoDB/cartodb" title="Source Code" class="FooterLink">Source Code</a></li>
     </ul>
 
     <ul class="grid-cell grid-cell--col2 grid-cell--col3--tablet">
-      <li class="FooterElement title6">About us</li>
+      <li class="FooterElement title is-small">About us</li>
       {% for about_item in site.data.hangaralpha.footer.about %}
-        <li class="FooterElement"><a href="{{ about_item.url }}" class="FooterLink js-Action--Footerlinks {{ about_item.className }}">{{ about_item.title }}</a></li>
+        <li class="FooterElement"><a href="{{ about_item.url }}" class="FooterLink js-Action--Footerlinks text is-small {{ about_item.className }}">{{ about_item.title }}</a></li>
       {% endfor %}
     </ul>
   </div>
