@@ -113,6 +113,7 @@ footer {
 .Footer-social {
   @media (max-width: $layout-mobile) {
     height: 100px;
+    align-items: center;
     margin-top: 40px;
     border-top: 1px solid $light-grey;
   }
