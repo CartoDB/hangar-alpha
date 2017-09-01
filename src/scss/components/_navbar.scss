@@ -7,7 +7,7 @@
 //HANGAR
 .Navbar {
   padding: 16px 0;
-  z-index: 200;
+  z-index: $zIndex-3;
   .Navbar-button {
     display: block;
   }
@@ -161,7 +161,7 @@
 .Navbar--fixed {
   position: fixed;
   top: -80px;
-  z-index: 50;
+  z-index: $zIndex-3;
   width: 100%;
   border-bottom: 1px solid #eee;
   background: #fff;
