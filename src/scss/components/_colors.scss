@@ -2,29 +2,27 @@
 # Colors
 ```
   <!-- texts -->
-  <h1 class="title is-title is-txtCartoRed">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtCartoRed">CARTO Red</h1>
   <br/>
-  <h1 class="title is-title is-txtSolutionsRed">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtSolutionsRed">Solutions Red</h1>
   <br/>
-  <h1 class="title is-title is-txtBuilderBlue">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtBuilderBlue">Builder Blue</h1>
   <br/>
-  <h1 class="title is-title is-txtEngineBlue">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtEngineBlue">Engine Blue</h1>
   <br/>
-  <h1 class="title is-title is-txtIntegrationsBlue">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtLDSBlue">LDS Blue</h1>
   <br/>
-  <h1 class="title is-title is-txtDataPurple">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtGuidesPurple">Guides Purple</h1>
   <br/>
-  <h1 class="title is-title is-txtLearnPurple">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtTutorialsPurple">Tutorials Purple</h1>
   <br/>
-  <h1 class="title is-title is-txtTutorialsPurple">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtDocsPurple">Docs Purple</h1>
   <br/>
-  <h1 class="title is-title is-txtDocsPurple">The precipitating manner in which</h1>
-  <br/>
-  <h1 class="title is-title is-txtBaseGrey">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtBaseGrey">Base Grey</h1>
   <br/>
   <br/>
   <br/>
-  
+
   <!-- box -->
   <div class="block is-bgCartoRed">
 
@@ -38,13 +36,10 @@
   <div class="block is-bgEngineBlue">
 
   </div>
-  <div class="block is-bgIntegrationsBlue">
+  <div class="block is-bgLDSBlue">
 
   </div>
-  <div class="block is-bgDataPurple">
-
-  </div>
-  <div class="block is-bgLearnPurple">
+  <div class="block is-bgGuidesPurple">
 
   </div>
   <div class="block is-bgTutorialsPurple">
@@ -68,4 +63,3 @@
     color: #{$color};
   }
 }
-
