@@ -46,3 +46,8 @@ about:
     url: '/legal/'
   - title: Privacy Policy
     url: '/privacy/'
+social:
+  github: 'https://github.com/CartoDB/carto'
+  twitter: 'https://twitter.com/CARTO'
+  facebook: 'https://www.facebook.com/CartoDB'
+  linkedin: 'https://www.linkedin.com/company/carto'
