@@ -316,3 +316,24 @@
     margin-top: -1px;
   }
 }
+
+
+//Navbar Logo
+
+.Navbar {
+  .Logo--negative {
+    display: flex;
+  }
+  .Logo--positive {
+    display: none;
+  }
+}
+
+.Navbar.Navbar--fixed.is-active {
+  .Logo--positive {
+    display: flex;
+  }
+  .Logo--negative {
+    display: none;
+  }
+}
