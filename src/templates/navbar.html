@@ -1,7 +1,14 @@
 <nav class="Navbar js-Navbar js-Navbar--fixed {% if page.url == '/engine/' %}u-positive{% endif %}">
   <div class="Navbar-inner u-inner">
     <div class="Navbar-header">
-      <a class="Logo js-Navbar-logo" href="/"></a>
+      <a class="Logo js-Navbar-logo u-rspace--40" href="/">
+        <div class="Logo--negative">
+          {% include hangaralpha/logos/logo_carto_negative.svg %}
+        </div>
+        <div class="Logo--positive">
+          {% include hangaralpha/logos/logo_carto_positive.svg %}
+        </div>
+      </a>
       <div class="Navbar-buttonMenu js-Navbar-button">
         <span></span>
         <span></span>
