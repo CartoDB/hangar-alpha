@@ -327,6 +327,16 @@
   }
 }
 
+.Navbar.u-positive,
+.Navbar--positive.Navbar {
+  .Logo--negative {
+    display: none;
+  }
+  .Logo--positive {
+    display: flex;
+  }
+}
+
 .Navbar.Navbar--fixed.is-active {
   .Logo--positive {
     display: flex;
