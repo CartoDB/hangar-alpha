@@ -7,7 +7,7 @@
 //HANGAR
 .Navbar {
   padding: 16px 0;
-  z-index: 200;
+  z-index: $zIndex-3;
   .Navbar-button {
     display: block;
   }
@@ -161,7 +161,7 @@
 .Navbar--fixed {
   position: fixed;
   top: -80px;
-  z-index: 50;
+  z-index: $zIndex-3;
   width: 100%;
   border-bottom: 1px solid #eee;
   background: #fff;
@@ -205,45 +205,43 @@
 /* End Navbar fixed */
 
 /* Navbar u-positive */
-.Navbar {
-  &.u-positive {
-    display: block;
-    top: 0;
-    opacity: 1;
-    .Navbar-link {
-      color: $base-grey;
+.Navbar.u-positive,
+.Navbar--positive .Navbar{
+  display: block;
+  top: 0;
+  opacity: 1;
+  .Navbar-link {
+    color: $base-grey;
+  }
+  .Navbar-icon {
+    polygon {
+      fill: $base-grey;
     }
-    .Navbar-icon {
-      polygon {
-        fill: $base-grey;
-      }
-    }
-    .Navbar-button {
-      display: none;
-    }
-    .Navbar-buttonFixed {
-      display: block
-    }
-    @media (max-width: $layout-tablet) {
+  }
+  .Navbar-button {
+    display: none;
+  }
+  .Navbar-buttonFixed {
+    display: block
+  }
+  @media (max-width: $layout-tablet) {
 
-     .Navbar-link {
-       color: $white;
+   .Navbar-link {
+     color: $white;
+   }
+   .Navbar-icon {
+     polygon {
+       fill: $white;
      }
-     .Navbar-icon {
-       polygon {
-         fill: $white;
-       }
+   }
+   .Navbar-buttonMenu {
+     span {
+       background: $base-grey;
      }
-     .Navbar-buttonMenu {
-       span {
-         background: $base-grey;
-       }
-       &.open span {
-         background: $white;
-       }
+     &.open span {
+       background: $white;
      }
-    }
-
+   }
   }
 }
 /* End Navbar u-positive */
@@ -314,5 +312,29 @@
     width: 0%;
     left: 50%;
     margin-top: -1px;
+  }
+}
+
+
+//Navbar Logo
+
+.Navbar {
+  .Logo--negative {
+    display: flex;
+  }
+  .Logo--positive {
+    display: none;
+  }
+}
+
+.Navbar.u-positive,
+.Navbar--positive .Navbar,
+.Navbar.Navbar--fixed.is-active
+ {
+  .Logo--positive {
+    display: flex;
+  }
+  .Logo--negative {
+    display: none;
   }
 }

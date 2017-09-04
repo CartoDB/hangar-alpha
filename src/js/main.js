@@ -10,10 +10,8 @@ HangarAlpha.Views.Main = Backbone.View.extend({
 	el: 'body',
 
   events: {
-    'click .js-ContactLink': '_onClickContactLink',
-    'click .js-ReadMore': '_onClickReadMore'
+    'click .js-ContactLink': '_onClickContactLink'
   },
-
 
 	initialize: function () {
     this._initViews();
@@ -26,6 +24,8 @@ HangarAlpha.Views.Main = Backbone.View.extend({
       $header: this.$('.js-Header')
      });
     this._initDropdowns();
+
+    this.dialog = new HangarAlpha.Views.Dialog();
 
     this.card = new HangarAlpha.Views.Card({
       el: this.$('.js-downloadCard')
@@ -41,6 +41,30 @@ HangarAlpha.Views.Main = Backbone.View.extend({
         el: $(el)
       })
     })
+  },
+
+  _onKeyDown: function (e) {
+    switch (e.which) {
+      // esc
+      case 27 :
+        this._closeContactDialog()
+        break
+    }
+  },
+
+  _closeDialogs: function () {
+    this.dialog.close()
+  },
+
+  _onClickContactLink: function (e) {
+    var mobile = 1280
+    var width = $(window).width()
+
+    if (width >= mobile) {
+      e.preventDefault()
+
+      this.dialog.open()
+    }
   }
 
 })

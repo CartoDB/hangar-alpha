@@ -3,8 +3,8 @@ HangarAlpha.Views.Dropdown = Backbone.View.extend({
   events: {
     'mouseenter': '_displayDropdown',
     'mouseleave' : '_hideDropdown',
-    'click .js-Dropdown-target': '_checkDevice',
-    'click .js-Dropdown-inner': 'close'
+    'click .js-Dropdown-target': '_checkDevice'//,
+    // 'click .js-Dropdown-inner': 'close'
   },
 
   initialize: function() {
@@ -13,9 +13,20 @@ HangarAlpha.Views.Dropdown = Backbone.View.extend({
   },
 
   _checkDevice: function(e) {
-    if (Modernizr.touch === true) {
+    var touch = this._checkTouch()
+    if (touch) {
       this._onTouch(e);
-   }
+    }
+  },
+
+  _checkTouch: function() {
+    try { 
+      document.createEvent("TouchEvent");
+      return true;
+    }
+      catch(e) {
+      return false;
+    }
   },
 
   _displayDropdown: function() {
@@ -41,5 +52,6 @@ HangarAlpha.Views.Dropdown = Backbone.View.extend({
 
   close: function() {
     $('.js-Dropdown-inner').hide();
-  }
+  },
+
 });

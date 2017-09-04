@@ -1,0 +1,53 @@
+# Footer menu
+products:
+  - title: Builder
+    url: /builder/
+  - title: Engine
+    url: /engine/
+  - title: Mobile
+    url: /engine/mobile/
+  - title: Location Data Services
+    url: /location-data-services/
+  - title: Data Observatory
+    url: /data-observatory/
+  - title: Integrations
+    url: /integrations/
+  - title: Attributions
+    url: '/attribution/'
+  - title: Pricing
+    url: /pricing/
+resources:
+  - title: Webinars
+    url: '/webinars/'
+  - title: Case Studies
+    url: '/resources/'
+  - title: Blog
+    url: '/blog/'
+  - title: Learn
+    url: '/learn/guides'
+  - title: Documentation
+    url: '/docs/'
+  - title: Brand
+    url: '/brand/'
+about:
+  - title: Team
+    url: '/team/'
+  - title: Careers
+    url: '/careers/'
+  - title: Press
+    url: '/press/'
+  - title: Partners
+    url: '/partners/'
+  - title: Contributions
+    url: '/contributions/'
+  - title: Request a Live Demo
+    url: '/request-live-demo/'
+  - title: Terms of Service
+    url: '/legal/'
+  - title: Privacy Policy
+    url: '/privacy/'
+social:
+  github: 'https://github.com/CartoDB/carto'
+  twitter: 'https://twitter.com/CARTO'
+  facebook: 'https://www.facebook.com/CartoDB'
+  linkedin: 'https://www.linkedin.com/company/carto'
