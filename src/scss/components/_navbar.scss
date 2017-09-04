@@ -205,45 +205,42 @@
 /* End Navbar fixed */
 
 /* Navbar u-positive */
-.Navbar {
-  &.u-positive {
-    display: block;
-    top: 0;
-    opacity: 1;
-    .Navbar-link {
-      color: $base-grey;
+.Navbar--positive .Navbar{
+  display: block;
+  top: 0;
+  opacity: 1;
+  .Navbar-link {
+    color: $base-grey;
+  }
+  .Navbar-icon {
+    polygon {
+      fill: $base-grey;
     }
-    .Navbar-icon {
-      polygon {
-        fill: $base-grey;
-      }
-    }
-    .Navbar-button {
-      display: none;
-    }
-    .Navbar-buttonFixed {
-      display: block
-    }
-    @media (max-width: $layout-tablet) {
+  }
+  .Navbar-button {
+    display: none;
+  }
+  .Navbar-buttonFixed {
+    display: block
+  }
+  @media (max-width: $layout-tablet) {
 
-     .Navbar-link {
-       color: $white;
+   .Navbar-link {
+     color: $white;
+   }
+   .Navbar-icon {
+     polygon {
+       fill: $white;
      }
-     .Navbar-icon {
-       polygon {
-         fill: $white;
-       }
+   }
+   .Navbar-buttonMenu {
+     span {
+       background: $base-grey;
      }
-     .Navbar-buttonMenu {
-       span {
-         background: $base-grey;
-       }
-       &.open span {
-         background: $white;
-       }
+     &.open span {
+       background: $white;
      }
-    }
-
+   }
   }
 }
 /* End Navbar u-positive */
