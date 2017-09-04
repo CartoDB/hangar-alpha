@@ -119,4 +119,14 @@ footer {
     margin-top: 40px;
     border-top: 1px solid $light-grey;
   }
+  .Footer-icon {
+    &:hover {
+      text-decoration: none;
+    }
+    path {
+      &:hover {
+        fill: $blue;
+      }
+    }
+  }
 }
