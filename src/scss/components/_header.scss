@@ -1,17 +1,12 @@
-// Headers
+// Header
+// --------------------------------------------------
 
 .Header {
   display: flex;
   flex-direction: column;
   position: relative;
 }
-// .Header--demo {
-//   height: 100vh;
-//   @media (max-width: $layout-tablet) {
-//     min-height: 100%;
-//     height: auto;
-//   }
-// }
+
 .Header--short {
   min-height: 0;
 }
@@ -22,17 +17,7 @@
   background-size: cover;
   background-position: center;
 }
-// .Header-inner--request {
-//   display: flex;
-//   align-items: center;
-//   height: 100%;
-//   box-sizing: border-box;
-//   background: $purple;
-//   @media (max-width: $layout-s) {
-//     display: block;
-//     height: auto;
-//   }
-// }
+
 .Header-inner {
   padding: 80px 0 96px;
 
