@@ -4,10 +4,10 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
   <style>
-    .box {
+    .block {
       display: inline-block;
-      width: 200px;
-      height: 200px;
+      width: 300px;
+      height: 300px;
       text-align: center;
       margin: 0 20px 20px 0;
     }
@@ -285,6 +285,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                 <a class="sectionlink" href="#" data-section="Buttons">Buttons</a>
         </li>
         <li>
+                <a class="sectionlink" href="#" data-section="Cards">Cards</a>
+        </li>
+        <li>
                 <a class="sectionlink" href="#" data-section="Colors">Colors</a>
         </li>
         <li>
@@ -303,142 +306,366 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
                 <div class="result">
                     <!-- normal buttons -->
-  <a href="#" class="button is-turquoiseOutline circle-animation">
-    <div class="circle-animationContent is-shadow"></div>
+  <a href="#" class="button is-jadeOutline">
     <span>Download all</span>
   </a>
 
-  <a href="#" class="button is-redOutline circle-animation">
-    <div class="circle-animationContent is-shadow"></div>
+  <a href="#" class="button is-jade">
     <span>Download all</span>
   </a>
 
-  <a href="#" class="button is-red circle-animation">
-    <div class="circle-animationContent is-shadow"></div>
+  <a href="#" class="button is-baseGrey">
     <span>Download all</span>
   </a>
 
-  <a href="#" class="button is-turquoise circle-animation">
-    <div class="circle-animationContent is-shadow"></div>
-    <span>Download all</span>
+  <span style="padding: 40px; background: black; display: block;">
+    <a href="#" class="button is-negative">
+      <span>Download all</span>
+    </a>
+  </span>
+
+  <a href="#" class="buttonLink is-jade">
+    <svg width="8px" height="7px" viewbox="0 0 8 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <path class="buttonLink-media" d="M1.52245273,3.04854764 L3.68776506,0.883235307 C3.88225492,0.688745449 3.88821988,0.353713791 3.68525771,0.15075162 C3.4882313,-0.0462747862 3.15435142,-0.053333131 2.95277402,0.148244267 L0.147793654,2.95322464 C0.0109867585,3.09003153 -0.0325396573,3.29637729 0.0243152648,3.47738142 C-0.0325396573,3.65838554 0.0109867585,3.8647313 0.147793654,4.00153819 L2.95277402,6.80651857 C3.15435142,7.00809596 3.4882313,7.00103762 3.68525771,6.80401121 C3.88821988,6.60104904 3.88225492,6.26601738 3.68776506,6.07152753 L1.70421948,4.08798194 L7.99996393,4.08798194 L7.99996393,3.04854764 L1.52245273,3.04854764 Z" id="Combined-Shape" fill="#00B9BF" transform="translate(3.999982, 3.477381) scale(-1, 1) translate(-3.999982, -3.477381) "/>
+        </g>
+    </svg>
+    Download all
   </a>
 
   <br>
 
   <!-- small buttons -->
-  <a href="#" class="button button--small is-turquoiseOutline circle-animation">
-    <div class="circle-animationContent is-shadow"></div>
+  <a href="#" class="button button--small is-jadeOutline">
     <span>Download all</span>
   </a>
 
-  <a href="#" class="button button--small is-redOutline circle-animation">
-    <div class="circle-animationContent is-shadow"></div>
+  <a href="#" class="button button--small is-jade">
     <span>Download all</span>
   </a>
 
-  <a href="#" class="button button--small is-red circle-animation">
-    <div class="circle-animationContent is-shadow"></div>
+  <a href="#" class="button button--small is-baseGrey">
     <span>Download all</span>
   </a>
 
-  <a href="#" class="button button--small is-turquoise circle-animation">
-    <div class="circle-animationContent is-shadow"></div>
-    <span>Download all</span>
+  <span style="padding: 40px; background: black; display: block;">
+    <a href="#" class="button button--small is-negative">
+      <span>Download all</span>
+    </a>
+  </span>
+
+  <a href="#" class="buttonLink is-jade">
+    <svg width="8px" height="7px" viewbox="0 0 8 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <path class="buttonLink-media" d="M1.52245273,3.04854764 L3.68776506,0.883235307 C3.88225492,0.688745449 3.88821988,0.353713791 3.68525771,0.15075162 C3.4882313,-0.0462747862 3.15435142,-0.053333131 2.95277402,0.148244267 L0.147793654,2.95322464 C0.0109867585,3.09003153 -0.0325396573,3.29637729 0.0243152648,3.47738142 C-0.0325396573,3.65838554 0.0109867585,3.8647313 0.147793654,4.00153819 L2.95277402,6.80651857 C3.15435142,7.00809596 3.4882313,7.00103762 3.68525771,6.80401121 C3.88821988,6.60104904 3.88225492,6.26601738 3.68776506,6.07152753 L1.70421948,4.08798194 L7.99996393,4.08798194 L7.99996393,3.04854764 L1.52245273,3.04854764 Z" id="Combined-Shape" fill="#00B9BF" transform="translate(3.999982, 3.477381) scale(-1, 1) translate(-3.999982, -3.477381) "/>
+        </g>
+    </svg>
+    Download all
   </a>
 
-  <br>  
+  <br>
 
   <!-- large buttons -->
-  <a href="#" class="button button--large is-turquoiseOutline circle-animation">
-    <div class="circle-animationContent is-shadow"></div>
+  <a href="#" class="button button--large is-jadeOutline">
     <span>Download all</span>
   </a>
 
-  <a href="#" class="button button--large is-redOutline circle-animation">
-    <div class="circle-animationContent is-shadow"></div>
+  <a href="#" class="button button--large is-jade">
     <span>Download all</span>
   </a>
 
-  <a href="#" class="button button--large is-red circle-animation">
-    <div class="circle-animationContent is-shadow"></div>
+  <a href="#" class="button button--large is-baseGrey">
     <span>Download all</span>
   </a>
 
-  <a href="#" class="button button--large is-turquoise circle-animation">
-    <div class="circle-animationContent is-shadow"></div>
-    <span>Download all</span>
+  <span style="padding: 40px; background: black; display: block;">
+    <a href="#" class="button button--large is-negative">
+      <span>Download all</span>
+    </a>
+  </span>
+
+  <a href="#" class="buttonLink buttonLink--large is-jade">
+    <svg width="8px" height="7px" viewbox="0 0 8 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <path class="buttonLink-media" d="M1.52245273,3.04854764 L3.68776506,0.883235307 C3.88225492,0.688745449 3.88821988,0.353713791 3.68525771,0.15075162 C3.4882313,-0.0462747862 3.15435142,-0.053333131 2.95277402,0.148244267 L0.147793654,2.95322464 C0.0109867585,3.09003153 -0.0325396573,3.29637729 0.0243152648,3.47738142 C-0.0325396573,3.65838554 0.0109867585,3.8647313 0.147793654,4.00153819 L2.95277402,6.80651857 C3.15435142,7.00809596 3.4882313,7.00103762 3.68525771,6.80401121 C3.88821988,6.60104904 3.88225492,6.26601738 3.68776506,6.07152753 L1.70421948,4.08798194 L7.99996393,4.08798194 L7.99996393,3.04854764 L1.52245273,3.04854764 Z" id="Combined-Shape" fill="#00B9BF" transform="translate(3.999982, 3.477381) scale(-1, 1) translate(-3.999982, -3.477381) "/>
+        </g>
+    </svg>
+    Download all
   </a>
                 </div>
 
                 <div class="markup hljs">
-<pre>
-<span class="hljs-comment">&lt;!-- normal buttons --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button is-turquoiseOutline circle-animation"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"circle-animationContent is-shadow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+                    <pre>
+                    <span class="hljs-comment">&lt;!-- normal buttons --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button is-jadeOutline"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Download all<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button is-redOutline circle-animation"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"circle-animationContent is-shadow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button is-jade"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Download all<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button is-red circle-animation"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"circle-animationContent is-shadow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button is-baseGrey"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Download all<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button is-turquoise circle-animation"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"circle-animationContent is-shadow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Download all<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"padding: 40px; background: black; display: block;"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button is-negative"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Download all<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"buttonLink is-jade"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"8px"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"7px"</span> <span class="hljs-attribute">viewbox</span>=<span class="hljs-value">"0 0 8 7"</span> <span class="hljs-attribute">version</span>=<span class="hljs-value">"1.1"</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">"http://www.w3.org/2000/svg"</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">"http://www.w3.org/1999/xlink"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">g</span> <span class="hljs-attribute">stroke</span>=<span class="hljs-value">"none"</span> <span class="hljs-attribute">stroke-width</span>=<span class="hljs-value">"1"</span> <span class="hljs-attribute">fill</span>=<span class="hljs-value">"none"</span> <span class="hljs-attribute">fill-rule</span>=<span class="hljs-value">"evenodd"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">path</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"buttonLink-media"</span> <span class="hljs-attribute">d</span>=<span class="hljs-value">"M1.52245273,3.04854764 L3.68776506,0.883235307 C3.88225492,0.688745449 3.88821988,0.353713791 3.68525771,0.15075162 C3.4882313,-0.0462747862 3.15435142,-0.053333131 2.95277402,0.148244267 L0.147793654,2.95322464 C0.0109867585,3.09003153 -0.0325396573,3.29637729 0.0243152648,3.47738142 C-0.0325396573,3.65838554 0.0109867585,3.8647313 0.147793654,4.00153819 L2.95277402,6.80651857 C3.15435142,7.00809596 3.4882313,7.00103762 3.68525771,6.80401121 C3.88821988,6.60104904 3.88225492,6.26601738 3.68776506,6.07152753 L1.70421948,4.08798194 L7.99996393,4.08798194 L7.99996393,3.04854764 L1.52245273,3.04854764 Z"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"Combined-Shape"</span> <span class="hljs-attribute">fill</span>=<span class="hljs-value">"#00B9BF"</span> <span class="hljs-attribute">transform</span>=<span class="hljs-value">"translate(3.999982, 3.477381) scale(-1, 1) translate(-3.999982, -3.477381) "</span>/&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+    Download all
   <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
 
   <span class="hljs-comment">&lt;!-- small buttons --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--small is-turquoiseOutline circle-animation"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"circle-animationContent is-shadow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--small is-jadeOutline"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Download all<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--small is-redOutline circle-animation"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"circle-animationContent is-shadow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--small is-jade"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Download all<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--small is-red circle-animation"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"circle-animationContent is-shadow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--small is-baseGrey"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Download all<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--small is-turquoise circle-animation"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"circle-animationContent is-shadow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Download all<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"padding: 40px; background: black; display: block;"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--small is-negative"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Download all<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"buttonLink is-jade"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"8px"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"7px"</span> <span class="hljs-attribute">viewbox</span>=<span class="hljs-value">"0 0 8 7"</span> <span class="hljs-attribute">version</span>=<span class="hljs-value">"1.1"</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">"http://www.w3.org/2000/svg"</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">"http://www.w3.org/1999/xlink"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">g</span> <span class="hljs-attribute">stroke</span>=<span class="hljs-value">"none"</span> <span class="hljs-attribute">stroke-width</span>=<span class="hljs-value">"1"</span> <span class="hljs-attribute">fill</span>=<span class="hljs-value">"none"</span> <span class="hljs-attribute">fill-rule</span>=<span class="hljs-value">"evenodd"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">path</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"buttonLink-media"</span> <span class="hljs-attribute">d</span>=<span class="hljs-value">"M1.52245273,3.04854764 L3.68776506,0.883235307 C3.88225492,0.688745449 3.88821988,0.353713791 3.68525771,0.15075162 C3.4882313,-0.0462747862 3.15435142,-0.053333131 2.95277402,0.148244267 L0.147793654,2.95322464 C0.0109867585,3.09003153 -0.0325396573,3.29637729 0.0243152648,3.47738142 C-0.0325396573,3.65838554 0.0109867585,3.8647313 0.147793654,4.00153819 L2.95277402,6.80651857 C3.15435142,7.00809596 3.4882313,7.00103762 3.68525771,6.80401121 C3.88821988,6.60104904 3.88225492,6.26601738 3.68776506,6.07152753 L1.70421948,4.08798194 L7.99996393,4.08798194 L7.99996393,3.04854764 L1.52245273,3.04854764 Z"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"Combined-Shape"</span> <span class="hljs-attribute">fill</span>=<span class="hljs-value">"#00B9BF"</span> <span class="hljs-attribute">transform</span>=<span class="hljs-value">"translate(3.999982, 3.477381) scale(-1, 1) translate(-3.999982, -3.477381) "</span>/&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+    Download all
   <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>  
+  <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
 
   <span class="hljs-comment">&lt;!-- large buttons --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--large is-turquoiseOutline circle-animation"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"circle-animationContent is-shadow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--large is-jadeOutline"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Download all<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--large is-redOutline circle-animation"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"circle-animationContent is-shadow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--large is-jade"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Download all<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--large is-red circle-animation"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"circle-animationContent is-shadow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--large is-baseGrey"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Download all<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--large is-turquoise circle-animation"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"circle-animationContent is-shadow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Download all<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"padding: 40px; background: black; display: block;"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"button button--large is-negative"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Download all<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"buttonLink buttonLink--large is-jade"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">svg</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"8px"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"7px"</span> <span class="hljs-attribute">viewbox</span>=<span class="hljs-value">"0 0 8 7"</span> <span class="hljs-attribute">version</span>=<span class="hljs-value">"1.1"</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">"http://www.w3.org/2000/svg"</span> <span class="hljs-attribute">xmlns:xlink</span>=<span class="hljs-value">"http://www.w3.org/1999/xlink"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">g</span> <span class="hljs-attribute">stroke</span>=<span class="hljs-value">"none"</span> <span class="hljs-attribute">stroke-width</span>=<span class="hljs-value">"1"</span> <span class="hljs-attribute">fill</span>=<span class="hljs-value">"none"</span> <span class="hljs-attribute">fill-rule</span>=<span class="hljs-value">"evenodd"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">path</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"buttonLink-media"</span> <span class="hljs-attribute">d</span>=<span class="hljs-value">"M1.52245273,3.04854764 L3.68776506,0.883235307 C3.88225492,0.688745449 3.88821988,0.353713791 3.68525771,0.15075162 C3.4882313,-0.0462747862 3.15435142,-0.053333131 2.95277402,0.148244267 L0.147793654,2.95322464 C0.0109867585,3.09003153 -0.0325396573,3.29637729 0.0243152648,3.47738142 C-0.0325396573,3.65838554 0.0109867585,3.8647313 0.147793654,4.00153819 L2.95277402,6.80651857 C3.15435142,7.00809596 3.4882313,7.00103762 3.68525771,6.80401121 C3.88821988,6.60104904 3.88225492,6.26601738 3.68776506,6.07152753 L1.70421948,4.08798194 L7.99996393,4.08798194 L7.99996393,3.04854764 L1.52245273,3.04854764 Z"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"Combined-Shape"</span> <span class="hljs-attribute">fill</span>=<span class="hljs-value">"#00B9BF"</span> <span class="hljs-attribute">transform</span>=<span class="hljs-value">"translate(3.999982, 3.477381) scale(-1, 1) translate(-3.999982, -3.477381) "</span>/&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">g</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">svg</span>&gt;</span>
+    Download all
   <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-</pre>
+                    </pre>
+                </div>
+
+        </div>
+        <div class="section" id="Cards-" data-section="Cards" data-heading="">
+
+            <div class="comment">
+                <h1>Cards</h1>
+                
+            </div>
+
+                <div class="result">
+                    <div style="width: 300px">
+    <a href="#" class="box box--bgCartoRed box-animationJade js-boxContent">
+      <div class="circle-content">
+        <p>Click to Download</p>
+        <svg width="21px" height="15px" viewbox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path d="M0.244060027,9.21956273 C-0.0820328754,8.90226422 -0.0811578497,8.3825853 0.245518404,8.06585289 L2.34499668,6.0281794 C2.67167293,5.71088089 3.2066053,5.71088089 3.53357323,6.0276133 L6.94325662,9.32910289 C7.27022455,9.6458353 7.80457357,9.6452692 8.13095814,9.32797069 L17.4750657,0.238967592 C17.8014503,-0.078330919 18.3363826,-0.0800292161 18.6642256,0.236137096 L20.7532036,2.24890223 C21.0810465,2.56506854 21.0825049,3.08304916 20.7561203,3.40063072 L9.42482945,14.422862 C9.09844487,14.7401605 8.45355094,15 7.99153739,15 L7.01267533,15 C6.55066177,15 5.90635119,14.7395944 5.58025829,14.4222959 L0.244060027,9.21956273" fill="#FFFFFF"/>
+        </svg>
+      </div>
+      text
+    </a>
+  </div>
+
+  <br>
+  <div style="width: 300px">
+    <a href="#" class="box box--bgBuilderBlue box-animationCartoRed js-boxContent">
+      <div class="circle-content">
+        <p>Click to Download</p>
+        <svg width="21px" height="15px" viewbox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path d="M0.244060027,9.21956273 C-0.0820328754,8.90226422 -0.0811578497,8.3825853 0.245518404,8.06585289 L2.34499668,6.0281794 C2.67167293,5.71088089 3.2066053,5.71088089 3.53357323,6.0276133 L6.94325662,9.32910289 C7.27022455,9.6458353 7.80457357,9.6452692 8.13095814,9.32797069 L17.4750657,0.238967592 C17.8014503,-0.078330919 18.3363826,-0.0800292161 18.6642256,0.236137096 L20.7532036,2.24890223 C21.0810465,2.56506854 21.0825049,3.08304916 20.7561203,3.40063072 L9.42482945,14.422862 C9.09844487,14.7401605 8.45355094,15 7.99153739,15 L7.01267533,15 C6.55066177,15 5.90635119,14.7395944 5.58025829,14.4222959 L0.244060027,9.21956273" fill="#FFFFFF"/>
+        </svg>
+      </div>
+      text
+    </a>
+  </div>
+
+  <br>
+  <div style="width: 300px">
+    <a href="#" class="box box--bgBaseGrey box-animationCartoRed js-boxContent">
+      <div class="circle-content">
+        <p>Click to Download</p>
+        <svg width="21px" height="15px" viewbox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path d="M0.244060027,9.21956273 C-0.0820328754,8.90226422 -0.0811578497,8.3825853 0.245518404,8.06585289 L2.34499668,6.0281794 C2.67167293,5.71088089 3.2066053,5.71088089 3.53357323,6.0276133 L6.94325662,9.32910289 C7.27022455,9.6458353 7.80457357,9.6452692 8.13095814,9.32797069 L17.4750657,0.238967592 C17.8014503,-0.078330919 18.3363826,-0.0800292161 18.6642256,0.236137096 L20.7532036,2.24890223 C21.0810465,2.56506854 21.0825049,3.08304916 20.7561203,3.40063072 L9.42482945,14.422862 C9.09844487,14.7401605 8.45355094,15 7.99153739,15 L7.01267533,15 C6.55066177,15 5.90635119,14.7395944 5.58025829,14.4222959 L0.244060027,9.21956273" fill="#FFFFFF"/>
+        </svg>
+      </div>
+      text
+    </a>
+  </div>
+
+  <br>
+  <div style="width: 300px">
+    <a href="#" class="box box--bgLightGrey box-animationCartoRed js-boxContent">
+      <div class="circle-content">
+        <p>Click to Download</p>
+        <svg width="21px" height="15px" viewbox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path d="M0.244060027,9.21956273 C-0.0820328754,8.90226422 -0.0811578497,8.3825853 0.245518404,8.06585289 L2.34499668,6.0281794 C2.67167293,5.71088089 3.2066053,5.71088089 3.53357323,6.0276133 L6.94325662,9.32910289 C7.27022455,9.6458353 7.80457357,9.6452692 8.13095814,9.32797069 L17.4750657,0.238967592 C17.8014503,-0.078330919 18.3363826,-0.0800292161 18.6642256,0.236137096 L20.7532036,2.24890223 C21.0810465,2.56506854 21.0825049,3.08304916 20.7561203,3.40063072 L9.42482945,14.422862 C9.09844487,14.7401605 8.45355094,15 7.99153739,15 L7.01267533,15 C6.55066177,15 5.90635119,14.7395944 5.58025829,14.4222959 L0.244060027,9.21956273" fill="#FFFFFF"/>
+        </svg>
+      </div>
+      text
+    </a>
+  </div>
+
+  <br>
+  <div style="width: 300px">
+    <a href="#" class="box box--bgWhite box-animationBaseGrey js-boxContent">
+      <div class="circle-content">
+        <p>Click to Download</p>
+        <svg width="21px" height="15px" viewbox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path d="M0.244060027,9.21956273 C-0.0820328754,8.90226422 -0.0811578497,8.3825853 0.245518404,8.06585289 L2.34499668,6.0281794 C2.67167293,5.71088089 3.2066053,5.71088089 3.53357323,6.0276133 L6.94325662,9.32910289 C7.27022455,9.6458353 7.80457357,9.6452692 8.13095814,9.32797069 L17.4750657,0.238967592 C17.8014503,-0.078330919 18.3363826,-0.0800292161 18.6642256,0.236137096 L20.7532036,2.24890223 C21.0810465,2.56506854 21.0825049,3.08304916 20.7561203,3.40063072 L9.42482945,14.422862 C9.09844487,14.7401605 8.45355094,15 7.99153739,15 L7.01267533,15 C6.55066177,15 5.90635119,14.7395944 5.58025829,14.4222959 L0.244060027,9.21956273" fill="#FFFFFF"/>
+        </svg>
+      </div>
+      text
+    </a>
+  </div>
+
+  <br>
+  <div style="width: 300px">
+    <div class="box box--bgCartoRed box-animationJade js-boxContent">
+      <div class="circle-content">
+        <p>Click to Copy</p>
+        <svg width="21px" height="15px" viewbox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path d="M0.244060027,9.21956273 C-0.0820328754,8.90226422 -0.0811578497,8.3825853 0.245518404,8.06585289 L2.34499668,6.0281794 C2.67167293,5.71088089 3.2066053,5.71088089 3.53357323,6.0276133 L6.94325662,9.32910289 C7.27022455,9.6458353 7.80457357,9.6452692 8.13095814,9.32797069 L17.4750657,0.238967592 C17.8014503,-0.078330919 18.3363826,-0.0800292161 18.6642256,0.236137096 L20.7532036,2.24890223 C21.0810465,2.56506854 21.0825049,3.08304916 20.7561203,3.40063072 L9.42482945,14.422862 C9.09844487,14.7401605 8.45355094,15 7.99153739,15 L7.01267533,15 C6.55066177,15 5.90635119,14.7395944 5.58025829,14.4222959 L0.244060027,9.21956273" fill="#FFFFFF"/>
+        </svg>
+      </div>
+      <div class="box-content u-flex u-flex--column u-justifySpace">
+        <h3 class="title is-caption is-txtWhite">Navy Blue</h3>
+        <ul class="title is-caption is-txtWhite">
+          <li>#162745</li>
+          <li>CMYK: 96, 82, 45, 47</li>
+          <li>PANTONE+ Solid Coated 533 C</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+                </div>
+
+                <div class="markup hljs">
+                    <pre>
+                    &lt;div style="width: 300px"&gt;
+    &lt;a href="#" class="box box--bgCartoRed box-animationJade js-boxContent"&gt;
+      &lt;div class="circle-content"&gt;
+        &lt;p&gt;Click to Download&lt;/p&gt;
+        &lt;svg width="21px" height="15px" viewbox="<span class="hljs-number">0 0 21 15</span>" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+          &lt;path d="M<span class="hljs-number">0.244060027</span>,<span class="hljs-number">9.21956273</span> C-<span class="hljs-number">0.08203287</span><span class="hljs-number">54,8.90226</span>422 -<span class="hljs-number">0.081157849</span><span class="hljs-number">7,8.38258</span><span class="hljs-number">53 0.2455184</span><span class="hljs-number">04,8.06585</span>289 L<span class="hljs-number">2.34499668</span>,<span class="hljs-number">6.0281794</span> C<span class="hljs-number">2.67167293</span>,<span class="hljs-number">5.71088089</span> <span class="hljs-number">3.2066053</span>,<span class="hljs-number">5.71088089</span> <span class="hljs-number">3.53357323</span>,<span class="hljs-number">6.0276133</span> L<span class="hljs-number">6.94325662</span>,<span class="hljs-number">9.32910289</span> C<span class="hljs-number">7.27022455</span>,<span class="hljs-number">9.6458353</span> <span class="hljs-number">7.80457357</span>,<span class="hljs-number">9.6452692</span> <span class="hljs-number">8.13095814</span>,<span class="hljs-number">9.32797069</span> L<span class="hljs-number">17.4750657</span>,<span class="hljs-number">0.238967592</span> C<span class="hljs-number">17.8014503</span>,-<span class="hljs-number">0.07833091</span><span class="hljs-number">9 18.33638</span>26,-<span class="hljs-number">0.080029216</span><span class="hljs-number">1 18.664225</span><span class="hljs-number">6,0.236137</span>096 L<span class="hljs-number">20.7532036</span>,<span class="hljs-number">2.24890223</span> C<span class="hljs-number">21.0810465</span>,<span class="hljs-number">2.56506854</span> <span class="hljs-number">21.0825049</span>,<span class="hljs-number">3.08304916</span> <span class="hljs-number">20.7561203</span>,<span class="hljs-number">3.40063072</span> L<span class="hljs-number">9.42482945</span>,<span class="hljs-number">14.422862</span> C<span class="hljs-number">9.09844487</span>,<span class="hljs-number">14.7401605</span> <span class="hljs-number">8.45355094</span>,<span class="hljs-number">15 7.99153</span>739,15 L<span class="hljs-number">7.01267533</span>,15 C<span class="hljs-number">6.55066177</span>,<span class="hljs-number">15 5.90635</span><span class="hljs-number">119,14.73959</span><span class="hljs-number">44 5.58025</span><span class="hljs-number">829,14.42</span>22959 L<span class="hljs-number">0.244060027</span>,<span class="hljs-number">9.21956273</span>" fill="#FFFFFF"/&gt;
+        &lt;/svg&gt;
+      &lt;/div&gt;
+      text
+    &lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;br&gt;
+  &lt;div style="width: 300px"&gt;
+    &lt;a href="#" class="box box--bgBuilderBlue box-animationCartoRed js-boxContent"&gt;
+      &lt;div class="circle-content"&gt;
+        &lt;p&gt;Click to Download&lt;/p&gt;
+        &lt;svg width="21px" height="15px" viewbox="<span class="hljs-number">0 0 21 15</span>" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+          &lt;path d="M<span class="hljs-number">0.244060027</span>,<span class="hljs-number">9.21956273</span> C-<span class="hljs-number">0.08203287</span><span class="hljs-number">54,8.90226</span>422 -<span class="hljs-number">0.081157849</span><span class="hljs-number">7,8.38258</span><span class="hljs-number">53 0.2455184</span><span class="hljs-number">04,8.06585</span>289 L<span class="hljs-number">2.34499668</span>,<span class="hljs-number">6.0281794</span> C<span class="hljs-number">2.67167293</span>,<span class="hljs-number">5.71088089</span> <span class="hljs-number">3.2066053</span>,<span class="hljs-number">5.71088089</span> <span class="hljs-number">3.53357323</span>,<span class="hljs-number">6.0276133</span> L<span class="hljs-number">6.94325662</span>,<span class="hljs-number">9.32910289</span> C<span class="hljs-number">7.27022455</span>,<span class="hljs-number">9.6458353</span> <span class="hljs-number">7.80457357</span>,<span class="hljs-number">9.6452692</span> <span class="hljs-number">8.13095814</span>,<span class="hljs-number">9.32797069</span> L<span class="hljs-number">17.4750657</span>,<span class="hljs-number">0.238967592</span> C<span class="hljs-number">17.8014503</span>,-<span class="hljs-number">0.07833091</span><span class="hljs-number">9 18.33638</span>26,-<span class="hljs-number">0.080029216</span><span class="hljs-number">1 18.664225</span><span class="hljs-number">6,0.236137</span>096 L<span class="hljs-number">20.7532036</span>,<span class="hljs-number">2.24890223</span> C<span class="hljs-number">21.0810465</span>,<span class="hljs-number">2.56506854</span> <span class="hljs-number">21.0825049</span>,<span class="hljs-number">3.08304916</span> <span class="hljs-number">20.7561203</span>,<span class="hljs-number">3.40063072</span> L<span class="hljs-number">9.42482945</span>,<span class="hljs-number">14.422862</span> C<span class="hljs-number">9.09844487</span>,<span class="hljs-number">14.7401605</span> <span class="hljs-number">8.45355094</span>,<span class="hljs-number">15 7.99153</span>739,15 L<span class="hljs-number">7.01267533</span>,15 C<span class="hljs-number">6.55066177</span>,<span class="hljs-number">15 5.90635</span><span class="hljs-number">119,14.73959</span><span class="hljs-number">44 5.58025</span><span class="hljs-number">829,14.42</span>22959 L<span class="hljs-number">0.244060027</span>,<span class="hljs-number">9.21956273</span>" fill="#FFFFFF"/&gt;
+        &lt;/svg&gt;
+      &lt;/div&gt;
+      text
+    &lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;br&gt;
+  &lt;div style="width: 300px"&gt;
+    &lt;a href="#" class="box box--bgBaseGrey box-animationCartoRed js-boxContent"&gt;
+      &lt;div class="circle-content"&gt;
+        &lt;p&gt;Click to Download&lt;/p&gt;
+        &lt;svg width="21px" height="15px" viewbox="<span class="hljs-number">0 0 21 15</span>" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+          &lt;path d="M<span class="hljs-number">0.244060027</span>,<span class="hljs-number">9.21956273</span> C-<span class="hljs-number">0.08203287</span><span class="hljs-number">54,8.90226</span>422 -<span class="hljs-number">0.081157849</span><span class="hljs-number">7,8.38258</span><span class="hljs-number">53 0.2455184</span><span class="hljs-number">04,8.06585</span>289 L<span class="hljs-number">2.34499668</span>,<span class="hljs-number">6.0281794</span> C<span class="hljs-number">2.67167293</span>,<span class="hljs-number">5.71088089</span> <span class="hljs-number">3.2066053</span>,<span class="hljs-number">5.71088089</span> <span class="hljs-number">3.53357323</span>,<span class="hljs-number">6.0276133</span> L<span class="hljs-number">6.94325662</span>,<span class="hljs-number">9.32910289</span> C<span class="hljs-number">7.27022455</span>,<span class="hljs-number">9.6458353</span> <span class="hljs-number">7.80457357</span>,<span class="hljs-number">9.6452692</span> <span class="hljs-number">8.13095814</span>,<span class="hljs-number">9.32797069</span> L<span class="hljs-number">17.4750657</span>,<span class="hljs-number">0.238967592</span> C<span class="hljs-number">17.8014503</span>,-<span class="hljs-number">0.07833091</span><span class="hljs-number">9 18.33638</span>26,-<span class="hljs-number">0.080029216</span><span class="hljs-number">1 18.664225</span><span class="hljs-number">6,0.236137</span>096 L<span class="hljs-number">20.7532036</span>,<span class="hljs-number">2.24890223</span> C<span class="hljs-number">21.0810465</span>,<span class="hljs-number">2.56506854</span> <span class="hljs-number">21.0825049</span>,<span class="hljs-number">3.08304916</span> <span class="hljs-number">20.7561203</span>,<span class="hljs-number">3.40063072</span> L<span class="hljs-number">9.42482945</span>,<span class="hljs-number">14.422862</span> C<span class="hljs-number">9.09844487</span>,<span class="hljs-number">14.7401605</span> <span class="hljs-number">8.45355094</span>,<span class="hljs-number">15 7.99153</span>739,15 L<span class="hljs-number">7.01267533</span>,15 C<span class="hljs-number">6.55066177</span>,<span class="hljs-number">15 5.90635</span><span class="hljs-number">119,14.73959</span><span class="hljs-number">44 5.58025</span><span class="hljs-number">829,14.42</span>22959 L<span class="hljs-number">0.244060027</span>,<span class="hljs-number">9.21956273</span>" fill="#FFFFFF"/&gt;
+        &lt;/svg&gt;
+      &lt;/div&gt;
+      text
+    &lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;br&gt;
+  &lt;div style="width: 300px"&gt;
+    &lt;a href="#" class="box box--bgLightGrey box-animationCartoRed js-boxContent"&gt;
+      &lt;div class="circle-content"&gt;
+        &lt;p&gt;Click to Download&lt;/p&gt;
+        &lt;svg width="21px" height="15px" viewbox="<span class="hljs-number">0 0 21 15</span>" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+          &lt;path d="M<span class="hljs-number">0.244060027</span>,<span class="hljs-number">9.21956273</span> C-<span class="hljs-number">0.08203287</span><span class="hljs-number">54,8.90226</span>422 -<span class="hljs-number">0.081157849</span><span class="hljs-number">7,8.38258</span><span class="hljs-number">53 0.2455184</span><span class="hljs-number">04,8.06585</span>289 L<span class="hljs-number">2.34499668</span>,<span class="hljs-number">6.0281794</span> C<span class="hljs-number">2.67167293</span>,<span class="hljs-number">5.71088089</span> <span class="hljs-number">3.2066053</span>,<span class="hljs-number">5.71088089</span> <span class="hljs-number">3.53357323</span>,<span class="hljs-number">6.0276133</span> L<span class="hljs-number">6.94325662</span>,<span class="hljs-number">9.32910289</span> C<span class="hljs-number">7.27022455</span>,<span class="hljs-number">9.6458353</span> <span class="hljs-number">7.80457357</span>,<span class="hljs-number">9.6452692</span> <span class="hljs-number">8.13095814</span>,<span class="hljs-number">9.32797069</span> L<span class="hljs-number">17.4750657</span>,<span class="hljs-number">0.238967592</span> C<span class="hljs-number">17.8014503</span>,-<span class="hljs-number">0.07833091</span><span class="hljs-number">9 18.33638</span>26,-<span class="hljs-number">0.080029216</span><span class="hljs-number">1 18.664225</span><span class="hljs-number">6,0.236137</span>096 L<span class="hljs-number">20.7532036</span>,<span class="hljs-number">2.24890223</span> C<span class="hljs-number">21.0810465</span>,<span class="hljs-number">2.56506854</span> <span class="hljs-number">21.0825049</span>,<span class="hljs-number">3.08304916</span> <span class="hljs-number">20.7561203</span>,<span class="hljs-number">3.40063072</span> L<span class="hljs-number">9.42482945</span>,<span class="hljs-number">14.422862</span> C<span class="hljs-number">9.09844487</span>,<span class="hljs-number">14.7401605</span> <span class="hljs-number">8.45355094</span>,<span class="hljs-number">15 7.99153</span>739,15 L<span class="hljs-number">7.01267533</span>,15 C<span class="hljs-number">6.55066177</span>,<span class="hljs-number">15 5.90635</span><span class="hljs-number">119,14.73959</span><span class="hljs-number">44 5.58025</span><span class="hljs-number">829,14.42</span>22959 L<span class="hljs-number">0.244060027</span>,<span class="hljs-number">9.21956273</span>" fill="#FFFFFF"/&gt;
+        &lt;/svg&gt;
+      &lt;/div&gt;
+      text
+    &lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;br&gt;
+  &lt;div style="width: 300px"&gt;
+    &lt;a href="#" class="box box--bgWhite box-animationBaseGrey js-boxContent"&gt;
+      &lt;div class="circle-content"&gt;
+        &lt;p&gt;Click to Download&lt;/p&gt;
+        &lt;svg width="21px" height="15px" viewbox="<span class="hljs-number">0 0 21 15</span>" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+          &lt;path d="M<span class="hljs-number">0.244060027</span>,<span class="hljs-number">9.21956273</span> C-<span class="hljs-number">0.08203287</span><span class="hljs-number">54,8.90226</span>422 -<span class="hljs-number">0.081157849</span><span class="hljs-number">7,8.38258</span><span class="hljs-number">53 0.2455184</span><span class="hljs-number">04,8.06585</span>289 L<span class="hljs-number">2.34499668</span>,<span class="hljs-number">6.0281794</span> C<span class="hljs-number">2.67167293</span>,<span class="hljs-number">5.71088089</span> <span class="hljs-number">3.2066053</span>,<span class="hljs-number">5.71088089</span> <span class="hljs-number">3.53357323</span>,<span class="hljs-number">6.0276133</span> L<span class="hljs-number">6.94325662</span>,<span class="hljs-number">9.32910289</span> C<span class="hljs-number">7.27022455</span>,<span class="hljs-number">9.6458353</span> <span class="hljs-number">7.80457357</span>,<span class="hljs-number">9.6452692</span> <span class="hljs-number">8.13095814</span>,<span class="hljs-number">9.32797069</span> L<span class="hljs-number">17.4750657</span>,<span class="hljs-number">0.238967592</span> C<span class="hljs-number">17.8014503</span>,-<span class="hljs-number">0.07833091</span><span class="hljs-number">9 18.33638</span>26,-<span class="hljs-number">0.080029216</span><span class="hljs-number">1 18.664225</span><span class="hljs-number">6,0.236137</span>096 L<span class="hljs-number">20.7532036</span>,<span class="hljs-number">2.24890223</span> C<span class="hljs-number">21.0810465</span>,<span class="hljs-number">2.56506854</span> <span class="hljs-number">21.0825049</span>,<span class="hljs-number">3.08304916</span> <span class="hljs-number">20.7561203</span>,<span class="hljs-number">3.40063072</span> L<span class="hljs-number">9.42482945</span>,<span class="hljs-number">14.422862</span> C<span class="hljs-number">9.09844487</span>,<span class="hljs-number">14.7401605</span> <span class="hljs-number">8.45355094</span>,<span class="hljs-number">15 7.99153</span>739,15 L<span class="hljs-number">7.01267533</span>,15 C<span class="hljs-number">6.55066177</span>,<span class="hljs-number">15 5.90635</span><span class="hljs-number">119,14.73959</span><span class="hljs-number">44 5.58025</span><span class="hljs-number">829,14.42</span>22959 L<span class="hljs-number">0.244060027</span>,<span class="hljs-number">9.21956273</span>" fill="#FFFFFF"/&gt;
+        &lt;/svg&gt;
+      &lt;/div&gt;
+      text
+    &lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;br&gt;
+  &lt;div style="width: 300px"&gt;
+    &lt;div class="box box--bgCartoRed box-animationJade js-boxContent"&gt;
+      &lt;div class="circle-content"&gt;
+        &lt;p&gt;Click to Copy&lt;/p&gt;
+        &lt;svg width="21px" height="15px" viewbox="<span class="hljs-number">0 0 21 15</span>" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+          &lt;path d="M<span class="hljs-number">0.244060027</span>,<span class="hljs-number">9.21956273</span> C-<span class="hljs-number">0.08203287</span><span class="hljs-number">54,8.90226</span>422 -<span class="hljs-number">0.081157849</span><span class="hljs-number">7,8.38258</span><span class="hljs-number">53 0.2455184</span><span class="hljs-number">04,8.06585</span>289 L<span class="hljs-number">2.34499668</span>,<span class="hljs-number">6.0281794</span> C<span class="hljs-number">2.67167293</span>,<span class="hljs-number">5.71088089</span> <span class="hljs-number">3.2066053</span>,<span class="hljs-number">5.71088089</span> <span class="hljs-number">3.53357323</span>,<span class="hljs-number">6.0276133</span> L<span class="hljs-number">6.94325662</span>,<span class="hljs-number">9.32910289</span> C<span class="hljs-number">7.27022455</span>,<span class="hljs-number">9.6458353</span> <span class="hljs-number">7.80457357</span>,<span class="hljs-number">9.6452692</span> <span class="hljs-number">8.13095814</span>,<span class="hljs-number">9.32797069</span> L<span class="hljs-number">17.4750657</span>,<span class="hljs-number">0.238967592</span> C<span class="hljs-number">17.8014503</span>,-<span class="hljs-number">0.07833091</span><span class="hljs-number">9 18.33638</span>26,-<span class="hljs-number">0.080029216</span><span class="hljs-number">1 18.664225</span><span class="hljs-number">6,0.236137</span>096 L<span class="hljs-number">20.7532036</span>,<span class="hljs-number">2.24890223</span> C<span class="hljs-number">21.0810465</span>,<span class="hljs-number">2.56506854</span> <span class="hljs-number">21.0825049</span>,<span class="hljs-number">3.08304916</span> <span class="hljs-number">20.7561203</span>,<span class="hljs-number">3.40063072</span> L<span class="hljs-number">9.42482945</span>,<span class="hljs-number">14.422862</span> C<span class="hljs-number">9.09844487</span>,<span class="hljs-number">14.7401605</span> <span class="hljs-number">8.45355094</span>,<span class="hljs-number">15 7.99153</span>739,15 L<span class="hljs-number">7.01267533</span>,15 C<span class="hljs-number">6.55066177</span>,<span class="hljs-number">15 5.90635</span><span class="hljs-number">119,14.73959</span><span class="hljs-number">44 5.58025</span><span class="hljs-number">829,14.42</span>22959 L<span class="hljs-number">0.244060027</span>,<span class="hljs-number">9.21956273</span>" fill="#FFFFFF"/&gt;
+        &lt;/svg&gt;
+      &lt;/div&gt;
+      &lt;div class="box-content u-flex u-flex--column u-justifySpace"&gt;
+        &lt;h3 class="title is-caption is-txtWhite"&gt;Navy Blue&lt;/h3&gt;
+        &lt;ul class="title is-caption is-txtWhite"&gt;
+          &lt;li&gt;#162745&lt;/li&gt;
+          &lt;li&gt;CMYK: 96, 82, 45, 47&lt;/li&gt;
+          &lt;li&gt;PANTONE+ Solid Coated 533 C&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+                    </pre>
                 </div>
 
         </div>
@@ -451,120 +678,110 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
                 <div class="result">
                     <!-- texts -->
-  <h1 class="title is-title is-cartoRed">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtCartoRed">CARTO Red</h1>
   <br>
-  <h1 class="title is-title is-solutionsRed">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtSolutionsRed">Solutions Red</h1>
   <br>
-  <h1 class="title is-title is-builderBlue">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtBuilderBlue">Builder Blue</h1>
   <br>
-  <h1 class="title is-title is-engineBlue">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtEngineBlue">Engine Blue</h1>
   <br>
-  <h1 class="title is-title is-integrationsBlue">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtLDSBlue">LDS Blue</h1>
   <br>
-  <h1 class="title is-title is-dataPurple">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtGuidesPurple">Guides Purple</h1>
   <br>
-  <h1 class="title is-title is-learnPurple">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtTutorialsPurple">Tutorials Purple</h1>
   <br>
-  <h1 class="title is-title is-tutorialsPurple">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtDocsPurple">Docs Purple</h1>
   <br>
-  <h1 class="title is-title is-docsPurple">The precipitating manner in which</h1>
-  <br>
-  <h1 class="title is-title is-baseGrey">The precipitating manner in which</h1>
+  <h1 class="title is-title is-txtBaseGrey">Base Grey</h1>
   <br>
   <br>
   <br>
 
   <!-- box -->
-  <div class="box is-bgCartoRed">
+  <div class="block is-bgCartoRed">
 
   </div>
-  <div class="box is-bgSolutionsRed">
+  <div class="block is-bgSolutionsRed">
 
   </div>
-  <div class="box is-bgBuilderBlue">
+  <div class="block is-bgBuilderBlue">
 
   </div>
-  <div class="box is-bgEngineBlue">
+  <div class="block is-bgEngineBlue">
 
   </div>
-  <div class="box is-bgIntegrationsBlue">
+  <div class="block is-bgLDSBlue">
 
   </div>
-  <div class="box is-bgDataPurple">
+  <div class="block is-bgGuidesPurple">
 
   </div>
-  <div class="box is-bgLearnPurple">
+  <div class="block is-bgTutorialsPurple">
 
   </div>
-  <div class="box is-bgTutorialsPurple">
+  <div class="block is-bgDocsPurple">
 
   </div>
-  <div class="box is-bgDocsPurple">
-
-  </div>
-  <div class="box is-bgBaseGrey">
+  <div class="block is-bgBaseGrey">
 
   </div>
                 </div>
 
                 <div class="markup hljs">
-<pre>
-<span class="hljs-comment">&lt;!-- texts --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title is-title is-cartoRed"</span>&gt;</span>The precipitating manner in which<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+                    <pre>
+                    <span class="hljs-comment">&lt;!-- texts --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title is-title is-txtCartoRed"</span>&gt;</span>CARTO Red<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title is-title is-solutionsRed"</span>&gt;</span>The precipitating manner in which<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title is-title is-txtSolutionsRed"</span>&gt;</span>Solutions Red<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title is-title is-builderBlue"</span>&gt;</span>The precipitating manner in which<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title is-title is-txtBuilderBlue"</span>&gt;</span>Builder Blue<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title is-title is-engineBlue"</span>&gt;</span>The precipitating manner in which<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title is-title is-txtEngineBlue"</span>&gt;</span>Engine Blue<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title is-title is-integrationsBlue"</span>&gt;</span>The precipitating manner in which<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title is-title is-txtLDSBlue"</span>&gt;</span>LDS Blue<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title is-title is-dataPurple"</span>&gt;</span>The precipitating manner in which<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title is-title is-txtGuidesPurple"</span>&gt;</span>Guides Purple<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title is-title is-learnPurple"</span>&gt;</span>The precipitating manner in which<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title is-title is-txtTutorialsPurple"</span>&gt;</span>Tutorials Purple<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title is-title is-tutorialsPurple"</span>&gt;</span>The precipitating manner in which<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title is-title is-txtDocsPurple"</span>&gt;</span>Docs Purple<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title is-title is-docsPurple"</span>&gt;</span>The precipitating manner in which<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title is-title is-baseGrey"</span>&gt;</span>The precipitating manner in which<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title is-title is-txtBaseGrey"</span>&gt;</span>Base Grey<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
 
   <span class="hljs-comment">&lt;!-- box --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"box is-bgCartoRed"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"block is-bgCartoRed"</span>&gt;</span>
 
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"box is-bgSolutionsRed"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"block is-bgSolutionsRed"</span>&gt;</span>
 
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"box is-bgBuilderBlue"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"block is-bgBuilderBlue"</span>&gt;</span>
 
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"box is-bgEngineBlue"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"block is-bgEngineBlue"</span>&gt;</span>
 
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"box is-bgIntegrationsBlue"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"block is-bgLDSBlue"</span>&gt;</span>
 
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"box is-bgDataPurple"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"block is-bgGuidesPurple"</span>&gt;</span>
 
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"box is-bgLearnPurple"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"block is-bgTutorialsPurple"</span>&gt;</span>
 
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"box is-bgTutorialsPurple"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"block is-bgDocsPurple"</span>&gt;</span>
 
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"box is-bgDocsPurple"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"block is-bgBaseGrey"</span>&gt;</span>
 
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"box is-bgBaseGrey"</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-</pre>
+                    </pre>
                 </div>
 
         </div>
@@ -612,8 +829,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                 </div>
 
                 <div class="markup hljs">
-<pre>
-<span class="hljs-comment">&lt;!-- titles --&gt;</span>
+                    <pre>
+                    <span class="hljs-comment">&lt;!-- titles --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title is-jumbo"</span>&gt;</span>The precipitating manner in which<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"title is-display"</span>&gt;</span>The precipitating manner in which<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
@@ -646,7 +863,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text is-small"</span>&gt;</span>The precipitating manner in which Captain Ahab had quitted the Samuel Enderby of London, had not been unattended with some small violence to his own person. He had lighted with such energy upon a thwart of his boat that his ivory leg had received a half-splintering shock. <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
-</pre>
+                    </pre>
                 </div>
 
         </div>

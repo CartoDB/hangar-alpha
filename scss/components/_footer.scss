@@ -1,0 +1,53 @@
+// Footer
+// --------------------------------------------------
+
+footer {
+  background-color: $white;
+}
+
+.Footer {
+  padding-top: 96px;
+
+  .FooterElement {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  .FooterLink {
+    color: $typo2;
+    transition: all .2s ease;
+
+    &:hover {
+    color: $link;
+    text-decoration: none;
+    }
+  }
+
+  @media (max-width: $layout-mobile) {
+    padding-top: 48px;
+  }
+}
+
+.Footer-social {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  @media (max-width: $layout-mobile) {
+    align-items: center;
+    height: 100px;
+    margin-top: 40px;
+    border-top: 1px solid $light-grey;
+  }
+  .Footer-icon {
+    &:hover {
+      text-decoration: none;
+    }
+    path {
+      &:hover {
+        fill: $blue;
+      }
+    }
+  }
+}

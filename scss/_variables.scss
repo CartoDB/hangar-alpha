@@ -1,0 +1,89 @@
+// Variables
+// --------------------------------------------------
+
+// Layout
+$layout-tablet: 800px;
+$layout-mobile: 600px;
+$layout-regular: 980px;
+
+$spacing-unit: 8px;
+
+// Colors
+$red: #F24440;
+$navy: #162945;
+$blue: #1785FB;
+$purple: #8364C5;
+$green: #73C86B;
+$grey: #647083;
+
+//New Colors
+$carto-red: #F24440;
+$solutions-red: #FF583E;
+$jade: #00B9BF;
+$builder-blue: #1785FB;
+$engine-blue: #2E51E8;
+$lds-blue: #3D33CC;
+$amber: #00B9BF;
+$guides-purple: #7D21F5;
+$tutorials-purple: #6E00DC;
+$docs-purple: #5300CC;
+$emerald: #80D100;
+$base-grey: #2E3C43;
+$light-grey: rgba($base-grey, 0.02);
+$typo0: #2E3C43;
+
+// Typo Scale
+$typo1: #162945;
+$typo2: #647083;
+$typo3: #B1B8C1;
+$typo4: #ffffff;
+$link: $blue;
+
+// Structure
+$white: #ffffff;
+$softgrey: #F9F9F9;
+
+// Lines
+$line1: rgba($navy,.1);
+$line2: rgba($navy,.2);
+$line3: rgba($navy,.3);
+
+///// Font
+$font-weight-base: 400;
+$font-size-base: 13px;
+$line-height-base: 20px;
+$font-family-base: "Open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-titles: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$text-color: $typo1;
+$background-color: $navy;
+
+
+
+// Z-Index
+//
+// Carto z-index scale. Z-index values should always be defined in _z-index.scss. This
+// allows us to at a glance determine relative layers of our application and prevents bugs
+// arrising from arbitrary z-index values. Do not edit the z-index scale! Only add application
+// scoped z-index values.
+// --------------------------------------------------
+
+
+// Z-Index Scale
+// --------------------------------------------------
+$zIndex-1: 100;
+$zIndex-2: 200;
+$zIndex-3: 300;
+$zIndex-4: 400;
+$zIndex-5: 500;
+$zIndex-6: 600;
+$zIndex-7: 700;
+$zIndex-8: 800;
+$zIndex-9: 900;
+$zIndex-10: 1000;
+
+
+// Z-Index Applications
+// --------------------------------------------------
+$zIndex--navbar: $zIndex-3;
+
+$zIndex--uInner: $zIndex-1;

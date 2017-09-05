@@ -1,0 +1,17 @@
+// Circle
+// --------------------------------------------------
+
+@mixin circle {
+  position: absolute;
+  top: -66%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  transform: scale(2) translateX(-75%) translateY(75%);
+  transform-origin: center center;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

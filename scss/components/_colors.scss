@@ -1,0 +1,65 @@
+/* SG
+# Colors
+```
+  <!-- texts -->
+  <h1 class="title is-title is-txtCartoRed">CARTO Red</h1>
+  <br/>
+  <h1 class="title is-title is-txtSolutionsRed">Solutions Red</h1>
+  <br/>
+  <h1 class="title is-title is-txtBuilderBlue">Builder Blue</h1>
+  <br/>
+  <h1 class="title is-title is-txtEngineBlue">Engine Blue</h1>
+  <br/>
+  <h1 class="title is-title is-txtLDSBlue">LDS Blue</h1>
+  <br/>
+  <h1 class="title is-title is-txtGuidesPurple">Guides Purple</h1>
+  <br/>
+  <h1 class="title is-title is-txtTutorialsPurple">Tutorials Purple</h1>
+  <br/>
+  <h1 class="title is-title is-txtDocsPurple">Docs Purple</h1>
+  <br/>
+  <h1 class="title is-title is-txtBaseGrey">Base Grey</h1>
+  <br/>
+  <br/>
+  <br/>
+
+  <!-- box -->
+  <div class="block is-bgCartoRed">
+
+  </div>
+  <div class="block is-bgSolutionsRed">
+
+  </div>
+  <div class="block is-bgBuilderBlue">
+
+  </div>
+  <div class="block is-bgEngineBlue">
+
+  </div>
+  <div class="block is-bgLDSBlue">
+
+  </div>
+  <div class="block is-bgGuidesPurple">
+
+  </div>
+  <div class="block is-bgTutorialsPurple">
+
+  </div>
+  <div class="block is-bgDocsPurple">
+
+  </div>
+  <div class="block is-bgBaseGrey">
+
+  </div>
+```
+*/
+
+
+@each $name, $color in $colors {
+  .is-bg#{$name} {
+    background: #{$color};
+  }
+  .is-txt#{$name} {
+    color: #{$color};
+  }
+}
