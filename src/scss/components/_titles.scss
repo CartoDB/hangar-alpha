@@ -43,6 +43,9 @@
   font-family: $font-family-base;
   font-weight: 400;
   // color: $base-grey;
+  &.is-semibold {
+    font-weight: 600;
+  }
 }
 
 .title {
