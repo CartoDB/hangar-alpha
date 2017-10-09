@@ -26,7 +26,7 @@ module.exports = function (grunt) {
         dest: 'dist/css/hangaralpha.css'
       },
       distJs: {
-        src: ['src/js/*.js', 'src/js/components/*.js'],
+        src: ['src/js/*.js', 'src/js/components/*.js', 'src/js/vendor/*.js'],
         dest: 'dist/js/hangaralpha.js'
       }
     },

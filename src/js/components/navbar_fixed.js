@@ -11,7 +11,7 @@ HangarAlpha.Views.NavbarFixed = Backbone.View.extend({
 
   _fixMenu: function() {
     var headerHeight = this.$header.outerHeight();
-    var scrollNumber = document.body.scrollTop;
+    var scrollNumber = $(window).scrollTop();
 
     if (scrollNumber >= headerHeight) {
       this.$el.addClass('Navbar--fixed is-active');
