@@ -1,0 +1,115 @@
+// Titles
+// --------------------------------------------------
+
+@mixin text() {
+  font-family: $font-family-base;
+  font-weight: 400;
+}
+
+@mixin title() {
+  font-family: $font-family-titles;
+  font-weight: 600;
+  color: $base-grey;
+  &.is-regular {
+    font-weight: 400;
+  }
+  &.is-bold {
+    font-weight: 700;
+  }
+}
+
+@mixin is-jumbo() {
+  font-size: 80px;
+  line-height: 96px;
+  @media (max-width: $layout-mobile) {
+    font-size: 48px;
+    line-height: 56px;
+    &.is-jumbo--mobile {
+      font-size: 80px;
+      line-height: 96px;
+    }
+  }
+}
+
+@mixin is-display() {
+  font-size: 64px;
+  line-height: 80px;
+  @media (max-width: $layout-mobile) {
+    font-size: 40px;
+    line-height: 48px;
+    &.is-display--mobile {
+      font-size: 64px;
+      line-height: 80px;
+    }
+  }
+}
+
+@mixin is-title() {
+  font-size: 48px;
+  line-height: 64px;
+  @media (max-width: $layout-mobile) {
+    font-size: 32px;
+    line-height: 40px;
+    &.is-title--mobile {
+      font-size: 48px;
+      line-height: 64px;
+    }
+  }
+}
+
+@mixin is-subheader() {
+  font-size: 32px;
+  line-height: 48px;
+  @media (max-width: $layout-mobile) {
+    font-size: 20px;
+    line-height: 24px;
+    &.is-subheader--mobile {
+      font-size: 32px;
+      line-height: 48px;
+    }
+  }
+}
+
+@mixin is-body() {
+  font-size: 20px;
+  line-height: 32px;
+  @media (max-width: $layout-mobile) {
+    font-size: 16px;
+    line-height: 24px;
+    &.is-body--mobile {
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+}
+
+@mixin is-subtitle() {
+  font-size: 20px;
+  line-height: 32px;
+  @media (max-width: $layout-mobile) {
+    font-size: 16px;
+    line-height: 24px;
+    &.is-subtitle--mobile {
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+}
+
+@mixin is-caption() {
+  font-size: 16px;
+  line-height: 24px;
+  @media (max-width: $layout-mobile) {
+    font-size: 12px;
+    line-height: 16px;
+    &.is-caption--mobile {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+@mixin is-small() {
+  font-size: 12px;
+  line-height: 16px;
+}
