@@ -60,7 +60,7 @@
 }
 
 .is-subheader {
-  @include is-title();
+  @include is-subheader();
 }
 
 .is-body {
