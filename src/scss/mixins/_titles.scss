@@ -6,16 +6,30 @@
   font-weight: 400;
 }
 
+@mixin is-regular() {
+  font-weight: 400;
+}
+
+@mixin is-bold() {
+  font-weight: 700;
+}
+
 @mixin title() {
   font-family: $font-family-titles;
   font-weight: 600;
   color: $base-grey;
+
   &.is-regular {
-    font-weight: 400;
+    @include is-regular();
   }
   &.is-bold {
-    font-weight: 700;
+    @include is-bold();
   }
+}
+
+@mixin is-jumbo--mobile() {
+  font-size: 80px;
+  line-height: 96px;
 }
 
 @mixin is-jumbo() {
@@ -25,10 +39,14 @@
     font-size: 48px;
     line-height: 56px;
     &.is-jumbo--mobile {
-      font-size: 80px;
-      line-height: 96px;
+      @include is-jumbo--mobile();
     }
   }
+}
+
+@mixin is-display--mobile() {
+  font-size: 64px;
+  line-height: 80px;
 }
 
 @mixin is-display() {
@@ -38,10 +56,14 @@
     font-size: 40px;
     line-height: 48px;
     &.is-display--mobile {
-      font-size: 64px;
-      line-height: 80px;
+      @include is-display--mobile();
     }
   }
+}
+
+@mixin is-title--mobile() {
+  font-size: 48px;
+  line-height: 64px;
 }
 
 @mixin is-title() {
@@ -51,10 +73,14 @@
     font-size: 32px;
     line-height: 40px;
     &.is-title--mobile {
-      font-size: 48px;
-      line-height: 64px;
+      @include is-title--mobile();
     }
   }
+}
+
+@mixin is-subheader--mobile() {
+    font-size: 32px;
+    line-height: 48px;
 }
 
 @mixin is-subheader() {
@@ -64,10 +90,14 @@
     font-size: 20px;
     line-height: 24px;
     &.is-subheader--mobile {
-      font-size: 32px;
-      line-height: 48px;
+      @include is-subheader--mobile();
     }
   }
+}
+
+@mixin is-body--mobile() {
+  font-size: 20px;
+  line-height: 32px;
 }
 
 @mixin is-body() {
@@ -77,10 +107,14 @@
     font-size: 16px;
     line-height: 24px;
     &.is-body--mobile {
-      font-size: 20px;
-      line-height: 32px;
+      @include is-body--mobile();
     }
   }
+}
+
+@mixin is-subtitle--mobile() {
+  font-size: 20px;
+  line-height: 32px;
 }
 
 @mixin is-subtitle() {
@@ -90,10 +124,14 @@
     font-size: 16px;
     line-height: 24px;
     &.is-subtitle--mobile {
-      font-size: 20px;
-      line-height: 32px;
+      @include is-subtitle--mobile();
     }
   }
+}
+
+@mixin is-caption--mobile() {
+  font-size: 16px;
+  line-height: 24px;
 }
 
 @mixin is-caption() {
@@ -103,8 +141,7 @@
     font-size: 12px;
     line-height: 16px;
     &.is-caption--mobile {
-      font-size: 16px;
-      line-height: 24px;
+      @include is-caption--mobile();
     }
   }
 }
