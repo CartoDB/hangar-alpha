@@ -4,6 +4,12 @@
 @mixin text() {
   font-family: $font-family-base;
   font-weight: 400;
+  &.is-semibold {
+    @include is-semibold();
+  }
+}
+@mixin is-semibold() {
+  font-weight: 600;
 }
 
 @mixin is-regular() {
