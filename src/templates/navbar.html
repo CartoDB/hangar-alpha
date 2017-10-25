@@ -45,6 +45,10 @@
             {% for solutions_item in site.data.hangaralpha.navbar.solutions %}
               <li class="Dropdown-item"><a href="{{ solutions_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if solutions_item.url == page.url %}is-active{% endif %}">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</a></li>
             {% endfor %}
+
+              {% for solutions_item in site.data.hangaralpha.navbar.solutions-extra %}
+              <li class="Dropdown-item {% if forloop.first%}Dropdown-itemExtra{% endif %}"><a href="{{ solutions_item.url }}" class="Dropdown-link text is-small is-semibold u-linkBlue {% if solutions_item.url == page.url %}is-active{% endif %}">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</a></li>
+            {% endfor %}
           </ul>
         </li>
 
@@ -134,8 +138,16 @@
             </a>
           </li>
         {% endfor %}
-          </ul>
-      </li>
+        </ul>
+        <ul>
+          {% for solutions_item in site.data.hangaralpha.navbar.solutions-extra %}
+          <li class="Navbar-subitem">
+            <a href="{{ solutions_item.url }}" class="Navbar-link">
+              <span class="text is-small is-semibold">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</span>
+            </a>
+          </li>
+          {% endfor %}
+      </ul>
       <li class="Navbar-item">
         <a href="/resources/" class="Navbar-link">
           <span class="title u-negative">Resources</span>

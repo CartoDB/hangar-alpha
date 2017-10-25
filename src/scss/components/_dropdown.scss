@@ -10,8 +10,8 @@
   display: none;
   position: absolute;
   top: 25px;
-  right: -106px;
-  min-width: 208px;
+  width: 224px;
+  right: -114px;
   background: $white;
   box-shadow: 0 1px 3px rgba(#000, .2);
   border-radius: 4px;
@@ -58,6 +58,11 @@
       border-radius: 3px;
     }
   }
+}
+
+.Dropdown-itemExtra {
+  border-top: 1px solid rgba(186,190,192,0.24);
+  padding-top: 8px;
 }
 
 .Dropdown-link {

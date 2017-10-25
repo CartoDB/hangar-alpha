@@ -38,6 +38,7 @@ solutions:
     url: '/solutions/journalism-media/'
   - title: Education & Research
     url: '/solutions/education-and-research/'
+solutions-extra:
   - title: Sales Analytics
     url: '/solutions/salesquest/'
 community:
