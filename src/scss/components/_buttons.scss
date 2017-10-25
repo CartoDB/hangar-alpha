@@ -130,7 +130,7 @@ $button-colors: (
 
   > span {
     position: relative;
-    z-index: 2;
+    // z-index: 2;
   }
 
   @each $name, $color in $button-colors {
