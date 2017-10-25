@@ -33,11 +33,6 @@
   }
 }
 
-@mixin is-jumbo--mobile() {
-  font-size: 80px;
-  line-height: 96px;
-}
-
 @mixin is-jumbo() {
   font-size: 80px;
   line-height: 96px;
@@ -50,9 +45,9 @@
   }
 }
 
-@mixin is-display--mobile() {
-  font-size: 64px;
-  line-height: 80px;
+@mixin is-jumbo--mobile() {
+  font-size: 80px;
+  line-height: 96px;
 }
 
 @mixin is-display() {
@@ -67,9 +62,9 @@
   }
 }
 
-@mixin is-title--mobile() {
-  font-size: 48px;
-  line-height: 64px;
+@mixin is-display--mobile() {
+  font-size: 64px;
+  line-height: 80px;
 }
 
 @mixin is-title() {
@@ -84,9 +79,9 @@
   }
 }
 
-@mixin is-subheader--mobile() {
-    font-size: 32px;
-    line-height: 48px;
+@mixin is-title--mobile() {
+  font-size: 48px;
+  line-height: 64px;
 }
 
 @mixin is-subheader() {
@@ -101,9 +96,9 @@
   }
 }
 
-@mixin is-body--mobile() {
-  font-size: 20px;
-  line-height: 32px;
+@mixin is-subheader--mobile() {
+    font-size: 32px;
+    line-height: 48px;
 }
 
 @mixin is-body() {
@@ -118,7 +113,7 @@
   }
 }
 
-@mixin is-subtitle--mobile() {
+@mixin is-body--mobile() {
   font-size: 20px;
   line-height: 32px;
 }
@@ -135,9 +130,9 @@
   }
 }
 
-@mixin is-caption--mobile() {
-  font-size: 16px;
-  line-height: 24px;
+@mixin is-subtitle--mobile() {
+  font-size: 20px;
+  line-height: 32px;
 }
 
 @mixin is-caption() {
@@ -150,6 +145,11 @@
       @include is-caption--mobile();
     }
   }
+}
+
+@mixin is-caption--mobile() {
+  font-size: 16px;
+  line-height: 24px;
 }
 
 @mixin is-small() {
