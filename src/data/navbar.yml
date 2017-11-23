@@ -49,6 +49,8 @@ community:
   - title: Ambassadors
     url: '/ambassadors/'
 resources:
+  - title: Community
+    url: '/community/'
   - title: Downloads
     url: '/resources/'
   - title: Location Intelligence
@@ -61,6 +63,7 @@ resources:
     url: '/learn/'
   - title: Documentation
     url: '/docs/'
+
 about:
   - title: Team
     url: '/team/'
