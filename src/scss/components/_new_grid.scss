@@ -1,0 +1,84 @@
+/* SG
+# CSS Grid
+```
+  <div class="container">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+  <div class="container container--1-11">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+  <div class="container container--2-10">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+  <div class="container container--3-9">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+  <div class="container container--4-8">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+  <div class="container container--5-7">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+  <div class="container container--6-6">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+
+```
+*/
+
+
+// New Grid
+// --------------------------------------------------
+
+$column: 60px;
+$gap: 20px;
+
+.box-grid {
+  border: 1px solid $jade;
+  background: rgba($jade, 0.08);
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(1px, 60px));
+  grid-gap: $gap;
+  box-sizing: border-box;
+}
+
+@for $i from 1 through 11 {
+  .container--#{$i}-#{12 - $i} {
+    grid-template-columns: minmax($gap, calc(#{$column} * #{$i} + #{$gap} * #{$i - 1})) 1fr;
+  }
+}
+
+
+
+
