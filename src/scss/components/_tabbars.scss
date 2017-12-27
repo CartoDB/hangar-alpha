@@ -1,0 +1,102 @@
+/* SG
+# Tab Bars
+```
+  <nav>
+    <ul class="tab_navigation">
+      <li class="tab_navigationItem">
+        <a class="tab_navigationAction is-active" href="#">Location reporting</a>
+      </li>
+      <li class="tab_navigationItem">
+        <a class="tab_navigationAction" href="#">Customer discovery</a>
+      </li>
+      <li class="tab_navigationItem">
+        <a class="tab_navigationAction" href="#">Custom basemaps</a>
+      </li>
+    </ul>
+  </nav>
+  <br><br><br>
+  <nav>
+    <ul class="button-group">
+      <li class="button-groupItem">
+        <button type="button" class="button-groupAction">APAC</button>
+      </li>
+      <li class="button-groupItem">
+        <button type="button" class="button-groupAction">EMEA</button>
+      </li>
+      <li class="button-groupItem">
+        <button type="button" class="button-groupAction">LATAM</button>
+      </li>
+      <li class="button-groupItem">
+        <button type="button" class="button-groupAction is-active">NA</button>
+      </li>
+    </ul>
+  </nav>
+
+```
+*/
+
+// Hangar Tab bars
+
+
+.tab_navigation {
+  display: flex;
+  border-bottom: 1px solid rgba($base-grey, 0.16);
+}
+
+.tab_navigationItem {
+  margin-right: 24px;
+  font: 400 16px/24px 'Montserrat' ;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.tab_navigationAction {
+  display: block;
+  padding-bottom: 12px;
+  margin-bottom: -1px;
+  border-bottom: 4px solid transparent;
+  color: $orange;
+  transition: border 300ms ease-in;
+
+  &:hover {
+    text-decoration: none;
+    border-bottom: 4px solid $orange;
+  }
+  &.is-active {
+    border-bottom: 4px solid $docs-purple;
+    color: $base-grey;
+  }
+}
+
+
+
+
+.button-group {
+  display: flex;
+  border: 1px solid rgba($base-grey, 0.16);
+  border-radius: 4px;
+  overflow: hidden;
+
+}
+.button-groupAction {
+  padding: 12px 44px;
+  border-left: 1px solid rgba($base-grey, 0.16);
+  text-align: center;
+  width: 100%;
+  font: 600 12px/16px 'Montserrat' ;
+  &.is-active {
+    background: $docs-purple;
+    color: $white;
+    border: 0;
+  }
+}
+.button-groupItem {
+  flex: 1;
+  &:first-child .button-groupAction {
+    border-left: 0;
+  }
+}
+
+
