@@ -137,7 +137,7 @@ $sizes: (0, 4, 8, 10, 12, 16, 20, 24, 28, 32, 36, 40, 48, 60, 64, 72, 80, 96, 10
 .u-inner {
   // 100px + 940px + 100px
   position: relative;
-  z-index: $zIndex--uInner;
+  z-index: 2;
   width: 980px;
   margin-right: auto;
   margin-left: auto;

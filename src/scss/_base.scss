@@ -4,26 +4,22 @@
 
 html,
 body {
-  background-color: $white;
   height: 100%;
 }
 
 body {
-  background-color: $white;
-  color: $typo2;
   color: $base-grey;
   font-family: $font-family-base;
   font-size: $font-size-base;
-  -webkit-font-smoothing: antialiased;
-  font-weight: $font-weight-base;
   line-height: $line-height-base;
+  -webkit-font-smoothing: antialiased;
   -webkit-text-rendering: optimizeLegibility;
   text-rendering: optimizeLegibility;
   
 }
 
 a {
-  color: $blue;
+  color: $link;
   text-decoration: none;
 
   &:hover {
@@ -59,7 +55,7 @@ iframe {
 
 pre,
 code {
-  border: 1px solid $line1;
+  border: 1px solid rgba($base-grey, 0.10);
   border-radius: 4px;
   font-family: 'PT Mono', monospace;
 }

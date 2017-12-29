@@ -165,7 +165,7 @@
     padding: 0;
     border-radius: 50%;
     &.is-error + .radio-decoration {
-      border: 1px solid $red;
+      border: 1px solid $carto-red;
     }
 
     &:hover + .radio-decoration  {
@@ -257,7 +257,7 @@
     padding: 0;
     border-radius: 3px;
     &.is-error + .checkbox-decoration {
-      border: 1px solid $red;
+      border: 1px solid $carto-red;
     }
 
     &:hover + .checkbox-decoration  {
