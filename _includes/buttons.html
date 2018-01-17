@@ -1,0 +1,52 @@
+{% assign jumbo-button = '<a href="#" class="button button--large is-jade">
+    <span>Sample Text</span>
+</a>'%}
+
+{% assign regular-button = '<a href="#" class="button is-jade">
+    <span>Sample Text</span>
+</a>' %}
+      
+{% assign small-button = '<a href="#" class="button button--small is-jade">
+    <span>Sample Text</span>
+</a>' %}
+
+<h2 class="title is-title">Buttons</h2>
+<p class="text is-body">Description</p>
+<nav>
+    <ul class="tab_navigation red-jade-design">
+        <li class="tab_navigationItem">
+            <a class="tab_navigationAction is-active" onclick="activate(this, 'primary-button-section')">Primary</a>
+        </li>
+        <li class="tab_navigationItem">
+            <a class="tab_navigationAction" onclick="activate(this, 'secondary-button-section')">Secondary</a>
+        </li>
+        <li class="tab_navigationItem">
+            <a class="tab_navigationAction" onclick="activate(this, 'ghost-button-section')">Ghost</a>
+        </li>
+    </ul>
+</nav>
+<div id="primary-button-section" class="section-container show">
+    <div class="grid ingrid-code-container">
+        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Jumbo</div>
+        <div class="grid-cell grid-cell--col3">{{jumbo-button}}</div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{jumbo-button | escape}}</code></pre></div>
+    </div>
+    <div class="grid ingrid-code-container">
+        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Regular</div>
+        <div class="grid-cell grid-cell--col3">{{regular-button}}</div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{regular-button | escape}}</code></pre></div>
+    </div>
+    <div class="grid ingrid-code-container">
+        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Small</div>
+        <div class="grid-cell grid-cell--col3">{{small-button}}</div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{small-button | escape}}</code></pre></div>
+    </div>
+</div>
+
+<div id="secondary-button-section" class="section-container show">
+    
+</div>
+
+<div id="ghost-button-section" class="section-container show">
+    
+</div>

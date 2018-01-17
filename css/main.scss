@@ -1,0 +1,103 @@
+---
+---
+section{
+    padding: 96px 0px;
+    border-bottom: 1px solid rgba(186,190,192,0.24);
+}
+
+h3{
+    margin-top: 32px;
+}
+
+p{
+    margin-top: 8px;
+    line-height: 32px;
+    margin-bottom: 24px;
+}
+
+pre{
+    // margin-top: 12px;
+    padding: 0px;
+    code{
+        padding: 16px 0px;
+    }
+}
+
+ul.red-jade-design{
+    a{
+        color: #00B9BF;
+        &:hover{
+            border-bottom: 4px solid #00B9BF;
+            cursor: pointer;
+        }
+    }
+    a.is-active{
+        border-bottom: 4px solid #FF583E;
+    }
+}
+
+.button-link-container{
+    display: inline-block;
+    text-align: center;
+    padding: 16px 26px;
+}
+
+.title-container{
+    max-width: 620px;
+}
+
+.header-navigator{
+    padding-top: 32px;
+    padding-bottom: 24px;
+}
+
+.example{
+    margin-bottom:12px;
+    & + pre{
+        margin-bottom: 64px;
+    }
+}
+
+.section-container{
+    display: none;
+    &.show{
+        display: block;
+    }
+}
+
+.ingrid-code-container{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #EFF0F0;
+}
+
+.elem-name{
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.color-box{
+    height: 272px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    p {
+        color: #ffffff;
+        margin: 0px;
+    }
+    .color-name{
+        margin-bottom: auto;
+    }
+    .class-container{
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.16);
+        margin-bottom: 4px;
+        padding: 4px;
+        display: table;
+        .color-class{
+            font-family: 'Overpass Mono', monospace;
+            font-size: 16px;
+        }
+    }
+}

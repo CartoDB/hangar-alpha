@@ -1,0 +1,45 @@
+{% assign regular-form = '<input type="text" class="input" placeholder="John">'%}
+
+{% assign dropdown-form = '<select class="select">
+    <option value="value1">Value 1</option> 
+    <option value="value2" selected>Value 2</option>
+    <option value="value3">Value 3</option>
+</select>' %}
+      
+{% assign error-form = '<input type="text" class="input is-error" placeholder="Error">' %}
+
+{% assign radio-button = '<input class="radio-input" type="radio" name="contact" value="01">
+<input class="radio-input" type="radio" name="contact" value="02" checked>' %}
+
+{% assign checkbox = '<input class="checkbox-input" type="checkbox" name="contact" value="01">
+<input class="checkbox-input" type="checkbox" name="contact" value="02" checked>' %}
+
+
+<h2 class="title is-title">Forms</h2>
+<p class="text is-body">Description</p>
+
+<div class="grid ingrid-code-container">
+    <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Regular</div>
+    <div class="grid-cell grid-cell--col3">{{regular-form}}</div>
+    <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{regular-form | escape}}</code></pre></div>
+</div>
+<div class="grid ingrid-code-container">
+    <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Dropdown</div>
+    <div class="grid-cell grid-cell--col3">{{dropdown-form}}</div>
+    <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{dropdown-form | escape}}</code></pre></div>
+</div>
+<div class="grid ingrid-code-container">
+    <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Error</div>
+    <div class="grid-cell grid-cell--col3">{{error-form}}</div>
+    <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{error-form | escape}}</code></pre></div>
+</div>
+<div class="grid ingrid-code-container">
+    <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Radio Buttons</div>
+    <div class="grid-cell grid-cell--col3">{{radio-button}}</div>
+    <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{radio-button | escape}}</code></pre></div>
+</div>
+<div class="grid ingrid-code-container">
+    <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Checkboxes</div>
+    <div class="grid-cell grid-cell--col3">{{checkbox}}</div>
+    <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{checkbox | escape}}</code></pre></div>
+</div>

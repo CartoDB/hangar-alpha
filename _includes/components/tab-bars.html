@@ -1,0 +1,35 @@
+{% assign tab-bar = '<nav>
+    <ul class="tab_navigation">
+        <li class="tab_navigationItem">
+            <a class="tab_navigationAction is-active" href="#">Tab Bar 1</a>
+        </li>
+        <li class="tab_navigationItem">
+            <a class="tab_navigationAction" href="#">Tab Bar 2</a>
+        </li>
+    </ul>
+</nav>'%}
+
+{% assign tab-bar-box = ' <nav>
+    <ul class="button-group">
+        <li class="button-groupItem">
+            <button type="button" class="button-groupAction">Item 1</button>
+        </li>
+        <li class="button-groupItem">
+            <button type="button" class="button-groupAction">Item 2</button>
+        </li>
+        <li class="button-groupItem">
+            <button type="button" class="button-groupAction">Item 3</button>
+        </li>
+        <li class="button-groupItem">
+            <button type="button" class="button-groupAction is-active">Item 4</button>
+        </li>
+    </ul>
+</nav>'%}
+
+<h3 class="title is-subheader">Tab bars</h3>
+<p class="text is-caption">This is a set of our differents types of tab bars navigations</p>
+<div class="example">{{tab-bar}}</div>
+<pre><code class="html hljs">{{tab-bar | escape}}</code></pre>
+
+<div class="example">{{tab-bar-box}}</div>
+<pre><code class="html hljs">{{tab-bar-box | escape}}</code></pre>

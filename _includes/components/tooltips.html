@@ -1,0 +1,37 @@
+{% assign tooltip-left = '<a href="#" tooltip-position="right" tooltip-text="Sample text.">Show</a>'%}
+{% assign tooltip-right = '<a href="#" tooltip-position="left" tooltip-text="Sample text.">Show</a>'%}
+{% assign tooltip-bottom = '<a href="#" tooltip-position="top" tooltip-text="Sample text.">Show</a>'%}
+{% assign tooltip-top = '<a href="#" tooltip-position="bottom" tooltip-text="Sample text.">Show</a>'%}
+
+
+<h3 class="title is-subheader">Tooltips</h3>
+<p class="text is-caption">This is a set of our differents types of tooltips</p>
+
+<div class="grid ingrid-code-container">
+    <div class="grid-cell grid-cell--col3">
+        <div class="grid-cell--col12 elem-name is-txtTypo2">Left arrow</div>
+        {{tooltip-left}}
+    </div>
+    <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{tooltip-left | escape}}</code></pre></div>
+</div>
+<div class="grid ingrid-code-container">
+    <div class="grid-cell grid-cell--col3">
+        <div class="grid-cell--col12 elem-name is-txtTypo2">Right arrow</div>
+        {{tooltip-right}}
+    </div>
+    <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{tooltip-right | escape}}</code></pre></div>
+</div>
+<div class="grid ingrid-code-container">
+    <div class="grid-cell grid-cell--col3">
+        <div class="grid-cell--col12 elem-name is-txtTypo2">Bottom arrow</div>
+        {{tooltip-bottom}}
+    </div>
+    <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{tooltip-bottom | escape}}</code></pre></div>
+</div>
+<div class="grid ingrid-code-container">
+    <div class="grid-cell grid-cell--col3">
+        <div class="grid-cell--col12 elem-name is-txtTypo2">Top arrow</div>
+        {{tooltip-top}}
+    </div>
+    <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{tooltip-top | escape}}</code></pre></div>
+</div>

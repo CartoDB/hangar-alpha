@@ -14,6 +14,7 @@ module.exports = function (grunt) {
           '.sass-cache',
           '.tmp',
           'dist',
+          '_site',
           '!dist/.git*'
           ]
         }]
@@ -23,7 +24,7 @@ module.exports = function (grunt) {
     concat: {
       distCss: {
         src: ['.tmp/css/*.css'],
-        dest: 'dist/css/hangaralpha.css'
+        dest: '_site/css/hangaralpha.css'
       },
       distJs: {
         src: ['src/js/*.js', 'src/js/components/*.js', 'src/js/vendor/*.js'],
@@ -39,7 +40,7 @@ module.exports = function (grunt) {
           open: true,
           hostname: '0.0.0.0',
           base: {
-            path: '.'
+            path: './_site'
           }
         }
       }
@@ -49,32 +50,16 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: 'node_modules/perfect-scrollbar/src/css/',
-          src: '*.scss',
-          dest: 'src/scss/vendor/perfect-scrollbar/'
-        },{
-          expand: true,
-          cwd: 'src/templates',
-          src: '*.html',
-          dest: 'dist/templates/'
-        },{
-          expand: true,
           cwd: 'src/scss',
           src: '**/*.scss',
           dest: 'dist/scss/'
-        },{
-          expand: true,
-          cwd: 'src/data',
-          src: '**/*.yml',
-          dest: 'dist/data/'
         }]
       }
-
     },
 
     'gh-pages': {
       options: {
-        base: 'dist'
+        base: '_src'
       },
       src: ['**/*']
     },
@@ -97,10 +82,14 @@ module.exports = function (grunt) {
     },
 
     shell: {
-      style: {
-        command: 'styleguide'
+      jekyll: {
+        command: 'jekyll build'
       }
     },
+
+    // jekyll: {
+    //   command: 'jekyll serve'
+    // },
 
     svgmin: {
       dist: {
@@ -143,12 +132,10 @@ module.exports = function (grunt) {
   /* End initConfig */
 
   var baseTasks = [
-    'clean',
-    'copy',
+    'shell',
     'sass',
     'concat',
-    'svgmin',
-    'shell'
+    'svgmin'
   ];
 
   var devTasks = baseTasks.concat([
@@ -157,7 +144,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.event.on('watch', function (action, filepath) {
-    grunt.task.run('shell:style');
+    grunt.task.run('shell:jekyll');
   });
 
   grunt.registerTask('dev', devTasks);
