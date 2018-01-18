@@ -34,7 +34,7 @@
             <p class="is-txtTypo2">Number of columns</p>
             <form onsubmit="return false;">
                 <input type="range" name="amountRange" min="1" max="12" value="4" oninput="this.form.amountInput.value=this.value; updateCode(this.value, 'grid-section')" />
-                <input type="number" name="amountInput" min="1" max="12" value="4" oninput="this.form.amountRange.value=this.value; " />
+                <input type="number" class="input" name="amountInput" min="1" max="12" value="4" oninput="this.form.amountRange.value=this.value; updateCode(this.value, 'grid-section')" />
             </form>
         </div>
     </div>

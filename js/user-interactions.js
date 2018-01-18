@@ -90,14 +90,16 @@ updateSnippet = function(snippetElement, newSnippet){
 }
 
 updateCode = function(newImput, elemID){
+    if (newImput > 12)
+        newImput = 12;
+    else if (newImput < 1)
+        newImput = 1;
     var elem = document.getElementById(elemID);
     var exampleResult = elem.querySelector(".example .container");
     var codeSnippet = elem.querySelector("code");
     removeClassStartingBy(exampleResult, "container--");
     addNumberColumns(exampleResult, newImput);
     updateSnippet(codeSnippet, exampleResult);
-    // console.log(exampleResult.classList);
-    // console.log(codeSnipet);
 }
 
 var navigatorPlaceHolder = document.getElementById("navigator");
