@@ -1,15 +1,3 @@
-{% assign jumbo-button = '<a href="#" class="button button--large is-jade">
-    <span>Sample Text</span>
-</a>'%}
-
-{% assign regular-button = '<a href="#" class="button is-jade">
-    <span>Sample Text</span>
-</a>' %}
-      
-{% assign small-button = '<a href="#" class="button button--small is-jade">
-    <span>Sample Text</span>
-</a>' %}
-
 <h2 class="title is-title">Buttons</h2>
 <p class="text is-body">Description</p>
 <nav>
@@ -26,6 +14,17 @@
     </ul>
 </nav>
 <div id="primary-button-section" class="section-container show">
+    {% assign jumbo-button = '<a href="#" class="button button--large is-jade">
+        <span>Sample Text</span>
+    </a>'%}
+
+    {% assign regular-button = '<a href="#" class="button is-jade">
+        <span>Sample Text</span>
+    </a>' %}
+        
+    {% assign small-button = '<a href="#" class="button button--small is-jade">
+        <span>Sample Text</span>
+    </a>' %}
     <div class="grid ingrid-code-container">
         <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Jumbo</div>
         <div class="grid-cell grid-cell--col3">{{jumbo-button}}</div>
@@ -44,9 +43,59 @@
 </div>
 
 <div id="secondary-button-section" class="section-container show">
-    
+    {% assign jumbo-button-baseGrey = '<a href="#" class="button button--large is-baseGrey">
+        <span>Sample Text</span>
+    </a>'%}
+
+    {% assign regular-button-baseGrey = '<a href="#" class="button is-baseGrey">
+        <span>Sample Text</span>
+    </a>' %}
+        
+    {% assign small-button-baseGrey = '<a href="#" class="button button--small is-baseGrey">
+        <span>Sample Text</span>
+    </a>' %}
+    <div class="grid ingrid-code-container">
+        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Jumbo</div>
+        <div class="grid-cell grid-cell--col3">{{jumbo-button-baseGrey}}</div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{jumbo-button-baseGrey | escape}}</code></pre></div>
+    </div>
+    <div class="grid ingrid-code-container">
+        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Regular</div>
+        <div class="grid-cell grid-cell--col3">{{regular-button-baseGrey}}</div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{regular-button-baseGrey | escape}}</code></pre></div>
+    </div>
+    <div class="grid ingrid-code-container">
+        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Small</div>
+        <div class="grid-cell grid-cell--col3">{{small-button-baseGrey}}</div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{small-button-baseGrey | escape}}</code></pre></div>
+    </div>
 </div>
 
 <div id="ghost-button-section" class="section-container show">
-    
+    {% assign jumbo-button-outline = '<a href="#" class="button button--large is-jadeOutline">
+        <span>Sample Text</span>
+    </a>'%}
+
+    {% assign regular-button-outline = '<a href="#" class="button is-jadeOutline">
+        <span>Sample Text</span>
+    </a>' %}
+        
+    {% assign small-button-outline = '<a href="#" class="button button--small is-jadeOutline">
+        <span>Sample Text</span>
+    </a>' %}
+    <div class="grid ingrid-code-container">
+        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Jumbo</div>
+        <div class="grid-cell grid-cell--col3">{{jumbo-button-outline}}</div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{jumbo-button-outline | escape}}</code></pre></div>
+    </div>
+    <div class="grid ingrid-code-container">
+        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Regular</div>
+        <div class="grid-cell grid-cell--col3">{{regular-button-outline}}</div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{regular-button-outline | escape}}</code></pre></div>
+    </div>
+    <div class="grid ingrid-code-container">
+        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Small</div>
+        <div class="grid-cell grid-cell--col3">{{small-button-outline}}</div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{small-button-outline | escape}}</code></pre></div>
+    </div>
 </div>
