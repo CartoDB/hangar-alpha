@@ -1,3 +1,6 @@
+const breakLine = "\n";
+const tabulationElement = "    ";
+
 deactivateSon = function(elem){
     var activeElement = elem.querySelector(".is-active");
     activeElement.classList.remove("is-active");
@@ -47,6 +50,10 @@ removeClassStartingBy = function(elem, startsBy){
     }
 }
 
+removeWhileLines = function(text){
+    return text.replace(/^\s\s\s\s\n/gm, "");
+}
+
 addNumberColumns = function(elem, numberColumns){
     var newClass = getContainerClass(numberColumns);
     if (newClass != "")
@@ -55,27 +62,31 @@ addNumberColumns = function(elem, numberColumns){
     if (remainingElements < 0){ //Needs to delete elements
         var elemsToRemove = elem.getElementsByClassName('box-grid');
         for (i = 0; i < -remainingElements; i++){
-            console.log(elemsToRemove[i]);
             elemsToRemove[i].remove();
+            elem.innerHTML = removeWhileLines(elem.innerHTML);
         }
     } else if (remainingElements > 0){
         var sampleElement = elem.getElementsByClassName('box-grid')[0];
-        console.log("adding element....");
         for (i = 0; i < remainingElements; i++){
-            var newElement = sampleElement.cloneNode(true);
-            elem.appendChild(newElement);
+            var newElement = sampleElement.outerHTML;
+            elem.innerHTML = elem.innerHTML + tabulationElement + newElement + breakLine;
         }
+    }
+}
+
+addLineCounterInCode = function(){
+    var codeWithoutLineCounter = document.querySelector("code.hljs>:not(table)");
+    if (codeWithoutLineCounter){
+        hljs.lineNumbersBlock(codeWithoutLineCounter.parentElement);
     }
 }
 
 updateSnippet = function(snippetElement, newSnippet){
     snippetElement.innerHTML = '';
-    console.log(newSnippet.outerHTML);
     var escapedString = new Option(newSnippet.outerHTML).innerHTML;
-    console.log("HEY");
-    console.log(escapedString);
     snippetElement.innerHTML = escapedString;
     hljs.highlightBlock(snippetElement.parentNode);
+    addLineCounterInCode();
 }
 
 updateCode = function(newImput, elemID){

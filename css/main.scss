@@ -16,7 +16,6 @@ p{
 }
 
 pre{
-    // margin-top: 12px;
     padding: 0px;
     code{
         padding: 16px 0px;
@@ -33,6 +32,9 @@ pre{
         }
         ul{
             height: 64px;
+        }
+        a:hover{
+            text-decoration: none;
         }
     }
 }
