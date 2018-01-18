@@ -8,11 +8,39 @@
       
 {% assign error-form = '<input type="text" class="input is-error" placeholder="Error">' %}
 
-{% assign radio-button = '<input class="radio-input" type="radio" name="contact" value="01">
-<input class="radio-input" type="radio" name="contact" value="02" checked>' %}
+{% assign radio-button = '<div class="u-flex">
+  <span class="radio" style="margin-right: 20px;">
+    <input class="radio-input" type="radio" name="contact" value="01">
+    <span class="radio-decoration"></span>
+  </span>
+  <span class="radio" style="margin-right: 20px;">
+    <input class="radio-input" type="radio" name="contact" value="02" checked>
+    <span class="radio-decoration"></span>
+  </span>
+</div>' %}
 
-{% assign checkbox = '<input class="checkbox-input" type="checkbox" name="contact" value="01">
-<input class="checkbox-input" type="checkbox" name="contact" value="02" checked>' %}
+{% assign checkbox = '<div class="u-flex">
+        <span class="checkbox" style="margin-right: 20px;">
+          <input class="checkbox-input" type="checkbox" name="contact" value="01">
+          <span class="checkbox-decoration">
+            <svg width="12px" height="12" class="checkbox-decorationMedia">
+                <g fill="none">
+                 <polyline class="checkbox-check" points="1.65093994 3.80255127 4.48919678 6.97192383 10.3794556 0.717346191"></polyline>
+                </g>
+            </svg>
+          </span>
+        </span>
+        <span class="checkbox" style="margin-right: 20px;">
+          <input class="checkbox-input" type="checkBox" name="contact" value="02" checked>
+          <span class="checkbox-decoration">
+            <svg width="12px" height="12" class="checkbox-decorationMedia">
+                <g fill="none">
+                 <polyline class="checkbox-check" points="1.65093994 3.80255127 4.48919678 6.97192383 10.3794556 0.717346191"></polyline>
+                </g>
+            </svg>
+          </span>
+        </span>
+      </div>' %}
 
 
 <h2 class="title is-title">Forms</h2>

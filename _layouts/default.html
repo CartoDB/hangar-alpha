@@ -15,10 +15,17 @@
       <script src='../js/user-interactions.js'></script>
       <link rel="stylesheet" href="../css/vendor/carto-dark.css">
       <script src='../js/vendor/highlight.pack.js'></script>
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.2/rangeslider.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.1.0/highlightjs-line-numbers.min.js"></script>
       <script>
           hljs.initHighlightingOnLoad();
           hljs.initLineNumbersOnLoad({singleLine: true});
+          $('input[type="range"]').rangeslider({
+            polyfill: false,
+            onInit: function() {console.log("INIT")}
+          });
       </script>
   </body>
 </html>
