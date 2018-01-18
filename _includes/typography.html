@@ -45,5 +45,35 @@
     </div>
 </div>
 <div id="open-sans-section" class="section-container">
+    {% assign sans-jumbo = '<h1 class="text is-jumbo">Aa</h1>'%}
+    {% assign sans-display = '<h1 class="text is-display">Aa</h1>'%}
+    {% assign sans-title = '<h1 class="text is-title">Aa</h1>'%}
+    {% assign sans-subheader = '<h1 class="text is-subheader">Aa</h1>'%}
+    {% assign sans-body = '<h1 class="text is-caption">Aa</h1>'%}
 
+    <div class="grid ingrid-code-container">
+        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Jumbo</div>
+        <div class="grid-cell grid-cell--col3">{{sans-jumbo}}</div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{sans-jumbo | escape}}</code></pre></div>
+    </div>
+    <div class="grid ingrid-code-container">
+        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Display</div>
+        <div class="grid-cell grid-cell--col3">{{sans-display}}</div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{sans-display | escape}}</code></pre></div>
+    </div>
+    <div class="grid ingrid-code-container">
+        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Title</div>
+        <div class="grid-cell grid-cell--col3">{{sans-title}}</div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{sans-title | escape}}</code></pre></div>
+    </div>
+    <div class="grid ingrid-code-container">
+        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Subheader</div>
+        <div class="grid-cell grid-cell--col3">{{sans-subheader}}</div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{sans-subheader | escape}}</code></pre></div>
+    </div>
+    <div class="grid ingrid-code-container">
+        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Body</div>
+        <div class="grid-cell grid-cell--col3">{{sans-body}}</div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{sans-body | escape}}</code></pre></div>
+    </div>
 </div>
