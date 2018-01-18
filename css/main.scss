@@ -21,25 +21,30 @@ pre{
         padding: 16px 0px;
     }
 }
+
 .navigator{
-    border-bottom: 1px solid rgba(186,190,192,0.24);
-.navigator-container{
-    padding: 24px 0px;
-    .top-menu{
-        li{
-            float: left;
-            margin-right: 32px;
-        }
-        ul{
-            height: 64px;
-        }
-        a:hover{
-            text-decoration: none;
+    height: 80px;
+    .navigator-container{
+        border-bottom: 1px solid rgba(186,190,192,0.24);
+        height: 80px;
+        width: 100%;
+        background-color: #ffffff;
+        z-index: 1000;
+        .top-menu{
+            li{
+                float: left;
+                margin-right: 32px;
+                padding: 24px 0px;
+            }
+            ul{
+                height: 64px;
+            }
+            a:hover{
+                text-decoration: none;
+            }
         }
     }
 }
-}
-
 .column-selector{
     display: flex;
     justify-content: flex-end;

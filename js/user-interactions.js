@@ -99,3 +99,16 @@ updateCode = function(newImput, elemID){
     // console.log(exampleResult.classList);
     // console.log(codeSnipet);
 }
+
+var navigatorPlaceHolder = document.getElementById("navigator");
+var navigatorContainer = document.getElementById("navigator-container");
+
+//SCROLL Listener for top menu
+window.addEventListener('scroll', function(e) {
+    if (navigatorContainer.style.position != "fixed" && navigatorPlaceHolder.getBoundingClientRect().y < 0){
+        navigatorContainer.style.position = "fixed";
+        navigatorContainer.style.top = "0px";
+    } else if (navigatorContainer.style.position != "relative" && navigatorPlaceHolder.getBoundingClientRect().y > 0){
+        navigatorContainer.style.position = "relative"
+    }
+});
