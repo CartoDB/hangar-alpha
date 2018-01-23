@@ -1,23 +1,28 @@
-module.exports = function (grunt) {
+module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
-  var config = {}
+  var log = function(err, stdout, stderr, cb) {
+    if (stdout) {
+      grunt.log.writeln(stdout);
+    }
+    if (stderr) {
+      grunt.log.error(stderr);
+    }
+    cb();
+  };
+
+  var config = {};
 
   /* Start initConfig */
   grunt.initConfig({
-
     clean: {
       dist: {
-        files: [{
-          dot: true,
-          src: [
-          '.sass-cache',
-          '.tmp',
-          'dist',
-          '_site',
-          '!dist/.git*'
-          ]
-        }]
+        files: [
+          {
+            dot: true,
+            src: ['.sass-cache', '.tmp', 'dist', '_site', '!dist/.git*']
+          }
+        ]
       }
     },
 
@@ -32,28 +37,16 @@ module.exports = function (grunt) {
       }
     },
 
-    connect: {
-      server: {
-        options: {
-          port: 9003,
-          livereload: 35732,
-          open: true,
-          hostname: '0.0.0.0',
-          base: {
-            path: './_site'
-          }
-        }
-      }
-    },
-
     copy: {
       dist: {
-        files: [{
-          expand: true,
-          cwd: 'src/scss',
-          src: '**/*.scss',
-          dest: 'dist/scss/'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: 'src/scss',
+            src: '**/*.scss',
+            dest: 'dist/scss/'
+          }
+        ]
       }
     },
 
@@ -64,26 +57,38 @@ module.exports = function (grunt) {
       src: ['**/*']
     },
 
-
     sass: {
       dist: {
         options: {
           sourceMap: false,
           outputStyle: 'compressed'
         },
-        files: [{
-          expand: true,
-          cwd: 'src/scss',
-          src: 'main.scss',
-          dest: '.tmp/css/',
-          ext: '.css'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: 'src/scss',
+            src: 'main.scss',
+            dest: '.tmp/css/',
+            ext: '.css'
+          }
+        ]
       }
     },
 
     shell: {
       jekyll: {
-        command: 'jekyll build'
+        command: 'bundle exec jekyll build',
+        options: {
+          callback: log
+        }
+      },
+
+      jekyllDev: {
+        command:
+          'bundle exec jekyll build --draft --incremental JEKYLL_ENV=dev',
+        options: {
+          callback: log
+        }
       }
     },
 
@@ -93,63 +98,59 @@ module.exports = function (grunt) {
 
     svgmin: {
       dist: {
-        files: [{
-          expand: true,
-          cwd: 'src/img',
-          src: '**/*.svg',
-          dest: 'dist/img'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: 'src/img',
+            src: '**/*.svg',
+            dest: 'dist/img'
+          }
+        ]
       }
     },
 
-
-
     watch: {
       scss: {
-        files: [
-          'src/scss/**/*.scss'
-        ],
-        tasks: [
-          'sass',
-          'concat'
-        ],
+        files: ['src/scss/**/*.scss'],
+        tasks: ['sass', 'concat'],
         options: {
-          spawn: false,
-          livereload: 35732
+          spawn: false
         }
       },
       js: {
         files: ['src/js/**/*.js'],
         tasks: ['concat']
       },
+      html: {
+        files: ['_includes/**', '_layouts/**', '_data/**'],
+        tasks: ['shell:jekyll', 'sass', 'concat']
+      }
+    },
+
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src: ['_site/**/*.*']
+        },
+        options: {
+          watchTask: true,
+          server: './_site'
+        }
+      }
     }
-
-
-
-
-
   });
   /* End initConfig */
 
-  var baseTasks = [
-    'shell',
-    'sass',
-    'concat',
-    'svgmin'
-  ];
+  var baseTasks = ['shell:jekyll', 'sass', 'concat', 'svgmin'];
 
-  var devTasks = baseTasks.concat([
-    'connect',
-    'watch'
-  ]);
+  var devTasks = baseTasks.concat(['browserSync', 'watch']);
 
-  grunt.event.on('watch', function (action, filepath) {
-    grunt.task.run('shell:jekyll');
+  grunt.event.on('watch', function(action, filepath) {
+    grunt.task.run('shell:jekyllDev');
   });
 
   grunt.registerTask('dev', devTasks);
   grunt.registerTask('build', baseTasks);
   grunt.registerTask('default', baseTasks);
   grunt.registerTask('publish', ['build', 'gh-pages']);
-
-}
+};
