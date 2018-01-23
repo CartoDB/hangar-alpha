@@ -1,3 +1,4 @@
+
 {% assign grid-desktop = '<div class="container container--4x3">
     <div class="box-grid"><span class="is-txtJade">.box-grid</span></div>
     <div class="box-grid"><span class="is-txtJade">.box-grid</span></div>
@@ -15,45 +16,30 @@
     <div class="box-grid"><span class="is-txtJade">.box-grid</span></div>
 </div>' %}
 
-<h2 class="title is-title">Grid System</h2>
-<p class="text is-body">Coming from an open source company, it made sense picking open sourced typefaces for our brand.</p>
-<nav>
-    <ul class="tab_navigation red-jade-design">
-        <li class="tab_navigationItem">
-            <a class="tab_navigationAction is-active" onclick="activate(this, 'flexbox-section')">Flexbox</a>
-        </li>
-        <li class="tab_navigationItem">
-            <a class="tab_navigationAction" onclick="activate(this, 'grid-section')">Grid</a>
-        </li>
-    </ul>
-</nav>
-<div id="grid-section" class="section-container ">
-    <div class="grid">
-        <div class="grid-cell--col6">
-            <h3 class="title is-subheader">Desktop</h3>
-            <p>940px wide grid</p>
+<div class="grid-cell grid-cell--col12">
+    <h2 class="title is-title">Grid System</h2>
+    <p class="text is-body">Coming from an open source company, it made sense picking open sourced typefaces for our brand.</p>
+    <nav>
+        <ul class="tab-navigation is-red">
+            <li class="tab-navigationItem">
+                <a class="tab-navigationAction is-active" onclick="activate(this, 'flexbox-section')">Flexbox</a>
+            </li>
+            <li class="tab-navigationItem">
+                <a class="tab-navigationAction" onclick="activate(this, 'grid-section')">Grid</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="grid-section" class="section-container ">
+        <div class="grid">
+            <div class="grid-cell--col6">
+                <h3 class="title is-subheader">Desktop</h3>
+                <p>940px wide grid</p>
+            </div>
         </div>
-<!--         <div class="grid-cell--col6 column-selector">
-            <p class="is-txtTypo2">Number of columns</p>
-            <form onsubmit="return false;">
-                <input type="range" name="amountRange" min="1" max="12" value="4" oninput="this.form.amountInput.value=this.value; updateCode(this.value, 'grid-section')" />
-                <input type="number" class="input" name="amountInput" min="1" max="12" value="4" oninput="this.form.amountRange.value=this.value; updateCode(this.value, 'grid-section')" />
-            </form>
-        </div> -->
+        <div class="example">{{grid-desktop}}</div>
+        <pre><code class="html hljs">{{grid-desktop | escape}}</code></pre>
     </div>
-    <div class="example">{{grid-desktop}}</div>
-    <pre><code class="html hljs">{{grid-desktop | escape}}</code></pre>
-<!-- 
-    <h3 class="title is-subheader">Tablet</h3>
-    <p>800px wide grid</p>
-    <div class="example">{{grid-tablet}}</div>
-    <pre><code class="html hljs">{{grid-tablet | escape}}</code></pre>
+    <div id="flexbox-section" class="section-container show">
 
-    <h3 class="title is-subheader">Mobile</h3>
-    <p>600px wide grid</p>
-    <div class="example">{{grid-mobile}}</div>
-    <pre><code class="html hljs">{{grid-mobile | escape}}</code></pre> -->
-</div>
-<div id="flexbox-section" class="section-container show">
-
+    </div>
 </div>

@@ -107,10 +107,6 @@ var navigatorContainer = document.getElementById("navigator-container");
 
 //SCROLL Listener for top menu
 window.addEventListener('scroll', function(e) {
-    if (navigatorContainer.style.position != "fixed" && navigatorPlaceHolder.getBoundingClientRect().y < 0){
-        navigatorContainer.style.position = "fixed";
-        navigatorContainer.style.top = "0px";
-    } else if (navigatorContainer.style.position != "relative" && navigatorPlaceHolder.getBoundingClientRect().y > 0){
-        navigatorContainer.style.position = "relative"
-    }
+    const navigation = document.querySelector('.navigation');
+    navigation.classList.toggle('is-fixed', navigatorPlaceHolder.getBoundingClientRect().y < 0);
 });
