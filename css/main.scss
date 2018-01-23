@@ -22,17 +22,17 @@ pre{
     }
 }
 
+.top-menu {
+    display: flex;
+}
 .navigator{
-    height: 80px;
     .navigator-container{
         border-bottom: 1px solid rgba(186,190,192,0.24);
-        height: 80px;
-        width: 100%;
         background-color: #ffffff;
         z-index: 1000;
         .top-menu{
+            display: flex;
             li{
-                float: left;
                 margin-right: 32px;
                 padding: 24px 0px;
             }
@@ -95,10 +95,6 @@ ul.red-jade-design{
     padding: 16px 26px;
 }
 
-.title-container{
-    max-width: 620px;
-}
-
 .header-navigator{
     padding-top: 32px;
     padding-bottom: 24px;
@@ -155,56 +151,3 @@ ul.red-jade-design{
     }
 }
 
-
-///RANGESLIDER
-
-.rangeslider--horizontal {
-    height: 4px;
-    width: 110px;
-}
-  
-
-.rangeslider,
-.rangeslider__fill {
-  display: inline-block;
-  margin-bottom: 3px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-}
-
-.rangeslider {
-  background: #f0f0f0;
-  position: relative;
-  margin-left: 14px;
-}
-
-.rangeslider--horizontal {
-  height: 4px;
-  width: 110px;
-}
-
-.rangeslider__fill {
-  background: #00B9BF;
-  position: absolute;
-}
-.rangeslider--horizontal .rangeslider__fill {
-  top: 0;
-  height: 100%;
-}
-
-.rangeslider__handle {
-  background: white;
-  border: 1px solid #00B9BF;
-  cursor: pointer;
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  position: absolute;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-}
-.rangeslider--horizontal .rangeslider__handle {
-  top: -5px;
-}
