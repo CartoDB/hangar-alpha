@@ -6,7 +6,8 @@ deactivateSon = function(elem){
     activeElement.classList.remove("is-active");
 }
 
-activate = function(caller, idToActivate){
+activate = function(event, caller, idToActivate){
+    event.preventDefault();
     var parentNav = caller.closest("nav");
     deactivateSon(parentNav)
     caller.classList.add("is-active");
