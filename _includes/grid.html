@@ -16,30 +16,32 @@
     <div class="box-grid"><span class="is-txtJade">.box-grid</span></div>
 </div>' %}
 
-<div class="grid-cell grid-cell--col12">
-    <h2 class="title is-title">Grid System</h2>
-    <p class="text is-body">Coming from an open source company, it made sense picking open sourced typefaces for our brand.</p>
-    <nav>
-        <ul class="tab-navigation is-red">
-            <li class="tab-navigationItem">
-                <a class="tab-navigationAction is-active" onclick="activate(this, 'flexbox-section')">Flexbox</a>
-            </li>
-            <li class="tab-navigationItem">
-                <a class="tab-navigationAction" onclick="activate(this, 'grid-section')">Grid</a>
-            </li>
-        </ul>
-    </nav>
-    <div id="grid-section" class="section-container ">
-        <div class="grid">
-            <div class="grid-cell--col6">
-                <h3 class="title is-subheader">Desktop</h3>
-                <p>940px wide grid</p>
+<div class="grid">
+    <div class="grid-cell grid-cell--col12">
+        <h2 class="title is-title u-vspace--4">Grid System</h2>
+        <p class="text is-body u-vspace--32">Coming from an open source company, it made sense picking open sourced typefaces for our brand.</p>
+        <nav>
+            <ul class="tab-navigation is-red">
+                <li class="tab-navigationItem">
+                    <a href="#" class="tab-navigationAction is-active" onclick="activate(this, 'flexbox-section')">Flexbox</a>
+                </li>
+                <li class="tab-navigationItem">
+                    <a href="#" class="tab-navigationAction" onclick="activate(this, 'grid-section')">Grid</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="grid-section" class="section-container ">
+            <div class="grid">
+                <div class="grid-cell--col6">
+                    <h3 class="title is-subheader">Desktop</h3>
+                    <p>940px wide grid</p>
+                </div>
             </div>
+            <div class="example">{{grid-desktop}}</div>
+            <pre><code class="html hljs">{{grid-desktop | escape}}</code></pre>
         </div>
-        <div class="example">{{grid-desktop}}</div>
-        <pre><code class="html hljs">{{grid-desktop | escape}}</code></pre>
-    </div>
-    <div id="flexbox-section" class="section-container show">
+        <div id="flexbox-section" class="section-container show">
 
+        </div>
     </div>
 </div>

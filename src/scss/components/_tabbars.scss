@@ -2,15 +2,15 @@
 # Tab Bars
 ```
   <nav>
-    <ul class="tab_navigation">
-      <li class="tab_navigationItem">
-        <a class="tab_navigationAction is-active" href="#">Location reporting</a>
+    <ul class="tab-navigation">
+      <li class="tab-navigationItem">
+        <a class="tab-navigationAction is-active" href="#">Location reporting</a>
       </li>
-      <li class="tab_navigationItem">
-        <a class="tab_navigationAction" href="#">Customer discovery</a>
+      <li class="tab-navigationItem">
+        <a class="tab-navigationAction" href="#">Customer discovery</a>
       </li>
-      <li class="tab_navigationItem">
-        <a class="tab_navigationAction" href="#">Custom basemaps</a>
+      <li class="tab-navigationItem">
+        <a class="tab-navigationAction" href="#">Custom basemaps</a>
       </li>
     </ul>
   </nav>
@@ -38,12 +38,36 @@
 // Hangar Tab bars
 
 
-.tab_navigation {
+.tab-navigation {
   display: flex;
   border-bottom: 1px solid rgba($base-grey, 0.16);
+
+  &.is-purple .tab-navigationAction {
+    color: $orange;
+    &:hover {
+      text-decoration: none;
+      border-bottom: 4px solid $orange;
+    }
+    &.is-active {
+      border-bottom: 4px solid $docs-purple;
+      color: $base-grey;
+    }
+  }
+
+  &.is-red .tab-navigationAction {
+    color: $jade;
+    &:hover {
+      text-decoration: none;
+      border-bottom: 4px solid $jade;
+    }
+    &.is-active {
+      border-bottom: 4px solid $solutions-red;
+      color: $base-grey;
+    }
+  }
 }
 
-.tab_navigationItem {
+.tab-navigationItem {
   margin-right: 24px;
   font: 400 16px/24px 'Montserrat' ;
 
@@ -52,22 +76,12 @@
   }
 }
 
-.tab_navigationAction {
+.tab-navigationAction {
   display: block;
   padding-bottom: 12px;
   margin-bottom: -1px;
   border-bottom: 4px solid transparent;
-  color: $orange;
   transition: border 300ms ease-in;
-
-  &:hover {
-    text-decoration: none;
-    border-bottom: 4px solid $orange;
-  }
-  &.is-active {
-    border-bottom: 4px solid $docs-purple;
-    color: $base-grey;
-  }
 }
 
 

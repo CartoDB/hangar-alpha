@@ -1,79 +1,105 @@
-<h2 class="title is-title">Typography</h2>
-<p class="text is-body">Description</p>
-<nav>
-    <ul class="tab_navigation red-jade-design">
-        <li class="tab_navigationItem">
-            <a class="tab_navigationAction is-active" onclick="activate(this, 'montserrat-section')">Monserrat</a>
-        </li>
-        <li class="tab_navigationItem">
-            <a class="tab_navigationAction" onclick="activate(this, 'open-sans-section')">Open Sans</a>
-        </li>
-    </ul>
-</nav>
+<div class="grid">
+    <div class="grid-cell grid-cell--col12">
+        <h2 class="title is-title u-vspace--4">Typography</h2>
+        <p class="text is-body u-vspace--32">Description</p>
+        <nav class="u-vspace--24">
+            <ul class="tab-navigation is-red">
+                <li class="tab-navigationItem">
+                    <a href="#" class="tab-navigationAction is-active" onclick="activate(this, 'montserrat-section')">Monserrat</a>
+                </li>
+                <li class="tab-navigationItem">
+                    <a href="#"class="tab-navigationAction" onclick="activate(this, 'open-sans-section')">Open Sans</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
 
-<div id="montserrat-section" class="section-container show">
+
+<ul id="montserrat-section" class="section-container show">
     {% assign montserrat-jumbo = '<h1 class="title is-jumbo">Aa</h1>'%}
     {% assign montserrat-display = '<h1 class="title is-display">Aa</h1>'%}
     {% assign montserrat-title = '<h1 class="title is-title">Aa</h1>'%}
     {% assign montserrat-subheader = '<h1 class="title is-subheader">Aa</h1>'%}
     {% assign montserrat-body = '<h1 class="title is-caption">Aa</h1>'%}
 
-    <div class="grid ingrid-code-container">
-        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Jumbo</div>
-        <div class="grid-cell grid-cell--col3">{{montserrat-jumbo}}</div>
+    <li class="grid grid--center u-vspace--32">
+        <div class="grid-cell grid-cell--col3">
+            <p class="text is-small">JUMBO</p>
+            {{montserrat-jumbo}}
+        </div>
         <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{montserrat-jumbo | escape}}</code></pre></div>
-    </div>
-    <div class="grid ingrid-code-container">
-        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Display</div>
-        <div class="grid-cell grid-cell--col3">{{montserrat-display}}</div>
+    </li>
+    <li class="grid grid--center u-vspace--32">
+        <div class="grid-cell grid-cell--col3">
+            <p class="text is-small">DISPLAY</p>
+            {{montserrat-display}}
+        </div>
         <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{montserrat-display | escape}}</code></pre></div>
-    </div>
-    <div class="grid ingrid-code-container">
-        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Title</div>
-        <div class="grid-cell grid-cell--col3">{{montserrat-title}}</div>
+    </li>
+    <li class="grid grid--center u-vspace--32">
+        <div class="grid-cell grid-cell--col3">
+            <p class="text is-small">TITLE</p>
+            {{montserrat-title}}
+        </div>
         <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{montserrat-title | escape}}</code></pre></div>
-    </div>
-    <div class="grid ingrid-code-container">
-        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Subheader</div>
-        <div class="grid-cell grid-cell--col3">{{montserrat-subheader}}</div>
+    </li>
+    <li class="grid grid--center u-vspace--32">
+        <div class="grid-cell grid-cell--col3">
+            <p class="text is-small">SUBHEADER</p>
+            {{montserrat-subheader}}
+        </div>
         <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{montserrat-subheader | escape}}</code></pre></div>
-    </div>
-    <div class="grid ingrid-code-container">
-        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Body</div>
-        <div class="grid-cell grid-cell--col3">{{montserrat-body}}</div>
+    <li>
+    <li class="grid grid--center u-vspace--32">
+        <div class="grid-cell grid-cell--col3">
+            <p class="text is-small">BODY</p>
+            {{montserrat-body}}
+        </div>
         <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{montserrat-body | escape}}</code></pre></div>
-    </div>
-</div>
-<div id="open-sans-section" class="section-container">
+    </li>
+</ul>
+
+<ul id="open-sans-section" class="section-container">
     {% assign sans-jumbo = '<h1 class="text is-jumbo">Aa</h1>'%}
     {% assign sans-display = '<h1 class="text is-display">Aa</h1>'%}
     {% assign sans-title = '<h1 class="text is-title">Aa</h1>'%}
     {% assign sans-subheader = '<h1 class="text is-subheader">Aa</h1>'%}
     {% assign sans-body = '<h1 class="text is-caption">Aa</h1>'%}
 
-    <div class="grid ingrid-code-container">
-        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Jumbo</div>
-        <div class="grid-cell grid-cell--col3">{{sans-jumbo}}</div>
+    <li class="grid grid--center u-vspace--32">
+        <div class="grid-cell grid-cell--col3">
+            <p class="text is-small">JUMBO</p>
+            {{sans-jumbo}}
+        </div>
         <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{sans-jumbo | escape}}</code></pre></div>
-    </div>
-    <div class="grid ingrid-code-container">
-        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Display</div>
-        <div class="grid-cell grid-cell--col3">{{sans-display}}</div>
+    </li>
+    <li class="grid grid--center u-vspace--32">
+        <div class="grid-cell grid-cell--col3">
+            <p class="text is-small">DISPLAY</p>
+            {{sans-display}}
+        </div>
         <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{sans-display | escape}}</code></pre></div>
-    </div>
-    <div class="grid ingrid-code-container">
-        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Title</div>
-        <div class="grid-cell grid-cell--col3">{{sans-title}}</div>
+    </li>
+    <li class="grid grid--center u-vspace--32">
+        <div class="grid-cell grid-cell--col3">
+            <p class="text is-small">TITLE</p>
+            {{sans-title}}
+        </div>
         <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{sans-title | escape}}</code></pre></div>
-    </div>
-    <div class="grid ingrid-code-container">
-        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Subheader</div>
-        <div class="grid-cell grid-cell--col3">{{sans-subheader}}</div>
+    </li>
+    <li class="grid grid--center u-vspace--32">
+        <div class="grid-cell grid-cell--col3">
+            <p class="text is-small">SUBHEADER</p>
+            {{sans-subheader}}
+        </div>
         <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{sans-subheader | escape}}</code></pre></div>
-    </div>
-    <div class="grid ingrid-code-container">
-        <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Body</div>
-        <div class="grid-cell grid-cell--col3">{{sans-body}}</div>
+    </li>
+    <li class="grid grid--center u-vspace--32">
+        <div class="grid-cell grid-cell--col3">
+            <p class="text is-small">BODY</p>
+            {{sans-body}}
+        </div>
         <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{sans-body | escape}}</code></pre></div>
-    </div>
-</div>
+    </li>
+</ul>
