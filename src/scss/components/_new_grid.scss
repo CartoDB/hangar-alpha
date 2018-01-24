@@ -105,12 +105,6 @@ $number_columns: 12;
 $gap: 20px;
 $column: ($width - (($number_columns - 1) * $gap)) / $number_columns;
 
-.box-grid {
-  border: 1px solid $jade;
-  background: rgba($jade, 0.08);
-  padding: 20px 0;
-  box-sizing: border-box;
-}
 .container {
   max-width: $width;
   margin: 0 auto;
@@ -130,7 +124,7 @@ $column: ($width - (($number_columns - 1) * $gap)) / $number_columns;
   grid-template-columns: repeat($repeat, minmax(1px, $columns * $column + $gap * $columns - 1));
 }
 
-.container--3x4 { 
+.container--3x4 {
   @include grid-exceptions(3, 4);
 }
 
@@ -145,8 +139,3 @@ $column: ($width - (($number_columns - 1) * $gap)) / $number_columns;
 .container--12x1 {
   @include grid-exceptions(12, 1);
 }
-
-
-
-
-

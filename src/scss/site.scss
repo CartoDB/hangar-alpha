@@ -2,3 +2,10 @@ pre {
   max-height: 215px;
   overflow: scroll;
 }
+
+.box-grid {
+  box-shadow: 0 0 0 1px #00B9BF;
+  background: rgba(#00B9BF, 0.08);
+  padding: 20px 0;
+  box-sizing: border-box;
+}
