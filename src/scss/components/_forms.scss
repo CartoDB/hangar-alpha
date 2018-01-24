@@ -12,7 +12,7 @@
 
 <!-- Selects -->
 <select class="select">
-  <option value="value1">Value 1</option> 
+  <option value="value1">Value 1</option>
   <option value="value2" selected>Value 2</option>
   <option value="value3">Value 3</option>
 </select>
@@ -79,7 +79,6 @@
   outline: none;
 }
 
-
 .input {
   border: 1px solid rgba($base-grey, 0.16);
   border-radius: 4px;
@@ -90,14 +89,14 @@
   color: $base-grey;
 
   &:hover {
-    border: 1px solid $link; 
+    border: 1px solid $link;
   }
   &:focus {
     border: 1px solid $base-grey;
   }
   &.is-disabled {
     border: 1px solid rgba($base-grey, 0.08);
-    background: rgba($base-grey, 0.04)
+    background: rgba($base-grey, 0.04);
   }
   &.is-error {
     border: 1px solid rgba($carto-red, 1);
@@ -106,7 +105,6 @@
     }
   }
 }
-
 
 .select {
   -webkit-appearance: none;
@@ -121,7 +119,7 @@
   color: $base-grey;
 
   &:hover {
-    border: 1px solid $link; 
+    border: 1px solid $link;
   }
   &:focus {
     border: 1px solid $base-grey;
@@ -142,7 +140,7 @@
     display: block;
 
     &:after {
-      content: '';      
+      content: '';
       display: block;
       border-radius: 50%;
       position: absolute;
@@ -168,8 +166,8 @@
       border: 1px solid $carto-red;
     }
 
-    &:hover + .radio-decoration  {
-      border: 1px solid $link; 
+    &:hover + .radio-decoration {
+      border: 1px solid $link;
       &:after {
         background: $link;
         width: 6px;
@@ -181,7 +179,7 @@
     }
 
     &:checked {
-      + .radio-decoration{
+      + .radio-decoration {
         border: 1px solid $link;
         &:before {
           content: '';
@@ -215,7 +213,6 @@
   }
 }
 
-
 .checkbox {
   position: relative;
 
@@ -239,8 +236,9 @@
   }
 
   .checkbox-decorationMedia {
+    display: flex;
     position: relative;
-    transform: translateX(1px) translateY(2px);
+    transform: translateX(1px) translateY(3px);
   }
 
   .checkbox-input {
@@ -260,12 +258,12 @@
       border: 1px solid $carto-red;
     }
 
-    &:hover + .checkbox-decoration  {
-      border: 1px solid $link; 
+    &:hover + .checkbox-decoration {
+      border: 1px solid $link;
     }
 
     &:checked {
-      + .checkbox-decoration{
+      + .checkbox-decoration {
         border: 1px solid $link;
         &:before {
           content: '';
@@ -282,7 +280,7 @@
           border-radius: 3px;
         }
         .checkbox-check {
-          animation: stroke .3s cubic-bezier(0.650, 0.000, 0.450, 1.000) 300ms forwards;
+          animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 300ms forwards;
         }
       }
     }
@@ -298,7 +296,7 @@
 @keyframes radioIn {
   0% {
     opacity: 0;
-    transform: scale3d(.3, .3, .3);
+    transform: scale3d(0.3, 0.3, 0.3);
   }
 
   to {
@@ -306,4 +304,3 @@
     transform: scale3d(1, 1, 1);
   }
 }
-
