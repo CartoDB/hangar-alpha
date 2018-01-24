@@ -35,13 +35,24 @@
     </ul>
 </nav>'%}
 
-<h3 class="title is-subheader">Tab bars</h3>
-<p class="text is-caption">This is a set of our differents types of tab bars navigations</p>
-<div class="example">{{tab-bar}}</div>
-<pre><code class="html hljs">{{tab-bar | escape}}</code></pre>
+<div class="grid grid--out">
+    <div class="grid-cell grid-cell--col12">
+        <h3 class="title is-subheader u-vspace--8">Tab bars</h3>
+        <p class="text is-caption u-vspace--16">This is a set of our differents types of tab bars navigations</p>
+    </div>
+</div>
 
-<div class="example">{{tab-bar-purple}}</div>
-<pre><code class="html hljs">{{tab-bar-purple | escape}}</code></pre>
+<ul class="grid grid--out">
+    <li class="grid-cell grid-cell--col12 u-vspace--32">
+        <div class="u-vspace--24">{{tab-bar}}</div>
+        <pre><code class="html hljs">{{tab-bar | escape}}</code></pre>
+    </li>
+    <li class="grid-cell grid-cell--col12 u-vspace--32">
+        <div class="u-vspace--24">{{tab-bar-box}}</div>
+        <pre><code class="html hljs">{{tab-bar-box | escape}}</code></pre>
+    </li>
+</ul>
 
-<div class="example">{{tab-bar-box}}</div>
-<pre><code class="html hljs">{{tab-bar-box | escape}}</code></pre>
+
+
+
