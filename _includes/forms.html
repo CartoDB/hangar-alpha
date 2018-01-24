@@ -42,32 +42,43 @@
         </span>
       </div>' %}
 
-
 <h2 class="title is-title">Forms</h2>
 <p class="text is-body">Description</p>
 
-<div class="grid ingrid-code-container">
-    <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Regular</div>
-    <div class="grid-cell grid-cell--col3">{{regular-form}}</div>
-    <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{regular-form | escape}}</code></pre></div>
-</div>
-<div class="grid ingrid-code-container">
-    <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Dropdown</div>
-    <div class="grid-cell grid-cell--col3">{{dropdown-form}}</div>
-    <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{dropdown-form | escape}}</code></pre></div>
-</div>
-<div class="grid ingrid-code-container">
-    <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Error</div>
-    <div class="grid-cell grid-cell--col3">{{error-form}}</div>
-    <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{error-form | escape}}</code></pre></div>
-</div>
-<div class="grid ingrid-code-container">
-    <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Radio Buttons</div>
-    <div class="grid-cell grid-cell--col3">{{radio-button}}</div>
-    <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{radio-button | escape}}</code></pre></div>
-</div>
-<div class="grid ingrid-code-container">
-    <div class="grid-cell grid-cell--col12 elem-name is-txtTypo2">Checkboxes</div>
-    <div class="grid-cell grid-cell--col3">{{checkbox}}</div>
-    <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{checkbox | escape}}</code></pre></div>
-</div>
+<ul>
+    <li class="grid grid--out grid--center u-vspace--32">
+        <div class="grid-cell grid-cell--col3">
+            <p class="text is-small u-vspace--8">Regular</p>
+            {{regular-form}}
+        </div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{regular-form | escape}}</code></pre></div>
+    </li>
+    <li class="grid grid--out u-vspace--32">
+        <div class="grid-cell grid-cell--col3">
+            <p class="text is-small u-vspace--8">Dropdown</p>
+            {{dropdown-form}}
+        </div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{dropdown-form | escape}}</code></pre></div>
+    </li>
+    <li class="grid grid--out grid--center u-vspace--32">
+        <div class="grid-cell grid-cell--col3">
+            <p class="text is-small u-vspace--8">Error</p>
+            {{error-form}}
+        </div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{error-form | escape}}</code></pre></div>
+    </li>
+    <li class="grid grid--out u-vspace--32">
+        <div class="grid-cell grid-cell--col3">
+            <p class="text is-small u-vspace--8">Radio Buttons</p>
+            {{radio-button}}
+        </div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{radio-button | escape}}</code></pre></div>
+    </li>
+    <li class="grid grid--out u-vspace--32">
+        <div class="grid-cell grid-cell--col3">
+            <p class="text is-small u-vspace--8">Checkboxess</p>
+            {{checkbox}}
+        </div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{checkbox | escape}}</code></pre></div>
+    </li>
+</ul>

@@ -15,7 +15,8 @@
     align-items: center;
   }
   &.grid--out {
-    margin: 0 -10px;
+    margin-right: -10px;
+    margin-left: -10px;
   }
 }
 .grid-cell {
