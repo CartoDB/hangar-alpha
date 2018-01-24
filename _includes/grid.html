@@ -1,19 +1,186 @@
 
-{% assign grid-desktop = '<div class="container container--4x3">
-    <div class="box-grid"><span class="is-txtJade">.box-grid</span></div>
-    <div class="box-grid"><span class="is-txtJade">.box-grid</span></div>
-    <div class="box-grid"><span class="is-txtJade">.box-grid</span></div>
-    <div class="box-grid"><span class="is-txtJade">.box-grid</span></div>
+{% assign grid = '<div class="container container--1-11">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+</div>
+<br/>
+<div class="container container--2-10">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+</div>
+<br/>
+<div class="container container--3-9">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+</div>
+<br/>
+<div class="container container--4-8">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+</div>
+<br/>
+<div class="container container--5-7">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+</div>
+<br/>
+<div class="container container--6-6">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+</div>
+<br/>
+<div class="container container--11-1">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+</div>
+<br/>
+<div class="container container--10-2">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+</div>
+<br/>
+<div class="container container--9-3">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+</div>
+<br/>
+<div class="container container--8-4">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+</div>
+<br/>
+<div class="container container--7-5">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+</div>
+<br/>
+<div class="container container--3x4">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+</div>
+<br/>
+<div class="container container--4x3">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+</div>
+<br/>
+<div class="container container--6x2">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+</div>
+<br/>
+<div class="container container--12x1">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
 </div>' %}
 
-{% assign grid-tablet = '<div class="container container--6-6">
-    <div class="box-grid"><span class="is-txtJade">.box-grid</span></div>
-    <div class="box-grid"><span class="is-txtJade">.box-grid</span></div>
-</div>' %}
-
-{% assign grid-mobile = '<div class="container container--6-6">
-    <div class="box-grid"><span class="is-txtJade">.box-grid</span></div>
-    <div class="box-grid"><span class="is-txtJade">.box-grid</span></div>
+{% assign flexgrid = '<div class="grid">
+    <div class="grid-cell grid-cell--col1 box-grid"></div>
+    <div class="grid-cell grid-cell--col11 box-grid"></div>
+</div>
+<br/>
+<div class="grid">
+    <div class="grid-cell grid-cell--col2 box-grid"></div>
+    <div class="grid-cell grid-cell--col10 box-grid"></div>
+</div>
+<br/>
+<div class="grid">
+    <div class="grid-cell grid-cell--col3 box-grid"></div>
+    <div class="grid-cell grid-cell--col9 box-grid"></div>
+</div>
+<br/>
+<div class="grid">
+    <div class="grid-cell grid-cell--col4 box-grid"></div>
+    <div class="grid-cell grid-cell--col8 box-grid"></div>
+</div>
+<br/>
+<div class="grid">
+    <div class="grid-cell grid-cell--col5 box-grid"></div>
+    <div class="grid-cell grid-cell--col7 box-grid"></div>
+</div>
+<br/>
+<div class="grid">
+    <div class="grid-cell grid-cell--col6 box-grid"></div>
+    <div class="grid-cell grid-cell--col6 box-grid"></div>
+</div>
+<br/>
+<div class="grid">
+    <div class="grid-cell grid-cell--col7 box-grid"></div>
+    <div class="grid-cell grid-cell--col5 box-grid"></div>
+</div>
+<br/>
+<div class="grid">
+    <div class="grid-cell grid-cell--col8 box-grid"></div>
+    <div class="grid-cell grid-cell--col4 box-grid"></div>
+</div>
+<br/>
+<div class="grid">
+    <div class="grid-cell grid-cell--col9 box-grid"></div>
+    <div class="grid-cell grid-cell--col3 box-grid"></div>
+</div>
+<br/>
+<div class="grid">
+    <div class="grid-cell grid-cell--col10 box-grid"></div>
+    <div class="grid-cell grid-cell--col2 box-grid"></div>
+</div>
+<br/>
+<div class="grid">
+    <div class="grid-cell grid-cell--col11 box-grid"></div>
+    <div class="grid-cell grid-cell--col1 box-grid"></div>
+</div>
+<br/>
+<div class="grid">
+    <div class="grid-cell grid-cell--col4 box-grid"></div>
+    <div class="grid-cell grid-cell--col4 box-grid"></div>
+    <div class="grid-cell grid-cell--col4 box-grid"></div>
+</div>
+<br/>
+<div class="grid">
+    <div class="grid-cell grid-cell--col3 box-grid"></div>
+    <div class="grid-cell grid-cell--col3 box-grid"></div>
+    <div class="grid-cell grid-cell--col3 box-grid"></div>
+    <div class="grid-cell grid-cell--col3 box-grid"></div>
+</div>
+<br/>
+<div class="grid">
+    <div class="grid-cell grid-cell--col2 box-grid"></div>
+    <div class="grid-cell grid-cell--col2 box-grid"></div>
+    <div class="grid-cell grid-cell--col2 box-grid"></div>
+    <div class="grid-cell grid-cell--col2 box-grid"></div>
+    <div class="grid-cell grid-cell--col2 box-grid"></div>
+    <div class="grid-cell grid-cell--col2 box-grid"></div>
+</div>
+<br/>
+<div class="grid">
+    <div class="grid-cell grid-cell--col1 box-grid"></div>
+    <div class="grid-cell grid-cell--col1 box-grid"></div>
+    <div class="grid-cell grid-cell--col1 box-grid"></div>
+    <div class="grid-cell grid-cell--col1 box-grid"></div>
+    <div class="grid-cell grid-cell--col1 box-grid"></div>
+    <div class="grid-cell grid-cell--col1 box-grid"></div>
+    <div class="grid-cell grid-cell--col1 box-grid"></div>
+    <div class="grid-cell grid-cell--col1 box-grid"></div>
+    <div class="grid-cell grid-cell--col1 box-grid"></div>
+    <div class="grid-cell grid-cell--col1 box-grid"></div>
+    <div class="grid-cell grid-cell--col1 box-grid"></div>
+    <div class="grid-cell grid-cell--col1 box-grid"></div>
 </div>' %}
 
 <div class="grid">
@@ -37,11 +204,18 @@
                     <p>940px wide grid</p>
                 </div>
             </div>
-            <div class="example">{{grid-desktop}}</div>
-            <pre><code class="html hljs">{{grid-desktop | escape}}</code></pre>
+            <div class="u-vspace--24">{{grid}}</div>
+            <pre><code class="html hljs">{{grid | escape}}</code></pre>
         </div>
         <div id="flexbox-section" class="section-container show">
-
+            <div class="grid">
+                <div class="grid-cell--col6">
+                    <h3 class="title is-subheader">Desktop</h3>
+                    <p>940px wide grid</p>
+                </div>
+            </div>
+            <div class="u-vspace--24">{{flexgrid}}</div>
+            <pre><code class="html hljs">{{flexgrid | escape}}</code></pre>
         </div>
     </div>
 </div>
