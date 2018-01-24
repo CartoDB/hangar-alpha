@@ -7,13 +7,16 @@
     <title>Hangar</title>
   </head>
   <body>
-      <nav class="header-navigator container">
-        <div class="grid">
-          <div class="grid-cell grid-cell--col12">
-            {% include icons/logo_carto_positive.svg %}
+      <div class="header">
+        <nav class="header-navigator">
+          <div class="container">
+            <div class="grid">
+              <div class="grid-cell grid-cell--col12">
+                {% include icons/logo_carto_positive.svg %}
+              </div>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
       {{ content }}
       {% include hangaralpha/footer.html %}
       <script src='../js/user-interactions.js'></script>
