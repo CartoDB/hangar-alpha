@@ -14,9 +14,15 @@
   &.grid--center {
     align-items: center;
   }
+  &.grid--space {
+    justify-content: space-between;
+  }
   &.grid--out {
     margin-right: -10px;
     margin-left: -10px;
+  }
+  &.grid--column {
+    flex-direction: column;
   }
 }
 .grid-cell {

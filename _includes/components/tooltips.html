@@ -4,34 +4,40 @@
 {% assign tooltip-top = '<a href="#" tooltip-position="bottom" tooltip-text="Sample text.">Show</a>'%}
 
 
-<h3 class="title is-subheader">Tooltips</h3>
-<p class="text is-caption">This is a set of our differents types of tooltips</p>
+<div class="grid grid--out">
+    <div class="grid-cell grid-cell--col12">
+        <h1 class="title is-title u-vspace--4">Tooltips</h1>
+        <p class="text is-body u-vspace--32">This is a set of our differents types of tooltips</p>
+    </div>
+</div>
 
-<div class="grid ingrid-code-container">
-    <div class="grid-cell grid-cell--col3">
-        <div class="grid-cell--col12 elem-name is-txtTypo2">Left arrow</div>
-        {{tooltip-left}}
-    </div>
-    <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{tooltip-left | escape}}</code></pre></div>
-</div>
-<div class="grid ingrid-code-container">
-    <div class="grid-cell grid-cell--col3">
-        <div class="grid-cell--col12 elem-name is-txtTypo2">Right arrow</div>
-        {{tooltip-right}}
-    </div>
-    <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{tooltip-right | escape}}</code></pre></div>
-</div>
-<div class="grid ingrid-code-container">
-    <div class="grid-cell grid-cell--col3">
-        <div class="grid-cell--col12 elem-name is-txtTypo2">Bottom arrow</div>
-        {{tooltip-bottom}}
-    </div>
-    <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{tooltip-bottom | escape}}</code></pre></div>
-</div>
-<div class="grid ingrid-code-container">
-    <div class="grid-cell grid-cell--col3">
-        <div class="grid-cell--col12 elem-name is-txtTypo2">Top arrow</div>
-        {{tooltip-top}}
-    </div>
-    <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{tooltip-top | escape}}</code></pre></div>
-</div>
+<ul>
+    <li class="grid grid--out grid--center u-vspace--32">
+        <div class="grid-cell grid-cell--col3">
+            <p class="text is-small u-vspace--8">Left arrow</p>
+            {{tooltip-left}}
+        </div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{tooltip-left | escape}}</code></pre></div>
+    </li>
+    <li class="grid grid--out grid--center u-vspace--32">
+        <div class="grid-cell grid-cell--col3">
+            <p class="text is-small u-vspace--8">Right arrow</p>
+            {{tooltip-right}}
+        </div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{tooltip-right | escape}}</code></pre></div>
+    </li>
+    <li class="grid grid--out grid--center u-vspace--32">
+        <div class="grid-cell grid-cell--col3">
+            <p class="text is-small u-vspace--8">Bottom arrow</p>
+            {{tooltip-bottom}}
+        </div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{tooltip-bottom | escape}}</code></pre></div>
+    </li>
+    <li class="grid grid--out grid--center u-vspace--32">
+        <div class="grid-cell grid-cell--col3">
+            <p class="text is-small u-vspace--8">Top arrow</p>
+            {{tooltip-top}}
+        </div>
+        <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">{{tooltip-top | escape}}</code></pre></div>
+    </li>
+</ul>
