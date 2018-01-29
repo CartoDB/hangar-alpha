@@ -33,7 +33,7 @@
     "grunt-shell": "1.1.2",
     "grunt-svgmin": "^2.0.1",
     "highlight.js": "~9.1.0",
-    "jquery": "~2.2.0",
+    "jquery": "~3.0.0",
     "load-grunt-tasks": "*",
     "markdown-styleguide-generator": "~2.0.4",
     "perfect-scrollbar": "git://github.com/CartoDB/perfect-scrollbar.git#master"
