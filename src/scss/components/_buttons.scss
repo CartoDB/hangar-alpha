@@ -98,7 +98,8 @@ $button-colors: (
   is-jade: $jade,
   is-emerald: $emerald,
   is-baseGrey: $base-grey,
-  is-white: $white
+  is-white: $white,
+  is-orange: $orange
 );
 
 @mixin outline($color) {
