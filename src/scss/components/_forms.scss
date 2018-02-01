@@ -1,0 +1,306 @@
+/* SG
+# Forms
+```
+<!-- Inputs -->
+<input type="text" class="input" placeholder="John" />
+<br/><br/><br/>
+<input type="text" class="input is-disabled" placeholder="Disabled" disabled />
+<br/><br/><br/>
+<input type="text" class="input is-error" placeholder="Error"  />
+<br/><br/><br/>
+
+
+<!-- Selects -->
+<select class="select">
+  <option value="value1">Value 1</option>
+  <option value="value2" selected>Value 2</option>
+  <option value="value3">Value 3</option>
+</select>
+<br/><br/><br/>
+
+<!-- RadioButtons -->
+<div class="u-flex">
+  <span class="radio" style="margin-right: 20px;">
+    <input class="radio-input" type="radio" name="contact" value="01">
+    <span class="radio-decoration"></span>
+  </span>
+  <span class="radio" style="margin-right: 20px;">
+    <input class="radio-input" type="radio" name="contact" value="02">
+    <span class="radio-decoration"></span>
+  </span>
+  <span class="radio">
+    <input class="radio-input is-error" type="radio" name="contact" value="02">
+    <span class="radio-decoration"></span>
+  </span>
+</div>
+<br/><br/>
+
+
+<!-- Checbox -->
+<div class="u-flex">
+  <span class="checkbox" style="margin-right: 20px;">
+    <input class="checkbox-input" type="checkbox" name="contact" value="01">
+    <span class="checkbox-decoration">
+      <svg width="12px" height="12" class="checkbox-decorationMedia">
+          <g fill="none">
+           <polyline class="checkbox-check" points="1.65093994 3.80255127 4.48919678 6.97192383 10.3794556 0.717346191"></polyline>
+          </g>
+      </svg>
+    </span>
+  </span>
+  <span class="checkbox" style="margin-right: 20px;">
+    <input class="checkbox-input" type="checkBox" name="contact" value="02">
+    <span class="checkbox-decoration">
+      <svg width="12px" height="12" class="checkbox-decorationMedia">
+          <g fill="none">
+           <polyline class="checkbox-check" points="1.65093994 3.80255127 4.48919678 6.97192383 10.3794556 0.717346191"></polyline>
+          </g>
+      </svg>
+    </span>
+  </span>
+  <span class="checkbox">
+    <input class="checkbox-input is-error" type="checkBox" name="contact" value="02">
+    <span class="checkbox-decoration">
+      <svg width="12px" height="12" class="checkbox-decorationMedia">
+          <g fill="none">
+           <polyline class="checkbox-check" points="1.65093994 3.80255127 4.48919678 6.97192383 10.3794556 0.717346191"></polyline>
+          </g>
+      </svg>
+    </span>
+  </span>
+
+</div>
+```
+*/
+
+// Hangar Forms
+
+:focus {
+  outline: none;
+}
+
+.input {
+  border: 1px solid rgba($base-grey, 0.16);
+  border-radius: 4px;
+  padding: 12px;
+  width: 100%;
+  transition: border 150ms ease-in;
+  font: 12px/16px $font-family-base;
+  color: $base-grey;
+
+  &:hover {
+    border: 1px solid $link;
+  }
+  &:focus {
+    border: 1px solid $base-grey;
+  }
+  &.is-disabled {
+    border: 1px solid rgba($base-grey, 0.08);
+    background: rgba($base-grey, 0.04);
+  }
+  &.is-error {
+    border: 1px solid rgba($carto-red, 1);
+    &:focus {
+      border: 1px solid $base-grey;
+    }
+  }
+}
+
+.select {
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+  border: 1px solid rgba($base-grey, 0.16);
+  border-radius: 4px;
+  padding: 12px;
+  width: 100%;
+  transition: border 150ms ease-in;
+  font: 12px/16px $font-family-base;
+  color: $base-grey;
+
+  &:hover {
+    border: 1px solid $link;
+  }
+  &:focus {
+    border: 1px solid $base-grey;
+  }
+}
+
+.radio {
+  position: relative;
+
+  .radio-decoration {
+    pointer-events: none;
+    width: $spacing-unit*2;
+    height: $spacing-unit*2;
+    overflow: hidden;
+    border: 1px solid rgba($base-grey, 0.16);
+    border-radius: 50%;
+    position: relative;
+    display: block;
+
+    &:after {
+      content: '';
+      display: block;
+      border-radius: 50%;
+      position: absolute;
+      top: calc(50% - 3px);
+      left: calc(50% - 3px);
+    }
+  }
+
+  .radio-input {
+    -webkit-appearance: none;
+    appearance: none;
+    background: none;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    &.is-error + .radio-decoration {
+      border: 1px solid $carto-red;
+    }
+
+    &:hover + .radio-decoration {
+      border: 1px solid $link;
+      &:after {
+        background: $link;
+        width: 6px;
+        height: 6px;
+        opacity: 0;
+        animation: radioIn 300ms;
+        animation-fill-mode: forwards;
+      }
+    }
+
+    &:checked {
+      + .radio-decoration {
+        border: 1px solid $link;
+        &:before {
+          content: '';
+          display: block;
+          width: 16px;
+          height: 16px;
+          opacity: 1;
+          background: $link;
+          animation: radioIn 600ms;
+          animation-fill-mode: forwards;
+          position: absolute;
+          top: calc(50% - 8px);
+          left: calc(50% - 8px);
+          border-radius: 50%;
+        }
+        &:after {
+          width: 6px;
+          height: 6px;
+          opacity: 1;
+          background: $white;
+        }
+      }
+    }
+    &:checked:hover + .radio-decoration {
+      &:after {
+        background: $white;
+        opacity: 1;
+        animation: initial;
+      }
+    }
+  }
+}
+
+.checkbox {
+  position: relative;
+
+  .checkbox-decoration {
+    pointer-events: none;
+    width: $spacing-unit*2;
+    height: $spacing-unit*2;
+    overflow: hidden;
+    border: 1px solid rgba($base-grey, 0.16);
+    border-radius: 3px;
+    position: relative;
+    display: block;
+  }
+
+  .checkbox-check {
+    stroke-width: 2;
+    stroke: #fff;
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+  }
+
+  .checkbox-decorationMedia {
+    display: flex;
+    position: relative;
+    transform: translateX(1px) translateY(3px);
+  }
+
+  .checkbox-input {
+    -webkit-appearance: none;
+    appearance: none;
+    background: none;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border-radius: 3px;
+    &.is-error + .checkbox-decoration {
+      border: 1px solid $carto-red;
+    }
+
+    &:hover + .checkbox-decoration {
+      border: 1px solid $link;
+    }
+
+    &:checked {
+      + .checkbox-decoration {
+        border: 1px solid $link;
+        &:before {
+          content: '';
+          display: block;
+          width: 16px;
+          height: 16px;
+          opacity: 1;
+          background: $link;
+          animation: radioIn 300ms;
+          animation-fill-mode: forwards;
+          position: absolute;
+          top: calc(50% - 8px);
+          left: calc(50% - 8px);
+          border-radius: 3px;
+        }
+        .checkbox-check {
+          animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 300ms forwards;
+        }
+      }
+    }
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes radioIn {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
