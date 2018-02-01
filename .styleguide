@@ -5,7 +5,6 @@
 	"templateFile": "./styleguide/_template.html",
 	"themeFile": "./styleguide/theme.css",
 	"highlightFolder": "./node_modules/highlight.js/styles",
-	"highlightStyle": "github",
 	"fileExtensions": {
 		"scss": true,
 		"sass": true,
