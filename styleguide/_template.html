@@ -1,99 +1,1365 @@
 <head>
-  <link href='../css/hangaralpha.css' type='text/css' rel='stylesheet'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
+  <script src="../js/hangaralpha.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
-  <style>
-    .block {
-      display: inline-block;
-      width: 300px;
-      height: 300px;
-      text-align: center;
-      margin: 0 20px 20px 0;
-    }
-  </style>
+  <title>Hangar</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.1.0/highlightjs-line-numbers.min.js"></script>
+  <link href='../css/hangaralpha.css' type='text/css' rel='stylesheet'>
+  <link href='/styleguide/theme.css' type='text/css' rel='stylesheet'>
 </head>
 
-{{> theme}}
-{{> highlight}}
-{{> jquery}}
+<body>
+    <div class="header">
+        <nav class="header-navigator">
+            <div class="container">
+                <div class="grid">
+                  <div class="grid-cell grid-cell--col12">
+                    <svg width="92px" height="36px" viewBox="0 0 92 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Logo-Scale-Positive" transform="translate(-162.000000, -282.000000)" fill="#162945">
+                          <g id="logo_carto_p_36" transform="translate(162.000000, 282.000000)">
+                              <path d="M74,36 C83.9411255,36 92,27.9411255 92,18 C92,8.0588745 83.9411255,0 74,0 C64.0588745,0 56,8.0588745 56,18 C56,27.9411255 64.0588745,36 74,36 Z" id="halo" fill-opacity="0.100000001"></path>
+                              <path d="M6.25280899,23.981602 C8.76747566,23.981602 10.220757,22.882802 11.2984713,21.390402 L8.9144367,19.684802 C8.22861851,20.521202 7.52647133,21.078802 6.33445401,21.078802 C4.73421159,21.078802 3.60751029,19.734002 3.60751029,18.012002 L3.60751029,17.979202 C3.60751029,16.306402 4.73421159,14.928802 6.33445401,14.928802 C7.4284973,14.928802 8.1796315,15.470002 8.83279168,16.273602 L11.2168263,14.420402 C10.204428,13.026402 8.70215964,12.042402 6.36711202,12.042402 C2.9053631,12.042402 0.358038428,14.666402 0.358038428,18.012002 L0.358038428,18.044802 C0.358038428,21.472402 2.98700813,23.981602 6.25280899,23.981602 L6.25280899,23.981602 Z M16.732047,23.752002 L20.0468349,23.752002 L20.8632851,21.685602 L25.2884453,21.685602 L26.1048955,23.752002 L29.5013284,23.752002 L24.6352851,12.190002 L21.5817613,12.190002 L16.732047,23.752002 Z M21.7940384,19.209202 L23.0840297,15.962002 L24.357692,19.209202 L21.7940384,19.209202 Z M35.6697093,23.752002 L38.8375361,23.752002 L38.8375361,20.275202 L40.2418305,20.275202 L42.5442201,23.752002 L46.1855881,23.752002 L43.4586443,19.750402 C44.8792677,19.143602 45.810021,17.979202 45.810021,16.208002 L45.810021,16.175202 C45.810021,15.043602 45.4671119,14.174402 44.7976227,13.502002 C44.0301595,12.731202 42.8218132,12.272002 41.0746097,12.272002 L35.6697093,12.272002 L35.6697093,23.752002 Z M38.8375361,17.782402 L38.8375361,15.010802 L40.9276487,15.010802 C41.9727049,15.010802 42.6421941,15.470002 42.6421941,16.388402 L42.6421941,16.421202 C42.6421941,17.257602 42.005363,17.782402 40.9439777,17.782402 L38.8375361,17.782402 Z M55.2605317,23.752002 L58.4283585,23.752002 L58.4283585,15.060002 L61.8574495,15.060002 L61.8574495,12.272002 L51.8477698,12.272002 L51.8477698,15.060002 L55.2605317,15.060002 L55.2605317,23.752002 Z M74,24 C77.3137085,24 80,21.3137085 80,18 C80,14.6862915 77.3137085,12 74,12 C70.6862915,12 68,14.6862915 68,18 C68,21.3137085 70.6862915,24 74,24 Z" id="logotype"></path>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
 
-<script>
-    var j = jQuery.noConflict(true);
-    j(function() {
-        // Show section in Styleguide
-        j('#styleguide .section[data-section="' + j('#styleguide-menu a').first().data('section') + '"]').show();
-        // Click on link with subheadings
-        j('#styleguide-menu .submenulink').click(function(event) {
-            event.preventDefault();
-            var jqCurSubmenu = j('[data-submenu="' + j(this).data('section') + '"]');
-            var isCurSubmenuOn = jqCurSubmenu.hasClass('on');
-            j('#styleguide-menu .on').removeClass('on');
-            if (!isCurSubmenuOn) {
-                jqCurSubmenu.addClass('on');
-                j(this).addClass('on');
-            }
-            showSection(j(this).data('section'));
-        });
-        // Click on link without subheadings
-        j('#styleguide-menu .sectionlink').click(function(event) {
-            event.preventDefault();
-            j('#styleguide-menu .on').removeClass('on');
-            j(this).addClass('on');
-            showSection(j(this).data('section'));
-        });
-        // Show/Hide sections
-        function showSection(section) {
-            j('#styleguide .section').hide();
-            var jqCurSections = j('#styleguide .section[data-section="' + section + '"]');
-            jqCurSections.show();
-        }
-    });
-</script>
+                  </div>
+                    </div>
+            </div>
+        </nav>
+    
 
-<div id="styleguide-menu">
-    <ul>
-    {{#each menu}}
-        <li>
-            {{#if headings.0.name}}
-                <a class="submenulink" href="#" data-section="{{name}}">{{name}}</a>
-                <ul class="submenu" data-submenu="{{../name}}">
-                {{#each headings}}
-                    <li><a href="#{{id}}">{{name}}</a></li>
-                {{/each}}
+        <section id="intro">
+            <div class="container">
+                <div class="grid">
+                  <div class="grid-cell grid-cell--col6">
+                    <h2 class="title is-caption is-regular is-txtTypo2">INTRODUCING</h2>
+                    <h1 class="title is-jumbo is-txtSolutionsRed">
+                      Hangar Framework
+                    </h1>
+                    <p class="text is-body u-vspace--48">Our very own Design Framework is now Open Source!</p>
+                  </div>
+                  <div class="grid-cell grid-cell--col12">
+                    <ul class="grid grid--center grid--out">
+                        <li class="grid-cell">
+                          <a href="#" class="button is-jade u-block">
+                            <span>Download .sketch files</span>
+                          </a>
+                        </li>
+                        <li class="grid-cell">
+                          <a href="https://github.com/CartoDB/hangar-alpha" class="buttonLink is-jade button-link-container u-block"><svg width="8px" height="7px" viewbox="0 0 8 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <path class="buttonLink-media" d="M1.52245273,3.04854764 L3.68776506,0.883235307 C3.88225492,0.688745449 3.88821988,0.353713791 3.68525771,0.15075162 C3.4882313,-0.0462747862 3.15435142,-0.053333131 2.95277402,0.148244267 L0.147793654,2.95322464 C0.0109867585,3.09003153 -0.0325396573,3.29637729 0.0243152648,3.47738142 C-0.0325396573,3.65838554 0.0109867585,3.8647313 0.147793654,4.00153819 L2.95277402,6.80651857 C3.15435142,7.00809596 3.4882313,7.00103762 3.68525771,6.80401121 C3.88821988,6.60104904 3.88225492,6.26601738 3.68776506,6.07152753 L1.70421948,4.08798194 L7.99996393,4.08798194 L7.99996393,3.04854764 L1.52245273,3.04854764 Z" id="Combined-Shape" fill="" transform="translate(3.999982, 3.477381) scale(-1, 1) translate(-3.999982, -3.477381) "/>
+                          </g>
+                        </svg>View code on GitHub</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- HEADER -->
+    <div id="navigator">
+        <div id="navigator-container" class="navigation">
+            <div class="container">
+            <nav class="grid">
+                <ul class="grid-cell grid-cell--col12 navigation-menu">
+                    <li class="top-menuItem u-rspace--32"><a href="#grid" class="is-txtJade text is-caption">Grid system</a></li>
+                    <li class="top-menuItem u-rspace--32"><a href="#typography" class="is-txtJade text is-caption">Typography</a></li>
+                    <li class="top-menuItem u-rspace--32"><a href="#colors" class="is-txtJade text is-caption">Colors</a></li>
+                    <li class="top-menuItem u-rspace--32"><a href="#buttons" class="is-txtJade text is-caption">Buttons</a></li>
+                    <li class="top-menuItem u-rspace--32"><a href="#forms" class="is-txtJade text is-caption">Forms</a></li>
+                    <li class="top-menuItem"><a href="#components" class="is-txtJade text is-caption">Components</a></li>
                 </ul>
-            {{/if}}
-            {{#unless headings.0.name}}
-                <a class="sectionlink" href="#" data-section="{{name}}">{{name}}</a>
-            {{/unless}}
-        </li>
-    {{/each}}
-    </ul>
-</div>
+            </nav>
+            </div>
+        </div>
+    </div>
+    <!-- End HEADER -->
 
-<div id="styleguide">
-    {{#each sections}}
-        <div class="section" id="{{id}}" data-section="{{section}}" data-heading="{{heading}}">
+<!-- GRID SECTION -->
+    <section id="grid">
+        <div class="container">
+            <div class="grid js-Tabs">
+                <div class="grid-cell grid-cell--col12">
+                    <h2 class="title is-title u-vspace--8">Grid System</h2>
+                    <p class="text is-body u-vspace--64">Coming from an open source company, it made sense picking open sourced typefaces for our brand.</p>
+                    <!-- GRID TABS -->
+                    <ul class="tab-navigation is-red u-vspace--40">
+                        <li class="tab-navigationItem">
+                            <a href="#flexbox-section" class="tab-navigationAction js-Tab is-active">Flexbox</a>
+                        </li>
+                        <li class="tab-navigationItem">
+                            <a href="#grid-section" class="tab-navigationAction js-Tab">Grid</a>
+                        </li>
+                    </ul> 
+                    <!-- GRID CONTENT -->
+                    <div class="tab-content js-tab-content" id="flexbox-section">
+                        Flexboxxxx
+                        <div class="grid u-vspace--24">
+                            <div class="grid-cell--col6">
+                                <h3 class="title is-subheader">Desktop</h3>
+                                <p class="text is-caption">940px wide grid</p>
+                            </div>
+                        </div>
 
-            <div class="comment">
-                <h1>{{section}}{{#if heading}}/{{heading}}{{/if}}</h1>
-                {{{comment}}}
+                        <div class="u-vspace--24"><div class="grid grid--out">
+                            <div class="grid-cell grid-cell--col1">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col11">
+                                <div class="box-grid"></div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="grid grid--out">
+                            <div class="grid-cell grid-cell--col2">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col10">
+                                <div class="box-grid"></div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="grid grid--out">
+                            <div class="grid-cell grid-cell--col3">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col9">
+                                <div class="box-grid"></div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="grid grid--out">
+                            <div class="grid-cell grid-cell--col4">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col8">
+                                <div class="box-grid"></div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="grid grid--out">
+                            <div class="grid-cell grid-cell--col5">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col7">
+                                <div class="box-grid"></div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="grid grid--out">
+                            <div class="grid-cell grid-cell--col6">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col6">
+                                <div class="box-grid"></div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="grid grid--out">
+                            <div class="grid-cell grid-cell--col7">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col5">
+                                <div class="box-grid"></div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="grid grid--out">
+                            <div class="grid-cell grid-cell--col8">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col4">
+                                <div class="box-grid"></div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="grid grid--out">
+                            <div class="grid-cell grid-cell--col9">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col3">
+                                <div class="box-grid"></div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="grid grid--out">
+                            <div class="grid-cell grid-cell--col10">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col2">
+                                <div class="box-grid"></div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="grid grid--out">
+                            <div class="grid-cell grid-cell--col11">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col1">
+                                <div class="box-grid"></div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="grid grid--out">
+                            <div class="grid-cell grid-cell--col4">
+                                <div class="box-grid"></div> 
+                            </div>
+                            <div class="grid-cell grid-cell--col4">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col4">
+                                <div class="box-grid"></div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="grid grid--out">
+                            <div class="grid-cell grid-cell--col3">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col3">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col3">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col3">
+                                <div class="box-grid"></div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="grid grid--out">
+                            <div class="grid-cell grid-cell--col2">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col2">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col2">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col2">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col2">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col2">
+                                <div class="box-grid"></div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="grid grid--out">
+                            <div class="grid-cell grid-cell--col1">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col1">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col1">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col1">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col1">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col1">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col1">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col1">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col1">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col1">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col1">
+                                <div class="box-grid"></div>
+                            </div>
+                            <div class="grid-cell grid-cell--col1">
+                                <div class="box-grid"></div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <pre><code class="html hljs">{{{sections.5.code}}}
+                        </code></pre>
+                    </div>
+
+                    <div class="tab-content js-tab-content" id="grid-section">
+                        Griddddd
+                        <div class="grid u-vspace--24">
+                            <div class="grid-cell--col6">
+                                <h3 class="title is-subheader u-vspace--8">Desktop</h3>
+                                <p class="text is-caption">940px wide grid</p>
+                            </div>
+                        </div>
+
+                        <div class="u-vspace--24">
+                            <div class="container-grid container--1-11">
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                            </div>
+                            <br/>
+                            <div class="container-grid container--2-10">
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                            </div>
+                            <br/>
+                            <div class="container-grid container--3-9">
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                            </div>
+                            <br/>
+                            <div class="container-grid container--4-8">
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                            </div>
+                            <br/>
+                            <div class="container-grid container--5-7">
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                            </div>
+                            <br/>
+                            <div class="container-grid container--6-6">
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                            </div>
+                            <br/>
+                            <div class="container-grid container--11-1">
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                            </div>
+                            <br/>
+                            <div class="container-grid container--10-2">
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                            </div>
+                            <br/>
+                            <div class="container-grid container--9-3">
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                            </div>
+                            <br/>
+                            <div class="container-grid container--8-4">
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                            </div>
+                            <br/>
+                            <div class="container-grid container--7-5">
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                            </div>
+                            <br/>
+                            <div class="container-grid container--3x4">
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                            </div>
+                            <br/>
+                            <div class="container-grid container--4x3">
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                            </div>
+                            <br/>
+                            <div class="container-grid container--6x2">
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                            </div>
+                            <br/>
+                            <div class="container-grid container--12x1">
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                                <div class="box-grid"></div>
+                            </div>
+                        </div>
+
+                        <pre><code class="html hljs">{{{sections.4.code}}}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- TYPOGRAPHY SECTION -->
+    <section id=typography>
+        <div class="container">
+            <div class="grid js-Tabs">
+                <div class="grid-cell grid-cell--col12">
+                    <h2 class="title is-title u-vspace--8">Typography</h2>
+                    <p class="text is-body u-vspace--64">Description</p>
+                    <ul class="tab-navigation is-red u-vspace--40">
+                        <li class="tab-navigationItem">
+                            <a href="#montserrat-section" class="tab-navigationAction js-Tab is-active">Montserrat</a>
+                        </li>
+                        <li class="tab-navigationItem">
+                            <a href="#open-sans-section" class="tab-navigationAction js-Tab">Open Sans</a>
+                        </li>
+                    </ul>
+
+                    <ul class="tab-content js-tab-content" id="montserrat-section">
+                        <li class="grid grid--out grid--center u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small">JUMBO</p>
+                                <h1 class="title is-jumbo">Aa</h1>
+                            </div>
+                            <div class="grid-cell grid-cell--col9"><pre><code class="html hljs"><h1 class="title is-jumbo">Aa</h1></code></code></pre></div>
+                        </li>
+                        <li class="grid grid--out grid--center u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small">DISPLAY</p>
+                                <h1 class="title is-display">Aa</h1>
+                            </div>
+                            <div class="grid-cell grid-cell--col9"><pre><code class="html hljs"><h1 class="title is-display">Aa</h1></code></pre></div>
+                        </li>
+                        <li class="grid grid--out grid--center u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small">TITLE</p>
+                                <h1 class="title is-title">Aa</h1>
+                            </div>
+                            <div class="grid-cell grid-cell--col9"><pre><code class="html hljs"><h1 class="title is-title">Aa</h1></code></pre></div>
+                        </li>
+                        <li class="grid grid--out grid--center u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small">SUBHEADER</p>
+                                <h1 class="title is-subheader">Aa</h1>
+                            </div>
+                            <div class="grid-cell grid-cell--col9"><pre><code class="html hljs"><h1 class="title is-subheader">Aa</h1></code></pre></div>
+                        </li>
+                        <li class="grid grid--out grid--center u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small">BODY</p>
+                                <h1 class="title is-caption">Aa</h1>
+                            </div>
+                            <div class="grid-cell grid-cell--col9"><pre><code class="html hljs"><h1 class="title is-caption">Aa</h1></code></pre></div>
+                        </li>
+                    </ul>
+                     
+                    <ul class="tab-content js-tab-content" id="open-sans-section">
+                        <li class="grid grid--out grid--center u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small">JUMBO</p>
+                                <h1 class="text is-jumbo">Aa</h1>
+                            </div>
+                            <div class="grid-cell grid-cell--col9">
+                                <pre><code class="html hljs"><h1 class="text is-jumbo">Aa</h1></code></pre>
+                            </div>
+                        </li>
+                        <li class="grid grid--out grid--center u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small">DISPLAY</p>
+                                <h1 class="text is-display">Aa</h1>
+                            </div>
+                            <div class="grid-cell grid-cell--col9"><pre><code class="html hljs"><h1 class="text is-display">Aa</h1></code></pre></div>
+                        </li>
+                        <li class="grid grid--out grid--center u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small">TITLE</p>
+                                <h1 class="text is-title">Aa</h1>
+                            </div>
+                            <div class="grid-cell grid-cell--col9"><pre><code class="html hljs"><h1 class="text is-title">Aa</h1></code></pre></div>
+                        </li>
+                        <li class="grid grid--out grid--center u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small">SUBHEADER</p>
+                                <h1 class="text is-subheader">Aa</h1>
+                            </div>
+                            <div class="grid-cell grid-cell--col9"><pre><code class="html hljs"><h1 class="text is-subheader">Aa</h1></code></pre></div>
+                        </li>
+                        <li class="grid grid--out grid--center u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small">BODY</p>
+                                <h1 class="text is-caption">Aa</h1>
+                            </div>
+                            <div class="grid-cell grid-cell--col9"><pre><code class="html hljs"><h1 class="text is-caption">Aa</h1></code></pre></div>
+                        </li>
+                    </ul> 
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- COLORS SECTION -->
+
+    <section id="colors">
+        <div class="container">
+            <div class="grid">
+                <div class="grid-cell grid-cell--col12">
+                   <h1 class="title is-title u-vspace--8">Colors</h1>
+                    <p class="text is-body u-vspace--64">Coming from an open source company, it made sense picking open sourced typefaces for our brand.</p>
+                    <h2 class="title is-subheader u-vspace--8">Primary colors</h2>
+                    <p class="text is-caption u-vspace--24">This is a set of our Primary Brand Colors</p>
+                </div>
             </div>
 
-            {{#if code}}
-                <div class="result">
-                    {{{code}}}
-                </div>
-            {{/if}}
 
-            {{#if markup}}
-                <div class="markup hljs">
-                    <pre>
-                    {{{markup}}}
-                    </pre>
+            <ul class="grid u-vspace--64">
+                <li class="grid-cell grid-cell--col4">
+                    <dl class="color-box is-bgCartoRed grid grid--columm grid--space u-vspace--24">
+                        <dt class="title is-caption is-regular is-txtWhite">Location Red</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <h4 class="title is-caption is-regular is-txtWhite u-vspace--12">#F24440</h4>
+                                </li>
+                                <li>
+                                    <span class="color-boxInfo textCode is-caption is-txtWhite">.is-txtCartoRed</span>
+                                </li>
+                                <li>
+                                    <span class="color-boxInfo textCode is-caption is-txtWhite">.is-bgCartoRed</span>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <p class="text is-caption">This is our main color that represents our hole company and brand.</p>
+                </li>
+                <li class="grid-cell grid-cell--col4">
+                    <dl class="color-box is-bgBuilderBlue grid grid--columm grid--space u-vspace--24">
+                        <dt class="title is-caption is-regular is-txtWhite">Prediction Blue</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <h4 class="title is-caption is-regular is-txtWhite u-vspace--12">#0079FB</h4>
+                                </li>
+                                <li>
+                                    <span class="color-boxInfo textCode is-caption is-txtWhite">.is-txtBuilderBlue</span>
+                                </li>
+                                <li>
+                                    <span class="color-boxInfo textCode is-caption is-txtWhite">.is-bgBuilderBlue</span>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <p class="text is-caption">The main color of CARTO Builder and the one that represents our product.</p>
+                </li>
+                <li class="grid-cell grid-cell--col4">
+                    <dl class="color-box is-bgNavyBlue grid grid--columm grid--space u-vspace--24">
+                        <dt class="title is-caption is-regular is-txtWhite">Navy Blue</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <h4 class="title is-caption is-regular is-txtWhite u-vspace--12">#162745</h4>
+                                </li>
+                                <li>
+                                    <span class="color-boxInfo textCode is-caption is-txtWhite">.is-txtNavyBlue</span>
+                                </li>
+                                <li>
+                                    <span class="color-boxInfo textCode is-caption is-txtWhite">.is-bgNavyBlue</span>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <p class="text is-caption">We use Navy Blue for all the advanced environments dedicated to developers.</p>
+                </li>
+            </ul>
+
+
+            <div class="grid">
+                <div class="grid-cell grid-cell--col12">
+                    <h2 class="title is-subheader u-vspace--8">Secondary colors</h2>
+                    <p class="text is-caption u-vspace--24">This is a set of our secondary and complementary colors </p>
                 </div>
-            {{/if}}
+            </div>
+
+
+            <ul class="grid">
+                <li class="grid-cell grid-cell--col4 u-vspace--20">
+                    <dl class="color-box is-bgCartoRed grid grid--columm grid--space">
+                        <dt class="title is-caption is-regular is-txtWhite">Solutions Red</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <h4 class="title is-caption is-regular is-txtWhite u-vspace--12">#FF583E</h4>
+                                </li>
+                                <li>
+                                    <span class="color-boxInfo textCode is-caption is-txtWhite">.is-txtSolutionsRed</span>
+                                </li>
+                                <li>
+                                    <span class="color-boxInfo textCode is-caption is-txtWhite">.is-bgSolutionsRed</span>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="grid-cell grid-cell--col4 u-vspace--20">
+                    <dl class="color-box is-bgCartoRed grid grid--columm grid--space">
+                        <dt class="title is-caption is-regular is-txtWhite">Engine Blue</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <h4 class="title is-caption is-regular is-txtWhite u-vspace--12">#2E51E8</h4>
+                                </li>
+                                <li>
+                                    <span class="color-boxInfo textCode is-caption is-txtWhite">.is-txtEngineBlue</span>
+                                </li>
+                                <li>
+                                    <span class="color-boxInfo textCode is-caption is-txtWhite">.is-bgEngineBlue</span>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="grid-cell grid-cell--col4 u-vspace--20">
+                    <dl class="color-box is-bgLDSBlue grid grid--columm grid--space">
+                        <dt class="title is-caption is-regular is-txtWhite">LDS Blue</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <h4 class="title is-caption is-regular is-txtWhite u-vspace--12">#3D33CC</h4>
+                                </li>
+                                <li>
+                                    <span class="color-boxInfo textCode is-caption is-txtWhite">.is-txtLDSBlue</span>
+                                </li>
+                                <li>
+                                    <span class="color-boxInfo textCode is-caption is-txtWhite">.is-bgLDSBlue</span>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="grid-cell grid-cell--col4 u-vspace--20">
+                    <dl class="color-box is-bgGuidesPurple grid grid--columm grid--space">
+                        <dt class="title is-caption is-regular is-txtWhite">Guides Purple</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <h4 class="title is-caption is-regular is-txtWhite u-vspace--12">#7D21F5</h4>
+                                </li>
+                                <li>
+                                    <span class="color-boxInfo textCode is-caption is-txtWhite">.is-txtGuidesPurple</span>
+                                </li>
+                                <li>
+                                    <span class="color-boxInfo textCode is-caption is-txtWhite">.is-bgGuidesPurple</span>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="grid-cell grid-cell--col4 u-vspace--20">
+                    <dl class="color-box is-bgTutorialsPurple grid grid--columm grid--space">
+                        <dt class="title is-caption is-regular is-txtWhite">Tutorials Purple</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <h4 class="title is-caption is-regular is-txtWhite u-vspace--12">#6E00DC</h4>
+                                </li>
+                                <li>
+                                    <span class="color-boxInfo textCode is-caption is-txtWhite">.is-txtTutorialsPurple</span>
+                                </li>
+                                <li>
+                                    <span class="color-boxInfo textCode is-caption is-txtWhite">.is-bgTutorialsPurple</span>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="grid-cell grid-cell--col4 u-vspace--20">
+                    <dl class="color-box is-bgDocsPurple grid grid--columm grid--space">
+                        <dt class="title is-caption is-regular is-txtWhite">Docs Purple</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    <h4 class="title is-caption is-regular is-txtWhite u-vspace--12">#3D33CC</h4>
+                                </li>
+                                <li>
+                                    <span class="color-boxInfo textCode is-caption is-txtWhite">.is-txtDocsPurple</span>
+                                </li>
+                                <li>
+                                    <span class="color-boxInfo textCode is-caption is-txtWhite">.is-bgDocsPurple</span>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+
 
         </div>
-    {{/each}}
-</div>
+    </section>
+
+<!-- BUTTONS SECTION -->
+    <section id="buttons">
+        <div class="container">
+            <div class="grid js-Tabs">
+                <div class="grid-cell grid-cell--col12">
+                    <h2 class="title is-title u-vspace--8">Buttons</h2>
+                    <p class="text is-body u-vspace--64">Description</p>
+
+
+                    <ul class="tab-navigation is-red u-vspace--40">
+                        <li class="tab-navigationItem">
+                            <a href="#primary-button-section" class="tab-navigationAction js-Tab is-active">Primary</a>
+                        </li>
+                        <li class="tab-navigationItem">
+                            <a href="#secondary-button-section" class="tab-navigationAction js-Tab">Secondary</a>
+                        </li>
+                        <li class="tab-navigationItem">
+                            <a href="#ghost-button-section" class="tab-navigationAction js-Tab">Ghost</a>
+                        </li>
+                    </ul>
+
+
+                    <ul class="tab-content js-tab-content" id="primary-button-section">
+                        <li class="grid grid--out u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small u-vspace--8">JUMBO</p>
+                                <a href="#" class="button button--large is-jade"><span>Sample Text</span></a>
+                            </div>
+                            <div class="grid-cell grid-cell--col9">
+                                <pre><code class="html hljs"><a href="#" class="button button--large is-jade">
+                                    <span>Sample Text</span></a>
+                                </code></pre>
+                            </div>
+                        </li>
+
+                        <li class="grid grid--out u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small u-vspace--8">REGULAR</p>
+                                <a href="#" class="button is-jade">
+                                    <span>Sample Text</span>
+                                </a>
+                            </div>
+                            <div class="grid-cell grid-cell--col9">
+                                <pre><code class="html hljs escaped">&lt;a href=&quot;#&quot; class=&quot;button is-jade&quot;&gt;
+                                        &lt;span&gt;Sample Text&lt;/span&gt;
+                                    &lt;/a&gt;</code></pre>
+                            </div>
+                        </li>
+                        <li class="grid grid--out u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small u-vspace--8">SMALL</p>
+                                <a href="#" class="button button--small is-jade">
+                                    <span>Sample Text</span>
+                                </a>
+                            </div>
+                            <div class="grid-cell grid-cell--col9">
+                                <pre><code class="html hljs escaped">&lt;a href=&quot;#&quot; class=&quot;button button--small is-jade&quot;&gt;
+                                &lt;span&gt;Sample Text&lt;/span&gt;
+                                &lt;/a&gt;</code></pre>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="tab-content js-tab-content" id="secondary-button-section">
+                        <li class="grid grid--out u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small u-vspace--8">JUMBO</p>
+                                <a href="#" class="button button--large is-jadeOutline">
+                                    <span>Sample Text</span>
+                                </a>
+                            </div>
+                            <div class="grid-cell grid-cell--col9">
+                                <pre><code class="html hljs">&lt;a href=&quot;#&quot; class=&quot;button button--large is-jadeOutline&quot;&gt;
+                                &lt;span&gt;Sample Text&lt;/span&gt;
+                                &lt;/a&gt;</code></pre>
+                            </div>
+                        </li>
+                        <li class="grid grid--out u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small u-vspace--8">REGULAR</p>
+                                <a href="#" class="button is-jadeOutline">
+                                    <span>Sample Text</span>
+                                </a>
+                            </div>
+                            <div class="grid-cell grid-cell--col9">
+                                <pre><code class="html hljs">&lt;a href=&quot;#&quot; class=&quot;button is-jadeOutline&quot;&gt;
+                                &lt;span&gt;Sample Text&lt;/span&gt;
+                                &lt;/a&gt;</code></pre>
+                            </div>
+                        </li>
+                        <li class="grid grid--out u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small u-vspace--8">SMALL</p>
+                                <a href="#" class="button button--small is-jadeOutline">
+                                    <span>Sample Text</span>
+                                </a>
+                            </div>
+                            <div class="grid-cell grid-cell--col9">
+                                <pre><code class="html hljs">&lt;a href=&quot;#&quot; class=&quot;button button--small is-jadeOutline&quot;&gt;
+                                &lt;span&gt;Sample Text&lt;/span&gt;
+                                &lt;/a&gt;</code></pre>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="tab-content js-tab-content" id="ghost-button-section">
+                        <li class="grid grid--out u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small u-vspace--8">JUMBO</p>
+                                <a href="#" class="buttonLink button--large is-jade">
+                                    <svg width="8px" height="7px" viewBox="0 0 8 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <path class="buttonLink-media" d="M1.52245273,3.04854764 L3.68776506,0.883235307 C3.88225492,0.688745449 3.88821988,0.353713791 3.68525771,0.15075162 C3.4882313,-0.0462747862 3.15435142,-0.053333131 2.95277402,0.148244267 L0.147793654,2.95322464 C0.0109867585,3.09003153 -0.0325396573,3.29637729 0.0243152648,3.47738142 C-0.0325396573,3.65838554 0.0109867585,3.8647313 0.147793654,4.00153819 L2.95277402,6.80651857 C3.15435142,7.00809596 3.4882313,7.00103762 3.68525771,6.80401121 C3.88821988,6.60104904 3.88225492,6.26601738 3.68776506,6.07152753 L1.70421948,4.08798194 L7.99996393,4.08798194 L7.99996393,3.04854764 L1.52245273,3.04854764 Z" id="Combined-Shape" fill="#00B9BF " transform="translate(3.999982, 3.477381) scale(-1, 1) translate(-3.999982, -3.477381) "></path>
+                                        </g>
+                                    </svg>
+                                    Sample Text
+                                </a>
+                            </div>
+                            <div class="grid-cell grid-cell--col9">
+                                <pre><code class="html hljs">&lt;a href=&quot;#&quot; class=&quot;buttonLink button--large is-jade&quot;&gt;
+                                &lt;svg width=&quot;8px&quot; height=&quot;7px&quot; viewBox=&quot;0 0 8 7&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;
+                                &lt;g stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;&gt;
+                                &lt;path class=&quot;buttonLink-media&quot; d=&quot;M1.52245273,3.04854764 L3.68776506,0.883235307 C3.88225492,0.688745449 3.88821988,0.353713791 3.68525771,0.15075162 C3.4882313,-0.0462747862 3.15435142,-0.053333131 2.95277402,0.148244267 L0.147793654,2.95322464 C0.0109867585,3.09003153 -0.0325396573,3.29637729 0.0243152648,3.47738142 C-0.0325396573,3.65838554 0.0109867585,3.8647313 0.147793654,4.00153819 L2.95277402,6.80651857 C3.15435142,7.00809596 3.4882313,7.00103762 3.68525771,6.80401121 C3.88821988,6.60104904 3.88225492,6.26601738 3.68776506,6.07152753 L1.70421948,4.08798194 L7.99996393,4.08798194 L7.99996393,3.04854764 L1.52245273,3.04854764 Z&quot; id=&quot;Combined-Shape&quot; fill=&quot;#00B9BF &quot; transform=&quot;translate(3.999982, 3.477381) scale(-1, 1) translate(-3.999982, -3.477381) &quot;&gt;&lt;/path&gt;
+                                &lt;/g&gt;
+                                &lt;/svg&gt;
+                                Sample Text
+                                &lt;/a&gt;</code></pre>
+                            </div>
+                        </li>
+                        <li class="grid grid--out u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small u-vspace--8">REGULAR</p>
+                                <a href="#" class="buttonLink is-jade">
+                                    <svg width="8px" height="7px" viewBox="0 0 8 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <path class="buttonLink-media" d="M1.52245273,3.04854764 L3.68776506,0.883235307 C3.88225492,0.688745449 3.88821988,0.353713791 3.68525771,0.15075162 C3.4882313,-0.0462747862 3.15435142,-0.053333131 2.95277402,0.148244267 L0.147793654,2.95322464 C0.0109867585,3.09003153 -0.0325396573,3.29637729 0.0243152648,3.47738142 C-0.0325396573,3.65838554 0.0109867585,3.8647313 0.147793654,4.00153819 L2.95277402,6.80651857 C3.15435142,7.00809596 3.4882313,7.00103762 3.68525771,6.80401121 C3.88821988,6.60104904 3.88225492,6.26601738 3.68776506,6.07152753 L1.70421948,4.08798194 L7.99996393,4.08798194 L7.99996393,3.04854764 L1.52245273,3.04854764 Z" id="Combined-Shape" fill="#00B9BF " transform="translate(3.999982, 3.477381) scale(-1, 1) translate(-3.999982, -3.477381) "></path>
+                                        </g>
+                                    </svg>
+                                Sample Text
+                                </a>
+                            </div>
+                            <div class="grid-cell grid-cell--col9">
+                                <pre><code class="html hljs">&lt;a href=&quot;#&quot; class=&quot;buttonLink is-jade&quot;&gt;
+                                &lt;svg width=&quot;8px&quot; height=&quot;7px&quot; viewBox=&quot;0 0 8 7&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;
+                                &lt;g stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;&gt;
+                                &lt;path class=&quot;buttonLink-media&quot; d=&quot;M1.52245273,3.04854764 L3.68776506,0.883235307 C3.88225492,0.688745449 3.88821988,0.353713791 3.68525771,0.15075162 C3.4882313,-0.0462747862 3.15435142,-0.053333131 2.95277402,0.148244267 L0.147793654,2.95322464 C0.0109867585,3.09003153 -0.0325396573,3.29637729 0.0243152648,3.47738142 C-0.0325396573,3.65838554 0.0109867585,3.8647313 0.147793654,4.00153819 L2.95277402,6.80651857 C3.15435142,7.00809596 3.4882313,7.00103762 3.68525771,6.80401121 C3.88821988,6.60104904 3.88225492,6.26601738 3.68776506,6.07152753 L1.70421948,4.08798194 L7.99996393,4.08798194 L7.99996393,3.04854764 L1.52245273,3.04854764 Z&quot; id=&quot;Combined-Shape&quot; fill=&quot;#00B9BF &quot; transform=&quot;translate(3.999982, 3.477381) scale(-1, 1) translate(-3.999982, -3.477381) &quot;&gt;&lt;/path&gt;
+                                &lt;/g&gt;
+                                &lt;/svg&gt;
+                                Sample Text
+                                &lt;/a&gt;</code></pre>
+                            </div>
+                        </li>
+                        <li class="grid grid--out u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small u-vspace--8">SMALL</p>
+                                <a href="#" class="buttonLink button--small is-jade">
+                                <svg width="8px" height="7px" viewBox="0 0 8 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <path class="buttonLink-media" d="M1.52245273,3.04854764 L3.68776506,0.883235307 C3.88225492,0.688745449 3.88821988,0.353713791 3.68525771,0.15075162 C3.4882313,-0.0462747862 3.15435142,-0.053333131 2.95277402,0.148244267 L0.147793654,2.95322464 C0.0109867585,3.09003153 -0.0325396573,3.29637729 0.0243152648,3.47738142 C-0.0325396573,3.65838554 0.0109867585,3.8647313 0.147793654,4.00153819 L2.95277402,6.80651857 C3.15435142,7.00809596 3.4882313,7.00103762 3.68525771,6.80401121 C3.88821988,6.60104904 3.88225492,6.26601738 3.68776506,6.07152753 L1.70421948,4.08798194 L7.99996393,4.08798194 L7.99996393,3.04854764 L1.52245273,3.04854764 Z" id="Combined-Shape" fill="#00B9BF " transform="translate(3.999982, 3.477381) scale(-1, 1) translate(-3.999982, -3.477381) "></path>
+                                    </g>
+                                </svg>
+                                Sample Text
+                                </a>
+                            </div>
+                            <div class="grid-cell grid-cell--col9">
+                                <pre><code class="html hljs">&lt;a href=&quot;#&quot; class=&quot;buttonLink button--small is-jade&quot;&gt;
+                                &lt;svg width=&quot;8px&quot; height=&quot;7px&quot; viewBox=&quot;0 0 8 7&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;
+                                &lt;g stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;&gt;
+                                &lt;path class=&quot;buttonLink-media&quot; d=&quot;M1.52245273,3.04854764 L3.68776506,0.883235307 C3.88225492,0.688745449 3.88821988,0.353713791 3.68525771,0.15075162 C3.4882313,-0.0462747862 3.15435142,-0.053333131 2.95277402,0.148244267 L0.147793654,2.95322464 C0.0109867585,3.09003153 -0.0325396573,3.29637729 0.0243152648,3.47738142 C-0.0325396573,3.65838554 0.0109867585,3.8647313 0.147793654,4.00153819 L2.95277402,6.80651857 C3.15435142,7.00809596 3.4882313,7.00103762 3.68525771,6.80401121 C3.88821988,6.60104904 3.88225492,6.26601738 3.68776506,6.07152753 L1.70421948,4.08798194 L7.99996393,4.08798194 L7.99996393,3.04854764 L1.52245273,3.04854764 Z&quot; id=&quot;Combined-Shape&quot; fill=&quot;#00B9BF &quot; transform=&quot;translate(3.999982, 3.477381) scale(-1, 1) translate(-3.999982, -3.477381) &quot;&gt;&lt;/path&gt;
+                                &lt;/g&gt;
+                                &lt;/svg&gt;
+                                Sample Text
+                                &lt;/a&gt;</code></pre>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- FORMS SECTION -->
+    <section id="forms">
+        <div class="container">
+            <div class="grid grid--out">
+                <div class="grid-cell grid-cell--col12">
+                    <h1 class="title is-title u-vspace--8">Forms</h1>
+                    <p class="text is-body u-vspace--64">Description</p>
+                </div>
+            </div>
+
+            <ul>
+                <li class="grid grid--out grid--center u-vspace--32">
+                    <div class="grid-cell grid-cell--col3">
+                        <p class="text is-small u-vspace--8">REGULAR</p>
+                        <input type="text" class="input" placeholder="John">
+                    </div>
+                    <div class="grid-cell grid-cell--col9">
+                        <pre><code class="html hljs">&lt;input type=&quot;text&quot; class=&quot;input&quot; placeholder=&quot;John&quot;&gt;</code></pre>
+                    </div>
+                </li>
+                <li class="grid grid--out u-vspace--32">
+                    <div class="grid-cell grid-cell--col3">
+                        <p class="text is-small u-vspace--8">DROPDOWN</p>
+                        <select class="select">
+                            <option value="value1">Value 1</option> 
+                            <option value="value2" selected>Value 2</option>
+                            <option value="value3">Value 3</option>
+                        </select>
+                    </div>
+
+                    <div class="grid-cell grid-cell--col9">
+                        <pre><code class="html hljs">&lt;select class=&quot;select&quot;&gt;
+                        &lt;option value=&quot;value1&quot;&gt;Value 1&lt;/option&gt; 
+                        &lt;option value=&quot;value2&quot; selected&gt;Value 2&lt;/option&gt;
+                        &lt;option value=&quot;value3&quot;&gt;Value 3&lt;/option&gt;
+                        &lt;/select&gt;</code></pre>
+                    </div>
+                </li>
+                <li class="grid grid--out grid--center u-vspace--32">
+                    <div class="grid-cell grid-cell--col3">
+                        <p class="text is-small u-vspace--8">ERROR</p>
+                        <input type="text" class="input is-error" placeholder="Error">
+                    </div>
+                    <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">&lt;input type=&quot;text&quot; class=&quot;input is-error&quot; placeholder=&quot;Error&quot;&gt;</code></pre></div>
+                </li>
+                <li class="grid grid--out u-vspace--32">
+                    <div class="grid-cell grid-cell--col3">
+                        <p class="text is-small u-vspace--8">RADIO BUTTONS</p>
+                        <div class="u-flex">
+              <span class="radio" style="margin-right: 20px;">
+                <input class="radio-input" type="radio" name="contact" value="01">
+                <span class="radio-decoration"></span>
+              </span>
+              <span class="radio" style="margin-right: 20px;">
+                <input class="radio-input" type="radio" name="contact" value="02" checked>
+                <span class="radio-decoration"></span>
+              </span>
+            </div>
+                    </div>
+                    <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">&lt;div class=&quot;u-flex&quot;&gt;
+              &lt;span class=&quot;radio&quot; style=&quot;margin-right: 20px;&quot;&gt;
+                &lt;input class=&quot;radio-input&quot; type=&quot;radio&quot; name=&quot;contact&quot; value=&quot;01&quot;&gt;
+                &lt;span class=&quot;radio-decoration&quot;&gt;&lt;/span&gt;
+              &lt;/span&gt;
+              &lt;span class=&quot;radio&quot; style=&quot;margin-right: 20px;&quot;&gt;
+                &lt;input class=&quot;radio-input&quot; type=&quot;radio&quot; name=&quot;contact&quot; value=&quot;02&quot; checked&gt;
+                &lt;span class=&quot;radio-decoration&quot;&gt;&lt;/span&gt;
+              &lt;/span&gt;
+            &lt;/div&gt;</code></pre></div>
+                </li>
+                <li class="grid grid--out u-vspace--32">
+                    <div class="grid-cell grid-cell--col3">
+                        <p class="text is-small u-vspace--8">CHECKBOXES</p>
+                        <div class="u-flex">
+                    <span class="checkbox" style="margin-right: 20px;">
+                      <input class="checkbox-input" type="checkbox" name="contact" value="01">
+                      <span class="checkbox-decoration">
+                        <svg width="12px" height="12" class="checkbox-decorationMedia">
+                            <g fill="none">
+                             <polyline class="checkbox-check" points="1.65093994 3.80255127 4.48919678 6.97192383 10.3794556 0.717346191"></polyline>
+                            </g>
+                        </svg>
+                      </span>
+                    </span>
+                    <span class="checkbox" style="margin-right: 20px;">
+                      <input class="checkbox-input" type="checkBox" name="contact" value="02" checked>
+                      <span class="checkbox-decoration">
+                        <svg width="12px" height="12" class="checkbox-decorationMedia">
+                            <g fill="none">
+                             <polyline class="checkbox-check" points="1.65093994 3.80255127 4.48919678 6.97192383 10.3794556 0.717346191"></polyline>
+                            </g>
+                        </svg>
+                      </span>
+                    </span>
+                  </div>
+                    </div>
+                    <div class="grid-cell grid-cell--col9"><pre><code class="html hljs">&lt;div class=&quot;u-flex&quot;&gt;
+                    &lt;span class=&quot;checkbox&quot; style=&quot;margin-right: 20px;&quot;&gt;
+                      &lt;input class=&quot;checkbox-input&quot; type=&quot;checkbox&quot; name=&quot;contact&quot; value=&quot;01&quot;&gt;
+                      &lt;span class=&quot;checkbox-decoration&quot;&gt;
+                        &lt;svg width=&quot;12px&quot; height=&quot;12&quot; class=&quot;checkbox-decorationMedia&quot;&gt;
+                            &lt;g fill=&quot;none&quot;&gt;
+                             &lt;polyline class=&quot;checkbox-check&quot; points=&quot;1.65093994 3.80255127 4.48919678 6.97192383 10.3794556 0.717346191&quot;&gt;&lt;/polyline&gt;
+                            &lt;/g&gt;
+                        &lt;/svg&gt;
+                      &lt;/span&gt;
+                    &lt;/span&gt;
+                    &lt;span class=&quot;checkbox&quot; style=&quot;margin-right: 20px;&quot;&gt;
+                      &lt;input class=&quot;checkbox-input&quot; type=&quot;checkBox&quot; name=&quot;contact&quot; value=&quot;02&quot; checked&gt;
+                      &lt;span class=&quot;checkbox-decoration&quot;&gt;
+                        &lt;svg width=&quot;12px&quot; height=&quot;12&quot; class=&quot;checkbox-decorationMedia&quot;&gt;
+                            &lt;g fill=&quot;none&quot;&gt;
+                             &lt;polyline class=&quot;checkbox-check&quot; points=&quot;1.65093994 3.80255127 4.48919678 6.97192383 10.3794556 0.717346191&quot;&gt;&lt;/polyline&gt;
+                            &lt;/g&gt;
+                        &lt;/svg&gt;
+                      &lt;/span&gt;
+                    &lt;/span&gt;
+                  &lt;/div&gt;</code></pre></div>
+                </li>
+            </ul>
+
+        </div>
+        </div>
+    </section>
+
+
+<!-- COMPONENTS SECTION -->
+    <section id="components">
+        <div class="container">
+            <h1 class="title is-title u-vspace--8">Components</h1>
+            <p class="text is-body u-vspace--64">Description</p>
+            <ul>
+                <li class="u-vspace--64">
+                    <h3 class="title is-subheader u-vspace--8">Cards</h3>
+                    <p class="text is-caption u-vspace--24">This is a set of our different types of cards</p>
+                </li>
+
+                <li class="u-vspace--64">
+                    <h3 class="title is-subheader u-vspace--8">Tables</h3>
+                    <p class="text is-caption u-vspace--24">This is a set of our different types of tables</p>
+                </li>
+
+                <li class="u-vspace--64">
+                    <div class="grid grid--out">
+                        <div class="grid-cell grid-cell--col12">
+                            <h3 class="title is-subheader u-vspace--8">Tab bars</h3>
+                            <p class="text is-caption u-vspace--24">This is a set of our differents types of tab bars navigations</p>
+                        </div>
+                    </div>
+
+                    <ul class="grid grid--out">
+                        <!-- TABS-->
+                        <li class="grid-cell grid-cell--col12 u-vspace--32 js-Tabs">
+                            <ul class="tab-navigation is-red u-vspace--40">
+                                <li class="tab-navigationItem">
+                                    <a href="#tab-bar-1-section" class="tab-navigationAction js-Tab is-active">Tab Bar 1</a>
+                                </li>
+                                <li class="tab-navigationItem">
+                                    <a href="#tab-bar-2-section" class="tab-navigationAction js-Tab">Tab Bar 2</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content js-tab-content" id="tab-bar-1-section">
+                                 <pre><code class="html hljs">{{{sections.6.code}}}</code></pre>
+                            </div>
+
+                            <div class="tab-content js-tab-content" id="tab-bar-2-section">
+                                <pre><code class="html hljs">{{{sections6.code}}}</code></pre>
+                            </div>
+                        </li>
+                         <!-- TAB BUTTONS-->
+                        <li class="grid-cell grid-cell--col12 u-vspace--32">
+                            <ul class="button-group u-vspace--24">
+                                <li class="button-groupItem">
+                                    <button type="button" class="button-groupAction">Item 1</button>
+                                </li>
+                                <li class="button-groupItem">
+                                    <button type="button" class="button-groupAction">Item 2</button>
+                                </li>
+                                <li class="button-groupItem">
+                                    <button type="button" class="button-groupAction">Item 3</button>
+                                </li>
+                                <li class="button-groupItem">
+                                    <button type="button" class="button-groupAction is-active">Item 4</button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content js-tab-content is-active" id="tab-bar-1-section">
+                                 <pre><code class="html hljs">{{{sections.7.code}}}</code></pre>
+                            </div>
+
+                            <div class="tab-content js-tab-content" id="tab-bar-2-section">
+                                <pre><code class="html hljs">{{{sections7.code}}}</code></pre>
+                            </div>
+                        </li>
+                    </ul>    
+                </li>
+
+                <li class="u-vspace--64">        
+                    <div class="grid grid--out">
+                        <div class="grid-cell grid-cell--col12">
+                            <h3 class="title is-subheader u-vspace--8">Tooltips</h3>
+                            <p class="text is-caption u-vspace--24">This is a set of our differents types of tooltips</p>
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li class="grid grid--out grid--center u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small u-vspace--8">Left arrow</p>
+                                <a href="#" tooltip-position="right" tooltip-text="Sample text.">Show</a>
+                            </div>
+                            <div class="grid-cell grid-cell--col9"><pre><code class="html hljs escaped">&lt;a href=&quot;#&quot; tooltip-position=&quot;right&quot; tooltip-text=&quot;Sample text.&quot;&gt;Show&lt;/a&gt;</code></pre></div>
+                        </li>
+                        <li class="grid grid--out grid--center u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small u-vspace--8">Right arrow</p>
+                                <a href="#" tooltip-position="left" tooltip-text="Sample text.">Show</a>
+                            </div>
+                            <div class="grid-cell grid-cell--col9"><pre><code class="html hljs escaped">&lt;a href=&quot;#&quot; tooltip-position=&quot;left&quot; tooltip-text=&quot;Sample text.&quot;&gt;Show&lt;/a&gt;</code></pre></div>
+                        </li>
+                        <li class="grid grid--out grid--center u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small u-vspace--8">Bottom arrow</p>
+                                <a href="#" tooltip-position="top" tooltip-text="Sample text.">Show</a>
+                            </div>
+                            <div class="grid-cell grid-cell--col9"><pre><code class="html hljs escaped">&lt;a href=&quot;#&quot; tooltip-position=&quot;top&quot; tooltip-text=&quot;Sample text.&quot;&gt;Show&lt;/a&gt;</code></pre></div>
+                        </li>
+                        <li class="grid grid--out grid--center u-vspace--32">
+                            <div class="grid-cell grid-cell--col3">
+                                <p class="text is-small u-vspace--8">Top arrow</p>
+                                <a href="#" tooltip-position="bottom" tooltip-text="Sample text.">Show</a>
+                            </div>
+                            <div class="grid-cell grid-cell--col9"><pre><code class="html hljs escaped">&lt;a href=&quot;#&quot; tooltip-position=&quot;bottom&quot; tooltip-text=&quot;Sample text.&quot;&gt;Show&lt;/a&gt;</code></pre></div>
+                        </li>
+                    </ul>
+                      </li>
+                      <li class="u-vspace--64">
+                        <h3 class="title is-subheader u-vspace--8">Alerts</h3>
+                    <p class="text is-caption u-vspace--24">This is a set of our differents types of alerts</p>
+
+                      </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="Footer-container">
+    <div class="grid Footer mobile--flex container">
+    <div class="grid-cell grid-cell--col12 u-vspace--8">
+      <p class="title is-small">Products</p>
+    </div>
+    <ul class="grid-cell grid-cell--col6">
+      
+        <li class="FooterElement"><a href="/builder/" class="FooterLink js-Action--Footerlinks text is-small">Builder</a></li>
+      
+        <li class="FooterElement"><a href="/engine/" class="FooterLink js-Action--Footerlinks text is-small">Engine</a></li>
+      
+        <li class="FooterElement"><a href="/engine/mobile/" class="FooterLink js-Action--Footerlinks text is-small">Mobile</a></li>
+      
+        <li class="FooterElement"><a href="/location-data-services/" class="FooterLink js-Action--Footerlinks text is-small">Location Data Services</a></li>
+      
+    </ul>
+    <ul class="grid-cell grid-cell--col6">
+      
+        <li class="FooterElement"><a href="/data-observatory/" class="FooterLink js-Action--Footerlinks text is-small">Data Observatory</a></li>
+      
+        <li class="FooterElement"><a href="/integrations/" class="FooterLink js-Action--Footerlinks text is-small">Integrations</a></li>
+      
+        <li class="FooterElement"><a href="/attribution/" class="FooterLink js-Action--Footerlinks text is-small">Attributions</a></li>
+      
+        <li class="FooterElement"><a href="/pricing/" class="FooterLink js-Action--Footerlinks text is-small">Pricing</a></li>
+      
+    </ul>
+
+
+    <div class="grid-cell grid-cell--col12 u-tspace--32 u-vspace--8">
+      <p class="title is-small">Resources</p>
+    </div>
+    <ul class="grid-cell grid-cell--col6">
+      
+        <li class="FooterElement"><a href="/webinars/" class="FooterLink js-Action--Footerlinks text is-small">Webinars</a></li>
+      
+        <li class="FooterElement"><a href="/resources/" class="FooterLink js-Action--Footerlinks text is-small">Case Studies</a></li>
+      
+        <li class="FooterElement"><a href="/blog/" class="FooterLink js-Action--Footerlinks text is-small">Blog</a></li>
+      
+        <li class="FooterElement"><a href="/learn/guides" class="FooterLink js-Action--Footerlinks text is-small">Learn</a></li>
+      
+    </ul>
+    <ul class="grid-cell grid-cell--col6">
+      
+        <li class="FooterElement"><a href="/docs/" class="FooterLink js-Action--Footerlinks text is-small">Documentation</a></li>
+      
+        <li class="FooterElement"><a href="/brand/" class="FooterLink js-Action--Footerlinks text is-small">Brand</a></li>
+      
+        <li class="FooterElement"><a href="https://github.com/CartoDB/cartodb" title="Source Code" class="FooterLink">Source Code</a></li>
+    </ul>
+
+
+    <div class="grid-cell grid-cell--col12 u-tspace--32 u-vspace--8 ">
+      <p class="title is-small">About us</p>
+    </div>
+    <ul class="grid-cell grid-cell--col6">
+      
+        <li class="FooterElement"><a href="/team/" class="FooterLink js-Action--Footerlinks text is-small">Team</a></li>
+      
+        <li class="FooterElement"><a href="/careers/" class="FooterLink js-Action--Footerlinks text is-small">Careers</a></li>
+      
+        <li class="FooterElement"><a href="/press/" class="FooterLink js-Action--Footerlinks text is-small">Press</a></li>
+      
+        <li class="FooterElement"><a href="/partners/" class="FooterLink js-Action--Footerlinks text is-small">Partners</a></li>
+      
+    </ul>
+    <ul class="grid-cell grid-cell--col6">
+      
+        <li class="FooterElement"><a href="/contributions/" class="FooterLink js-Action--Footerlinks text is-small">Contributions</a></li>
+      
+        <li class="FooterElement"><a href="/request-live-demo/" class="FooterLink js-Action--Footerlinks text is-small">Request a Live Demo</a></li>
+      
+        <li class="FooterElement"><a href="/legal/" class="FooterLink js-Action--Footerlinks text is-small">Terms of Service</a></li>
+      
+        <li class="FooterElement"><a href="/privacy/" class="FooterLink js-Action--Footerlinks text is-small">Privacy Policy</a></li>
+      
+    </ul>
+  </div>
+
+  <div class="grid Footer desktop--flex u-inner">
+    <div class="Footer-logo grid-cell grid-cell--col6 grid-cell--col3--tablet">
+      <svg width="82px" height="32px" viewBox="388 665 82 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(388.000000, 665.000000)">
+    <path d="M66,32 C74.836556,32 82,24.836556 82,16 C82,7.163444 74.836556,0 66,0 C57.163444,0 50,7.163444 50,16 C50,24.836556 57.163444,32 66,32 Z" id="Symbol" fill-opacity="0.100000001" fill="#162945"></path>
+    <path d="M5.7551281,21.4831351 C7.99692789,21.4831351 9.29251349,20.4759018 10.2532848,19.1078685 L8.12794217,17.5444018 C7.51654222,18.3111018 6.89058514,18.8222351 5.8279138,18.8222351 C4.40131393,18.8222351 3.39687117,17.5895018 3.39687117,16.0110018 L3.39687117,15.9809351 C3.39687117,14.4475351 4.40131393,13.1847351 5.8279138,13.1847351 C6.80324229,13.1847351 7.4728708,13.6808351 8.05515646,14.4174685 L10.1804991,12.7187018 C9.27795635,11.4408685 7.93869933,10.5388685 5.85702809,10.5388685 C2.77091408,10.5388685 0.5,12.9442018 0.5,16.0110018 L0.5,16.0410685 C0.5,19.1830351 2.84369979,21.4831351 5.7551281,21.4831351 L5.7551281,21.4831351 Z M15.0972624,21.2726685 L18.0523621,21.2726685 L18.7802192,19.3784685 L22.7252045,19.3784685 L23.4530616,21.2726685 L26.4809471,21.2726685 L22.1429189,10.6741685 L19.4207334,10.6741685 L15.0972624,21.2726685 Z M19.6099763,17.1084351 L20.7599904,14.1318351 L21.8954475,17.1084351 L19.6099763,17.1084351 Z M31.979996,21.2726685 L34.8040814,21.2726685 L34.8040814,18.0856018 L36.0559956,18.0856018 L38.1085526,21.2726685 L41.3547951,21.2726685 L38.9237525,17.6045351 C40.1902238,17.0483018 41.0199809,15.9809351 41.0199809,14.3573351 L41.0199809,14.3272685 C41.0199809,13.2899685 40.7142809,12.4932018 40.1174381,11.8768351 C39.4332524,11.1702685 38.356024,10.7493351 36.7984098,10.7493351 L31.979996,10.7493351 L31.979996,21.2726685 Z M34.8040814,15.8005351 L34.8040814,13.2599018 L36.6673956,13.2599018 C37.5990526,13.2599018 38.1958954,13.6808351 38.1958954,14.5227018 L38.1958954,14.5527685 C38.1958954,15.3194685 37.6281669,15.8005351 36.6819527,15.8005351 L34.8040814,15.8005351 Z M49.4450152,21.2726685 L52.2691007,21.2726685 L52.2691007,13.3050018 L55.3261004,13.3050018 L55.3261004,10.7493351 L46.4025727,10.7493351 L46.4025727,13.3050018 L49.4450152,13.3050018 L49.4450152,21.2726685 Z M66,21.5 C69.0375661,21.5 71.5,19.0375661 71.5,16 C71.5,12.9624339 69.0375661,10.5 66,10.5 C62.9624339,10.5 60.5,12.9624339 60.5,16 C60.5,19.0375661 62.9624339,21.5 66,21.5 Z" id="Logotype" fill="#162945"></path>
+  </g>
+</svg>
+    </div>
+
+    <ul class="grid-cell grid-cell--col2 grid-cell--col3--tablet">
+      <li class="FooterElement title is-small">Products</li>
+      
+      <li class="FooterElement"><a href="/builder/" class="FooterLink js-Action--Footerlinks text is-small">Builder</a></li>
+      
+      <li class="FooterElement"><a href="/engine/" class="FooterLink js-Action--Footerlinks text is-small">Engine</a></li>
+      
+      <li class="FooterElement"><a href="/engine/mobile/" class="FooterLink js-Action--Footerlinks text is-small">Mobile</a></li>
+      
+      <li class="FooterElement"><a href="/location-data-services/" class="FooterLink js-Action--Footerlinks text is-small">Location Data Services</a></li>
+      
+      <li class="FooterElement"><a href="/data-observatory/" class="FooterLink js-Action--Footerlinks text is-small">Data Observatory</a></li>
+      
+      <li class="FooterElement"><a href="/integrations/" class="FooterLink js-Action--Footerlinks text is-small">Integrations</a></li>
+      
+      <li class="FooterElement"><a href="/attribution/" class="FooterLink js-Action--Footerlinks text is-small">Attributions</a></li>
+      
+      <li class="FooterElement"><a href="/pricing/" class="FooterLink js-Action--Footerlinks text is-small">Pricing</a></li>
+      
+    </ul>
+
+    <ul class="grid-cell grid-cell--col2 grid-cell--col3--tablet">
+      <li class="FooterElement title is-small">Resources</li>
+      
+      <li class="FooterElement"><a href="/webinars/" class="FooterLink js-Action--Footerlinks text is-small">Webinars</a></li>
+      
+      <li class="FooterElement"><a href="/resources/" class="FooterLink js-Action--Footerlinks text is-small">Case Studies</a></li>
+      
+      <li class="FooterElement"><a href="/blog/" class="FooterLink js-Action--Footerlinks text is-small">Blog</a></li>
+      
+      <li class="FooterElement"><a href="/learn/guides" class="FooterLink js-Action--Footerlinks text is-small">Learn</a></li>
+      
+      <li class="FooterElement"><a href="/docs/" class="FooterLink js-Action--Footerlinks text is-small">Documentation</a></li>
+      
+      <li class="FooterElement"><a href="/brand/" class="FooterLink js-Action--Footerlinks text is-small">Brand</a></li>
+      
+      <li class="FooterElement"><a href="https://github.com/CartoDB/cartodb" title="Source Code" class="FooterLink text is-small">Source Code</a></li>
+    </ul>
+
+    <ul class="grid-cell grid-cell--col2 grid-cell--col3--tablet">
+      <li class="FooterElement title is-small">About us</li>
+      
+        <li class="FooterElement"><a href="/team/" class="FooterLink js-Action--Footerlinks text is-small ">Team</a></li>
+      
+        <li class="FooterElement"><a href="/careers/" class="FooterLink js-Action--Footerlinks text is-small ">Careers</a></li>
+      
+        <li class="FooterElement"><a href="/press/" class="FooterLink js-Action--Footerlinks text is-small ">Press</a></li>
+      
+        <li class="FooterElement"><a href="/partners/" class="FooterLink js-Action--Footerlinks text is-small ">Partners</a></li>
+      
+        <li class="FooterElement"><a href="/contributions/" class="FooterLink js-Action--Footerlinks text is-small ">Contributions</a></li>
+      
+        <li class="FooterElement"><a href="/request-live-demo/" class="FooterLink js-Action--Footerlinks text is-small ">Request a Live Demo</a></li>
+      
+        <li class="FooterElement"><a href="/legal/" class="FooterLink js-Action--Footerlinks text is-small ">Terms of Service</a></li>
+      
+        <li class="FooterElement"><a href="/privacy/" class="FooterLink js-Action--Footerlinks text is-small ">Privacy Policy</a></li>
+      
+    </ul>
+  </div>
+
+  <div class="Footer-social grid u-inner">
+    <div class="grid-cell grid-cell--col6 grid-cell--col3--tablet grid-cell--col6--mobile">
+      <p class="text is-small desktop">© CARTO 2017</p>
+
+      <a href="/" class="mobile">
+        <svg width="64px" height="26px" viewBox="0 0 64 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Logo" fill="#2E3C43">
+      <path d="M51.4782609,25.0434783 C58.3938264,25.0434783 64,19.4373047 64,12.5217391 C64,5.60617357 58.3938264,0 51.4782609,0 C44.5626953,0 38.9565217,5.60617357 38.9565217,12.5217391 C38.9565217,19.4373047 44.5626953,25.0434783 51.4782609,25.0434783 Z" id="Halo" opacity="0.1"></path>
+      <path d="M4.10070996,16.6828535 C5.85004329,16.6828535 6.86102165,15.9184709 7.61073593,14.8802796 L5.95227706,13.6937753 C5.47518615,14.2756187 4.98673593,14.6635144 4.15750649,14.6635144 C3.04429437,14.6635144 2.26050216,13.7280014 2.26050216,12.5300883 L2.26050216,12.5072709 C2.26050216,11.343584 3.04429437,10.3852535 4.15750649,10.3852535 C4.91858009,10.3852535 5.44110823,10.7617405 5.89548052,11.3207666 L7.55393939,10.031584 C6.84966234,9.06184484 5.80460606,8.3773231 4.18022511,8.3773231 C1.77205195,8.3773231 0,10.2027144 0,12.5300883 L0,12.5529057 C0,14.9373231 1.82884848,16.6828535 4.10070996,16.6828535 L4.10070996,16.6828535 Z M11.3906147,16.5231318 L13.6965541,16.5231318 L14.2645194,15.0856361 L17.3428917,15.0856361 L17.9108571,16.5231318 L20.273593,16.5231318 L16.8885194,8.48000136 L14.764329,8.48000136 L11.3906147,16.5231318 Z M14.9119999,13.3629231 L15.8093852,11.1040014 L16.6954112,13.3629231 L14.9119999,13.3629231 Z M24.5646406,16.5231318 L26.7683462,16.5231318 L26.7683462,14.1044883 L27.7452466,14.1044883 L29.346909,16.5231318 L31.8800345,16.5231318 L29.9830302,13.7394101 C30.9712899,13.3172883 31.6187705,12.5072709 31.6187705,11.2751318 L31.6187705,11.2523144 C31.6187705,10.4651144 31.380225,9.86045353 30.9144934,9.39269701 C30.380606,8.85648832 29.5400172,8.53704484 28.3245713,8.53704484 L24.5646406,8.53704484 L24.5646406,16.5231318 Z M26.7683462,12.3703666 L26.7683462,10.442297 L28.2223376,10.442297 C28.9493332,10.442297 29.4150648,10.7617405 29.4150648,11.4006274 L29.4150648,11.4234448 C29.4150648,12.0052883 28.9720518,12.3703666 28.2336969,12.3703666 L26.7683462,12.3703666 Z M38.1930388,16.5231318 L38.1930388,10.4765231 L35.8189436,10.4765231 L35.8189436,8.53704484 L42.782199,8.53704484 L42.782199,10.4765231 L40.3967444,10.4765231 L40.3967444,16.5231318 L38.1930388,16.5231318 Z M51.2291907,16.6956522 C48.9240021,16.6956522 47.0552776,14.8269277 47.0552776,12.5217391 C47.0552776,10.2165506 48.9240021,8.34782609 51.2291907,8.34782609 C53.5343792,8.34782609 55.4031037,10.2165506 55.4031037,12.5217391 C55.4031037,14.8269277 53.5343792,16.6956522 51.2291907,16.6956522 Z"></path>
+    </g>
+  </g>
+</svg>
+      </a>
+
+    </div>
+    <div class="grid-cell grid-cell--col6 grid-cell--col9--tablet grid-cell--col6--mobile">
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/CartoDB" target="_blank" rel="nofollow" class="Footer-icon u-rspace--16">
+        <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <path d="M15.1169495,0 L0.88311046,0 C0.395244536,0 0,0.395243055 0,0.883047202 L0,15.1169528 C0,15.604637 0.395244536,16 0.88311046,16 L8.54610649,16 L8.54610649,9.80398211 L6.46101621,9.80398211 L6.46101621,7.38924067 L8.54610649,7.38924067 L8.54610649,5.60845879 C8.54610649,3.54184058 9.80827523,2.4165399 11.6518905,2.4165399 C12.534941,2.4165399 13.2938968,2.48230384 13.515169,2.51167879 L13.515169,4.67139763 L12.2364543,4.67199712 C11.2338653,4.67199712 11.03975,5.14841098 11.03975,5.84753498 L11.03975,7.38924067 L13.4308805,7.38924067 L13.1195048,9.80398211 L11.03975,9.80398211 L11.03975,16 L15.1169495,16 C15.6046356,16 16,15.604637 16,15.1169528 L16,0.883047202 C16,0.395243055 15.6046356,0 15.1169495,0" id="Facebook" fill="#2E3C43"></path>
+  </g>
+</svg>
+      </a>
+
+
+      <!-- Twitter -->
+      <a href="https://twitter.com/CARTO" target="_blank" rel="nofollow" class="Footer-icon u-rspace--16">
+        <svg width="16px" height="13px" viewBox="0 0 16 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <path d="M0,11.3482487 C0.256805296,11.3780914 0.518116976,11.3933585 0.783057171,11.3933585 C2.32096273,11.3933585 3.7363766,10.8767565 4.85981199,10.0101072 C3.42338783,9.98400922 2.21111233,9.04978171 1.79342331,7.76596783 C1.99381104,7.80370334 2.19946596,7.82392496 2.41097333,7.82392496 C2.71038443,7.82392496 3.00037309,7.78446111 3.27584769,7.71060321 C1.77411025,7.41378894 0.64265701,6.10773704 0.64265701,4.54208788 C0.64265701,4.52849157 0.64265701,4.51495288 0.642891108,4.50147179 C1.08551154,4.74349756 1.591631,4.88885128 2.12976334,4.90561622 C1.24897034,4.32616011 0.669402685,3.33708648 0.669402685,2.21602499 C0.669402685,1.62383674 0.83128132,1.06875028 1.11383738,0.591496908 C2.73285782,2.54648435 5.15161491,3.83294836 7.87979078,3.96770157 C7.8238414,3.73120651 7.79475475,3.48457183 7.79475475,3.23131183 C7.79475475,1.44679671 9.26453784,0 11.0774498,0 C12.0215663,0 12.8746772,0.392449297 13.4734994,1.02047187 C14.2212078,0.875521429 14.9237353,0.606591112 15.5579648,0.236322228 C15.3128644,0.990859581 14.7924065,1.6241248 14.1146348,2.02406359 C14.7786532,1.94594244 15.4113025,1.77224388 16,1.51523913 C15.5598961,2.16325289 15.0033286,2.73239655 14.3620176,3.18798801 C14.3683383,3.32654358 14.3714986,3.46590572 14.3714986,3.6060168 C14.3714986,7.87612095 11.0697831,12.8 5.0319324,12.8 C3.17817038,12.8 1.45269395,12.2650776 0,11.3482487 Z" id="Twitter" fill="#2E3C43"></path>
+  </g>
+</svg>
+      </a>
+
+      <!-- Linkedin -->
+      <a href="https://www.linkedin.com/company/carto" target="_blank" rel="nofollow" class="Footer-icon u-rspace--16">
+        <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <path d="M6.11489139e-15,14.8538596 L0,14.8538596 L0,1.14614038 C0,0.513101458 0.52935165,0 1.18237072,0 L14.8176293,0 C15.4706268,0 16,0.513101458 16,1.14614038 L16,14.8538596 C16,15.4866847 15.4706268,16 14.8176293,16 L1.18237072,16 C0.52935165,16 6.11489139e-15,15.4866847 6.11489139e-15,14.8538596 Z M4.8500952,2.60634161 L4.8500952,2.60634161 L2.4334384,2.60634161 L2.4334384,9.83123772 L4.8500952,9.83123772 L4.8500952,2.60634161 Z M3.64175604,10.8176753 L3.64171301,10.8176753 L3.62600716,10.8176753 C2.81500446,10.8176753 2.29057972,11.3724662 2.29057972,12.0657946 C2.29057972,12.7747298 2.83107607,13.3141277 3.65774158,13.3141277 C4.48449316,13.3141277 4.99331964,12.7747298 5.00902548,12.0657946 C5.00902548,11.3724662 4.48449316,10.8176753 3.64175604,10.8176753 Z M6.18730838,2.60634161 L6.18737293,2.60634161 C6.18737293,2.60634161 6.21908583,9.15330242 6.18737293,9.83123772 L8.60400822,9.83123772 L8.60400822,8.78344179 L8.58787207,8.78344179 C8.90586172,9.27666056 9.47820007,10.000775 10.7819146,10.000775 C12.3718844,10.000775 13.5641304,8.96815831 13.5641304,6.74899451 L13.5641304,2.60634161 L11.1476888,2.60634161 L11.1476888,6.47149214 C11.1476888,7.44275044 10.7978786,8.10529269 9.92340709,8.10529269 C9.25580094,8.10529269 8.85816328,7.65846684 8.6834626,7.22703403 C8.61964952,7.07267601 8.60394367,6.85695961 8.60394367,6.64102941 L8.60394367,2.60634161 L6.18730838,2.60634161 Z" id="Linkedin" fill="#2E3C43" transform="translate(8.000000, 8.000000) scale(1, -1) translate(-8.000000, -8.000000) "></path>
+  </g>
+</svg>
+      </a>
+      
+    </div>
+  </div>
+</footer>
+
+  </body>
+
+    <script>
+
+$(document).ready(function() {
+    $('pre code').each(function(i, block) {
+        if (!$(block).hasClass('escaped')) {
+           block.innerHTML =  _.escape(block.innerHTML);
+        }
+        hljs.highlightBlock(block);
+    });
+    $('code.hljs').each(function(i, block) {
+        hljs.lineNumbersBlock(block, {
+            singleLine: true
+        });
+    });
+});
+</script>
+</html>
