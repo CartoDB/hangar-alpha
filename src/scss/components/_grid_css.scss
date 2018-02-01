@@ -1,0 +1,141 @@
+/* SG
+# Grid CSS
+```
+  <div class="container-grid container--1-11">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+  <div class="container-grid container--2-10">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+  <div class="container-grid container--3-9">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+  <div class="container-grid container--4-8">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+  <div class="container-grid container--5-7">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+  <div class="container-grid container--6-6">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+  <div class="container-grid container--11-1">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+ <div class="container-grid container--10-2">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+ <div class="container-grid container--9-3">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+ <div class="container-grid container--8-4">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+ <div class="container-grid container--7-5">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+  <div class="container-grid container--3x4">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+  <div class="container-grid container--4x3">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+  <div class="container-grid container--6x2">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+  <div class="container-grid container--12x1">
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+    <div class="box-grid"></div>
+  </div>
+  <br/>
+```
+*/
+
+
+// New Grid
+// --------------------------------------------------
+
+$width: 940px;
+$number_columns: 12;
+$gap: 20px;
+$column: ($width - (($number_columns - 1) * $gap)) / $number_columns;
+
+.container-grid {
+  max-width: $width;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-gap: $gap;
+  box-sizing: border-box;
+}
+
+@for $i from 1 through 11 {
+  .container--#{$i}-#{12 - $i} {
+    grid-template-columns: minmax($gap, calc(#{$column} * #{$i} + #{$gap} * #{$i - 1})) 1fr;
+  }
+}
+
+@mixin grid-exceptions($repeat, $columns) {
+  grid-template-columns: repeat($repeat, minmax(1px, $columns * $column + $gap * $columns - 1));
+}
+
+.container--3x4 {
+  @include grid-exceptions(3, 4);
+}
+
+.container--4x3 {
+  @include grid-exceptions(4, 3);
+}
+
+.container--6x2 {
+  @include grid-exceptions(6, 2);
+}
+
+.container--12x1 {
+  @include grid-exceptions(12, 1);
+}
