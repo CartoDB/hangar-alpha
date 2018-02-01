@@ -29,6 +29,19 @@ HangarAlpha.Views.Main = Backbone.View.extend({
 
     this.card = new HangarAlpha.Views.Card({
       el: this.$('.js-downloadCard')
+    });
+
+    this._initTabs();
+
+  },
+
+  _initTabs: function () {
+    var _this = this;
+
+    _.each(this.$('.js-Tabs'), function (el) {
+      var tab = new HangarAlpha.Views.Tab({
+        el: $(el)
+      })
     })
   },
 
