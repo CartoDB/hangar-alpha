@@ -62,14 +62,6 @@ pre {
   box-sizing: border-box;
 }
 
-.tab-content {
-    display: none;
-}
-
-.hello {
-    display: block;
-}
-
 /* CARTODARK */
 
 .hljs {
