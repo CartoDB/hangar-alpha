@@ -2,13 +2,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
-  <script src="../js/hangaralpha.js"></script>
+  <script src="../js/hangaralpha.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
   <title>Hangar</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.1.0/highlightjs-line-numbers.min.js"></script>
-  <link href='../css/hangaralpha.css' type='text/css' rel='stylesheet'>
+  <link href='../css/hangaralpha.min.css' type='text/css' rel='stylesheet'>
   <link href='theme.css' type='text/css' rel='stylesheet'>
 </head>
 
@@ -67,24 +67,27 @@
     </div>
 
 
+
     <!-- HEADER -->
-    <div id="navigator">
-        <div id="navigator-container" class="navigation">
+    <div id="navigator" class="js-Header">
+        <div id="navigator-container" class="navigation js-Navbar--fixed">
             <div class="container">
             <nav class="grid">
                 <ul class="grid-cell grid-cell--col12 navigation-menu">
-                    <li class="top-menuItem u-rspace--32"><a href="#grid" class="is-txtJade text is-caption">Grid system</a></li>
-                    <li class="top-menuItem u-rspace--32"><a href="#typography" class="is-txtJade text is-caption">Typography</a></li>
-                    <li class="top-menuItem u-rspace--32"><a href="#colors" class="is-txtJade text is-caption">Colors</a></li>
-                    <li class="top-menuItem u-rspace--32"><a href="#buttons" class="is-txtJade text is-caption">Buttons</a></li>
-                    <li class="top-menuItem u-rspace--32"><a href="#forms" class="is-txtJade text is-caption">Forms</a></li>
-                    <li class="top-menuItem"><a href="#components" class="is-txtJade text is-caption">Components</a></li>
+                    <li class="u-rspace--32"><a href="#grid" class="is-txtJade text is-caption">Grid system</a></li>
+                    <li class="u-rspace--32"><a href="#typography" class="is-txtJade text is-caption">Typography</a></li>
+                    <li class="u-rspace--32"><a href="#colors" class="is-txtJade text is-caption">Colors</a></li>
+                    <li class="u-rspace--32"><a href="#buttons" class="is-txtJade text is-caption">Buttons</a></li>
+                    <li class="u-rspace--32"><a href="#forms" class="is-txtJade text is-caption">Forms</a></li>
+                    <li><a href="#components" class="is-txtJade text is-caption">Components</a></li>
                 </ul>
             </nav>
             </div>
         </div>
     </div>
     <!-- End HEADER -->
+
+
 
 <!-- GRID SECTION -->
     <section id="grid">
@@ -1017,16 +1020,6 @@
             <p class="text is-body u-vspace--64">Description</p>
             <ul>
                 <li class="u-vspace--64">
-                    <h3 class="title is-subheader u-vspace--8">Cards</h3>
-                    <p class="text is-caption u-vspace--24">This is a set of our different types of cards</p>
-                </li>
-
-                <li class="u-vspace--64">
-                    <h3 class="title is-subheader u-vspace--8">Tables</h3>
-                    <p class="text is-caption u-vspace--24">This is a set of our different types of tables</p>
-                </li>
-
-                <li class="u-vspace--64">
                     <div class="grid grid--out">
                         <div class="grid-cell grid-cell--col12">
                             <h3 class="title is-subheader u-vspace--8">Tab bars</h3>
@@ -1125,13 +1118,8 @@
                             <div class="grid-cell grid-cell--col9"><pre><code class="html hljs escaped">&lt;a href=&quot;#&quot; tooltip-position=&quot;bottom&quot; tooltip-text=&quot;Sample text.&quot;&gt;Show&lt;/a&gt;</code></pre></div>
                         </li>
                     </ul>
-                      </li>
-                      <li class="u-vspace--64">
-                        <h3 class="title is-subheader u-vspace--8">Alerts</h3>
-                    <p class="text is-caption u-vspace--24">This is a set of our differents types of alerts</p>
-
-                      </li>
-                    </ul>
+                </li>
+            </ul>
                 </li>
             </ul>
         </div>
