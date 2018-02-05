@@ -3,7 +3,7 @@
 
 .Navbar {
   padding: 16px 0;
-  z-index: $zIndex-3;
+  z-index: 300;
   .Navbar-button {
     display: block;
   }
@@ -157,7 +157,7 @@
 .Navbar--fixed {
   position: fixed;
   top: -80px;
-  z-index: $zIndex-3;
+  z-index: 300;
   width: 100%;
   border-bottom: 1px solid #eee;
   background: #fff;

@@ -43,6 +43,9 @@
   font-family: $font-family-base;
   font-weight: 400;
   // color: $base-grey;
+  &.is-semibold {
+    font-weight: 600;
+  }
 }
 
 .title {
@@ -55,6 +58,10 @@
   &.is-bold {
     font-weight: 700;
   }
+}
+
+.textCode {
+  font-family: $font-family-code;
 }
 
 .is-jumbo {
@@ -101,7 +108,7 @@
   line-height: 48px;
   @media (max-width: $layout-mobile) {
     font-size: 20px;
-    line-height: 24px;
+    line-height: 32px;
     &.is-subheader--mobile {
       font-size: 32px;
       line-height: 48px;

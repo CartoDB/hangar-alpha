@@ -38,7 +38,7 @@ footer {
     align-items: center;
     height: 100px;
     margin-top: 40px;
-    border-top: 1px solid $light-grey;
+    border-top: 1px solid $softgrey;
   }
   .Footer-icon {
     &:hover {
@@ -46,7 +46,7 @@ footer {
     }
     path {
       &:hover {
-        fill: $blue;
+        fill: $link;
       }
     }
   }

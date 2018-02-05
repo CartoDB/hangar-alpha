@@ -1,0 +1,48 @@
+/* SG
+# Tabs Button
+```
+  <nav>
+    <ul class="button-group">
+      <li class="button-groupItem">
+        <button type="button" class="button-groupAction">APAC</button>
+      </li>
+      <li class="button-groupItem">
+        <button type="button" class="button-groupAction">EMEA</button>
+      </li>
+      <li class="button-groupItem">
+        <button type="button" class="button-groupAction">LATAM</button>
+      </li>
+      <li class="button-groupItem">
+        <button type="button" class="button-groupAction is-active">NA</button>
+      </li>
+    </ul>
+  </nav>
+```
+*/
+
+
+.button-group {
+  display: flex;
+  border: 1px solid rgba($base-grey, 0.16);
+  border-radius: 4px;
+  overflow: hidden;
+
+}
+.button-groupAction {
+  padding: 12px 44px;
+  border-left: 1px solid rgba($base-grey, 0.16);
+  text-align: center;
+  width: 100%;
+  font: 600 12px/16px 'Montserrat' ;
+  &.is-active {
+    background: $docs-purple;
+    color: $white;
+    border: 0;
+  }
+}
+.button-groupItem {
+  flex: 1;
+  &:first-child .button-groupAction {
+    border-left: 0;
+  }
+}

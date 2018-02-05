@@ -1,5 +1,5 @@
 <nav class="Navbar js-Navbar js-Navbar--fixed">
-  <div class="Navbar-inner u-inner">
+  <div class="Navbar-inner container">
     <div class="Navbar-header">
       <a class="Logo js-Navbar-logo u-rspace--40" href="/">
         <div class="Logo--negative">
@@ -20,7 +20,7 @@
     <div class="Navbar-collapse">
       <ul class="Navbar-list">
         <li class="Navbar-item Dropdown js-Dropdown">
-          <a href="#/products" class="Navbar-link title is-regular is-small js-Dropdown-target js-Action--NAVproducts">
+          <a href="/products/" class="Navbar-link title is-regular is-small js-Dropdown-target js-Action--NAVproducts">
             Products
             <svg class="Navbar-icon js-navbarCaret" width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <polygon id="Chevron" fill="#FFFFFF" fill-rule="nonzero" points="1.07650484 0.292893219 0.292893219 1.12132035 3.29289323 4.29289322 6.29289322 1.12132034 5.50928159 0.292893219 3.29289323 2.63603897"></polygon>
@@ -44,6 +44,10 @@
           <ul class="Dropdown-inner js-Dropdown-inner">
             {% for solutions_item in site.data.hangaralpha.navbar.solutions %}
               <li class="Dropdown-item"><a href="{{ solutions_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if solutions_item.url == page.url %}is-active{% endif %}">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</a></li>
+            {% endfor %}
+
+              {% for solutions_item in site.data.hangaralpha.navbar.solutions-extra %}
+              <li class="Dropdown-item {% if forloop.first%}Dropdown-itemExtra{% endif %}"><a href="{{ solutions_item.url }}" class="Dropdown-link text is-small is-semibold u-linkBlue {% if solutions_item.url == page.url %}is-active{% endif %}">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</a></li>
             {% endfor %}
           </ul>
         </li>
@@ -82,7 +86,7 @@
           </a>
         </li>
         <li class="Navbar-item">
-          <a href="/signup/" class="Navbar-link title is-regular is-small js-Action--NAVcontact">
+          <a href="/get-started/" class="Navbar-link title is-regular is-small js-Action--NAVcontact">
             <span>Sign up</span>
           </a>
         </li>
@@ -100,7 +104,7 @@
   <div class="NavbarMobile js-Navbar js-Navbar-mobile">
     <ul class="NavbarMobile-collapse js-ScrollbarY">
       <li class="Navbar-item">
-        <a href="#/products" class="Navbar-link">
+        <a href="/products/" class="Navbar-link">
           <span class="title u-negative">Products</span>
         </a>
       </li>
@@ -134,26 +138,34 @@
             </a>
           </li>
         {% endfor %}
-          </ul>
-      </li>
+        </ul>
+        <ul>
+          {% for solutions_item in site.data.hangaralpha.navbar.solutions-extra %}
+          <li class="Navbar-subitem">
+            <a href="{{ solutions_item.url }}" class="Navbar-link">
+              <span class="text is-small is-semibold">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</span>
+            </a>
+          </li>
+          {% endfor %}
+      </ul>
       <li class="Navbar-item">
-        <a href="/resources" class="Navbar-link">
+        <a href="/resources/" class="Navbar-link">
           <span class="title u-negative">Resources</span>
         </a>
       </li>
       <li class="Navbar-item">
-        <a href="/pricing" class="Navbar-link">
+        <a href="/pricing/" class="Navbar-link">
           <span class="title u-negative">Pricing</span>
         </a>
       </li>
       <li class="Navbar-item">
-        <a href="/blog" class="Navbar-link">
+        <a href="/blog/" class="Navbar-link">
           <span class="title u-negative">Blog</span>
         </a>
       </li>
     </ul>
     <div class="Navbar-item">
-      <a href="#" class="button is-jade">
+      <a href="/request-live-demo/" class="button is-jade">
         <span>Request a demo</span>
       </a>
     </div>
