@@ -21,7 +21,7 @@ HangarAlpha.Views.Main = Backbone.View.extend({
     this.navbar = new HangarAlpha.Views.Navbar()
     this.navbar_fixed = new HangarAlpha.Views.NavbarFixed({
       el: this.$('.js-Navbar--fixed'),
-      $header: this.$('.js-Header')
+      $header: this.$('.js-Header')[0]
      });
     this._initDropdowns();
 
