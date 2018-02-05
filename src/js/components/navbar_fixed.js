@@ -10,7 +10,7 @@ HangarAlpha.Views.NavbarFixed = Backbone.View.extend({
   },
 
   _fixMenu: function() {
-    var headerHeight = this.$header.outerHeight();
+    var headerHeight = this.$header.offsetTop;
     var scrollNumber = $(window).scrollTop();
 
     if (scrollNumber >= headerHeight) {

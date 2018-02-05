@@ -23,11 +23,7 @@ module.exports = function (grunt) {
     concat: {
       distCss: {
         src: ['.tmp/css/*.css'],
-        dest: 'dist/css/hangaralpha.css'
-      },
-      distJs: {
-        src: ['src/js/*.js', 'src/js/components/*.js', 'src/js/vendor/*.js'],
-        dest: 'dist/js/hangaralpha.js'
+        dest: 'dist/css/hangaralpha.min.css'
       }
     },
 
@@ -119,6 +115,15 @@ module.exports = function (grunt) {
     },
 
 
+    uglify: {
+      my_target: {
+        files: {
+          'dist/js/hangaralpha.min.js': ['src/js/*.js', 'src/js/components/*.js', 'src/js/vendor/*.js'],
+        }
+      }
+    },
+
+
 
     watch: {
       scss: {
@@ -136,7 +141,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['src/js/**/*.js'],
-        tasks: ['concat']
+        tasks: ['uglify']
       },
     }
 
@@ -152,6 +157,7 @@ module.exports = function (grunt) {
     'copy',
     'sass',
     'concat',
+    'uglify',
     'svgmin',
     'shell'
   ];
