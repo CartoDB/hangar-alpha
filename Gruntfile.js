@@ -67,6 +67,11 @@ module.exports = function (grunt) {
           cwd: 'src/data',
           src: '**/*.yml',
           dest: 'dist/data/'
+        },{
+          expand: true,
+          cwd: 'styleguide',
+          src: '**/*.css',
+          dest: 'dist/styleguide/'
         }]
       }
 
