@@ -17,5 +17,5 @@
 	"customVars": {
 		"sampleVar": "Hello from customVars!"
 	},
-	"jqFile": "/usr/local/lib/node_modules/markdown-styleguide-generator/template/jquery.js"
+	"jqFile": "node_modules/markdown-styleguide-generator/template/jquery.js"
 }

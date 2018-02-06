@@ -11,10 +11,10 @@ module.exports = function (grunt) {
         files: [{
           dot: true,
           src: [
-          '.sass-cache',
-          '.tmp',
-          'dist',
-          '!dist/.git*'
+            '.sass-cache',
+            '.tmp',
+            'dist',
+            '!dist/.git*'
           ]
         }]
       }
@@ -48,22 +48,22 @@ module.exports = function (grunt) {
           cwd: 'node_modules/perfect-scrollbar/src/css/',
           src: '*.scss',
           dest: 'src/scss/vendor/perfect-scrollbar/'
-        },{
+        }, {
           expand: true,
           cwd: 'src/templates',
           src: '*.html',
           dest: 'dist/templates/'
-        },{
+        }, {
           expand: true,
           cwd: 'src/scss',
           src: '**/*.scss',
           dest: 'dist/scss/'
-        },{
+        }, {
           expand: true,
           cwd: 'src/data',
           src: '**/*.yml',
           dest: 'dist/data/'
-        },{
+        }, {
           expand: true,
           cwd: 'styleguide',
           src: '**/*.css',
@@ -99,7 +99,7 @@ module.exports = function (grunt) {
 
     shell: {
       style: {
-        command: 'styleguide'
+        command: 'npm run styleguide'
       }
     },
 
@@ -144,11 +144,6 @@ module.exports = function (grunt) {
         tasks: ['uglify']
       },
     }
-
-
-
-
-
   });
   /* End initConfig */
 
