@@ -139,6 +139,13 @@ module.exports = function (grunt) {
         files: ['src/js/**/*.js'],
         tasks: ['webpack:prod']
       }
+    },
+
+    eslint: {
+      options: {
+        configFile: '.eslint.json'
+      },
+      target: ['src/**/*.js']
     }
   });
   /* End initConfig */

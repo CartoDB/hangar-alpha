@@ -9,6 +9,17 @@ const Card = require('./components/card');
 const Dropdown = require('./components/dropdown');
 const Tab = require('./components/tab');
 
+window.HangarAlpha = {
+  Components: {
+    Navbar: Navbar,
+    NavbarFixed: NavbarFixed,
+    Dialog: Dialog,
+    Card: Card,
+    Dropdown: Dropdown,
+    Tab: Tab
+  }
+};
+
 module.exports = Backbone.View.extend({
 
   el: 'body',
@@ -39,47 +50,41 @@ module.exports = Backbone.View.extend({
   },
 
   _initTabs: function () {
-    var _this = this;
-
     _.each(this.$('.js-Tabs'), function (el) {
-      var tab = new Tab({
+      new Tab({  // eslint-disable-line
         el: $(el)
       });
-    })
+    });
   },
 
-
   _initDropdowns: function () {
-    var _this = this;
-
     _.each(this.$('.js-Dropdown'), function (el) {
-      var dropdown = new Dropdown({
+      new Dropdown({  // eslint-disable-line
         el: $(el)
-      })
-    })
+      });
+    });
   },
 
   _onKeyDown: function (e) {
     switch (e.which) {
       // esc
       case 27:
-        this._closeContactDialog()
-        break
+        this._closeContactDialog();
+        break;
     }
   },
 
   _closeDialogs: function () {
-    this.dialog.close()
+    this.dialog.close();
   },
 
   _onClickContactLink: function (e) {
-    var mobile = 1280
-    var width = $(window).width()
+    var mobile = 1280;
+    var width = $(window).width();
 
     if (width >= mobile) {
-      e.preventDefault()
-
-      this.dialog.open()
+      e.preventDefault();
+      this.dialog.open();
     }
   }
 });

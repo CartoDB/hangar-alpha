@@ -6,7 +6,7 @@ module.exports = Backbone.View.extend({
   },
 
   _onClickCardContent: function (e) {
-    var $card = this.$el
+    var $card = this.$el;
 
     $card.addClass('is-download');
 

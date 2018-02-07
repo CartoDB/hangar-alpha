@@ -7,7 +7,7 @@ module.exports = Backbone.View.extend({
     this.options = options;
 
     this.$header = this.options.$header;
-    this.$navbarButton = this.$('.js-Navbar-button')
+    this.$navbarButton = this.$('.js-Navbar-button');
 
     this._initBindings();
   },

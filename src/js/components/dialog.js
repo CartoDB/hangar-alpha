@@ -37,8 +37,8 @@ module.exports = Backbone.View.extend({
       this.$el.addClass('is-closing');
 
       setTimeout(function () {
-        _this.$el.removeClass('is-active')
-        _this.$el.removeClass('is-closing')
+        _this.$el.removeClass('is-active');
+        _this.$el.removeClass('is-closing');
       }, 100);
     } else {
       this.$el.addClass('is-active');

@@ -26,10 +26,9 @@ module.exports = Backbone.View.extend({
 
   _checkTouch: function () {
     try {
-      document.createEvent("TouchEvent");
+      document.createEvent('TouchEvent');
       return true;
-    }
-    catch (e) {
+    } catch (e) {
       return false;
     }
   },
@@ -57,6 +56,5 @@ module.exports = Backbone.View.extend({
 
   close: function () {
     $('.js-Dropdown-inner').hide();
-  },
-
+  }
 });
