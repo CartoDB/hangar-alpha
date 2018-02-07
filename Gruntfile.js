@@ -1,3 +1,5 @@
+const webpackConfig = require('./webpack.config.babel');
+
 module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
@@ -114,16 +116,12 @@ module.exports = function (grunt) {
       }
     },
 
-
-    uglify: {
-      my_target: {
-        files: {
-          'dist/js/hangaralpha.min.js': ['src/js/*.js', 'src/js/components/*.js', 'src/js/vendor/*.js'],
-        }
-      }
+    webpack: {
+      options: {
+        stats: !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
+      },
+      prod: webpackConfig
     },
-
-
 
     watch: {
       scss: {
@@ -141,8 +139,8 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['src/js/**/*.js'],
-        tasks: ['uglify']
-      },
+        tasks: ['webpack:prod']
+      }
     }
   });
   /* End initConfig */
@@ -152,7 +150,7 @@ module.exports = function (grunt) {
     'copy',
     'sass',
     'concat',
-    'uglify',
+    'webpack:prod',
     'svgmin',
     'shell'
   ];
