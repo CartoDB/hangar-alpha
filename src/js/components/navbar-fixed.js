@@ -1,15 +1,18 @@
-HangarAlpha.Views.NavbarFixed = Backbone.View.extend({
+const Backbone = require('backbone');
+const $ = require('jquery');
 
-  initialize: function(options) {
+module.exports = Backbone.View.extend({
+
+  initialize: function (options) {
     this.options = options;
 
     this.$header = this.options.$header;
-    this.$navbarButton = this.$('.js-Navbar-button')
+    this.$navbarButton = this.$('.js-Navbar-button');
 
     this._initBindings();
   },
 
-  _fixMenu: function() {
+  _fixMenu: function () {
     var headerHeight = this.$header.offsetTop;
     var scrollNumber = $(window).scrollTop();
 
@@ -20,19 +23,19 @@ HangarAlpha.Views.NavbarFixed = Backbone.View.extend({
     }
   },
 
-  _initBindings: function() {
+  _initBindings: function () {
     var _this = this;
 
     $(document)
-      .ready(function() {
+      .ready(function () {
         _this._fixMenu();
       });
 
     $(window)
-      .scroll(function() {
+      .scroll(function () {
         _this._fixMenu();
       })
-      .resize(function() {
+      .resize(function () {
         _this._fixMenu();
       });
   }

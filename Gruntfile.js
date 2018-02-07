@@ -1,11 +1,18 @@
 module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
-  var config = {}
+  // we need to set the NODE_ENV before require webpack config
+  (() => {
+    const prodTasks = ['build', 'publish'];
+    const task = grunt.cli.tasks[0];
+    const prodEnv = (prodTasks.indexOf(task) > -1);
+    process.env.NODE_ENV = prodEnv ? 'production' : 'development';
+  })();
+
+  const webpackConfig = require('./webpack.config.babel');
 
   /* Start initConfig */
   grunt.initConfig({
-
     clean: {
       dist: {
         files: [{
@@ -32,11 +39,9 @@ module.exports = function (grunt) {
         options: {
           port: 9003,
           livereload: 35732,
-          open: true,
+          open: 'http://0.0.0.0:9003/styleguide',
           hostname: '0.0.0.0',
-          base: {
-            path: '.'
-          }
+          base: './dist'
         }
       }
     },
@@ -114,16 +119,9 @@ module.exports = function (grunt) {
       }
     },
 
-
-    uglify: {
-      my_target: {
-        files: {
-          'dist/js/hangaralpha.min.js': ['src/js/*.js', 'src/js/components/*.js', 'src/js/vendor/*.js'],
-        }
-      }
+    webpack: {
+      all: webpackConfig
     },
-
-
 
     watch: {
       scss: {
@@ -141,8 +139,15 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['src/js/**/*.js'],
-        tasks: ['uglify']
+        tasks: ['webpack']
+      }
+    },
+
+    eslint: {
+      options: {
+        configFile: '.eslint.json'
       },
+      target: ['src/**/*.js']
     }
   });
   /* End initConfig */
@@ -152,7 +157,7 @@ module.exports = function (grunt) {
     'copy',
     'sass',
     'concat',
-    'uglify',
+    'webpack',
     'svgmin',
     'shell'
   ];
@@ -169,6 +174,6 @@ module.exports = function (grunt) {
   grunt.registerTask('dev', devTasks);
   grunt.registerTask('build', baseTasks);
   grunt.registerTask('default', baseTasks);
-  grunt.registerTask('publish', ['build', 'gh-pages']);
+  grunt.registerTask('publish', ['eslint', 'build', 'gh-pages']);
 
 }
