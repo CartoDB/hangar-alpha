@@ -1,13 +1,18 @@
-const webpackConfig = require('./webpack.config.babel');
-
 module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
-  var config = {}
+  // we need to set the NODE_ENV before require webpack config
+  (() => {
+    const prodTasks = ['build', 'publish'];
+    const task = grunt.cli.tasks[0];
+    const prodEnv = (prodTasks.indexOf(task) > -1);
+    process.env.NODE_ENV = prodEnv ? 'production' : 'development';
+  })();
+
+  const webpackConfig = require('./webpack.config.babel');
 
   /* Start initConfig */
   grunt.initConfig({
-
     clean: {
       dist: {
         files: [{
@@ -115,10 +120,7 @@ module.exports = function (grunt) {
     },
 
     webpack: {
-      options: {
-        stats: !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
-      },
-      prod: webpackConfig
+      all: webpackConfig
     },
 
     watch: {
@@ -137,7 +139,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['src/js/**/*.js'],
-        tasks: ['webpack:prod']
+        tasks: ['webpack']
       }
     },
 
@@ -155,7 +157,7 @@ module.exports = function (grunt) {
     'copy',
     'sass',
     'concat',
-    'webpack:prod',
+    'webpack',
     'svgmin',
     'shell'
   ];

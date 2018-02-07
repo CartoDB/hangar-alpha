@@ -4,6 +4,9 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const path = require('path');
 const root = path.resolve(`${__dirname}`);
+const isDev = process.env.NODE_ENV !== 'production';
+
+console.info(`Webpack running in ${process.env.NODE_ENV}`);
 
 module.exports = {
   entry: {
@@ -36,16 +39,20 @@ module.exports = {
       ['dist/js']
     ),
 
-    // new UglifyJSPlugin({
-    //   uglifyOptions: {
-    //     ie8: false,
-    //     mangle: true,
-    //     output: {
-    //       comments: false,
-    //       beautify: false
-    //     },
-    //     warnings: false
-    //   }
-    // })
-  ]
+    isDev
+      ? () => { }
+      : new UglifyJSPlugin({
+        uglifyOptions: {
+          ie8: false,
+          mangle: true,
+          output: {
+            comments: false,
+            beautify: false
+          },
+          warnings: false
+        }
+      })
+  ],
+  devtool: isDev ? 'cheap-eval-source-map' : false,
+  stats: isDev
 }
