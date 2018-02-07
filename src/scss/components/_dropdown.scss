@@ -77,3 +77,24 @@
     }
   }
 }
+
+.Dropdown--2columns{
+  width: 392px;
+  right: -198px;
+}
+
+.no-columns-item{
+  column-span: all;
+}
+
+.columns--2{
+  column-count: 2;
+}
+
+.full-dropdown{
+  background-color: #F2F6F9;
+  min-height: 44px;
+  padding-top: 12px;
+  width: 392px;
+  margin-left: -40px;
+}
