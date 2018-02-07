@@ -81,20 +81,22 @@
 .Dropdown--2columns{
   width: 392px;
   right: -198px;
+  padding: 16px;
 }
 
-.no-columns-item{
-  column-span: all;
-}
-
-.columns--2{
-  column-count: 2;
-}
-
-.full-dropdown{
-  background-color: #F2F6F9;
-  min-height: 44px;
+.Dropdown-innerHighlight{
+  margin-bottom: -16px;
+  margin-right: -16px;
+  margin-left: -16px;
+  padding-left: 16px;
+  border-radius: 0px 0px 4px 4px;
+  margin-top: 8px;
   padding-top: 12px;
-  width: 392px;
-  margin-left: -40px;
+  padding-bottom: 8px;
+  .Dropdown-item:nth-child(even){
+    margin-left: -8px;
+  }
+  .Dropdown-item:nth-child(odd){
+    padding-right: 8px;
+  }
 }

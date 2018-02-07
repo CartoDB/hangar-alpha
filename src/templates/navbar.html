@@ -26,12 +26,13 @@
               <polygon id="Chevron" fill="#FFFFFF" fill-rule="nonzero" points="1.07650484 0.292893219 0.292893219 1.12132035 3.29289323 4.29289322 6.29289322 1.12132034 5.50928159 0.292893219 3.29289323 2.63603897"></polygon>
             </svg>
           </a>
-
-          <ul class="Dropdown-inner js-Dropdown-inner">
-            {% for products_item in site.data.hangaralpha.navbar.products %}
-              <li class="Dropdown-item"><a href="{{ products_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if products_item.url == page.url %}is-active{% endif %}">{{ products_item.title }}</a></li>
-            {% endfor %}
-          </ul>
+          <div class="Dropdown-inner js-Dropdown-inner">
+            <ul>
+              {% for products_item in site.data.hangaralpha.navbar.products %}
+                <li class="Dropdown-item"><a href="{{ products_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if products_item.url == page.url %}is-active{% endif %}">{{ products_item.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
         </li>
 
         <li class="Navbar-item Dropdown js-Dropdown">
@@ -41,19 +42,21 @@
               <polygon id="Chevron" fill="#FFFFFF" fill-rule="nonzero" points="1.07650484 0.292893219 0.292893219 1.12132035 3.29289323 4.29289322 6.29289322 1.12132034 5.50928159 0.292893219 3.29289323 2.63603897"></polygon>
             </svg>
           </a>
-          <ul class="Dropdown-inner Dropdown--2columns columns--2 js-Dropdown-inner">
-            {% for solutions_item in site.data.hangaralpha.navbar.solutions %}
-              <li class="Dropdown-item"><a href="{{ solutions_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if solutions_item.url == page.url %}is-active{% endif %}">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</a></li>
-            {% endfor %}
+          <div class="Dropdown-inner Dropdown--2columns js-Dropdown-inner">
+            <ul class="grid">
+              {% for solutions_item in site.data.hangaralpha.navbar.solutions %}
+                <li class="Dropdown-item grid-cell--col6"><a href="{{ solutions_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if solutions_item.url == page.url %}is-active{% endif %}">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</a></li>
+              {% endfor %}
 
-            <li class="no-columns-item">
-              <ul class="columns--2 full-dropdown">
-                {% for solutions_item in site.data.hangaralpha.navbar.solutions-extra %}
-                  <li class="Dropdown-item"><a href="{{ solutions_item.url }}" class="Dropdown-link text is-small is-semibold u-linkBlue {% if solutions_item.url == page.url %}is-active{% endif %}">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</a></li>
-                {% endfor %}
-              </ul>
-            </li>
-          </ul>
+              <li class="grid-cell--col12">
+                <ul class="grid Dropdown-innerHighlight is-bgSoftBlue">
+                  {% for solutions_item in site.data.hangaralpha.navbar.solutions-extra %}
+                    <li class="Dropdown-item grid-cell--col6"><a href="{{ solutions_item.url }}" class="Dropdown-link text is-small is-semibold u-linkBlue {% if solutions_item.url == page.url %}is-active{% endif %}">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+            </ul>
+          </div>
         </li>
 
         <li class="Navbar-item js-Dropdown Dropdown">
@@ -63,11 +66,13 @@
               <polygon id="Chevron" fill="#FFFFFF" fill-rule="nonzero" points="1.07650484 0.292893219 0.292893219 1.12132035 3.29289323 4.29289322 6.29289322 1.12132034 5.50928159 0.292893219 3.29289323 2.63603897"></polygon>
             </svg>
           </a>
-          <ul class="Dropdown-inner js-Dropdown-inner">
-            {% for resources_item in site.data.hangaralpha.navbar.resources %}
-              <li class="Dropdown-item"><a href="{{ resources_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if resources_item.url == page.url %}is-active{% endif %}">{{ resources_item.title }}</a></li>
-            {% endfor %}
-          </ul>
+          <div class="Dropdown-inner js-Dropdown-inner">
+            <ul>
+              {% for resources_item in site.data.hangaralpha.navbar.resources %}
+                <li class="Dropdown-item"><a href="{{ resources_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if resources_item.url == page.url %}is-active{% endif %}">{{ resources_item.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
         </li>
 
         <li class="Navbar-item">
