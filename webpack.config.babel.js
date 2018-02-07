@@ -7,7 +7,7 @@ const root = path.resolve(`${__dirname}`);
 
 module.exports = {
   entry: {
-    hangaralpha: './src/js/main.js'
+    hangaralpha: './src/js/hangar.js'
   },
   output: {
     filename: '[name].min.js',
@@ -15,7 +15,7 @@ module.exports = {
   },
   externals: {
     jquery: 'jQuery',
-    underscore: 'underscore',
+    underscore: '_',
     backbone: 'Backbone'
   },
   module: {
@@ -36,16 +36,16 @@ module.exports = {
       ['dist/js']
     ),
 
-    new UglifyJSPlugin({
-      uglifyOptions: {
-        ie8: false,
-        mangle: true,
-        output: {
-          comments: false,
-          beautify: false
-        },
-        warnings: false
-      }
-    })
+    // new UglifyJSPlugin({
+    //   uglifyOptions: {
+    //     ie8: false,
+    //     mangle: true,
+    //     output: {
+    //       comments: false,
+    //       beautify: false
+    //     },
+    //     warnings: false
+    //   }
+    // })
   ]
 }

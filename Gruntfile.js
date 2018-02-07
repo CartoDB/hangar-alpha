@@ -34,11 +34,9 @@ module.exports = function (grunt) {
         options: {
           port: 9003,
           livereload: 35732,
-          open: true,
+          open: 'http://0.0.0.0:9003/styleguide',
           hostname: '0.0.0.0',
-          base: {
-            path: '.'
-          }
+          base: './dist'
         }
       }
     },
