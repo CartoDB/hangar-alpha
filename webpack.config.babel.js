@@ -1,5 +1,3 @@
-const webpack = require('webpack');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const path = require('path');
@@ -8,14 +6,7 @@ const isDev = process.env.NODE_ENV !== 'production';
 
 console.info(`Webpack running in ${process.env.NODE_ENV}`);
 
-module.exports = {
-  entry: {
-    hangaralpha: './src/js/hangar.js'
-  },
-  output: {
-    filename: '[name].min.js',
-    path: path.resolve(root, 'dist', 'js')
-  },
+const config = {
   externals: {
     jquery: 'jQuery',
     underscore: '_',
@@ -26,7 +17,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
         query: {
           presets: ['env']
         }
@@ -35,12 +26,8 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin(
-      ['dist/js']
-    ),
-
     isDev
-      ? () => { }
+      ? () => {}
       : new UglifyJSPlugin({
         uglifyOptions: {
           ie8: false,
@@ -55,4 +42,22 @@ module.exports = {
   ],
   devtool: isDev ? 'cheap-eval-source-map' : false,
   stats: isDev
-}
+};
+
+var hangarConfig = Object.assign({}, config, {
+  entry: './src/js/hangar.js',
+  output: {
+    path: path.resolve(root, 'dist', 'js'),
+    filename: 'hangaralpha.min.js'
+  }
+});
+
+var landingConfig = Object.assign({}, config, {
+  entry: './src/js/main.js',
+  output: {
+    path: path.resolve(root, 'dist', 'framework', 'js'),
+    filename: 'main.js'
+  }
+});
+
+module.exports = [hangarConfig, landingConfig];

@@ -1,10 +1,27 @@
-const webpack = require('webpack');
-const webpackConfig = require('./webpack.config.babel.js');
-Object.assign(webpackConfig, {
+const webpackConfig = {
   entry: () => {
     return {};
-  }
-});
+  },
+  externals: {
+    jquery: 'jQuery',
+    underscore: '_',
+    backbone: 'Backbone'
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['env']
+        }
+      }
+    ]
+  },
+  devtool: false,
+  stats: false
+};
 
 module.exports = (config) => {
   config.set({
