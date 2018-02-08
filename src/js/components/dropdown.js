@@ -1,5 +1,4 @@
 const Backbone = require('backbone');
-const $ = require('jquery');
 
 module.exports = Backbone.View.extend({
   events: {
