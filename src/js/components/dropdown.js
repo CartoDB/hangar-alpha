@@ -2,10 +2,9 @@ const Backbone = require('backbone');
 const $ = require('jquery');
 
 module.exports = Backbone.View.extend({
-
   events: {
-    'mouseenter': '_displayDropdown',
-    'mouseleave': '_hideDropdown',
+    mouseenter: '_displayDropdown',
+    mouseleave: '_hideDropdown',
     'click .js-Dropdown-target': '_checkDevice'
   },
 
@@ -55,6 +54,6 @@ module.exports = Backbone.View.extend({
   },
 
   close: function () {
-    $('.js-Dropdown-inner').hide();
+    this.$dropdown.hide();
   }
 });

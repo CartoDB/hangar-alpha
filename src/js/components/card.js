@@ -2,7 +2,7 @@ const Backbone = require('backbone');
 
 module.exports = Backbone.View.extend({
   events: {
-    'click': '_onClickCardContent'
+    click: '_onClickCardContent'
   },
 
   _onClickCardContent: function (e) {

@@ -32,17 +32,21 @@ const Main = Backbone.View.extend({
 
   _initTabs: function () {
     _.each(this.$('.js-Tabs'), function (el) {
+      /* eslint-disable */
       new Hangar.Tab({
-        el: $(el)
+        el: el
       });
+      /* eslint-enable */
     });
   },
 
   _initDropdowns: function () {
     _.each(this.$('.js-Dropdown'), function (el) {
+      /* eslint-disable */
       new Hangar.Dropdown({
         el: $(el)
       });
+      /* eslint-enable */
     });
   },
 
@@ -71,5 +75,7 @@ const Main = Backbone.View.extend({
 });
 
 $(() => {
+  /* eslint-disable */
   new Main();
+  /* eslint-enable */
 });
