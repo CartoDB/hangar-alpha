@@ -1,6 +1,17 @@
-const $ = require('jquery');
-const Main = require('./main');
+const Navbar = require('./components/navbar');
+const NavbarFixed = require('./components/navbar-fixed');
+const Dialog = require('./components/dialog');
+const Card = require('./components/card');
+const Dropdown = require('./components/dropdown');
+const Tab = require('./components/tab');
 
-$(function () {
-  new Main();  // eslint-disable-line
-});
+window.HangarAlpha = {
+  Components: {
+    Navbar: Navbar,
+    NavbarFixed: NavbarFixed,
+    Dialog: Dialog,
+    Card: Card,
+    Dropdown: Dropdown,
+    Tab: Tab
+  }
+};
