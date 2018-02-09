@@ -31,18 +31,6 @@ module.exports = function (grunt) {
       }
     },
 
-    connect: {
-      server: {
-        options: {
-          port: 9003,
-          livereload: 35732,
-          open: 'http://0.0.0.0:9003/framework',
-          hostname: '0.0.0.0',
-          base: './dist'
-        }
-      }
-    },
-
     copy: {
       dist: {
         files: [
@@ -158,6 +146,19 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'karma.config.js'
       }
+    },
+
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src: ['dist/**/*']
+        },
+        options: {
+          watchTask: true,
+          server: './dist',
+          startPath: '/framework'
+        }
+      }
     }
   });
   /* End initConfig */
@@ -172,7 +173,7 @@ module.exports = function (grunt) {
     'shell'
   ];
 
-  var devTasks = baseTasks.concat(['connect', 'watch']);
+  var devTasks = baseTasks.concat(['browserSync', 'watch']);
 
   grunt.event.on('watch', function (action, filepath) {
     grunt.task.run('shell:style');
