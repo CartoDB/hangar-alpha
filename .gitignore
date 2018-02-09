@@ -6,3 +6,4 @@ dist/
 .sass-cache/
 .jekyll-metadata
 .prettierignore
+_site/

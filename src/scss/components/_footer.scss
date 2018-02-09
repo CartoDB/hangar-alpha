@@ -1,12 +1,10 @@
 // Footer
 // --------------------------------------------------
 
-footer {
-  background-color: $white;
-}
 
-.Footer {
+.Footer-container {
   padding-top: 96px;
+  background-color: $white;
 
   .FooterElement {
     margin-bottom: 8px;
@@ -27,7 +25,7 @@ footer {
   }
 
   @media (max-width: $layout-mobile) {
-    padding-top: 48px;
+    padding-top: 64px;
   }
 }
 

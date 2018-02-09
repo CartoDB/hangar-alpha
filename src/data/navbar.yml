@@ -41,6 +41,8 @@ solutions:
 solutions-extra:
   - title: Sales Analytics
     url: '/solutions/salesquest/'
+  - title: Traffic Management
+    url: '/solutions/traffico/'
 community:
   - title: Map Gallery
     url: '/gallery/'

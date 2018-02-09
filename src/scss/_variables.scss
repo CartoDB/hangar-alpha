@@ -11,7 +11,7 @@ $layout-regular: 980px;
 //UI Colors
 $carto-red: #F24440;
 $solutions-red: #FF583E;
-$jade: #00B9BF;
+$jade: #11a2b8;
 $builder-blue: #1785FB;
 $navyBlue: #162745;
 $engine-blue: #2E51E8;
@@ -20,8 +20,20 @@ $orange: #FF990B;
 $guides-purple: #7D21F5;
 $tutorials-purple: #6E00DC;
 $docs-purple: #5300CC;
-$emerald: #80D100;
+$emerald: #2aac02;
 $base-grey: #2E3C43;
+$light-grey: rgba($base-grey, 0.02);
+$softblue: #F2F6F9;
+$typo0: #2E3C43;
+
+// Typo Scale
+$typo1: #162945;
+$typo2: #647083;
+$typo3: #B1B8C1;
+$typo4: #ffffff;
+$link: $blue;
+
+// Structure
 $white: #ffffff;
 $softgrey: #F9F9F9;
 $softblue: #F2F6F9;
@@ -39,3 +51,34 @@ $font-family-code: 'Overpass Mono', monospace;
 $text-color: $base-grey;
 
 
+<<<<<<< HEAD
+=======
+// Z-Index
+//
+// Carto z-index scale. Z-index values should always be defined in _z-index.scss. This
+// allows us to at a glance determine relative layers of our application and prevents bugs
+// arrising from arbitrary z-index values. Do not edit the z-index scale! Only add application
+// scoped z-index values.
+// --------------------------------------------------
+
+
+// Z-Index Scale
+// --------------------------------------------------
+$zIndex-1: 100;
+$zIndex-2: 200;
+$zIndex-3: 300;
+$zIndex-4: 400;
+$zIndex-5: 500;
+$zIndex-6: 600;
+$zIndex-7: 700;
+$zIndex-8: 800;
+$zIndex-9: 900;
+$zIndex-10: 1000;
+
+
+// Z-Index Applications
+// --------------------------------------------------
+$zIndex--navbar: $zIndex-3;
+
+$zIndex--uInner: $zIndex-1;
+>>>>>>> master
