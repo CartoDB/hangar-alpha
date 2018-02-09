@@ -1,7 +1,7 @@
 {
   "name": "hangar-alpha",
   "description": "Share frontend assets between different web repositories",
-  "version": "0.1.23",
+  "version": "0.1.24",
   "repository": {
     "type": "git",
     "url": "https://github.com/CartoDB/hangar-alpha.git"
@@ -16,7 +16,10 @@
     "styleguide": "styleguide",
     "release": "grunt publish && np"
   },
-  "files": ["dist", "src"],
+  "files": [
+    "dist",
+    "src"
+  ],
   "style": "dist/css/hangaralpha.css",
   "sass": "src/scss/main.scss",
   "main": "dist/js/hangaralpha.js",
@@ -60,8 +63,7 @@
     "load-grunt-tasks": "*",
     "markdown-styleguide-generator": "~2.0.4",
     "np": "^2.19.0",
-    "perfect-scrollbar":
-      "git://github.com/CartoDB/perfect-scrollbar.git#master",
+    "perfect-scrollbar": "git://github.com/CartoDB/perfect-scrollbar.git#master",
     "uglifyjs-webpack-plugin": "^1.1.8",
     "underscore": "^1.8.3",
     "webpack": "^2.7.0"
