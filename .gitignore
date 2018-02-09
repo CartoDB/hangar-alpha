@@ -7,3 +7,4 @@ dist/
 .jekyll-metadata
 .prettierignore
 _site/
+npm-debug.log
