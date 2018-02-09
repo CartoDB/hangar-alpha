@@ -2,26 +2,9 @@ const Backbone = require('backbone');
 const _ = require('underscore');
 const $ = require('jquery');
 
-const Navbar = require('./components/navbar');
-const NavbarFixed = require('./components/navbar-fixed');
-const Dialog = require('./components/dialog');
-const Card = require('./components/card');
-const Dropdown = require('./components/dropdown');
-const Tab = require('./components/tab');
+const Hangar = window.HangarAlpha.Components;
 
-window.HangarAlpha = {
-  Components: {
-    Navbar: Navbar,
-    NavbarFixed: NavbarFixed,
-    Dialog: Dialog,
-    Card: Card,
-    Dropdown: Dropdown,
-    Tab: Tab
-  }
-};
-
-module.exports = Backbone.View.extend({
-
+const Main = Backbone.View.extend({
   el: 'body',
 
   events: {
@@ -33,35 +16,37 @@ module.exports = Backbone.View.extend({
   },
 
   _initViews: function () {
-    this.navbar = new Navbar();
-    this.navbarFixed = new NavbarFixed({
+    this.navbar = new Hangar.Navbar();
+    this.navbarFixed = new Hangar.NavbarFixed({
       el: this.$('.js-Navbar--fixed'),
       $header: this.$('.js-Header')[0]
     });
     this._initDropdowns();
 
-    this.dialog = new Dialog();
+    this.dialog = new Hangar.Dialog();
 
-    this.card = new Card({
-      el: this.$('.js-downloadCard')
-    });
+    this.card = new Hangar.Card({ el: this.$('.js-downloadCard') });
 
     this._initTabs();
   },
 
   _initTabs: function () {
     _.each(this.$('.js-Tabs'), function (el) {
-      new Tab({  // eslint-disable-line
-        el: $(el)
+      /* eslint-disable */
+      new Hangar.Tab({
+        el: el
       });
+      /* eslint-enable */
     });
   },
 
   _initDropdowns: function () {
     _.each(this.$('.js-Dropdown'), function (el) {
-      new Dropdown({  // eslint-disable-line
+      /* eslint-disable */
+      new Hangar.Dropdown({
         el: $(el)
       });
+      /* eslint-enable */
     });
   },
 
@@ -87,4 +72,10 @@ module.exports = Backbone.View.extend({
       this.dialog.open();
     }
   }
+});
+
+$(() => {
+  /* eslint-disable */
+  new Main();
+  /* eslint-enable */
 });

@@ -1,7 +1,6 @@
 const Backbone = require('backbone');
 
 module.exports = Backbone.View.extend({
-
   events: {
     'click .js-Tab': 'switchTab'
   },
@@ -19,7 +18,13 @@ module.exports = Backbone.View.extend({
   },
 
   render: function () {
-    var idTab = this.$el.find('.js-Tab.is-active').length !== 0 ? this.$el.find('.js-Tab.is-active').attr('href') : this.$el.find('.js-Tab').first().attr('href');
+    var idTab =
+      this.$el.find('.js-Tab.is-active').length !== 0
+        ? this.$el.find('.js-Tab.is-active').attr('href')
+        : this.$el
+          .find('.js-Tab')
+          .first()
+          .attr('href');
     this.renderTabs(idTab);
   },
 

@@ -2,7 +2,6 @@ const Backbone = require('backbone');
 const $ = require('jquery');
 
 module.exports = Backbone.View.extend({
-
   el: '.js-Navbar',
 
   events: {
@@ -22,19 +21,12 @@ module.exports = Backbone.View.extend({
   },
 
   _toggleNavbar: function () {
-    if (this.model.get('hidden')) {
-      // Close menu
-      this.$navMobile.removeClass('is-active');
-      $('body').removeClass('u-overflow');
-      $('.Announcement').show();
-      this._toggleViewportScrolling(false);
-    } else {
-      // Open menu
-      this.$navMobile.addClass('is-active');
-      $('body').addClass('u-overflow');
-      $('.Announcement').hide();
-      this._toggleViewportScrolling(true);
-    }
+    const isHidden = this.model.get('hidden');
+
+    this.$navMobile.toggleClass('is-active', !isHidden);
+    $('body').toggleClass('u-overflow', !isHidden);
+    $('.Announcement').display(isHidden);
+    this._toggleViewportScrolling(!isHidden);
   },
 
   _openMobileMenu: function () {
@@ -44,14 +36,9 @@ module.exports = Backbone.View.extend({
   },
 
   _toggleViewportScrolling: function (bool) {
-    if (bool === true) {
-      document.body.ontouchmove = function (e) {
-        e.preventDefault();
-      };
-    } else {
-      document.body.ontouchmove = function (e) {
-        return true;
-      };
-    }
+    document.body.ontouchmove = function (e) {
+      if (!bool) return true;
+      e.preventDefault();
+    };
   }
 });
