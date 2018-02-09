@@ -27,7 +27,7 @@ This will make a new build, publish the new version to github pages and then lau
 
 As we already published hangar to npm, unpkg.com is the best choice, and the good thing is, we don't need to do anything to version the assets:
 
-https://unpkg.com/hangar-alpha@0.1.22/dist/js/hangaralpha.js
-https://unpkg.com/hangar-alpha@0.1.22/dist/css/hangaralpha.css
+* https://unpkg.com/hangar-alpha@0.1.22/dist/js/hangaralpha.js
+* https://unpkg.com/hangar-alpha@0.1.22/dist/css/hangaralpha.css
 
 Use @latest as latest version.
