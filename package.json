@@ -13,7 +13,8 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "styleguide": "styleguide"
+    "styleguide": "styleguide",
+    "release": "grunt publish && np"
   },
   "files": ["dist", "src"],
   "style": "dist/css/hangaralpha.css",
@@ -58,6 +59,7 @@
     "karma-webpack": "^2.0.9",
     "load-grunt-tasks": "*",
     "markdown-styleguide-generator": "~2.0.4",
+    "np": "^2.19.0",
     "perfect-scrollbar":
       "git://github.com/CartoDB/perfect-scrollbar.git#master",
     "uglifyjs-webpack-plugin": "^1.1.8",
