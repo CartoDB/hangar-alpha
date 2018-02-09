@@ -18,9 +18,9 @@
     "test": "karma start karma.config.js --single-run"
   },
   "files": ["dist", "src"],
-  "style": "dist/css/hangaralpha.css",
+  "style": "dist/css/hangaralpha.min.css",
   "sass": "src/scss/main.scss",
-  "main": "dist/js/hangaralpha.js",
+  "main": "dist/js/hangaralpha.min.js",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
