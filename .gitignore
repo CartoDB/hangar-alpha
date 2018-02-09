@@ -1,5 +1,11 @@
 .DS_Store
 node_modules/
 .tmp/
-dist/
+dist/css/
+dist/data/
+dist/img/
+dist/scss/
+dist/styleguide/
+dist/templates/
 .grunt
+_site/
