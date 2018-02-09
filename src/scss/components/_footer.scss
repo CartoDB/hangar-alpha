@@ -1,7 +1,6 @@
 // Footer
 // --------------------------------------------------
 
-
 .Footer-container {
   padding-top: 96px;
   background-color: $white;
@@ -13,14 +12,14 @@
       margin-bottom: 0;
     }
   }
-  
+
   .FooterLink {
     color: $typo2;
-    transition: all .2s ease;
+    transition: color 0.2s ease;
 
     &:hover {
-    color: $link;
-    text-decoration: none;
+      color: #000;
+      text-decoration: underline;
     }
   }
 

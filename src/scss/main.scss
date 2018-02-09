@@ -1,33 +1,19 @@
 @charset "utf-8";
 
 // Reset scss
-@import
-  "reset"
-;
+@import 'reset';
 
 // Non-rendering scss
-@import
-  "variables",
-  "mixins"
-;
+@import 'variables', 'mixins';
 
 // Arrays
-@import
-  "arrays"
-;
+@import 'arrays';
 
 // Layout
-@import
-  "base",
-  "components"
-;
+@import 'base', 'components';
 
 //Utilities
-@import
-  "utilities"
-;
+@import 'utilities';
 
 //Vendor
-@import
-  "vendor"
-;
+@import 'vendor';
