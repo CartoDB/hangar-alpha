@@ -1,0 +1,16 @@
+{
+  "extends": "semistandard",
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jasmine": true
+  },
+  "globals": {
+    "grunt": true
+  },
+  "rules": {
+    "camelcase": "off",
+    "no-mixed-operators": "off",
+    "no-useless-escape": "off"
+  }
+}

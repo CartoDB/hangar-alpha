@@ -1,11 +1,10 @@
 {
 	"sgComment": "SG",
 	"srcFolder": "./src",
-	"outputFile": "./dist/styleguide/index.html",
+	"outputFile": "./dist/framework/index.html",
 	"templateFile": "./styleguide/_template.html",
 	"themeFile": "./styleguide/theme.css",
 	"highlightFolder": "./node_modules/highlight.js/styles",
-	"highlightStyle": "github",
 	"fileExtensions": {
 		"scss": true,
 		"sass": true,
@@ -18,5 +17,5 @@
 	"customVars": {
 		"sampleVar": "Hello from customVars!"
 	},
-	"jqFile": "/usr/local/lib/node_modules/markdown-styleguide-generator/template/jquery.js"
+	"jqFile": "node_modules/markdown-styleguide-generator/template/jquery.js"
 }

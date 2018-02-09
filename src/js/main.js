@@ -1,75 +1,81 @@
-window.HangarAlpha = {
-  Models: {},
-  Collections: {},
-  Views: {},
-  Routers: {}
-};
+const Backbone = require('backbone');
+const _ = require('underscore');
+const $ = require('jquery');
 
-HangarAlpha.Views.Main = Backbone.View.extend({
+const Hangar = window.HangarAlpha.Components;
 
-	el: 'body',
+const Main = Backbone.View.extend({
+  el: 'body',
 
   events: {
     'click .js-ContactLink': '_onClickContactLink'
   },
 
-	initialize: function () {
+  initialize: function () {
     this._initViews();
   },
 
   _initViews: function () {
-    this.navbar = new HangarAlpha.Views.Navbar()
-    this.navbar_fixed = new HangarAlpha.Views.NavbarFixed({
+    this.navbar = new Hangar.Navbar();
+    this.navbarFixed = new Hangar.NavbarFixed({
       el: this.$('.js-Navbar--fixed'),
-      $header: this.$('.js-Header')
-     });
+      $header: this.$('.js-Header')[0]
+    });
     this._initDropdowns();
 
-    this.dialog = new HangarAlpha.Views.Dialog();
+    this.dialog = new Hangar.Dialog();
 
-    this.card = new HangarAlpha.Views.Card({
-      el: this.$('.js-downloadCard')
-    })
+    this.card = new Hangar.Card({ el: this.$('.js-downloadCard') });
+
+    this._initTabs();
   },
 
+  _initTabs: function () {
+    _.each(this.$('.js-Tabs'), function (el) {
+      /* eslint-disable */
+      new Hangar.Tab({
+        el: el
+      });
+      /* eslint-enable */
+    });
+  },
 
-	_initDropdowns: function () {
-    var _this = this;
-
+  _initDropdowns: function () {
     _.each(this.$('.js-Dropdown'), function (el) {
-      var dropdown = new HangarAlpha.Views.Dropdown({
+      /* eslint-disable */
+      new Hangar.Dropdown({
         el: $(el)
-      })
-    })
+      });
+      /* eslint-enable */
+    });
   },
 
   _onKeyDown: function (e) {
     switch (e.which) {
       // esc
-      case 27 :
-        this._closeContactDialog()
-        break
+      case 27:
+        this._closeContactDialog();
+        break;
     }
   },
 
   _closeDialogs: function () {
-    this.dialog.close()
+    this.dialog.close();
   },
 
   _onClickContactLink: function (e) {
-    var mobile = 1280
-    var width = $(window).width()
+    var mobile = 1280;
+    var width = $(window).width();
 
     if (width >= mobile) {
-      e.preventDefault()
-
-      this.dialog.open()
+      e.preventDefault();
+      this.dialog.open();
     }
   }
+});
 
-})
-
-
-$(function () {
-  window.main = new HangarAlpha.Views.Main()
-})
+$(() => {
+  /* eslint-disable */
+  new Main();
+  /* eslint-enable */
+});

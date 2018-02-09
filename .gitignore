@@ -3,4 +3,7 @@ node_modules/
 .tmp/
 dist/
 .grunt
+.sass-cache/
+.jekyll-metadata
+.prettierignore
 _site/

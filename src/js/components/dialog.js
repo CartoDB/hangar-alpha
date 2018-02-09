@@ -1,5 +1,6 @@
-HangarAlpha.Views.Dialog = Backbone.View.extend({
+const Backbone = require('backbone');
 
+module.exports = Backbone.View.extend({
   el: '.js-Dialog',
 
   events: {
@@ -7,42 +8,36 @@ HangarAlpha.Views.Dialog = Backbone.View.extend({
   },
 
   initialize: function () {
-    this.model = new Backbone.Model({ hidden: true })
-
-    this.model.on('change:hidden', this._toggleDialog, this)
+    this.model = new Backbone.Model({ hidden: true });
+    this.model.on('change:hidden', this._toggleDialog, this);
   },
 
   close: function () {
-    if (!this.model.get('hidden')) {
-      this.model.set('hidden', true)
-    }
+    this.model.set('hidden', true);
   },
 
   open: function () {
-    if (this.model.get('hidden')) {
-      this.model.set('hidden', false)
-    }
+    this.model.set('hidden', false);
   },
 
   _closeContactDialog: function (e) {
-    e.preventDefault()
-
-    this.close()
+    e.preventDefault();
+    this.close();
   },
 
   _toggleDialog: function () {
-    var _this = this
-
     if (this.model.get('hidden')) {
-      this.$el.addClass('is-closing')
+      this.$el.addClass('is-closing');
 
-      setTimeout(function () {
-        _this.$el.removeClass('is-active')
-        _this.$el.removeClass('is-closing')
-      }, 100)
+      setTimeout(
+        function () {
+          this.$el.removeClass('is-active');
+          this.$el.removeClass('is-closing');
+        }.bind(this),
+        100
+      );
     } else {
-      this.$el.addClass('is-active')
+      this.$el.addClass('is-active');
     }
   }
-
-})
+});
