@@ -48,7 +48,6 @@
   color: white;
 
   &:hover {
-    color: #000;
     text-decoration: underline;
   }
 }
@@ -184,10 +183,6 @@
     }
     .Navbar-link {
       color: $base-grey;
-
-      &:hover {
-        color: #000;
-      }
     }
     .Navbar-icon {
       polygon {

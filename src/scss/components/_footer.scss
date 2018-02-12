@@ -18,7 +18,7 @@
     transition: color 0.2s ease;
 
     &:hover {
-      color: #000;
+      color: $typo0;
       text-decoration: underline;
     }
   }
