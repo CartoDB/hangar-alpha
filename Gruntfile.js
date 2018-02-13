@@ -42,27 +42,15 @@ module.exports = function (grunt) {
           },
           {
             expand: true,
-            cwd: 'src/templates',
+            cwd: 'src/img',
+            src: '*.jpg',
+            dest: 'dist/img/'
+          },
+          {
+            expand: true,
+            cwd: 'src/partials',
             src: '*.html',
-            dest: 'dist/templates/'
-          },
-          {
-            expand: true,
-            cwd: 'src/scss',
-            src: '**/*.scss',
-            dest: 'dist/scss/'
-          },
-          {
-            expand: true,
-            cwd: 'src/data',
-            src: '**/*.yml',
-            dest: 'dist/data/'
-          },
-          {
-            expand: true,
-            cwd: 'styleguide',
-            src: '**/*.css',
-            dest: 'dist/styleguide/'
+            dest: 'dist/partials/'
           }
         ]
       }
@@ -130,7 +118,7 @@ module.exports = function (grunt) {
         tasks: ['webpack']
       },
       html: {
-        files: ['styleguide/*.html'],
+        files: ['styleguide/*.html', 'partials/*.html'],
         tasks: ['shell']
       }
     },
