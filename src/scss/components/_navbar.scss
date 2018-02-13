@@ -47,7 +47,7 @@
 .Navbar-link {
   color: white;
 
-  &:hover {
+  &:not(.button):hover {
     text-decoration: underline;
   }
 }
