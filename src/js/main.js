@@ -22,11 +22,6 @@ const Main = Backbone.View.extend({
       $header: this.$('.js-Header').get(0)
     });
 
-    this.navbarFixed2 = new Hangar.NavbarFixed({
-      el: this.$('#navbar'),
-      $header: this.$('#grid').get(0)
-    });
-
     this._initDropdowns();
 
     this.dialog = new Hangar.Dialog();
