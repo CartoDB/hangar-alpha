@@ -27,7 +27,9 @@
     margin-left: -14px;
     top: -15px;
     border: 8px solid transparent;
+    border-bottom: 8px solid rgba(210, 210, 210, 0.2);
   }
+
   &:after {
     content: '';
     position: absolute;
