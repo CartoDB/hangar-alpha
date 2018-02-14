@@ -8,3 +8,4 @@ dist/
 .prettierignore
 _site/
 npm-debug.log
+.vscode
