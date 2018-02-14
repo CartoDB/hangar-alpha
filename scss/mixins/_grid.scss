@@ -1,7 +1,0 @@
-// Grid
-// --------------------------------------------------
-
-@mixin grid($value) {
-  flex: 0 0 $value;
-  max-width: $value;
-}
