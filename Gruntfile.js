@@ -31,18 +31,6 @@ module.exports = function (grunt) {
       }
     },
 
-    connect: {
-      server: {
-        options: {
-          port: 9003,
-          livereload: 35732,
-          open: 'http://0.0.0.0:9003/framework',
-          hostname: '0.0.0.0',
-          base: './dist'
-        }
-      }
-    },
-
     copy: {
       dist: {
         files: [
@@ -54,27 +42,15 @@ module.exports = function (grunt) {
           },
           {
             expand: true,
-            cwd: 'src/templates',
+            cwd: 'src/img',
+            src: '*.jpg',
+            dest: 'dist/img/'
+          },
+          {
+            expand: true,
+            cwd: 'src/partials',
             src: '*.html',
-            dest: 'dist/templates/'
-          },
-          {
-            expand: true,
-            cwd: 'src/scss',
-            src: '**/*.scss',
-            dest: 'dist/scss/'
-          },
-          {
-            expand: true,
-            cwd: 'src/data',
-            src: '**/*.yml',
-            dest: 'dist/data/'
-          },
-          {
-            expand: true,
-            cwd: 'styleguide',
-            src: '**/*.css',
-            dest: 'dist/styleguide/'
+            dest: 'dist/partials/'
           }
         ]
       }
@@ -142,7 +118,7 @@ module.exports = function (grunt) {
         tasks: ['webpack']
       },
       html: {
-        files: ['styleguide/*.html'],
+        files: ['styleguide/*.html', 'partials/*.html'],
         tasks: ['shell']
       }
     },
@@ -158,6 +134,19 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'karma.config.js'
       }
+    },
+
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src: ['dist/**/*']
+        },
+        options: {
+          watchTask: true,
+          server: './dist',
+          startPath: '/framework'
+        }
+      }
     }
   });
   /* End initConfig */
@@ -172,7 +161,7 @@ module.exports = function (grunt) {
     'shell'
   ];
 
-  var devTasks = baseTasks.concat(['connect', 'watch']);
+  var devTasks = baseTasks.concat(['browserSync', 'watch']);
 
   grunt.event.on('watch', function (action, filepath) {
     grunt.task.run('shell:style');

@@ -60,4 +60,12 @@ var landingConfig = Object.assign({}, config, {
   }
 });
 
-module.exports = [hangarConfig, landingConfig];
+var partialConfig = Object.assign({}, config, {
+  entry: './src/js/partials.js',
+  output: {
+    path: path.resolve(root, 'dist', 'partials', 'js'),
+    filename: 'main.js'
+  }
+});
+
+module.exports = [hangarConfig, landingConfig, partialConfig];

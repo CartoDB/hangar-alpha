@@ -44,10 +44,11 @@
   }
 }
 
-.Navbar-link{
+.Navbar-link {
   color: white;
-  &:hover {
-    text-decoration: none;
+
+  &:not(.button):hover {
+    text-decoration: underline;
   }
 }
 
@@ -57,7 +58,7 @@
 
 @media (max-width: $layout-tablet) {
   .Navbar-collapse {
-    display:none;
+    display: none;
   }
 
   .Navbar-header {
@@ -100,7 +101,6 @@
     display: block;
     flex: 1;
     margin-top: 68px;
-
   }
 
   .Navbar-item {
@@ -152,7 +152,6 @@
 }
 /* End Navbar Mobile */
 
-
 /* Navbar fixed */
 .Navbar--fixed {
   position: fixed;
@@ -162,7 +161,7 @@
   border-bottom: 1px solid #eee;
   background: #fff;
   opacity: 0;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 
   &.is-active {
     top: 0;
@@ -194,7 +193,7 @@
       display: none;
     }
     .Navbar-buttonFixed {
-      display: block
+      display: block;
     }
   }
 }
@@ -202,7 +201,7 @@
 
 /* Navbar u-positive */
 .Navbar.u-positive,
-.Navbar--positive .Navbar{
+.Navbar--positive .Navbar {
   display: block;
   top: 0;
   opacity: 1;
@@ -218,35 +217,33 @@
     display: none;
   }
   .Navbar-buttonFixed {
-    display: block
+    display: block;
   }
   @media (max-width: $layout-tablet) {
-
-   .Navbar-link {
-     color: $white;
-   }
-   .Navbar-icon {
-     polygon {
-       fill: $white;
-     }
-   }
-   .Navbar-buttonMenu {
-     span {
-       background: $base-grey;
-     }
-     &.open span {
-       background: $white;
-     }
-   }
+    .Navbar-link {
+      color: $white;
+    }
+    .Navbar-icon {
+      polygon {
+        fill: $white;
+      }
+    }
+    .Navbar-buttonMenu {
+      span {
+        background: $base-grey;
+      }
+      &.open span {
+        background: $white;
+      }
+    }
   }
 }
 /* End Navbar u-positive */
 
-
 /* Navbar open/close button */
 /* Icon 1 */
 @media (max-width: $layout-tablet) {
-  .Navbar-buttonMenu  {
+  .Navbar-buttonMenu {
     width: 46px;
     height: 40px;
     position: relative;
@@ -263,7 +260,7 @@
     position: absolute;
     height: 2px;
     width: 100%;
-    background: #FFF;
+    background: #fff;
     border-radius: 2px;
     opacity: 1;
     left: 0;
@@ -285,7 +282,7 @@
 
   .Navbar-buttonMenu span:nth-child(4) {
     top: 100%;
-    margin-top: -1px
+    margin-top: -1px;
   }
 
   .Navbar-buttonMenu.open span:nth-child(1) {
@@ -311,7 +308,6 @@
   }
 }
 
-
 //Navbar Logo
 
 .Navbar {
@@ -325,8 +321,7 @@
 
 .Navbar.u-positive,
 .Navbar--positive .Navbar,
-.Navbar.Navbar--fixed.is-active
- {
+.Navbar.Navbar--fixed.is-active {
   .Logo--positive {
     display: flex;
   }
