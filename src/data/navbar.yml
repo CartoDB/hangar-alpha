@@ -1,0 +1,111 @@
+products:
+  - title: Builder
+    url: /builder/
+  - title: Engine
+    url: /engine/
+  - title: Mobile SDK
+    url: /engine/mobile/
+  - title: Location Data Services
+    url: /location-data-services/
+  - title: Data Observatory
+    url: /data-observatory/
+  - title: Integrations
+    url: /integrations/
+  - title: Pricing
+    url: /pricing/
+solutions:
+  - title: Banking & Insurance
+    url: '/solutions/banking-and-insurance/'
+  - title: BI & Analytics
+    url: '/solutions/business-intelligence-and-analytics/'
+  - title: Cities & Government
+    url: '/solutions/cities-government/'
+  - title: Real Estate
+    url: '/solutions/real-estate/'
+  - title: Retail
+    url: '/solutions/retail/'
+  - title: Transport & Logistics
+    url: '/solutions/transport-logistics/'
+  - title: Telco & Utilities
+    url: '/solutions/telco-utilities/'
+  - title: Healthcare & Pharma
+    url: '/solutions/healthcare-and-pharma/'
+  - title: Web & Mobile Development
+    url: '/solutions/web-and-mobile-development/'
+  - title: Natural & Conservation Science
+    url: '/solutions/natural-conservation-science/'
+  - title: Journalism & Media
+    url: '/solutions/journalism-media/'
+  - title: Education & Research
+    url: '/solutions/education-and-research/'
+solutions-extra:
+  - title: Sales Analytics
+    url: '/solutions/salesquest/'
+  - title: Traffic Management
+    url: '/solutions/traffico/'
+community:
+  - title: Map Gallery
+    url: '/gallery/'
+  - title: Explore
+    url: '/explore/'
+  - title: Ambassadors
+    url: '/ambassadors/'
+resources:
+  - title: Community
+    url: '/community/'
+  - title: Downloads
+    url: '/resources/'
+  - title: Location Intelligence
+    url: '/location-intelligence/'
+  - title: Webinars
+    url: '/webinars/'
+  - title: Blog
+    url: '/blog/'
+  - title: Learn
+    url: '/learn/'
+  - title: Documentation
+    url: '/docs/'
+
+about:
+  - title: Team
+    url: '/team/'
+  - title: Careers
+    url: '/careers/'
+  - title: Press
+    url: '/press/'
+  - title: Partners
+    url: '/partners/'
+  - title: Attribution
+    url: '/attribution/'
+  - title: Contributions
+    url: '/contributions/'
+  - title: Contact
+    url: '/contact/'
+    className: 'js-ContactLink'
+  - title: Request a Live Demo
+    url: '/request-live-demo/'
+  - title: Terms of Service
+    url: '/legal/'
+  - title: Privacy Policy
+    url: '/privacy/'
+integrations:
+  - title: Box
+    url: '/integrations/box/'
+  - title: Dropbox
+    url: '/integrations/dropbox/'
+  - title: Google Drive
+    url: '/integrations/google-drive/'
+  - title: Twitter Maps
+    url: '/integrations/twitter-maps/'
+  - title: Excel Data
+    url: '/integrations/excel/'
+  - title: ArcGIS&trade;
+    url: '/integrations/arcgis/'
+  - title: Satellite Imagery
+    url: '/integrations/satellite-imagery/'
+  - title: Qlik®
+    url: '/integrations/qlik/'
+  - title: Splunk
+    url: '/integrations/splunk/'
+  - title: Alteryx
+    url: '/integrations/alteryx/'
