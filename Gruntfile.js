@@ -36,15 +36,27 @@ module.exports = function (grunt) {
         files: [
           {
             expand: true,
-            cwd: 'node_modules/perfect-scrollbar/src/css/',
-            src: '*.scss',
-            dest: 'src/scss/vendor/perfect-scrollbar/'
-          },
-          {
-            expand: true,
             cwd: 'src/img',
             src: '*.jpg',
             dest: 'dist/img/'
+          },
+          {
+            expand: true,
+            cwd: 'src/templates',
+            src: '*.html',
+            dest: 'dist/templates/'
+          },
+          {
+            expand: true,
+            cwd: 'src/data',
+            src: '**/*.yml',
+            dest: 'dist/data/'
+          },
+          {
+            expand: true,
+            cwd: 'src/scss',
+            src: '**/*.scss',
+            dest: 'dist/scss/'
           },
           {
             expand: true,
