@@ -7,6 +7,7 @@ module.exports = Backbone.View.extend({
     this.options = options;
     this.$window = $(window);
     this.$header = this.options.$header;
+    this.after = this.options.after;
     this.$navbarButton = this.$('.js-Navbar-button');
 
     _.bindAll(this, '_fixMenu');
@@ -17,6 +18,9 @@ module.exports = Backbone.View.extend({
 
   _fixMenu: function () {
     var headerHeight = this.$header.offsetTop;
+    if (this.after) {
+      headerHeight = headerHeight + $(this.$header).outerHeight();
+    }
     var scrollNumber = this.$window.scrollTop();
     this.$el.toggleClass(
       'Navbar--fixed is-active',

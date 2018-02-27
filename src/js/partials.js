@@ -19,7 +19,8 @@ const Main = Backbone.View.extend({
     this.navbar = new Hangar.Navbar();
     this.navbarFixed = new Hangar.NavbarFixed({
       el: this.$('.js-Navbar--fixed'),
-      $header: document.querySelector('#triggerFixed')
+      $header: document.querySelector('#triggerFixed'),
+      after: true
     });
 
     this._initDropdowns();
