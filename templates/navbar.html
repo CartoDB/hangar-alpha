@@ -1,0 +1,182 @@
+<nav class="Navbar js-Navbar js-Navbar--fixed">
+  <div class="Navbar-inner container">
+    <div class="Navbar-header">
+      <a class="Logo js-Navbar-logo u-rspace--40" href="/">
+        <div class="Logo--negative">
+          {% include hangaralpha/logos/logo_carto_negative.svg %}
+        </div>
+        <div class="Logo--positive">
+          {% include hangaralpha/logos/logo_carto_positive.svg %}
+        </div>
+      </a>
+      <div class="Navbar-buttonMenu js-Navbar-button">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="Navbar-collapse">
+      <ul class="Navbar-list">
+        <li class="Navbar-item Dropdown js-Dropdown">
+          <a href="/products/" class="Navbar-link title is-regular is-small js-Dropdown-target js-Action--NAVproducts">
+            Products
+            <svg class="Navbar-icon js-navbarCaret" width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <polygon id="Chevron" fill="#FFFFFF" fill-rule="nonzero" points="1.07650484 0.292893219 0.292893219 1.12132035 3.29289323 4.29289322 6.29289322 1.12132034 5.50928159 0.292893219 3.29289323 2.63603897"></polygon>
+            </svg>
+          </a>
+          <div class="Dropdown-inner js-Dropdown-inner">
+            <ul>
+              {% for products_item in site.data.hangaralpha.navbar.products %}
+                <li class="Dropdown-item"><a href="{{ products_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if products_item.url == page.url %}is-active{% endif %}">{{ products_item.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </li>
+
+        <li class="Navbar-item Dropdown js-Dropdown">
+          <a href="/solutions/" class="Navbar-link title is-regular is-small js-Dropdown-target js-Action--NAVsolutions">
+            Solutions
+            <svg class="Navbar-icon js-navbarCaret" width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <polygon id="Chevron" fill="#FFFFFF" fill-rule="nonzero" points="1.07650484 0.292893219 0.292893219 1.12132035 3.29289323 4.29289322 6.29289322 1.12132034 5.50928159 0.292893219 3.29289323 2.63603897"></polygon>
+            </svg>
+          </a>
+          <div class="Dropdown-inner Dropdown--2columns js-Dropdown-inner">
+            <ul class="grid">
+              {% for solutions_item in site.data.hangaralpha.navbar.solutions %}
+                <li class="Dropdown-item grid-cell--col6"><a href="{{ solutions_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if solutions_item.url == page.url %}is-active{% endif %}">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</a></li>
+              {% endfor %}
+
+              <li class="grid-cell--col12">
+                <ul class="grid Dropdown-innerHighlight is-bgSoftBlue">
+                  {% for solutions_item in site.data.hangaralpha.navbar.solutions-extra %}
+                    <li class="Dropdown-item grid-cell--col6"><a href="{{ solutions_item.url }}" class="Dropdown-link text is-small is-semibold u-linkBlue {% if solutions_item.url == page.url %}is-active{% endif %}">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="Navbar-item js-Dropdown Dropdown">
+          <a href="/resources/" class="Navbar-link title is-regular is-small js-Dropdown-target">
+            Resources
+            <svg class="Navbar-icon js-navbarCaret" width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <polygon id="Chevron" fill="#FFFFFF" fill-rule="nonzero" points="1.07650484 0.292893219 0.292893219 1.12132035 3.29289323 4.29289322 6.29289322 1.12132034 5.50928159 0.292893219 3.29289323 2.63603897"></polygon>
+            </svg>
+          </a>
+          <div class="Dropdown-inner js-Dropdown-inner">
+            <ul>
+              {% for resources_item in site.data.hangaralpha.navbar.resources %}
+                <li class="Dropdown-item"><a href="{{ resources_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if resources_item.url == page.url %}is-active{% endif %}">{{ resources_item.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </li>
+
+        <li class="Navbar-item">
+          <a href="/pricing/" class="Navbar-link title is-regular is-small js-Action--NAVpricing">
+            <span>Pricing</span>
+          </a>
+        </li>
+
+        <li class="Navbar-item">
+          <a href="/blog/" class="Navbar-link title is-regular is-small js-Action--NAVblog">
+            <span>Blog</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="Navbar-list">
+        <li class="Navbar-item">
+          <a href="/login" class="Navbar-link title is-regular is-small js-Action--NAVlogin">
+            <span>Log in</span>
+          </a>
+        </li>
+        <li class="Navbar-item">
+          <a href="/get-started/" class="Navbar-link title is-regular is-small js-Action--NAVcontact">
+            <span>Sign up</span>
+          </a>
+        </li>
+        <li class="Navbar-item">
+          <a href="/request-live-demo/" class="button button--small is-negative Navbar-link Navbar-button js-Action--NAVdemo"><span>Request a Demo</span>
+          </a>
+          <a href="/request-live-demo/" class="button button--small is-baseGreyOutline Navbar-link Navbar-buttonFixed js-Action--NAVdemo">
+            <span>Request a Demo</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="NavbarMobile js-Navbar js-Navbar-mobile">
+    <ul class="NavbarMobile-collapse js-ScrollbarY">
+      <li class="Navbar-item">
+        <a href="/products/" class="Navbar-link">
+          <span class="title u-negative">Products</span>
+        </a>
+      </li>
+      <li class="Navbar-item NavbarMobile-list">
+        <ul>
+          <li class="Navbar-subitem">
+            <a href="/builder/" class="Navbar-link"><span class="text is-small">Builder</span></a>
+          </li>
+          <li class="Navbar-subitem">
+            <a href="/engine/" class="Navbar-link"><span class="text is-small">Engine</span></a>
+          </li>
+          <li class="Navbar-subitem">
+            <a href="/engine/mobile/" class="Navbar-link"><span class="text is-small">Mobile SDK</span></a>
+          </li>
+          <li class="Navbar-subitem">
+            <a href="/data-observatory/" class="Navbar-link"><span class="text">Data Observatory</span></a>
+          </li>
+        </ul>
+        </li>
+      <li class="Navbar-item">
+        <a href="/solutions/" class="Navbar-link">
+          <span class="title u-negative">Solutions</span>
+        </a>
+      </li>
+      <li class="Navbar-item NavbarMobile-list">
+        <ul class="NavbarMobile--tabletList">
+        {% for solutions_item in site.data.hangaralpha.navbar.solutions %}
+          <li class="Navbar-subitem">
+            <a href="{{ solutions_item.url }}" class="Navbar-link">
+              <span class="text is-small">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</span>
+            </a>
+          </li>
+        {% endfor %}
+        </ul>
+        <ul>
+          {% for solutions_item in site.data.hangaralpha.navbar.solutions-extra %}
+          <li class="Navbar-subitem">
+            <a href="{{ solutions_item.url }}" class="Navbar-link">
+              <span class="text is-small is-semibold">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</span>
+            </a>
+          </li>
+          {% endfor %}
+      </ul>
+      <li class="Navbar-item">
+        <a href="/resources/" class="Navbar-link">
+          <span class="title u-negative">Resources</span>
+        </a>
+      </li>
+      <li class="Navbar-item">
+        <a href="/pricing/" class="Navbar-link">
+          <span class="title u-negative">Pricing</span>
+        </a>
+      </li>
+      <li class="Navbar-item">
+        <a href="/blog/" class="Navbar-link">
+          <span class="title u-negative">Blog</span>
+        </a>
+      </li>
+    </ul>
+    <div class="Navbar-item">
+      <a href="/request-live-demo/" class="button is-jade">
+        <span>Request a demo</span>
+      </a>
+    </div>
+  </div>
+</nav>

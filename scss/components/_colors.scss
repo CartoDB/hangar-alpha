@@ -1,0 +1,63 @@
+/* SG
+# Colors
+```
+  <!-- texts -->
+  <h1 class="text is-caption is-txtCartoRed">CARTO Red</h1>
+  <br/>
+  <h1 class="text is-caption is-txtSolutionsRed">Solutions Red</h1>
+  <br/>
+  <h1 class="text is-caption is-txtJade">Jade</h1>
+  <br/>
+  <h1 class="text is-caption is-txtBuilderBlue">Builder Blue</h1>
+  <br/>
+  <h1 class="text is-caption is-txtEngineblue">Engine Blue</h1>
+  <br/>
+  <h1 class="text is-caption is-txtLDSBlue">LDS Blue</h1>
+  <br/>
+  <h1 class="text is-caption is-txtGuidesPurple">Guides Purple</h1>
+  <br/>
+  <h1 class="text is-caption is-txtTutorialsPurple">Purple</h1>
+  <br/>
+  <h1 class="text is-caption is-txtDocsPurple">Docs Purple</h1>
+  <br/>
+  <h1 class="text is-caption is-txtEmerald">Emerald</h1>
+  <br/>
+  <h1 class="text is-caption is-txtOrange">Orange</h1>
+  <br/>
+  <h1 class="text is-caption is-txtBaseGrey">Base Grey</h1>
+  <br/>
+  <h1 class="text is-caption is-txtTypo2">Typo 2</h1>
+  <br/>
+ <h1 class="text is-caption is-txtTypo3">Typo 3</h1>
+  <br/>
+
+
+  <!-- box -->
+  <div class="block is-bgCartoRed"></div>
+  <div class="block is-bgSolutionsRed"></div>
+  <div class="block is-bgJade"></div>
+  <div class="block is-bgBuilderBlue"></div>
+  <div class="block is-bgEngineBlue"></div>
+  <div class="block is-bgLDSBlue"></div>
+  <div class="block is-bgGuidesPurple"></div>
+  <div class="block is-bgTutorialsPurple"></div>
+  <div class="block is-bgDocsPurple"></div>
+  <div class="block is-bgEmerald"></div>
+  <div class="block is-bgOrange"></div>
+  <div class="block is-bgBaseGrey"></div>
+  <div class="block is-bgTypo2"></div>
+  <div class="block is-bgTypo3"></div>
+  <div class="block is-bgSoftGray"></div>
+  <div class="block is-bgSoftBlue"></div>
+```
+*/
+
+
+@each $name, $color in $colors {
+  .is-bg#{$name} {
+    background: #{$color};
+  }
+  .is-txt#{$name} {
+    color: #{$color};
+  }
+}

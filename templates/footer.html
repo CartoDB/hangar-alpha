@@ -1,0 +1,106 @@
+<footer class="Footer-container">
+  <div class="grid Footer mobile--flex container">
+    <div class="grid-cell grid-cell--col12 u-vspace--8">
+      <p class="title is-small">Products</p>
+    </div>
+    <ul class="grid-cell grid-cell--col6">
+      {% for item in site.data.hangaralpha.footer.products | limit: 4 %}
+        <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks text is-small">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+    <ul class="grid-cell grid-cell--col6">
+      {% for item in site.data.hangaralpha.footer.products | offset: 4 %}
+        <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks text is-small">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+
+
+    <div class="grid-cell grid-cell--col12 u-tspace--32 u-vspace--8">
+      <p class="title is-small">Resources</p>
+    </div>
+    <ul class="grid-cell grid-cell--col6">
+      {% for item in site.data.hangaralpha.footer.resources | limit: 4 %}
+        <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks text is-small">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+    <ul class="grid-cell grid-cell--col6">
+      {% for item in site.data.hangaralpha.footer.resources | offset: 4 %}
+        <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks text is-small">{{ item.title }}</a></li>
+      {% endfor %}
+        <li class="FooterElement"><a href="https://github.com/CartoDB/cartodb" title="Source Code" class="FooterLink">Source Code</a></li>
+    </ul>
+
+
+    <div class="grid-cell grid-cell--col12 u-tspace--32 u-vspace--8 ">
+      <p class="title is-small">About us</p>
+    </div>
+    <ul class="grid-cell grid-cell--col6">
+      {% for item in site.data.hangaralpha.footer.about | limit: 4 %}
+        <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks text is-small">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+    <ul class="grid-cell grid-cell--col6">
+      {% for item in site.data.hangaralpha.footer.about | offset: 4 %}
+        <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks text is-small">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="grid Footer desktop--flex container">
+    <div class="Footer-logo grid-cell grid-cell--col6 grid-cell--col3--tablet">
+      {% include hangaralpha/logos/logo_carto_footer.svg %}
+    </div>
+
+    <ul class="grid-cell grid-cell--col2 grid-cell--col3--tablet">
+      <li class="FooterElement title is-small">Products</li>
+      {% for item in site.data.hangaralpha.footer.products %}
+      <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks text is-small">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+
+    <ul class="grid-cell grid-cell--col2 grid-cell--col3--tablet">
+      <li class="FooterElement title is-small">Resources</li>
+      {% for resources_item in site.data.hangaralpha.footer.resources %}
+      <li class="FooterElement"><a href="{{ resources_item.url }}" class="FooterLink js-Action--Footerlinks text is-small">{{ resources_item.title }}</a></li>
+      {% endfor %}
+      <li class="FooterElement"><a href="https://github.com/CartoDB/cartodb" title="Source Code" class="FooterLink">Source Code</a></li>
+    </ul>
+
+    <ul class="grid-cell grid-cell--col2 grid-cell--col3--tablet">
+      <li class="FooterElement title is-small">About us</li>
+      {% for about_item in site.data.hangaralpha.footer.about %}
+        <li class="FooterElement"><a href="{{ about_item.url }}" class="FooterLink js-Action--Footerlinks text is-small {{ about_item.className }}">{{ about_item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="Footer-social grid container u-tspace--64 u-vspace--64 u-vspace--16--mobile">
+    <div class="grid-cell grid-cell--col6 grid-cell--col3--tablet grid-cell--col6--mobile">
+      <p class="text is-small desktop">© CARTO 2017</p>
+
+      <a href="/" class="mobile">
+        {% include hangaralpha/logos/logo_carto_footer_small.svg %}
+      </a>
+
+    </div>
+    <div class="grid-cell grid-cell--col6 grid-cell--col9--tablet grid-cell--col6--mobile">
+
+      <!-- Facebook -->
+      <a href="{{ site.data.hangaralpha.footer.social.facebook }}" target="_blank" rel="nofollow" class="Footer-icon u-rspace--16">
+        {% include hangaralpha/icons/facebook.svg %}
+      </a>
+
+
+      <!-- Twitter -->
+      <a href="{{ site.data.hangaralpha.footer.social.twitter }}" target="_blank" rel="nofollow" class="Footer-icon u-rspace--16">
+        {% include hangaralpha/icons/twitter.svg %}
+      </a>
+
+      <!-- Linkedin -->
+      <a href="{{ site.data.hangaralpha.footer.social.linkedin }}" target="_blank" rel="nofollow" class="Footer-icon u-rspace--16">
+        {% include hangaralpha/icons/linkedin.svg %}
+      </a>
+      
+    </div>
+  </div>
+</footer>

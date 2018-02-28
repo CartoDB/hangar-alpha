@@ -1,0 +1,331 @@
+// Navbar
+// --------------------------------------------------
+
+.Navbar {
+  padding: 16px 0;
+  z-index: 300;
+  .Navbar-button {
+    display: block;
+  }
+  .Navbar-buttonFixed {
+    display: none;
+  }
+}
+
+.Navbar-inner {
+  z-index: 2;
+  display: flex;
+}
+
+.Navbar-header {
+  display: flex;
+}
+
+.Navbar-collapse {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.Navbar-collapseStatic {
+  justify-content: flex-end;
+}
+
+.Navbar-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.Navbar-item {
+  margin-right: calc(12px + 1vw);
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.Navbar-link {
+  color: white;
+
+  &:not(.button):hover {
+    text-decoration: underline;
+  }
+}
+
+.Navbar-icon {
+  vertical-align: middle;
+}
+
+@media (max-width: $layout-tablet) {
+  .Navbar-collapse {
+    display: none;
+  }
+
+  .Navbar-header {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+/* Navbar Mobile */
+.NavbarMobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba($base-grey, 0.96);
+  z-index: 1;
+  text-align: center;
+  display: none;
+  @media (max-width: $layout-tablet) {
+    &.is-active {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      animation: fade-and-scale-in 200ms ease-out;
+    }
+  }
+
+  .NavbarMobile-header {
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 20px 0 16px;
+  }
+
+  .NavbarMobile-collapse {
+    width: 100%;
+    display: block;
+    flex: 1;
+    margin-top: 68px;
+  }
+
+  .Navbar-item {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 16px 0;
+    margin: 0;
+  }
+
+  .Navbar-subitem {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 8px 0;
+    @media (max-width: $layout-mobile) {
+      height: 48px;
+    }
+  }
+
+  .NavbarMobile-list {
+    padding: 0 0 16px 0;
+  }
+
+  .NavbarMobile--tablet {
+    display: block;
+  }
+
+  .NavbarMobile--tabletList {
+    padding: 0 10%;
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: $layout-mobile) {
+      padding: 0 5%;
+    }
+    .Navbar-subitem {
+      text-align: right;
+      flex: 50%;
+      max-width: 50%;
+      padding-right: 20px;
+      padding-left: 20px;
+      @media (max-width: $layout-mobile) {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+      &:nth-child(even) {
+        text-align: left;
+      }
+    }
+  }
+}
+/* End Navbar Mobile */
+
+/* Navbar fixed */
+.Navbar--fixed {
+  position: fixed;
+  top: -80px;
+  z-index: 300;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  opacity: 0;
+  transition: all 0.3s ease;
+
+  &.is-active {
+    top: 0;
+    opacity: 1;
+
+    @media (max-width: $layout-tablet) {
+      display: none;
+    }
+  }
+}
+
+/* Navbar fixed  */
+.Navbar {
+  &.Navbar--fixed.is-active {
+    top: 0;
+    opacity: 1;
+    @media (max-width: $layout-tablet) {
+      display: none;
+    }
+    .Navbar-link {
+      color: $base-grey;
+    }
+    .Navbar-icon {
+      polygon {
+        fill: $base-grey;
+      }
+    }
+    .Navbar-button {
+      display: none;
+    }
+    .Navbar-buttonFixed {
+      display: block;
+    }
+  }
+}
+/* End Navbar fixed */
+
+/* Navbar u-positive */
+.Navbar.u-positive,
+.Navbar--positive .Navbar {
+  display: block;
+  top: 0;
+  opacity: 1;
+  .Navbar-link {
+    color: $base-grey;
+  }
+  .Navbar-icon {
+    polygon {
+      fill: $base-grey;
+    }
+  }
+  .Navbar-button {
+    display: none;
+  }
+  .Navbar-buttonFixed {
+    display: block;
+  }
+  @media (max-width: $layout-tablet) {
+    .Navbar-link {
+      color: $white;
+    }
+    .Navbar-icon {
+      polygon {
+        fill: $white;
+      }
+    }
+    .Navbar-buttonMenu {
+      span {
+        background: $base-grey;
+      }
+      &.open span {
+        background: $white;
+      }
+    }
+  }
+}
+/* End Navbar u-positive */
+
+/* Navbar open/close button */
+/* Icon 1 */
+@media (max-width: $layout-tablet) {
+  .Navbar-buttonMenu {
+    width: 46px;
+    height: 40px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: 250ms ease-in-out;
+    cursor: pointer;
+    border: 12px solid transparent;
+    display: block;
+    margin-right: -12px;
+  }
+
+  .Navbar-buttonMenu span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 250ms ease-in-out;
+  }
+
+  /* Icon 3 */
+
+  .Navbar-buttonMenu span:nth-child(1) {
+    top: 0px;
+  }
+
+  .Navbar-buttonMenu span:nth-child(2),
+  .Navbar-buttonMenu span:nth-child(3) {
+    top: 50%;
+    margin-top: -1px;
+  }
+
+  .Navbar-buttonMenu span:nth-child(4) {
+    top: 100%;
+    margin-top: -1px;
+  }
+
+  .Navbar-buttonMenu.open span:nth-child(1) {
+    top: 50%;
+    width: 0%;
+    left: 50%;
+    margin-top: -1px;
+  }
+
+  .Navbar-buttonMenu.open span:nth-child(2) {
+    transform: rotate(45deg);
+  }
+
+  .Navbar-buttonMenu.open span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
+  .Navbar-buttonMenu.open span:nth-child(4) {
+    top: 50%;
+    width: 0%;
+    left: 50%;
+    margin-top: -1px;
+  }
+}
+
+//Navbar Logo
+
+.Navbar {
+  .Logo--negative {
+    display: flex;
+  }
+  .Logo--positive {
+    display: none;
+  }
+}
+
+.Navbar.u-positive,
+.Navbar--positive .Navbar,
+.Navbar.Navbar--fixed.is-active {
+  .Logo--positive {
+    display: flex;
+  }
+  .Logo--negative {
+    display: none;
+  }
+}
