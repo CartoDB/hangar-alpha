@@ -162,6 +162,7 @@
   background: #fff;
   opacity: 0;
   transition: all 0.3s ease;
+  transform: translate3d(0, 0, 0);
 
   &.is-active {
     top: 0;
