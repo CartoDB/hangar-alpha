@@ -330,3 +330,8 @@
     display: none;
   }
 }
+
+.Navbar--scroll--vertical{
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}

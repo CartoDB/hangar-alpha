@@ -109,7 +109,7 @@
   </div>
 
   <div class="NavbarMobile js-Navbar js-Navbar-mobile">
-    <ul class="NavbarMobile-collapse js-ScrollbarY">
+    <ul class="NavbarMobile-collapse Navbar--scroll--vertical">
       <li class="Navbar-item">
         <a href="/products/" class="Navbar-link">
           <span class="title u-negative">Products</span>
@@ -137,6 +137,7 @@
         </a>
       </li>
       <li class="Navbar-item NavbarMobile-list">
+        <p class="title is-small is-txtTypo2 u-tspace--8 u-vspace--16">Solutions by Industry</p>
         <ul class="NavbarMobile--tabletList">
         {% for solutions_item in site.data.hangaralpha.navbar.solutions %}
           <li class="Navbar-subitem">
@@ -146,7 +147,8 @@
           </li>
         {% endfor %}
         </ul>
-        <ul>
+        <p class="title is-small is-txtTypo2 u-tspace--32 u-vspace--16">Solutions by Use Case</p>
+        <ul class="NavbarMobile--tabletList">
           {% for solutions_item in site.data.hangaralpha.navbar.solutions-extra %}
           <li class="Navbar-subitem">
             <a href="{{ solutions_item.url }}" class="Navbar-link">
@@ -154,7 +156,8 @@
             </a>
           </li>
           {% endfor %}
-      </ul>
+        </ul>
+      </li>
       <li class="Navbar-item">
         <a href="/resources/" class="Navbar-link">
           <span class="title u-negative">Resources</span>
