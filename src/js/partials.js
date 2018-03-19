@@ -19,26 +19,11 @@ const Main = Backbone.View.extend({
     this.navbar = new Hangar.Navbar();
     this.navbarFixed = new Hangar.NavbarFixed({
       el: this.$('.js-Navbar--fixed'),
-      $header: this.$('.js-Header').get(0)
+      $header: document.querySelector('#triggerFixed'),
+      after: true
     });
 
     this._initDropdowns();
-
-    this.dialog = new Hangar.Dialog();
-
-    this.card = new Hangar.Card({ el: this.$('.js-downloadCard') });
-
-    this._initTabs();
-  },
-
-  _initTabs: function () {
-    _.each(this.$('.js-Tabs'), function (el) {
-      /* eslint-disable */
-      new Hangar.Tab({
-        el: el
-      });
-      /* eslint-enable */
-    });
   },
 
   _initDropdowns: function () {
@@ -49,29 +34,6 @@ const Main = Backbone.View.extend({
       });
       /* eslint-enable */
     });
-  },
-
-  _onKeyDown: function (e) {
-    switch (e.which) {
-      // esc
-      case 27:
-        this._closeContactDialog();
-        break;
-    }
-  },
-
-  _closeDialogs: function () {
-    this.dialog.close();
-  },
-
-  _onClickContactLink: function (e) {
-    var mobile = 1280;
-    var width = $(window).width();
-
-    if (width >= mobile) {
-      e.preventDefault();
-      this.dialog.open();
-    }
   }
 });
 

@@ -45,6 +45,10 @@
   @include title();
 }
 
+.textCode {
+  font-family: $font-family-code;
+}
+
 .is-jumbo {
   @include is-jumbo();
 }

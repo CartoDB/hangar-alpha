@@ -27,7 +27,6 @@
       {% for item in site.data.hangaralpha.footer.resources | offset: 4 %}
         <li class="FooterElement"><a href="{{ item.url }}" class="FooterLink js-Action--Footerlinks text is-small">{{ item.title }}</a></li>
       {% endfor %}
-        <li class="FooterElement"><a href="https://github.com/CartoDB/cartodb" title="Source Code" class="FooterLink">Source Code</a></li>
     </ul>
 
 
@@ -46,7 +45,7 @@
     </ul>
   </div>
 
-  <div class="grid Footer desktop--flex u-inner">
+  <div class="grid Footer desktop--flex container">
     <div class="Footer-logo grid-cell grid-cell--col6 grid-cell--col3--tablet">
       {% include hangaralpha/logos/logo_carto_footer.svg %}
     </div>
@@ -63,7 +62,6 @@
       {% for resources_item in site.data.hangaralpha.footer.resources %}
       <li class="FooterElement"><a href="{{ resources_item.url }}" class="FooterLink js-Action--Footerlinks text is-small">{{ resources_item.title }}</a></li>
       {% endfor %}
-      <li class="FooterElement"><a href="https://github.com/CartoDB/cartodb" title="Source Code" class="FooterLink">Source Code</a></li>
     </ul>
 
     <ul class="grid-cell grid-cell--col2 grid-cell--col3--tablet">
@@ -74,9 +72,9 @@
     </ul>
   </div>
 
-  <div class="Footer-social grid u-inner">
+  <div class="Footer-social grid container u-tspace--64 u-vspace--64 u-vspace--16--mobile">
     <div class="grid-cell grid-cell--col6 grid-cell--col3--tablet grid-cell--col6--mobile">
-      <p class="text is-small desktop">© CARTO 2017</p>
+      <p class="text is-small desktop">© CARTO 2018</p>
 
       <a href="/" class="mobile">
         {% include hangaralpha/logos/logo_carto_footer_small.svg %}
@@ -100,7 +98,7 @@
       <a href="{{ site.data.hangaralpha.footer.social.linkedin }}" target="_blank" rel="nofollow" class="Footer-icon u-rspace--16">
         {% include hangaralpha/icons/linkedin.svg %}
       </a>
-      
+
     </div>
   </div>
 </footer>

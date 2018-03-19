@@ -38,6 +38,11 @@ solutions:
     url: '/solutions/journalism-media/'
   - title: Education & Research
     url: '/solutions/education-and-research/'
+solutions-extra:
+  - title: Sales Analytics
+    url: '/solutions/salesquest/'
+  - title: Traffic Management
+    url: '/solutions/traffico/'
 community:
   - title: Map Gallery
     url: '/gallery/'
@@ -46,6 +51,8 @@ community:
   - title: Ambassadors
     url: '/ambassadors/'
 resources:
+  - title: Community
+    url: '/community/'
   - title: Downloads
     url: '/resources/'
   - title: Location Intelligence
@@ -58,6 +65,7 @@ resources:
     url: '/learn/'
   - title: Documentation
     url: '/docs/'
+
 about:
   - title: Team
     url: '/team/'

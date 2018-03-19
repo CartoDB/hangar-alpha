@@ -29,6 +29,8 @@ resources:
     url: '/docs/'
   - title: Brand
     url: '/brand/'
+  - title: Source Code
+    url: 'https://github.com/CartoDB/cartodb'
 about:
   - title: Team
     url: '/team/'

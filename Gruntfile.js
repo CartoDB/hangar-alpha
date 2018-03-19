@@ -1,75 +1,71 @@
 module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
-  var config = {}
+  // we need to set the NODE_ENV before require webpack config
+  (() => {
+    const prodTasks = ['build', 'publish'];
+    const task = grunt.cli.tasks[0];
+    const prodEnv = prodTasks.indexOf(task) > -1;
+    process.env.NODE_ENV = prodEnv ? 'production' : 'development';
+  })();
+
+  const webpackConfig = require('./webpack.config.babel');
 
   /* Start initConfig */
   grunt.initConfig({
-
     clean: {
       dist: {
-        files: [{
-          dot: true,
-          src: [
-          '.sass-cache',
-          '.tmp',
-          'dist',
-          '!dist/.git*'
-          ]
-        }]
+        files: [
+          {
+            dot: true,
+            src: ['.sass-cache', '.tmp', 'dist', '!dist/.git*']
+          }
+        ]
       }
     },
 
     concat: {
       distCss: {
         src: ['.tmp/css/*.css'],
-        dest: 'dist/css/hangaralpha.css'
-      },
-      distJs: {
-        src: ['src/js/*.js', 'src/js/components/*.js', 'src/js/vendor/*.js'],
-        dest: 'dist/js/hangaralpha.js'
-      }
-    },
-
-    connect: {
-      server: {
-        options: {
-          port: 9003,
-          livereload: 35732,
-          open: true,
-          hostname: '0.0.0.0',
-          base: {
-            path: '.'
-          }
-        }
+        dest: 'dist/css/hangaralpha.min.css'
       }
     },
 
     copy: {
       dist: {
-        files: [{
-          expand: true,
-          cwd: 'node_modules/perfect-scrollbar/src/css/',
-          src: '*.scss',
-          dest: 'src/scss/vendor/perfect-scrollbar/'
-        },{
-          expand: true,
-          cwd: 'src/templates',
-          src: '*.html',
-          dest: 'dist/templates/'
-        },{
-          expand: true,
-          cwd: 'src/scss',
-          src: '**/*.scss',
-          dest: 'dist/scss/'
-        },{
-          expand: true,
-          cwd: 'src/data',
-          src: '**/*.yml',
-          dest: 'dist/data/'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: 'src/img',
+            src: '*.jpg',
+            dest: 'dist/img/'
+          },
+          {
+            expand: true,
+            cwd: 'src/templates',
+            src: '*.html',
+            dest: 'dist/templates/'
+          },
+          {
+            expand: true,
+            cwd: 'src/data',
+            src: '**/*.yml',
+            dest: 'dist/data/'
+          },
+          {
+            expand: true,
+            cwd: 'src/scss',
+            src: '**/*.scss',
+            dest: 'dist/scss/'
+          },
+          {
+            expand: true,
+            cwd: 'src/partials',
+            src: '*.html',
+            dest: 'dist/partials/'
+          }
+        ]
       }
-
     },
 
     'gh-pages': {
@@ -79,51 +75,51 @@ module.exports = function (grunt) {
       src: ['**/*']
     },
 
-
     sass: {
       dist: {
         options: {
           sourceMap: false,
           outputStyle: 'compressed'
         },
-        files: [{
-          expand: true,
-          cwd: 'src/scss',
-          src: 'main.scss',
-          dest: '.tmp/css/',
-          ext: '.css'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: 'src/scss',
+            src: 'main.scss',
+            dest: '.tmp/css/',
+            ext: '.css'
+          }
+        ]
       }
     },
 
     shell: {
       style: {
-        command: 'styleguide'
+        command: 'npm run styleguide'
       }
     },
 
     svgmin: {
       dist: {
-        files: [{
-          expand: true,
-          cwd: 'src/img',
-          src: '**/*.svg',
-          dest: 'dist/img'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: 'src/img',
+            src: '**/*.svg',
+            dest: 'dist/img'
+          }
+        ]
       }
     },
 
-
+    webpack: {
+      all: webpackConfig
+    },
 
     watch: {
       scss: {
-        files: [
-          'src/scss/**/*.scss'
-        ],
-        tasks: [
-          'sass',
-          'concat'
-        ],
+        files: ['src/scss/**/*.scss'],
+        tasks: ['sass', 'concat'],
         options: {
           spawn: false,
           livereload: 35732
@@ -131,14 +127,39 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['src/js/**/*.js'],
-        tasks: ['concat']
+        tasks: ['webpack']
       },
+      html: {
+        files: ['styleguide/*.html', 'partials/*.html'],
+        tasks: ['shell']
+      }
+    },
+
+    eslint: {
+      options: {
+        configFile: '.eslintrc'
+      },
+      target: ['src/**/*.js']
+    },
+
+    karma: {
+      unit: {
+        configFile: 'karma.config.js'
+      }
+    },
+
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src: ['dist/**/*']
+        },
+        options: {
+          watchTask: true,
+          server: './dist',
+          startPath: '/framework'
+        }
+      }
     }
-
-
-
-
-
   });
   /* End initConfig */
 
@@ -147,14 +168,12 @@ module.exports = function (grunt) {
     'copy',
     'sass',
     'concat',
+    'webpack',
     'svgmin',
     'shell'
   ];
 
-  var devTasks = baseTasks.concat([
-    'connect',
-    'watch'
-  ]);
+  var devTasks = baseTasks.concat(['browserSync', 'watch']);
 
   grunt.event.on('watch', function (action, filepath) {
     grunt.task.run('shell:style');
@@ -163,6 +182,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dev', devTasks);
   grunt.registerTask('build', baseTasks);
   grunt.registerTask('default', baseTasks);
-  grunt.registerTask('publish', ['build', 'gh-pages']);
-
-}
+  grunt.registerTask('publish', ['eslint', 'build', 'gh-pages']);
+  grunt.registerTask('test', ['karma']);
+  grunt.registerTask('lint', ['eslint']);
+};

@@ -1,33 +1,31 @@
 // Footer
 // --------------------------------------------------
 
-footer {
-  background-color: $white;
-}
-
-.Footer {
+.Footer-container {
   padding-top: 96px;
+  background-color: $white;
 
   .FooterElement {
+    line-height: 1;
     margin-bottom: 8px;
 
     &:last-child {
       margin-bottom: 0;
     }
   }
-  
+
   .FooterLink {
     color: $typo2;
-    transition: all .2s ease;
+    transition: color 0.2s ease;
 
     &:hover {
-    color: $link;
-    text-decoration: none;
+      color: $typo0;
+      text-decoration: underline;
     }
   }
 
   @media (max-width: $layout-mobile) {
-    padding-top: 48px;
+    padding-top: 64px;
   }
 }
 
@@ -38,7 +36,7 @@ footer {
     align-items: center;
     height: 100px;
     margin-top: 40px;
-    border-top: 1px solid $light-grey;
+    border-top: 1px solid $softgrey;
   }
   .Footer-icon {
     &:hover {
@@ -46,7 +44,7 @@ footer {
     }
     path {
       &:hover {
-        fill: $blue;
+        fill: $link;
       }
     }
   }

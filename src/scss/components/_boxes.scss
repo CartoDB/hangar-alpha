@@ -1,0 +1,39 @@
+/*
+  <div class="Cards">
+      <div class="Cards-media">
+          media
+      </div>
+      <div class="Cards-text">
+         text
+  </div>
+  <div class="Cards is-full">
+      <div class="Cards-media">
+          media
+      </div>
+      <div class="Cards-text">
+          text
+      </div>
+  </div>
+*/
+
+.Cards {
+  border-radius: 4px;
+  padding: 16px;
+  border: 1px solid rgba($base-grey, 0.12);
+  .Cards-media {
+    margin-bottom: 12px;
+  }
+
+  &.is-full {
+    padding: 0;
+    .Cards-media {
+      margin-bottom: 0;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+    .Cards-text {
+      padding: 16px;
+    }
+  }
+}
+

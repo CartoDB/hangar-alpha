@@ -96,7 +96,6 @@
 // Colors Button
 $button-colors: (
   is-jade: $jade,
-  is-opal: $opal,
   is-emerald: $emerald,
   is-baseGrey: $base-grey,
   is-white: $white
@@ -130,13 +129,13 @@ $button-colors: (
 
   > span {
     position: relative;
-    z-index: 2;
+    // z-index: 2;
   }
 
   @each $name, $color in $button-colors {
     &.#{$name} {
       background-color: $color;
-      color: $typo4;
+      color: $white;
       &:after {
         content: '';
         background: rgba(lighten($color, 40%), 0.24)
@@ -163,7 +162,7 @@ $button-colors: (
   }
 
   &.is-negative {
-    color: $typo4;
+    color: $white;
     border: 2px solid $white;
     &:after {
       background: rgba($white, 0.16);
