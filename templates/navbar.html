@@ -20,7 +20,7 @@
     <div class="Navbar-collapse">
       <ul class="Navbar-list">
         <li class="Navbar-item Dropdown js-Dropdown">
-          <a href="/products/" class="Navbar-link title is-regular is-small js-Dropdown-target js-Action--NAVproducts">
+          <a href="/products/" class="Navbar-link Navbar--no-decoration title is-regular is-small js-Dropdown-target js-Action--NAVproducts">
             Products
             <svg class="Navbar-icon js-navbarCaret" width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <polygon id="Chevron" fill="#FFFFFF" fill-rule="nonzero" points="1.07650484 0.292893219 0.292893219 1.12132035 3.29289323 4.29289322 6.29289322 1.12132034 5.50928159 0.292893219 3.29289323 2.63603897"></polygon>
@@ -36,7 +36,7 @@
         </li>
 
         <li class="Navbar-item Dropdown js-Dropdown">
-          <a href="/solutions/" class="Navbar-link title is-regular is-small js-Dropdown-target js-Action--NAVsolutions">
+          <a href="/solutions/" class="Navbar-link Navbar--no-decoration title is-regular is-small js-Dropdown-target js-Action--NAVsolutions">
             Solutions
             <svg class="Navbar-icon js-navbarCaret" width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <polygon id="Chevron" fill="#FFFFFF" fill-rule="nonzero" points="1.07650484 0.292893219 0.292893219 1.12132035 3.29289323 4.29289322 6.29289322 1.12132034 5.50928159 0.292893219 3.29289323 2.63603897"></polygon>
@@ -44,23 +44,21 @@
           </a>
           <div class="Dropdown-inner Dropdown--2columns js-Dropdown-inner">
             <ul class="grid">
+              <li class="Dropdown-divisor text is-small grid-cell--col12"><span>Solutions by Industry</span></li>
               {% for solutions_item in site.data.hangaralpha.navbar.solutions %}
                 <li class="Dropdown-item grid-cell--col6"><a href="{{ solutions_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if solutions_item.url == page.url %}is-active{% endif %}">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</a></li>
               {% endfor %}
 
-              <li class="grid-cell--col12">
-                <ul class="grid Dropdown-innerHighlight is-bgSoftBlue">
-                  {% for solutions_item in site.data.hangaralpha.navbar.solutions-extra %}
-                    <li class="Dropdown-item grid-cell--col6"><a href="{{ solutions_item.url }}" class="Dropdown-link text is-small is-semibold u-linkBlue {% if solutions_item.url == page.url %}is-active{% endif %}">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</a></li>
-                  {% endfor %}
-                </ul>
-              </li>
+              <li class="Dropdown-divisor text is-small grid-cell--col12 u-tspace--16"><span>Solutions by Use Case</span></li>
+              {% for solutions_item in site.data.hangaralpha.navbar.solutions-extra %}
+                <li class="Dropdown-item grid-cell--col6 u-vspace--0"><a href="{{ solutions_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if solutions_item.url == page.url %}is-active{% endif %}">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</a></li>
+              {% endfor %}
             </ul>
           </div>
         </li>
 
         <li class="Navbar-item js-Dropdown Dropdown">
-          <a href="/resources/" class="Navbar-link title is-regular is-small js-Dropdown-target">
+          <a href="/resources/" class="Navbar-link Navbar--no-decoration title is-regular is-small js-Dropdown-target">
             Resources
             <svg class="Navbar-icon js-navbarCaret" width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <polygon id="Chevron" fill="#FFFFFF" fill-rule="nonzero" points="1.07650484 0.292893219 0.292893219 1.12132035 3.29289323 4.29289322 6.29289322 1.12132034 5.50928159 0.292893219 3.29289323 2.63603897"></polygon>
@@ -76,13 +74,13 @@
         </li>
 
         <li class="Navbar-item">
-          <a href="/pricing/" class="Navbar-link title is-regular is-small js-Action--NAVpricing">
+          <a href="/pricing/" class="Navbar-link Navbar--no-decoration title is-regular is-small js-Action--NAVpricing">
             <span>Pricing</span>
           </a>
         </li>
 
         <li class="Navbar-item">
-          <a href="/blog/" class="Navbar-link title is-regular is-small js-Action--NAVblog">
+          <a href="/blog/" class="Navbar-link Navbar--no-decoration title is-regular is-small js-Action--NAVblog">
             <span>Blog</span>
           </a>
         </li>
@@ -90,12 +88,12 @@
 
       <ul class="Navbar-list">
         <li class="Navbar-item">
-          <a href="/login" class="Navbar-link title is-regular is-small js-Action--NAVlogin">
+          <a href="/login" class="Navbar-link Navbar--no-decoration title is-regular is-small js-Action--NAVlogin">
             <span>Log in</span>
           </a>
         </li>
         <li class="Navbar-item">
-          <a href="/get-started/" class="Navbar-link title is-regular is-small js-Action--NAVcontact">
+          <a href="/get-started/" class="Navbar-link Navbar--no-decoration title is-regular is-small js-Action--NAVcontact">
             <span>Sign up</span>
           </a>
         </li>
@@ -111,7 +109,7 @@
   </div>
 
   <div class="NavbarMobile js-Navbar js-Navbar-mobile">
-    <ul class="NavbarMobile-collapse js-ScrollbarY">
+    <ul class="NavbarMobile-collapse Navbar--scroll--vertical">
       <li class="Navbar-item">
         <a href="/products/" class="Navbar-link">
           <span class="title u-negative">Products</span>
@@ -139,6 +137,7 @@
         </a>
       </li>
       <li class="Navbar-item NavbarMobile-list">
+        <h5 class="title is-small is-txtTypo2 u-tspace--8 u-vspace--16">Solutions by Industry</h5>
         <ul class="NavbarMobile--tabletList">
         {% for solutions_item in site.data.hangaralpha.navbar.solutions %}
           <li class="Navbar-subitem">
@@ -148,7 +147,8 @@
           </li>
         {% endfor %}
         </ul>
-        <ul>
+        <h5 class="title is-small is-txtTypo2 u-tspace--32 u-vspace--16">Solutions by Use Case</h5>
+        <ul class="NavbarMobile--tabletList">
           {% for solutions_item in site.data.hangaralpha.navbar.solutions-extra %}
           <li class="Navbar-subitem">
             <a href="{{ solutions_item.url }}" class="Navbar-link">
@@ -156,7 +156,8 @@
             </a>
           </li>
           {% endfor %}
-      </ul>
+        </ul>
+      </li>
       <li class="Navbar-item">
         <a href="/resources/" class="Navbar-link">
           <span class="title u-negative">Resources</span>

@@ -39,6 +39,8 @@
 
 .Navbar-item {
   margin-right: calc(12px + 1vw);
+  padding-top: 4px;
+  padding-bottom: 4px;
   &:last-of-type {
     margin-right: 0;
   }
@@ -49,6 +51,9 @@
 
   &:not(.button):hover {
     text-decoration: underline;
+  }
+  &.Navbar--no-decoration:hover{
+    text-decoration: none;
   }
 }
 
@@ -106,7 +111,7 @@
   .Navbar-item {
     font-size: 16px;
     line-height: 24px;
-    padding: 16px 0;
+    padding: 16px 0px;
     margin: 0;
   }
 
@@ -329,4 +334,9 @@
   .Logo--negative {
     display: none;
   }
+}
+
+.Navbar--scroll--vertical{
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }

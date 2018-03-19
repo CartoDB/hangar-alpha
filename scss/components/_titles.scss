@@ -2,37 +2,35 @@
 # Titles
 ```
 <!-- titles -->
-<h1 class="title is-jumbo">The precipitating manner in which</h1>
+<h1 class="title is-jumbo">The precipitating manner in which (desktop 80/96) (mobile 48/56)</h1>
 <br/>
-<h1 class="title is-display">The precipitating manner in which</h1>
+<h1 class="title is-display">The precipitating manner in which (desktop 64/80) (mobile 40/48)</h1>
 <br/>
-<h1 class="title is-title">The precipitating manner in which</h1>
+<h1 class="title is-title">The precipitating manner in which (desktop 48/64) (mobile 32/40)</h1>
 <br/>
-<h1 class="title is-subheader">The precipitating manner in which</h1>
+<h1 class="title is-subheader">The precipitating manner in which (desktop 32/48) (mobile 20/24)</h1>
 <br/>
-<h1 class="title is-subtitle">The precipitating manner in which</h1>
+<h1 class="title is-subtitle">The precipitating manner in which (desktop 20/32) (mobile 16/24)</h1>
 <br/>
-<h1 class="title is-caption">The precipitating manner in which</h1>
+<h1 class="title is-caption">The precipitating manner in which (desktop 16/24) (mobile 12/16)</h1>
 <br/>
-<h1 class="title is-small">The precipitating manner in which</h1>
+<h1 class="title is-small">The precipitating manner in which (desktop & mobile 12/16)</h1>
 <br/>
 
 <!-- texts -->
-<p class="text is-jumbo">The precipitating manner in which</p>
+<p class="text is-jumbo">The precipitating manner in which (desktop 80/96) (mobile 48/56)</p>
 <br/>
-<p class="text is-jumbo">The precipitating manner in which</p>
+<p class="text is-display">The precipitating manner in which  (desktop 64/80) (mobile 40/48)</p>
 <br/>
-<p class="text is-display">The precipitating manner in which</p>
+<p class="text is-title">The precipitating manner in which Captain Ahab. (desktop 48/64) (mobile 32/40)</p>
 <br/>
-<p class="text is-title">The precipitating manner in which Captain Ahab.</p>
+<p class="text is-subheader">The precipitating manner in which Captain Ahab had quitted the Samuel. (desktop 32/48) (mobile 20/24)</p>
 <br/>
-<p class="text is-subheader">The precipitating manner in which Captain Ahab had quitted the Samuel.</p>
+<p class="text is-body">The precipitating manner in which Captain Ahab had quitted the Samuel Enderby of London, had not been unattended with some small violence to his own person.  He had lighted with such energy upon a thwart. (desktop 20/32) (mobile 16/24)</p>
 <br/>
-<p class="text is-body">The precipitating manner in which Captain Ahab had quitted the Samuel Enderby of London, had not been unattended with some small violence to his own person.  He had lighted with such energy upon a thwart. </p>
+<p class="text is-caption">The precipitating manner in which Captain Ahab had quitted the Samuel Enderby of London, had not been unattended with some small violence to his own person. He had lighted with such energy upon a thwart of his boat that his ivory leg had received a half-splintering shock. (desktop 16/24) (mobile 12/16)</p>
 <br/>
-<p class="text is-caption">The precipitating manner in which Captain Ahab had quitted the Samuel Enderby of London, had not been unattended with some small violence to his own person. He had lighted with such energy upon a thwart of his boat that his ivory leg had received a half-splintering shock.</p>
-<br/>
-<p class="text is-small">The precipitating manner in which Captain Ahab had quitted the Samuel Enderby of London, had not been unattended with some small violence to his own person. He had lighted with such energy upon a thwart of his boat that his ivory leg had received a half-splintering shock. </p>
+<p class="text is-small">The precipitating manner in which Captain Ahab had quitted the Samuel Enderby of London, had not been unattended with some small violence to his own person. He had lighted with such energy upon a thwart of his boat that his ivory leg had received a half-splintering shock. (desktop & mobile 12/16)</p>
 <br/>
 ```
 */
@@ -40,24 +38,11 @@
 // New typography for CARTO
 
 .text {
-  font-family: $font-family-base;
-  font-weight: 400;
-  // color: $base-grey;
-  &.is-semibold {
-    font-weight: 600;
-  }
+  @include text();
 }
 
 .title {
-  font-family: $font-family-titles;
-  font-weight: 600;
-  color: $base-grey;
-  &.is-regular {
-    font-weight: 400;
-  }
-  &.is-bold {
-    font-weight: 700;
-  }
+  @include title();
 }
 
 .textCode {
@@ -65,86 +50,34 @@
 }
 
 .is-jumbo {
-  font-size: 80px;
-  line-height: 96px;
-  @media (max-width: $layout-mobile) {
-    font-size: 48px;
-    line-height: 56px;
-    &.is-jumbo--mobile {
-      font-size: 80px;
-      line-height: 96px;
-    }
-  }
+  @include is-jumbo();
 }
 
 .is-display {
-  font-size: 64px;
-  line-height: 80px;
-  @media (max-width: $layout-mobile) {
-    font-size: 40px;
-    line-height: 48px;
-    &.is-display--mobile {
-      font-size: 64px;
-      line-height: 80px;
-    }
-  }
+  @include is-display();
 }
 
 .is-title {
-  font-size: 48px;
-  line-height: 64px;
-  @media (max-width: $layout-mobile) {
-    font-size: 32px;
-    line-height: 40px;
-    &.is-title--mobile {
-      font-size: 48px;
-      line-height: 64px;
-    }
-  }
+  @include is-title();
 }
 
 .is-subheader {
-  font-size: 32px;
-  line-height: 48px;
-  @media (max-width: $layout-mobile) {
-    font-size: 20px;
-    line-height: 32px;
-    &.is-subheader--mobile {
-      font-size: 32px;
-      line-height: 48px;
-    }
-  }
+  @include is-subheader();
 }
 
-.is-body,
+.is-body {
+  @include is-body();
+}
+
 .is-subtitle {
-  font-size: 20px;
-  line-height: 32px;
-  @media (max-width: $layout-mobile) {
-    font-size: 16px;
-    line-height: 24px;
-    &.is-body--mobile,
-    &.is-subtitle--mobile {
-      font-size: 20px;
-      line-height: 32px;
-    }
-  }
+  @include is-subtitle();
 }
 
 .is-caption {
-  font-size: 16px;
-  line-height: 24px;
-  @media (max-width: $layout-mobile) {
-    font-size: 12px;
-    line-height: 16px;
-    &.is-caption--mobile {
-      font-size: 16px;
-      line-height: 24px;
-    }
-  }
+  @include is-caption();
 }
 
+
 .is-small {
-  font-size: 12px;
-  line-height: 16px;
+  @include is-small();
 }
