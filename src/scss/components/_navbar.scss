@@ -316,6 +316,13 @@
 
 //Navbar Logo
 
+.Navbar-header{
+  .Logo{
+    display: flex;
+    align-items: center;
+  }
+}
+
 .Navbar {
   .Logo--negative {
     display: flex;
