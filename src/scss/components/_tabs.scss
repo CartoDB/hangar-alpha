@@ -26,10 +26,10 @@
   border-bottom: 1px solid rgba($base-grey, 0.16);
 
   &.is-purple .tab-navigationAction {
-    color: $orange;
+    color: $opal;
     &:hover {
       text-decoration: none;
-      border-bottom: 4px solid $orange;
+      border-bottom: 4px solid $opal;
     }
     &.is-active {
       border-bottom: 4px solid $docs-purple;
