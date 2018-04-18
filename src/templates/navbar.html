@@ -105,8 +105,8 @@
             <ul>
               <li class="Dropdown--loggedUser Dropdown--userInformation">
                 <ul>
-                  <li id="hangar-user-fullname" class="is-txtBaseGrey text is-small js-User-full-name">Cillas Subira</li>
-                  <li id="hangar-user-email" class="is-txtTypo3 text is-small u-tspace--8 js-User-email">csubira@carto.com</li>
+                  <li id="hangar-user-fullname" class="is-txtBaseGrey text is-small js-User-full-name"></li>
+                  <li id="hangar-user-email" class="is-txtTypo3 text is-small u-tspace--8 js-User-email"></li>
                 </ul>
               </li>
               <li class="Dropdown--loggedUser Dropdown--userLinks">
@@ -215,98 +215,3 @@
     </div>
   </div>
 </nav>
-<script>
-  function getCookieValue(cookieName){
-    var cookies = document.cookie.split("; ");
-    for(i = 0; i < cookies.length; i++){
-      var keyValue = cookies[i].split("=");
-      if (keyValue[0] == cookieName)
-        return keyValue[1];
-    }
-    return null;
-  }
-
-  function isConnected(){
-    if(getCookieValue("_cartodb_base_url"))
-      return true;
-    return false;
-  }
-  
-  function addClassToElementList(elementList, className){
-    for(i = 0; i < elementList.length; i++)
-      elementList[i].classList.add(className);
-  }
-
-  function removeClassFromElementList(elementList, className){
-    for(i = 0; i < elementList.length; i++)
-      elementList[i].classList.remove(className);
-  }
-
-  function getBaseURL(){
-    return decodeURIComponent(getCookieValue("_cartodb_base_url"));
-  }
-
-  function changeURLElement(elementId, url){
-    var element = document.getElementById(elementId);
-    element.href = url;
-  }
-
-  function changeTextElement(elementId, text){
-    var element = document.getElementById(elementId);
-    element.innerHTML = text;
-  }
-
-  function changeImageElement(elementId, imageUrl){
-    var element = document.getElementById(elementId);
-    element.src = imageUrl;
-  }
-
-  function setAccountLinks(){
-    var baseURL = getBaseURL();
-    changeURLElement("hangar-user-map-link", baseURL + "/dashboard");
-    changeURLElement("hangar-user-dataset-link", baseURL + "/dashboard/datasets");
-    changeURLElement("hangar-user-account-link", baseURL + "/profile");
-    changeURLElement("hangar-user-subscription-link", baseURL + "/dashboard");
-    changeURLElement("hangar-user-close-session-link", baseURL + "/logout");
-  }
-
-
-  function setUserData(data){
-    changeImageElement("hangar-user-avatar", data.user_data.avatar_url);
-    changeTextElement("hangar-user-fullname", data.user_data.name + " " + data.user_data.last_name);
-    changeTextElement("hangar-user-email", data.user_data.email);
-  }
-
-  function updateUserData(){
-    var apiUrl = getBaseURL() + "/api/v3/me";
-    fetch(apiUrl, {
-            method: 'GET',
-            credentials: 'include'
-          }
-      ).then(function(response) {
-        return response.json();
-      }).then(function(jsonResponse) {
-        setUserData(jsonResponse)
-      });
-  }
-
-  function updateUserInformation(){
-    setAccountLinks();
-    updateUserData();
-  }
-
-  function initShowConnected(){
-    var showConnected = document.getElementsByClassName("js-Navbar--showConnected");
-    var hideConnected = document.getElementsByClassName("js-Navbar--hideConnected");
-    if (isConnected()){
-      addClassToElementList(hideConnected, "Navbar-list--hide");
-      removeClassFromElementList(showConnected, "Navbar-list--hide");
-      updateUserInformation();
-    } else {
-      addClassToElementList(showConnected, "Navbar-list--hide");
-      removeClassFromElementList(hideConnected, "Navbar-list--hide");
-    }
-  }
-
-  initShowConnected()
-</script>
