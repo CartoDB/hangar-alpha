@@ -86,7 +86,41 @@
         </li>
       </ul>
 
-      <ul class="Navbar-list">
+      <ul class="Navbar-list Navbar-list--hide js-Navbar--showConnected">
+        <li class="Navbar-item">
+          <a id="hangar-user-map-link" class="Navbar-link Navbar--no-decoration title is-regular is-small js-Action--NAVlogin">
+            <span>Maps</span>
+          </a>
+        </li>
+        <li class="Navbar-item">
+          <a id="hangar-user-dataset-link" href="/get-started/" class="Navbar-link Navbar--no-decoration title is-regular is-small js-Action--NAVcontact">
+            <span>Datasets</span>
+          </a>
+        </li>
+        <li class="Navbar-item js-Dropdown Dropdown">
+          <div class="Navbar--userAvatar js-Dropdown-target">
+            <img id="hangar-user-avatar" src=""/>
+          </div>
+          <div class="Dropdown-inner Dropdown-inner--userMenu js-Dropdown-inner">
+            <ul>
+              <li class="Dropdown--loggedUser Dropdown--userInformation">
+                <ul>
+                  <li id="hangar-user-fullname" class="is-txtBaseGrey text is-small js-User-full-name"></li>
+                  <li id="hangar-user-email" class="is-txtTypo3 text is-small u-tspace--8 js-User-email"></li>
+                </ul>
+              </li>
+              <li class="Dropdown--loggedUser Dropdown--userLinks">
+                <ul>
+                  <li><a id="hangar-user-account-link" class="text is-small">Your Account</a></li>
+                  <li class="u-tspace--8"><a id="hangar-user-subscription-link" class="text is-small">Your Subscription</a></li>
+                  <li class="u-tspace--8"><a id="hangar-user-close-session-link" class="text is-small is-txtSolutionsRed">Close Session</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <ul class="Navbar-list js-Navbar--hideConnected">
         <li class="Navbar-item">
           <a href="/login" class="Navbar-link Navbar--no-decoration title is-regular is-small js-Action--NAVlogin">
             <span>Log in</span>

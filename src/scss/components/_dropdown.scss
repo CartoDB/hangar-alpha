@@ -41,6 +41,28 @@
     border: 6px solid transparent;
     border-bottom: 6px solid #fff;
   }
+
+  &.Dropdown-inner--userMenu{
+    right: 0px;
+    padding: 0px;
+    top: 55px;
+    &:before {
+      left: unset;
+      right: 12px;
+    }
+    &:after {
+      left: unset;
+      right: 14px;
+    }
+  }
+}
+
+.Dropdown--loggedUser{
+  padding: 16px;
+  &.Dropdown--userLinks{
+    background-color: $softgrey;
+    border-radius: 0px 0px 4px 4px;
+  }
 }
 
 .Dropdown-item {
