@@ -25,6 +25,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  position: relative;
 }
 
 .Navbar-collapseStatic {
@@ -349,10 +350,11 @@
 }
 
 .Navbar--userAvatar{
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 4px;
   overflow: hidden;
+  margin-bottom: 4px;
   img{
     min-width: 100%;
     min-height: 100%;
@@ -360,6 +362,19 @@
   }
 }
 
-.Navbar-list--hide{
-  display: none;
+.Navbar-height--48{
+  height: 48px;
+}
+
+.Navbar--show-animation{
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 1;
+  pointer-events: all;
+  &.Navbar-list--hide{
+    opacity: 0;
+    pointer-events: none;
+  }
+  transition: opacity 1s;
 }
