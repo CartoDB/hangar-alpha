@@ -1,18 +1,31 @@
 const Backbone = require('backbone');
 
 module.exports = Backbone.View.extend({
-  events: {
-    mouseenter: '_displayDropdown',
-    mouseleave: '_hideDropdown',
-    'click .js-Dropdown-target': '_checkDevice'
+  events: function(){
+    var events;
+    if (this.activateOnClick){
+      events = {
+        'click .js-Dropdown-target': '_onTouch'
+      }
+    }
+    else {
+      events = {
+        mouseenter: '_displayDropdown',
+        mouseleave: '_hideDropdown',
+        'click .js-Dropdown-target': '_checkDevice'
+      }
+    }
+    return events;
   },
 
-  initialize: function () {
+  initialize: function (options) {
     this.$dropdown = this.$('.js-Dropdown-inner');
     this.model = new Backbone.Model({
       hidden: true,
       touch: this._checkTouch()
     });
+    this.activateOnClick = options.el.hasClass('js-Dropdown--onClick');
+    console.log(options.el);
   },
 
   _checkDevice: function (e) {

@@ -1,5 +1,5 @@
 <nav class="Navbar js-Navbar js-Navbar--fixed">
-  <div class="Navbar-inner Navbar-height--48 container">
+  <div class="Navbar-inner Navbar-height--44 container">
     <div class="Navbar-header">
       <a class="Logo js-Navbar-logo u-rspace--40" href="/">
         <div class="Logo--negative">
@@ -86,7 +86,7 @@
         </li>
       </ul>
 
-      <ul class="Navbar-list Navbar--show-animation Navbar-list--hide Navbar-height--48 js-Navbar--showConnected">
+      <ul class="Navbar-list Navbar--show-animation Navbar-list--hide Navbar-height--44 js-Navbar--showConnected">
         <li class="Navbar-item">
           <a id="hangar-user-map-link" class="Navbar-link Navbar--no-decoration title is-regular is-small js-Action--NAVlogin">
             <span>Maps</span>
@@ -97,30 +97,29 @@
             <span>Datasets</span>
           </a>
         </li>
-        <li class="Navbar-item js-Dropdown Dropdown">
-          <div class="Navbar--userAvatar js-Dropdown-target">
+        <li class="Navbar-item js-Dropdown js-Dropdown--onClick Dropdown">
+          <div class="Navbar--userAvatar js-Dropdown-target u-pointer">
             <img id="hangar-user-avatar" src=""/>
           </div>
           <div class="Dropdown-inner Dropdown-inner--userMenu js-Dropdown-inner">
             <ul>
               <li class="Dropdown--loggedUser Dropdown--userInformation">
                 <ul>
-                  <li id="hangar-user-fullname" class="is-txtBaseGrey text is-small js-User-full-name"></li>
-                  <li id="hangar-user-email" class="is-txtTypo3 text is-small u-tspace--8 js-User-email"></li>
+                  <li id="hangar-user-username" class="is-txtBaseGrey text is-small js-User-full-name"></li>
+                  <li id="hangar-user-email" class="is-txtTypo3 text is-small u-tspace--4 js-User-email"></li>
                 </ul>
               </li>
               <li class="Dropdown--loggedUser Dropdown--userLinks">
                 <ul>
                   <li><a id="hangar-user-account-link" class="text is-small">Your Account</a></li>
-                  <li class="u-tspace--8"><a id="hangar-user-subscription-link" class="text is-small">Your Subscription</a></li>
-                  <li class="u-tspace--8"><a id="hangar-user-close-session-link" class="text is-small is-txtSolutionsRed">Close Session</a></li>
+                  <li class="u-tspace--4"><a id="hangar-user-close-session-link" class="text is-small is-txtSolutionsRed">Close Session</a></li>
                 </ul>
               </li>
             </ul>
           </div>
         </li>
       </ul>
-      <ul class="Navbar-list Navbar--show-animation Navbar-list--hide Navbar-height--48 js-Navbar--hideConnected">
+      <ul class="Navbar-list Navbar--show-animation Navbar-list--hide Navbar-height--44 js-Navbar--hideConnected">
         <li class="Navbar-item">
           <a href="/login" class="Navbar-link Navbar--no-decoration title is-regular is-small js-Action--NAVlogin">
             <span>Log in</span>

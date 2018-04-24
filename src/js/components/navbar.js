@@ -93,14 +93,13 @@ module.exports = Backbone.View.extend({
     this._changeURLElement("hangar-user-map-link", baseURL + "/dashboard");
     this._changeURLElement("hangar-user-dataset-link", baseURL + "/dashboard/datasets");
     this._changeURLElement("hangar-user-account-link", baseURL + "/profile");
-    this._changeURLElement("hangar-user-subscription-link", baseURL + "/dashboard");
     this._changeURLElement("hangar-user-close-session-link", baseURL + "/logout");
   },
 
 
   _setUserData: function(data){
     this._changeImageElement("hangar-user-avatar", data.user_data.avatar_url);
-    this._changeTextElement("hangar-user-fullname", data.user_data.name + " " + data.user_data.last_name);
+    this._changeTextElement("hangar-user-username", data.user_data.username);
     this._changeTextElement("hangar-user-email", data.user_data.email);
   },
 
