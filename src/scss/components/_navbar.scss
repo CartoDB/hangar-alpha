@@ -354,6 +354,7 @@
   height: 36px;
   border-radius: 4px;
   overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.08);
   img{
     min-width: 100%;
     min-height: 100%;
@@ -375,5 +376,5 @@
     opacity: 0;
     pointer-events: none;
   }
-  transition: opacity 1s;
+  transition: opacity 300ms;
 }

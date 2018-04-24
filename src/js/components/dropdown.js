@@ -3,6 +3,7 @@ const Backbone = require('backbone');
 module.exports = Backbone.View.extend({
   events: function(){
     var events;
+    this.activateOnClick = this.el.classList.contains('js-Dropdown--onClick');
     if (this.activateOnClick){
       events = {
         'click .js-Dropdown-target': '_onTouch'
@@ -24,8 +25,6 @@ module.exports = Backbone.View.extend({
       hidden: true,
       touch: this._checkTouch()
     });
-    this.activateOnClick = options.el.hasClass('js-Dropdown--onClick');
-    console.log(options.el);
   },
 
   _checkDevice: function (e) {
