@@ -75,23 +75,25 @@ module.exports = Backbone.View.extend({
 
   _changeURLElement: function(elementId, url){
     var element = document.getElementById(elementId);
-    element.href = url;
+    if (element)
+      element.href = url;
   },
 
   _changeTextElement: function(elementId, text){
     var element = document.getElementById(elementId);
-    element.innerHTML = text;
+    if (element)
+      element.innerHTML = text;
   },
 
   _changeImageElement: function(elementId, imageUrl){
     var element = document.getElementById(elementId);
-    element.src = imageUrl;
+    if (element)
+      element.src = imageUrl;
   },
 
   _setAccountLinks: function(){
     var baseURL = this._getBaseURL();
-    this._changeURLElement("hangar-user-map-link", baseURL + "/dashboard");
-    this._changeURLElement("hangar-user-dataset-link", baseURL + "/dashboard/datasets");
+    this._changeURLElement("hangar-user-dashboard-link", baseURL + "/dashboard");
     this._changeURLElement("hangar-user-account-link", baseURL + "/profile");
     this._changeURLElement("hangar-user-close-session-link", baseURL + "/logout");
   },
