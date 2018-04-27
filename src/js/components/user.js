@@ -101,9 +101,17 @@ module.exports = Backbone.View.extend({
       this._addClassToElementList(hideConnected, "Navbar-list--hide");
       this._removeClassFromElementList(showConnected, "Navbar-list--hide");
       this._updateUserInformation();
+      if(typeof ga !== 'undefined'){
+        console.log("USER CONECTED")
+        ga('send', 'event', 'UserState', 'pageview', "Connected");
+      }
     } else {
       this._addClassToElementList(showConnected, "Navbar-list--hide");
       this._removeClassFromElementList(hideConnected, "Navbar-list--hide");
+      if(typeof ga !== 'undefined'){
+        console.log("USER DISCONECTED")
+        ga('send', 'event', 'UserState', 'pageview', "Disconnected");
+      }
     }
   }
 });
