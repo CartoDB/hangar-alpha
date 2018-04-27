@@ -88,26 +88,26 @@
 
       <ul class="Navbar-list Navbar--show-animation Navbar-list--hide Navbar-height--44 js-Navbar--showConnected">
         <li class="Navbar-item">
-          <a id="hangar-user-dashboard-link" class="Navbar-link Navbar--no-decoration title is-regular is-small js-Action--NAVlogin">
+          <a class="Navbar-link Navbar--no-decoration title is-regular is-small js-Action--NAVlogin js-user-information" data-addBaselink="dashboard">
             <span>Dashboard</span>
           </a>
         </li>
         <li class="Navbar-item js-Dropdown js-Dropdown--onClick Dropdown">
           <div class="Navbar--userAvatar js-Dropdown-target u-pointer">
-            <img id="hangar-user-avatar" src=""/>
+            <img class="js-user-information" data-addUserImage="avatar_url" src=""/>
           </div>
           <div class="Dropdown-inner Dropdown-inner--userMenu js-Dropdown-inner">
             <ul>
               <li class="Dropdown--loggedUser Dropdown--userInformation">
                 <ul>
-                  <li id="hangar-user-username" class="is-txtBaseGrey text is-small js-User-full-name"></li>
-                  <li id="hangar-user-email" class="is-txtTypo3 text is-small u-tspace--4 js-User-email"></li>
+                  <li class="is-txtBaseGrey text is-small js-user-information" data-addUserText="username"></li>
+                  <li class="is-txtTypo3 text is-small u-tspace--4 js-user-information" data-addUserText="email"></li>
                 </ul>
               </li>
               <li class="Dropdown--loggedUser Dropdown--userLinks">
                 <ul>
-                  <li class="u-flex"><a id="hangar-user-account-link" class="text is-small">Your Account</a></li>
-                  <li class="u-tspace--4 u-flex"><a id="hangar-user-close-session-link" class="text is-small is-txtSolutionsRed">Close Session</a></li>
+                  <li class="u-flex"><a class="text is-small js-user-information" data-addBaselink="profile">Your Account</a></li>
+                  <li class="u-tspace--4 u-flex"><a class="text is-small is-txtSolutionsRed js-user-information" data-addBaselink="logout">Close Session</a></li>
                 </ul>
               </li>
             </ul>

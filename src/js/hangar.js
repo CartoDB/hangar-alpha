@@ -4,6 +4,7 @@ const Dialog = require('./components/dialog');
 const Card = require('./components/card');
 const Dropdown = require('./components/dropdown');
 const Tab = require('./components/tab');
+const User = require('./components/user');
 
 window.HangarAlpha = {
   Components: {
@@ -12,6 +13,7 @@ window.HangarAlpha = {
     Dialog: Dialog,
     Card: Card,
     Dropdown: Dropdown,
-    Tab: Tab
+    Tab: Tab,
+    User: User
   }
 };
