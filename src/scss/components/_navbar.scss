@@ -372,9 +372,10 @@
   top: 0;
   opacity: 1;
   pointer-events: all;
-  &.Navbar-list--hide{
-    opacity: 0;
-    pointer-events: none;
-  }
   transition: opacity 300ms;
+}
+
+.User-element--hide{ //To use with position: absolute elements
+  opacity: 0;
+  pointer-events: none;
 }

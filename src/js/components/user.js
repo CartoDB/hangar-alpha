@@ -95,21 +95,19 @@ module.exports = Backbone.View.extend({
   },
 
   _initShowConnected: function(){
-    var showConnected = document.getElementsByClassName("js-Navbar--showConnected");
-    var hideConnected = document.getElementsByClassName("js-Navbar--hideConnected");
+    var showConnected = document.getElementsByClassName("js-User--showConnected");
+    var hideConnected = document.getElementsByClassName("js-User--hideConnected");
     if (this.isConnected()){
-      this._addClassToElementList(hideConnected, "Navbar-list--hide");
-      this._removeClassFromElementList(showConnected, "Navbar-list--hide");
+      this._addClassToElementList(hideConnected, "User-element--hide");
+      this._removeClassFromElementList(showConnected, "User-element--hide");
       this._updateUserInformation();
       if(typeof ga !== 'undefined'){
-        console.log("USER CONECTED")
         ga('send', 'event', 'UserState', 'pageview', "Connected");
       }
     } else {
-      this._addClassToElementList(showConnected, "Navbar-list--hide");
-      this._removeClassFromElementList(hideConnected, "Navbar-list--hide");
+      this._addClassToElementList(showConnected, "User-element--hide");
+      this._removeClassFromElementList(hideConnected, "User-element--hide");
       if(typeof ga !== 'undefined'){
-        console.log("USER DISCONECTED")
         ga('send', 'event', 'UserState', 'pageview', "Disconnected");
       }
     }
