@@ -63,8 +63,8 @@ resources:
     url: '/blog/'
   - title: Learn
     url: '/learn/'
-  - title: Documentation
-    url: '/docs/'
+  - title: Developers
+    url: '/developers/'
 
 about:
   - title: Team
