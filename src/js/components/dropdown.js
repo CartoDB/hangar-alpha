@@ -25,6 +25,7 @@ module.exports = Backbone.View.extend({
       hidden: true,
       touch: this._checkTouch()
     });
+    this._initBodyListener();
   },
 
   _checkDevice: function (e) {
@@ -52,6 +53,18 @@ module.exports = Backbone.View.extend({
   _hideDropdown: function () {
     this.$dropdown.hide();
     this._toggleHidden();
+  },
+
+  _initBodyListener(){
+    if(this.$el.hasClass("js-Dropdown--onClick")){
+      var dropdownClass = this;
+      document.body.addEventListener('click', function(event){
+        if (!event.target.closest(".js-Dropdown")){
+          dropdownClass.model.set('hidden', false);
+          dropdownClass._onTouch(event);
+        }
+      });
+    }
   },
 
   _onTouch: function (e) {
