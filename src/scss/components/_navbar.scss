@@ -1,6 +1,8 @@
 // Navbar
 // --------------------------------------------------
 
+$navbarHeight: 76px;
+
 .Navbar {
   padding: 16px 0;
   z-index: 300;
@@ -378,4 +380,8 @@
 .User-element--hide{ //To use with position: absolute elements
   opacity: 0;
   pointer-events: none;
+}
+
+.Navbar-container{
+  min-height: $navbarHeight;
 }
