@@ -3,7 +3,8 @@ const Backbone = require('backbone');
 module.exports = Backbone.View.extend({
   initialize: function () {
     this.userInformation = null;
-    this._initShowConnected();
+    // this._initShowConnected();
+    this._initUserStatus();
   },
 
   _getCookieValue: function(cookieName){
@@ -74,42 +75,78 @@ module.exports = Backbone.View.extend({
     }
   },
 
-  _updateUserData: function(){
-    var apiUrl = this.getBaseURL() + "/api/v3/me";
-    var ownClass = this;
-    fetch(apiUrl, {
-            method: 'GET',
-            credentials: 'include'
-          }
-      ).then(function(response) {
-        return response.json();
-      }).then(function(jsonResponse) {
-        ownClass.userInformation = jsonResponse;
-        ownClass._setUserInfo();
-      });
-  },
+  // _updateUserData: function(){
+  //   var apiUrl = this.getBaseURL() + "/api/v3/me";
+  //   var ownClass = this;
+  //   fetch(apiUrl, {
+  //           method: 'GET',
+  //           credentials: 'include'
+  //         }
+  //     ).then(function(response) {
+  //       return response.json();
+  //     }).then(function(jsonResponse) {
+  //       ownClass.userInformation = jsonResponse;
+  //       ownClass._setUserInfo();
+  //     });
+  // },
 
   _updateUserInformation: function(){
     this._setBaseurlLinks();
-    this._updateUserData();
+    // this._updateUserData();
   },
 
-  _initShowConnected: function(){
+  _initUserStatus: function(){
+    if(!this.isConnected())
+      this._initDisconnectedSettings();
+    else {
+      var apiUrl = this.getBaseURL() + "/api/v3/me";
+      var ownClass = this;
+      fetch(apiUrl, {
+              method: 'GET',
+              credentials: 'include'
+            }
+      ).then(function(response) {
+        if (!response.ok)
+          throw Error(response.statusText);
+        return response.json();
+      }).then(function(jsonResponse) {
+        ownClass.userInformation = jsonResponse;
+        if(jsonResponse.user_data){
+          ownClass._initConnectedSettings()
+          ownClass._setUserInfo();
+        }
+        else
+        {
+          ownClass._initDisconnectedSettings();
+        }
+      }).catch(function(error) {
+        ownClass._initDisconnectedSettings();
+      });
+    }
+  },
+
+  _initConnectedSettings: function(){
     var showConnected = document.getElementsByClassName("js-User--showConnected");
     var hideConnected = document.getElementsByClassName("js-User--hideConnected");
-    if (this.isConnected()){
-      this._addClassToElementList(hideConnected, "User-element--hide");
-      this._removeClassFromElementList(showConnected, "User-element--hide");
-      this._updateUserInformation();
-      if(typeof ga !== 'undefined'){
-        ga('send', 'event', 'UserState', 'pageview', "Connected");
-      }
-    } else {
-      this._addClassToElementList(showConnected, "User-element--hide");
-      this._removeClassFromElementList(hideConnected, "User-element--hide");
-      if(typeof ga !== 'undefined'){
-        ga('send', 'event', 'UserState', 'pageview', "Disconnected");
-      }
+    this._addClassToElementList(hideConnected, "User-element--hide");
+    this._removeClassFromElementList(showConnected, "User-element--hide");
+    this._updateUserInformation();
+    if(typeof ga !== 'undefined'){
+      ga('send', 'event', 'UserState', 'pageview', "Connected");
     }
-  }
+  },
+
+  _initDisconnectedSettings: function(){
+    var showConnected = document.getElementsByClassName("js-User--showConnected");
+    var hideConnected = document.getElementsByClassName("js-User--hideConnected");
+    this._addClassToElementList(showConnected, "User-element--hide");
+    this._removeClassFromElementList(hideConnected, "User-element--hide");
+    if(typeof ga !== 'undefined'){
+      ga('send', 'event', 'UserState', 'pageview', "Disconnected");
+    }
+  },
+
+  // _initShowConnected: function(){
+  //   this._initUserStatus()
+  // }
 });
