@@ -1,7 +1,7 @@
 {
   "name": "hangar-alpha",
   "description": "Share frontend assets between different web repositories",
-  "version": "0.1.35-8",
+  "version": "0.1.35-9",
   "repository": {
     "type": "git",
     "url": "https://github.com/CartoDB/hangar-alpha.git"
