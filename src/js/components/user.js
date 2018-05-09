@@ -3,7 +3,6 @@ const Backbone = require('backbone');
 module.exports = Backbone.View.extend({
   initialize: function () {
     this.userInformation = null;
-    // this._initShowConnected();
     this._initUserStatus();
   },
 
@@ -75,26 +74,6 @@ module.exports = Backbone.View.extend({
     }
   },
 
-  // _updateUserData: function(){
-  //   var apiUrl = this.getBaseURL() + "/api/v3/me";
-  //   var ownClass = this;
-  //   fetch(apiUrl, {
-  //           method: 'GET',
-  //           credentials: 'include'
-  //         }
-  //     ).then(function(response) {
-  //       return response.json();
-  //     }).then(function(jsonResponse) {
-  //       ownClass.userInformation = jsonResponse;
-  //       ownClass._setUserInfo();
-  //     });
-  // },
-
-  _updateUserInformation: function(){
-    this._setBaseurlLinks();
-    // this._updateUserData();
-  },
-
   _initUserStatus: function(){
     if(!this.isConnected())
       this._initDisconnectedSettings();
@@ -130,7 +109,7 @@ module.exports = Backbone.View.extend({
     var hideConnected = document.getElementsByClassName("js-User--hideConnected");
     this._addClassToElementList(hideConnected, "User-element--hide");
     this._removeClassFromElementList(showConnected, "User-element--hide");
-    this._updateUserInformation();
+    this._setBaseurlLinks();
     if(typeof ga !== 'undefined'){
       ga('send', 'event', 'UserState', 'pageview', "Connected");
     }
@@ -145,8 +124,4 @@ module.exports = Backbone.View.extend({
       ga('send', 'event', 'UserState', 'pageview', "Disconnected");
     }
   },
-
-  // _initShowConnected: function(){
-  //   this._initUserStatus()
-  // }
 });
