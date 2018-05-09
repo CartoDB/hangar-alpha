@@ -61,7 +61,7 @@ module.exports = Backbone.View.extend({
       document.body.addEventListener('click', function(event){
         if (!event.target.closest(".js-Dropdown")){
           dropdownClass.model.set('hidden', false);
-          dropdownClass._onTouch(event);
+          dropdownClass._hideDropdown();
         }
       });
     }
