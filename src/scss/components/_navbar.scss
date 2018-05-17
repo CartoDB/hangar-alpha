@@ -84,7 +84,7 @@ $navbarHeight: 76px;
   bottom: 0;
   left: 0;
   background-color: rgba($base-grey, 0.96);
-  z-index: 1;
+  z-index: $zIndex-10;
   text-align: center;
   display: none;
   @media (max-width: $layout-tablet) {
