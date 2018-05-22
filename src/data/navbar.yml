@@ -43,6 +43,8 @@ solutions-extra:
     url: '/solutions/salesquest/'
   - title: Traffic Management
     url: '/solutions/traffico/'
+  - title: Site Planning
+    url: '/solutions/reveal/'
 community:
   - title: Map Gallery
     url: '/gallery/'

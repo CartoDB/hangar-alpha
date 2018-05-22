@@ -52,7 +52,7 @@
 
                 <li class="Dropdown-divisor text is-small grid-cell--col12 u-tspace--16"><span>Solutions by Use Case</span></li>
                 {% for solutions_item in site.data.hangaralpha.navbar.solutions-extra %}
-                  <li class="Dropdown-item grid-cell--col6 u-vspace--0"><a href="{{ solutions_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if solutions_item.url == page.url %}is-active{% endif %}">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</a></li>
+                  <li class="Dropdown-item grid-cell--col6"><a href="{{ solutions_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if solutions_item.url == page.url %}is-active{% endif %}">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</a></li>
                 {% endfor %}
               </ul>
             </div>
