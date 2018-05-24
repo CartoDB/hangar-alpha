@@ -108,6 +108,6 @@ integrations:
 help:
   - title: Builder Guides
     url: '/learn/guides/'
-  - title: Developers
+  - title: Developer Center
     url: '/developers/'
 
