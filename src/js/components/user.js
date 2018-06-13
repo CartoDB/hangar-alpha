@@ -111,7 +111,9 @@ module.exports = Backbone.View.extend({
     this._removeClassFromElementList(showConnected, "User-element--hide");
     this._setBaseurlLinks();
     if(typeof ga !== 'undefined'){
-      ga('send', 'event', 'UserState', 'pageview', "Connected");
+      ga('send', 'event', 'UserState', 'pageview', "Connected", {
+        nonInteraction: true
+      });
     }
   },
 
@@ -121,7 +123,9 @@ module.exports = Backbone.View.extend({
     this._addClassToElementList(showConnected, "User-element--hide");
     this._removeClassFromElementList(hideConnected, "User-element--hide");
     if(typeof ga !== 'undefined'){
-      ga('send', 'event', 'UserState', 'pageview', "Disconnected");
+      ga('send', 'event', 'UserState', 'pageview', "Disconnected", {
+        nonInteraction: true
+      });
     }
   },
 });
