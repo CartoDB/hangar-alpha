@@ -77,7 +77,10 @@
   @include is-caption();
 }
 
-
 .is-small {
   @include is-small();
+}
+
+.is-ellipsis{
+  @include ellipsis();
 }
