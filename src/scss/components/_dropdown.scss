@@ -182,6 +182,11 @@
     opacity: 1;
     pointer-events: all;
   }
+  &.Dropdown-new--click-activated{
+    opacity: 1;
+    display: none;
+    pointer-events: unset;
+  }
   display: block;
   opacity: 0;
   transition: all 0.2s ease-in-out;

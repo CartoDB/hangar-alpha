@@ -52,7 +52,7 @@ solutions:
 platform:
   - title: 'Location Data Streams'
     description: 'Includes stuff relevant to current/new Data page.'
-    url: '/location-data-services/'
+    url: '/platform/location-data-streams/'
     svg: '<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fill-rule="evenodd">
               <circle fill="#1785FB" opacity=".8" cx="18" cy="18" r="18"/>
@@ -64,7 +64,7 @@ platform:
           </svg>'
   - title: 'Spatial Data Science & Analytics'
     description: 'CARTOFrames and Predict site performances.'
-    url: '/location-data-services/'
+    url: '/platform/spatial-data-science/'
     svg: '<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
             <g transform="translate(0 -4)" fill="none" fill-rule="evenodd">
               <circle fill="#1785FB" opacity=".8" cx="18" cy="22" r="18"/>
@@ -75,7 +75,7 @@ platform:
           </svg>'
   - title: 'Cartography & Web Visualization'
     description: 'CARTO VL, CARTO Colors? Predict site performances.'
-    url: '/location-data-services/'
+    url: '/platform/vector-mapping-cartography/'
     svg: '<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
             <g transform="translate(0 -4)" fill="none" fill-rule="evenodd">
               <circle fill="#1785FB" opacity=".8" cx="18" cy="22" r="18"/>
@@ -87,7 +87,7 @@ platform:
           </svg>'
   - title: 'Development Platform'
     description: 'Builder & Engine, Airship stuff later performances.'
-    url: '/location-data-services/'
+    url: '/platform/development/'
     svg: '<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
             <g transform="translate(0 -4)" fill="none" fill-rule="evenodd">
               <circle fill="#1785FB" opacity=".8" cx="18" cy="22" r="18"/>
@@ -98,19 +98,19 @@ platform:
           </svg>'
 industries:
   - title: 'Retail'
-    url: '/retail/'
+    url: '/industries/retail/'
   - title: 'Financial Services'
     url: '/financial-services/'
   - title: 'Transport & Logistics'
-    url: '/transport-logistics/'
+    url: '/industries/transport-logistics/'
   - title: 'Telco & Utilities'
-    url: '/telco-utilities/'
+    url: '/industries/telco-utilities/'
   - title: 'Real Estate'
-    url: '/real-estate/'
+    url: '/industries/real-estate/'
   - title: 'Healthcare & Pharma'
-    url: '/healthcare-pharma/'
+    url: '/industries/healthcare-and-pharma/'
   - title: 'Cities & Government'
-    url: '/cities-government/'
+    url: '/industries/cities-government/'
 resources:
   - title: 'Resources'
     description: 'Includes stuff relevant to currentnew.'
@@ -126,14 +126,10 @@ resources:
     submenu:
       - title: 'Location Intelligence'
         url: '/location-intelligence/'
-      - title: 'Case Studies'
-        url: '/case-studies/'
-      - title: 'Success Stories'
-        url: '/success-stories/'
       - title: 'Webinars'
         url: '/webinars/'
-      - title: 'Events'
-        url: '/events/'
+      - title: 'Testimonials'
+        url: '/resources/#testimonials'
   - title: 'Developers'
     description: 'Includes stuff relevant to currentnew.'
     url: '/developers/'
