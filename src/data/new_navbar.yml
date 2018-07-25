@@ -1,0 +1,161 @@
+solutions:
+  - title: 'Site Planning'
+    description: 'Monitor, Compare, and Predict site performances.'
+    url: '/solutions/site-planning/'
+    svg: '<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" fill-rule="evenodd">
+            <circle fill="#F24440" opacity=".8" cx="18" cy="18" r="18"/>
+            <path d="M6 5h24v24H6z"/>
+            <g fill="#FFF" fill-rule="nonzero">
+              <path d="M23 20.54v1.9c1.83.37 3 .93 3 1.56 0 1.1-3.58 2-8 2s-8-.9-8-2c0-.63 1.17-1.2 3-1.56v-1.9c-2.99.7-5 1.98-5 3.46 0 2.21 4.48 4 10 4s10-1.79 10-4c0-1.48-2.01-2.77-5-3.46z"/>
+              <path d="M24 14a6 6 0 0 0-12 0c0 4 6 11 6 11s6-7 6-11zm-8 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+            </g>
+          </g>
+        </svg>'
+  - title: 'Territory Management'
+    description: 'Brief explanation about this specific Solution.'
+    url: '/solutions/territory-management/'
+    svg: '<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd">
+              <circle fill="#F24440" opacity=".8" cx="18" cy="18" r="18"/>
+              <path d="M26 20c-.295 0-.572.067-.824.182l-2.451-1.75c.171-.446.275-.926.275-1.432 0-.74-.215-1.426-.566-2.019l3.055-3.055c.163.043.333.074.511.074 1.104 0 2-.894 2-2 0-1.103-.896-2-2-2-1.105 0-2 .897-2 2 0 .178.031.348.074.512l-3.055 3.055C20.426 13.215 19.74 13 19 13c-1.141 0-2.164.482-2.893 1.249l-4.111-2.284C11.977 10.878 11.092 10 10 10c-1.105 0-2 .897-2 2 0 1.106.895 2 2 2 .375 0 .721-.109 1.022-.289L15.142 16c-.083.322-.142.652-.142 1 0 .74.215 1.426.566 2.02l-5.055 5.055C10.348 24.031 10.178 24 10 24c-1.105 0-2 .897-2 2 0 1.106.895 2 2 2 1.103 0 2-.894 2-2 0-.178-.031-.348-.074-.512l5.055-5.055c.314.187.656.33 1.019.425v3.419c-.596.347-1 .984-1 1.723 0 1.106.894 2 2 2 1.104 0 2-.894 2-2 0-.737-.404-1.375-1-1.723v-3.419c.582-.151 1.107-.43 1.555-.805l2.464 1.761c-.006.062-.019.122-.019.186 0 1.106.895 2 2 2 1.104 0 2-.894 2-2 0-1.103-.896-2-2-2z" fill="#FFF" fill-rule="nonzero"/>
+            </g>
+          </svg>'
+  - title: 'Logistic Optimization'
+    description: 'Brief explanation about this specific Solution.'
+    url: '/solutions/logistics-optimization/'
+    svg: '<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(0 -4)" fill="none" fill-rule="evenodd">
+              <circle fill="#F24440" opacity=".8" cx="18" cy="22" r="18"/>
+              <path d="M6 10h24v24H6z"/>
+              <g transform="translate(8 14)" fill="#FFF" fill-rule="nonzero">
+                <circle cx="15" cy="14" r="2"/>
+                <path d="M6.96 11.17c.02-.05.04-.1.04-.17V4a1 1 0 0 0-1-1H4a4 4 0 0 0-4 4v6a1 1 0 0 0 1 1h2a3 3 0 0 1 3.96-2.83zM5 8H2V6h3v2z"/>
+                <circle cx="6" cy="14" r="2"/>
+                <path d="M18 0h-8a2 2 0 0 0-2 2v9.78c.6.55 1 1.34 1 2.22h3a3 3 0 0 1 6 0h1a1 1 0 0 0 1-1V2a2 2 0 0 0-2-2z"/>
+              </g>
+            </g>
+          </svg>'
+  - title: 'Mobility Planning'
+    url: '/solutions/mobility-planning/'
+    svg: '<svg width="18" height="24" viewBox="0 0 18 16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.7188 10.125c0-1.4892-.9704-2.738-2.3086-3.186l-.8116-4.0601C14.3632 1.6993 13.3194.8438 12.1163.8438h-5.67c-1.2032 0-2.247.8555-2.4824 2.0342l-.8117 4.061C1.8141 7.387.8438 8.6358.8438 10.125c0 1.247.6835 2.322 1.6875 2.9067V13.5c0 .9315.7552 1.6875 1.6875 1.6875.9324 0 1.6875-.756 1.6875-1.6875h6.75c0 .9315.756 1.6875 1.6875 1.6875s1.6875-.756 1.6875-1.6875v-.4683c1.0041-.5847 1.6876-1.6596 1.6876-2.9067zM3.7967 8.8594c.6987 0 1.2657.567 1.2657 1.2656 0 .6986-.567 1.2656-1.2656 1.2656-.6986 0-1.2656-.567-1.2656-1.2656 0-.6986.567-1.2656 1.2656-1.2656zm8.0157 2.9531H6.75V10.125h5.0625v1.6875zM5.0794 5.9062l.5391-2.6974c.0785-.3924.427-.6776.8277-.6776h5.6709a.8453.8453 0 0 1 .8269.6784l.54 2.6966H5.0794zm9.6862 5.4844c-.6986 0-1.2656-.567-1.2656-1.2656 0-.6986.567-1.2656 1.2656-1.2656.6987 0 1.2657.567 1.2657 1.2656 0 .6986-.567 1.2656-1.2657 1.2656z" fill="#F24440" fill-rule="nonzero"/>
+          </svg>'
+  - title: 'Geomarketing'
+    url: '/solutions/geomarketing/'
+    svg: '<svg width="14" height="24" viewBox="0 0 14 16" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#F24440" fill-rule="nonzero">
+              <path d="M8 11.5v.75H2v-9h6V4h1.5V1.75A1.5 1.5 0 0 0 8 .25H2a1.5 1.5 0 0 0-1.5 1.5v12a1.5 1.5 0 0 0 1.5 1.5h6a1.5 1.5 0 0 0 1.5-1.5V11.5H8z"/>
+              <path d="M11 4.75A2.25 2.25 0 0 0 8.75 7c0 1.5 2.25 3.75 2.25 3.75S13.25 8.5 13.25 7A2.25 2.25 0 0 0 11 4.75zm0 3.374a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25z"/>
+            </g>
+          </svg>'
+platform:
+  - title: 'Location Data Streams'
+    description: 'Includes stuff relevant to current/new Data page.'
+    url: '/platform/location-data-streams/'
+    svg: '<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd">
+              <circle fill="#1785FB" opacity=".8" cx="18" cy="18" r="18"/>
+              <g fill="#FFF" fill-rule="nonzero">
+                <path d="M25 26.42l-7-7-7 7L9.59 25 18 16.6 26.41 25z"/>
+                <path d="M25 19.42l-7-7-7 7L9.59 18 18 9.6 26.41 18z"/>
+              </g>
+            </g>
+          </svg>'
+  - title: 'Spatial Data Science & Analytics'
+    description: 'CARTOFrames and Predict site performances.'
+    url: '/platform/spatial-data-science/'
+    svg: '<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(0 -4)" fill="none" fill-rule="evenodd">
+              <circle fill="#1785FB" opacity=".8" cx="18" cy="22" r="18"/>
+              <g fill="#FFF" fill-rule="nonzero">
+                <path d="M18 19c-4.2 0-7.2-.8-9-2v2c0 .8 2.2 3 9 3s9-2.2 9-3v-2c-1.8 1.2-4.8 2-9 2zM18 27c6.8 0 9-2.2 9-3v-2c-1.8 1.2-4.8 2-9 2s-7.2-.8-9-2v2c0 .8 2.2 3 9 3zM18 17c5.2 0 7.7-1.3 8.6-2.3-1.2-1.8-5-2.7-8.6-2.7-3.7 0-7.4 1-8.6 2.7.9 1 3.4 2.3 8.6 2.3zM18 29c-4.2 0-7.2-.8-9-2v1c0 2.6 4.5 4 9 4s9-1.4 9-4v-1c-1.8 1.2-4.8 2-9 2z"/>
+              </g>
+            </g>
+          </svg>'
+  - title: 'Cartography & Web Visualization'
+    description: 'CARTO VL, CARTO Colors? Predict site performances.'
+    url: '/platform/vector-mapping-cartography/'
+    svg: '<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(0 -4)" fill="none" fill-rule="evenodd">
+              <circle fill="#1785FB" opacity=".8" cx="18" cy="22" r="18"/>
+              <g fill="#FFF" fill-rule="nonzero">
+                <path d="M27.8 27.8l-1.6-7C26 19.8 25 19 24 19h-1.5c-1.8 3-4.5 6-4.5 6s-2.7-3-4.5-6H12c-1 0-2 .8-2.2 1.8l-1.6 7c0 .6 0 1.1.4 1.5.3.5.8.7 1.4.7h16c.6 0 1-.2 1.4-.7.4-.4.5-1 .4-1.5z"/>
+                <path d="M22 15a4 4 0 0 0-8 0c0 2.2 4 7 4 7s4-4.8 4-7zm-6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+              </g>
+            </g>
+          </svg>'
+  - title: 'Development Platform'
+    description: 'Builder & Engine, Airship stuff later performances.'
+    url: '/platform/development/'
+    svg: '<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(0 -4)" fill="none" fill-rule="evenodd">
+              <circle fill="#1785FB" opacity=".8" cx="18" cy="22" r="18"/>
+              <g fill="#FFF" fill-rule="nonzero">
+                <path d="M25.9 13H9.7c-.5 0-.9.4-.9.9V22c0 .5.4.9.9.9h16.2c.5 0 .9-.4.9-.9v-8.1c0-.5-.4-.9-.9-.9zM28.3 29l-1.5-4.6a.9.9 0 0 0-.9-.6H9.7c-.4 0-.7.2-.9.6L7.3 29c-.1.5 0 1 .2 1.4.3.4.8.6 1.3.6h18c.5 0 1-.2 1.3-.6.3-.4.3-1 .2-1.4zm-8.7-.7H16v-1.8h3.6v1.8z"/>
+              </g>
+            </g>
+          </svg>'
+industries:
+  - title: 'Retail'
+    url: '/industries/retail/'
+  - title: 'Financial Services'
+    url: '/financial-services/'
+  - title: 'Transport & Logistics'
+    url: '/industries/transport-logistics/'
+  - title: 'Telco & Utilities'
+    url: '/industries/telco-utilities/'
+  - title: 'Real Estate'
+    url: '/industries/real-estate/'
+  - title: 'Healthcare & Pharma'
+    url: '/industries/healthcare-and-pharma/'
+  - title: 'Cities & Government'
+    url: '/industries/cities-government/'
+resources:
+  - title: 'Resources'
+    description: 'Includes stuff relevant to currentnew.'
+    url: '/resources/'
+    svg: '<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(0 -4)" fill="none" fill-rule="evenodd">
+              <circle fill="#5300CC" opacity=".8" cx="18" cy="22" r="18"/>
+              <g fill="#FFF" fill-rule="nonzero">
+                <path d="M15 21.001h7a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1zM17 22.001h-7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1zM27 22.001h-7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1z"/>
+              </g>
+            </g>
+          </svg>'
+    submenu:
+      - title: 'Location Intelligence'
+        url: '/location-intelligence/'
+      - title: 'Webinars'
+        url: '/webinars/'
+      - title: 'Testimonials'
+        url: '/resources/#testimonials'
+  - title: 'Developers'
+    description: 'Includes stuff relevant to currentnew.'
+    url: '/developers/'
+    svg: '<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(0 -4)" fill="none" fill-rule="evenodd">
+              <circle fill="#7D21F5" opacity=".8" cx="18" cy="22" r="18"/>
+              <path d="M22.25 12H11.83c-1.01 0-1.83.82-1.83 1.83v16.44c0 1 .82 1.82 1.83 1.82H24.6c1 0 1.82-.81 1.82-1.82V16.19l-4.18-4.18zM17.04 26.9l-1.3 1.29-3.38-3.39 3.39-3.38 1.29 1.29-2.1 2.1 2.1 2.09zm3.65 1.29l-1.3-1.3 2.1-2.09-2.1-2.1 1.3-1.28 3.38 3.38-3.38 3.39zm.27-10.7v-4.56l4.56 4.56h-4.56z" fill="#FFF" fill-rule="nonzero"/>
+            </g>
+          </svg>'
+  - title: 'Help'
+    description: 'Builder & Engine, Airship stuff later.'
+    url: '/help/'
+    svg: '<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(0 -4)" fill="none" fill-rule="evenodd">
+              <circle fill="#7D21F5" opacity=".8" cx="18" cy="22" r="18"/>
+              <path d="M18 12c-5.514 0-10 4.487-10 10 0 5.515 4.486 10 10 10s10-4.485 10-10c0-5.513-4.486-10-10-10zm0 16.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm1-4.375V25h-2v-3h1a2 2 0 1 0-2-2h-2c0-2.205 1.795-4 4-4s4 1.795 4 4a4.01 4.01 0 0 1-3 3.875z" fill="#FFF" fill-rule="nonzero"/>
+            </g>
+          </svg>'
+  - title: 'Community'
+    description: 'Builder & Engine, Airship stuff later.'
+    url: '/community/'
+    svg: '<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(0 -4)" fill="none" fill-rule="evenodd">
+              <circle fill="#7D21F5" opacity=".8" cx="18" cy="22" r="18"/>
+              <g fill="#FFF" fill-rule="nonzero">
+                <path d="M15.36 24.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0M17.72 31a4 4 0 0 0-3.86-3h-2A4 4 0 0 0 8 31h9.72zM25.64 24.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0M28 31a4 4 0 0 0-3.86-3h-2a4 4 0 0 0-3.86 3H28zM20.5 13.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0M22.86 20A4 4 0 0 0 19 17h-2a4 4 0 0 0-3.86 3h9.72z"/>
+              </g>
+            </g>
+          </svg>'

@@ -1,219 +1,336 @@
 <div class="Navbar-container">
-  <nav class="Navbar js-Navbar js-Navbar--fixed">
-    <div class="Navbar-inner Navbar-height--44 container">
-      <div class="Navbar-header">
-        <a class="Logo js-Navbar-logo u-rspace--40" href="/">
-          <div class="Logo--negative">
-            {% include hangaralpha/logos/logo_carto_negative.svg %}
+    <nav class="Navbar js-Navbar js-Navbar--fixed">
+      <div class="Navbar-inner Navbar-height--44 container">
+        <div class="Navbar-header">
+          <a class="Logo js-Navbar-logo u-rspace--28" href="/">
+            <div class="Logo--negative">
+              {% include hangaralpha/logos/logo_carto_negative.svg %}
+            </div>
+            <div class="Logo--positive">
+              {% include hangaralpha/logos/logo_carto_positive.svg %}
+            </div>
+          </a>
+          <div class="Navbar-buttonMenu js-Navbar-button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-          <div class="Logo--positive">
-            {% include hangaralpha/logos/logo_carto_positive.svg %}
-          </div>
-        </a>
-        <div class="Navbar-buttonMenu js-Navbar-button">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+        </div>
+  
+        <div class="Navbar-collapse">
+          <ul class="Navbar-list">
+            <li class="Navbar-item Dropdown u-rspace--28">
+              <span class="Navbar-link Navbar--no-decoration text is-semibold is-caption js-Action--NAVproducts u-default">
+                Solutions
+              </span>
+              <div class="Dropdown-inner Dropdown--center Dropdown--new">
+                {% assign navbarElementLarge =  site.data.hangaralpha.new_navbar.solutions | where_exp: 'item', 'item.description != nil' %}
+                {% assign navbarElementSmall =  site.data.hangaralpha.new_navbar.solutions | where_exp: 'item', 'item.description == nil' %}
+                <ul class="grid">
+                    {% for element in navbarElementLarge %}
+                      <li class="Dropdown-item grid-cell--col12 u-flex u-vspace--32">
+                        {{element.svg}}
+                        <div class="u-lspace--12">
+                            <a href="{{element.url}}" class="Dropdown-link text is-caption is-txtBaseGrey is-semibold">{{element.title}}</a>
+                            <p class="text is-small is-txtBaseGrey">{{element.description}}</p>
+                        </div>
+                      </li>
+                    {%endfor%}
+                    {% for element in navbarElementSmall %}
+                      <li class="Dropdown-item grid-cell--col6 u-flex u-vspace--32">
+                        {{element.svg}}
+                        <div class="u-lspace--8">
+                            <a href="{{element.url}}" class="Dropdown-link text is-caption is-txtBaseGrey is-semibold">{{element.title}}</a>
+                        </div>
+                      </li>
+                    {%endfor%}
+                </ul>
+                <div class="Dropdown-innerHighlight is-bgSoftBlue">
+                  <a href="/solutions/" class="buttonLink is-txtCartoRed">
+                    <svg width="8px" height="7px" viewBox="0 0 8 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path class="buttonLink-media" d="M1.52245273,3.04854764 L3.68776506,0.883235307 C3.88225492,0.688745449 3.88821988,0.353713791 3.68525771,0.15075162 C3.4882313,-0.0462747862 3.15435142,-0.053333131 2.95277402,0.148244267 L0.147793654,2.95322464 C0.0109867585,3.09003153 -0.0325396573,3.29637729 0.0243152648,3.47738142 C-0.0325396573,3.65838554 0.0109867585,3.8647313 0.147793654,4.00153819 L2.95277402,6.80651857 C3.15435142,7.00809596 3.4882313,7.00103762 3.68525771,6.80401121 C3.88821988,6.60104904 3.88225492,6.26601738 3.68776506,6.07152753 L1.70421948,4.08798194 L7.99996393,4.08798194 L7.99996393,3.04854764 L1.52245273,3.04854764 Z" id="Combined-Shape" fill="currentColor " transform="translate(3.999982, 3.477381) scale(-1, 1) translate(-3.999982, -3.477381) "></path></g>
+                    </svg>
+                    View All Solutions
+                  </a>
+                </div>
+              </div>
+            </li>
+  
+            <li class="Navbar-item Dropdown u-rspace--28">
+              <span class="Navbar-link Navbar--no-decoration text is-semibold is-caption js-Action--NAVsolutions u-default">
+                Platform
+              </span>
+              <div class="Dropdown-inner Dropdown--center Dropdown--new Dropdown--platform">
+                <ul class="grid">
+                  {% assign platformElements =  site.data.hangaralpha.new_navbar.platform %}
+                  {% for element in platformElements %}
+                    <li class="Dropdown-item grid-cell--col6 u-flex u-vspace--32">
+                      {{element.svg}}
+                      <div class="u-lspace--12">
+                          <a href="{{element.url}}" class="Dropdown-link text is-caption is-txtBaseGrey is-semibold">{{element.title}}</a>
+                          <p class="text is-small is-txtBaseGrey">{{element.description}}</p>
+                      </div>
+                    </li>
+                  {%endfor%}
+                </ul>
+                <div class="Dropdown-innerHighlight is-bgSoftBlue">
+                  <a href="/platform/" class="buttonLink is-txtBuilderBlue">
+                    <svg width="8px" height="7px" viewBox="0 0 8 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path class="buttonLink-media" d="M1.52245273,3.04854764 L3.68776506,0.883235307 C3.88225492,0.688745449 3.88821988,0.353713791 3.68525771,0.15075162 C3.4882313,-0.0462747862 3.15435142,-0.053333131 2.95277402,0.148244267 L0.147793654,2.95322464 C0.0109867585,3.09003153 -0.0325396573,3.29637729 0.0243152648,3.47738142 C-0.0325396573,3.65838554 0.0109867585,3.8647313 0.147793654,4.00153819 L2.95277402,6.80651857 C3.15435142,7.00809596 3.4882313,7.00103762 3.68525771,6.80401121 C3.88821988,6.60104904 3.88225492,6.26601738 3.68776506,6.07152753 L1.70421948,4.08798194 L7.99996393,4.08798194 L7.99996393,3.04854764 L1.52245273,3.04854764 Z" id="Combined-Shape" fill="currentColor " transform="translate(3.999982, 3.477381) scale(-1, 1) translate(-3.999982, -3.477381) "></path></g>
+                    </svg>
+                    View All Products
+                  </a>
+                </div>
+              </div>
+            </li>
+  
+            <li class="Navbar-item Dropdown u-rspace--28">
+              <span class="Navbar-link Navbar--no-decoration text is-semibold is-caption u-default">
+                Industries
+              </span>
+              <div class="Dropdown-inner Dropdown--center Dropdown--new Dropdown--industries">
+                <ul class="grid u-vspace--24">
+                  {% assign industriesElements =  site.data.hangaralpha.new_navbar.industries %}
+                  {% for element in industriesElements %}
+                    <li class="Dropdown-item grid-cell--col6 u-vspace--24">
+                      <a href="{{element.url}}" class="Dropdown-link text is-caption is-txtBaseGrey is-semibold">{{element.title}}</a>
+                    </li>
+                  {%endfor%}
+                </ul>
+                <div class="Dropdown-innerHighlight is-bgSoftBlue">
+                  <a href="/industries/" class="buttonLink is-txtEngineBlue">
+                    <svg width="8px" height="7px" viewBox="0 0 8 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path class="buttonLink-media" d="M1.52245273,3.04854764 L3.68776506,0.883235307 C3.88225492,0.688745449 3.88821988,0.353713791 3.68525771,0.15075162 C3.4882313,-0.0462747862 3.15435142,-0.053333131 2.95277402,0.148244267 L0.147793654,2.95322464 C0.0109867585,3.09003153 -0.0325396573,3.29637729 0.0243152648,3.47738142 C-0.0325396573,3.65838554 0.0109867585,3.8647313 0.147793654,4.00153819 L2.95277402,6.80651857 C3.15435142,7.00809596 3.4882313,7.00103762 3.68525771,6.80401121 C3.88821988,6.60104904 3.88225492,6.26601738 3.68776506,6.07152753 L1.70421948,4.08798194 L7.99996393,4.08798194 L7.99996393,3.04854764 L1.52245273,3.04854764 Z" id="Combined-Shape" fill="currentColor " transform="translate(3.999982, 3.477381) scale(-1, 1) translate(-3.999982, -3.477381) "></path></g>
+                    </svg>
+                    View All Industries
+                  </a>
+                </div>
+              </div>
+            </li>
+  
+            <li class="Navbar-item Dropdown u-rspace--28">
+              <span class="Navbar-link Navbar--no-decoration text is-semibold is-caption u-default">
+                Resources
+              </span>
+              <div class="Dropdown-inner Dropdown--center Dropdown--new Dropdown--resources">
+                <div class="grid">
+                  {% assign resourcesTree =  site.data.hangaralpha.new_navbar.resources | where_exp: 'item', 'item.submenu != nil' | first %}
+                  <ul class="grid-cell--col6">
+                    <li class="Dropdown-item">
+                      <div class="u-flex u-vspace--10">
+                        {{resourcesTree.svg}}
+                        <div class="u-lspace--12">
+                            <a href="{{resourcesTree.url}}" class="Dropdown-link text is-caption is-txtBaseGrey is-semibold">{{resourcesTree.title}}</a>
+                            <p class="text is-small is-txtBaseGrey">{{resourcesTree.description}}</p>
+                        </div>
+                      </div>
+                      <ul class="tree u-lspace--16">
+                        {% for treeElement in resourcesTree.submenu %}
+                        <li class="u-vspace--12"><a href="{{treeElement.url}}" class="Dropdown-link text is-caption is-txtBaseGrey is-semibold">{{treeElement.title}}</a></li>
+                        {% endfor %}
+                      </ul>
+                    </li>
+                  </ul>
+                  <ul class="grid-cell--col6 u-vspace--32">
+                    {% assign resourcesElements =  site.data.hangaralpha.new_navbar.resources | where_exp: 'item', 'item.submenu == nil' %}
+                    {% for element in resourcesElements %}
+                    <li class="Dropdown-item u-flex u-vspace--32">
+                      {{element.svg}}
+                      <div class="u-lspace--12">
+                        <a href="{{element.url}}" class="Dropdown-link text is-caption is-txtBaseGrey is-semibold">{{element.title}}</a>
+                        <p class="text is-small is-txtBaseGrey">{{element.description}}</p>
+                      </div>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                <div class="Dropdown-innerHighlight is-bgSoftBlue">
+                  <a href="/blog/" class="title is-small is-txtEmerald">
+                    CARTO BLOG
+                  </a>
+                  {% if site.data.blogFeed %}
+                    <ul>
+                      <li class="is-ellipsis u-tspace--8 u-rspace--24"><a href="{{site.data.blogFeed.rss.channel.item[0].link}}" class="text is-caption is-txtBaseGrey">{{site.data.blogFeed.rss.channel.item[0].title}}</a></li>
+                      <li class="is-ellipsis u-tspace--8 u-rspace--24"><a href="{{site.data.blogFeed.rss.channel.item[1].link}}" class="text is-caption is-txtBaseGrey">{{site.data.blogFeed.rss.channel.item[1].title}}</a></li>
+                      <li class="is-ellipsis u-tspace--8 u-rspace--24"><a href="{{site.data.blogFeed.rss.channel.item[2].link}}" class="text is-caption is-txtBaseGrey">{{site.data.blogFeed.rss.channel.item[2].title}}</a></li>
+                    </ul>
+                  {% endif %}
+                </div>
+              </div>
+            </li>
+  
+            <li class="Navbar-item">
+              <a href="/pricing/" class="Navbar-link Navbar--no-decoration text is-semibold is-caption js-Action--NAVpricing">
+                <span>Pricing</span>
+              </a>
+            </li>
+  
+          </ul>
+  
+          <ul class="Navbar-list Navbar--show-animation User-element--hide Navbar-height--44 js-User--showConnected">
+            <li class="Navbar-item u-rspace--28">
+              <a class="Navbar-link Navbar--no-decoration text is-semibold is-caption js-Action--NAVlogin js-user-information" data-addBaselink="dashboard">
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li class="Navbar-item js-Dropdown js-Dropdown--onClick Dropdown">
+              <div class="Navbar--userAvatar js-Dropdown-target u-pointer">
+                <img class="js-user-information" data-addUserImage="avatar_url" src=""/>
+              </div>
+              <div class="Dropdown-inner Dropdown--center Dropdown--new Dropdown-new--click-activated js-Dropdown-inner">
+                <ul class="grid u-vspace--36">
+                  <li class="Dropdown-item grid-cell--col12 u-flex u-vspace--36 u-flex">
+                    <div class="Navbar--userAvatar u-rspace--12">
+                      <img class="js-user-information" data-addUserImage="avatar_url" src=""/>
+                    </div>
+                    <ul>
+                      <li class="is-txtBaseGrey text is-semibold is-caption is-txtBaseGrey js-user-information" data-addUserText="username"></li>
+                      <li class="text is-small is-txtBaseGrey u-tspace--4 js-user-information" data-addUserText="email"></li>
+                    </ul>
+                  </li>
+                  <li class="Dropdown-item grid-cell--col12 u-flex u-vspace--20">
+                    <svg width="18" height="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                      <g fill="#2E51E8" fill-rule="nonzero">
+                        <circle cx="9" cy="9" r="2.4"/>
+                        <path d="M16 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 10.09h-1.79a4.343 4.343 0 0 1-.431 1.053l1.13 1.13-1.636 1.635-1.131-1.13a4.193 4.193 0 0 1-1.053.43V15H7.908v-1.791a4.201 4.201 0 0 1-1.052-.43l-1.131 1.13-1.635-1.635 1.131-1.13a4.36 4.36 0 0 1-.431-1.053H3V7.909h1.79c.098-.373.244-.723.431-1.053L4.09 5.726 5.727 4.09l1.131 1.13a4.24 4.24 0 0 1 1.052-.43V2.999h2.181V4.79a4.23 4.23 0 0 1 1.053.43l1.131-1.13 1.636 1.636-1.13 1.13c.187.33.333.679.431 1.053H15v2.181z"/>
+                      </g>
+                    </svg>
+                    <div class="u-lspace--12">
+                        <a class="Dropdown-link text is-caption is-txtBaseGrey is-semibold js-user-information" data-addBaselink="profile">Settings</a>
+                    </div>
+                  </li>
+                  <li class="Dropdown-item grid-cell--col12 u-flex u-vspace--20">
+                    <svg width="19" height="24" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.723 10.579l2.121-2.121-1.414-1.414 1.414-1.415 1.415 1.415 1.414-1.414-1.415-1.415 1.415-1.414 1.415 1.414 1.414-1.414-2.828-2.83L7.896 7.75l-.707-.707c-.781-.782-2.048-.782-2.828 0L.825 10.578c-.78.781-.78 2.047.001 2.828l4.242 4.242c.781.781 2.047.781 2.828 0l3.535-3.535c.782-.781.782-2.047 0-2.828l-.708-.706zM6.834 13.76c-.586.586-1.535.586-2.121 0-.586-.586-.586-1.535 0-2.121.586-.587 1.535-.587 2.121 0 .586.586.586 1.535 0 2.121z" fill="#2E51E8" fill-rule="nonzero"/>
+                    </svg>
+                    <div class="u-lspace--12">
+                        <a class="Dropdown-link text is-caption is-txtBaseGrey is-semibold js-user-information" data-addBaselink="your_apps">API Keys</a>
+                    </div>
+                  </li>
+                  <li class="Dropdown-item grid-cell--col12 u-flex u-vspace--20">
+                    <svg width="16" height="24" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
+                      <g fill="none" fill-rule="evenodd">
+                        <path d="M-4-4h24v24H-4z"/>
+                        <g fill="#2E51E8" fill-rule="nonzero">
+                          <path d="M8 8a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 9c-4.7 0-8 2.47-8 6v1h16v-1c0-3.53-3.29-6-8-6z"/>
+                        </g>
+                      </g>
+                    </svg>
+                    <div class="u-lspace--12">
+                        <a class="Dropdown-link text is-caption is-txtBaseGrey is-semibold js-user-information" data-addBaselink="me">Public Profile</a>
+                    </div>
+                  </li>
+                  <li class="Dropdown-item grid-cell--col12 u-flex">
+                    <svg width="20" height="24" viewBox="0 0 20 13" xmlns="http://www.w3.org/2000/svg">
+                      <g fill="none" fill-rule="evenodd">
+                        <path d="M-2-5h24v24H-2z"/>
+                        <g fill="#2E51E8" fill-rule="nonzero">
+                          <path d="M10 5.82L18.96.26A1.98 1.98 0 0 0 18 0H2c-.35 0-.68.1-.97.26L10 5.82z"/>
+                          <path d="M10.53 7.85a1 1 0 0 1-1.06 0L0 1.97V11c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V2v-.03l-9.47 5.88z"/>
+                        </g>
+                      </g>
+                    </svg>
+                    <div class="u-lspace--12">
+                        <a class="Dropdown-link text is-caption is-txtBaseGrey is-semibold" href="mailto:support@carto.com">Contact Support</a>
+                    </div>
+                  </li>
+                </ul>
+                <div class="Dropdown-innerHighlight is-bgSoftBlue">
+                  <a class="buttonLink is-txtSolutionsRed js-user-information" data-addBaselink="logout">
+                    <svg width="8px" height="7px" viewBox="0 0 8 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path class="buttonLink-media" d="M1.52245273,3.04854764 L3.68776506,0.883235307 C3.88225492,0.688745449 3.88821988,0.353713791 3.68525771,0.15075162 C3.4882313,-0.0462747862 3.15435142,-0.053333131 2.95277402,0.148244267 L0.147793654,2.95322464 C0.0109867585,3.09003153 -0.0325396573,3.29637729 0.0243152648,3.47738142 C-0.0325396573,3.65838554 0.0109867585,3.8647313 0.147793654,4.00153819 L2.95277402,6.80651857 C3.15435142,7.00809596 3.4882313,7.00103762 3.68525771,6.80401121 C3.88821988,6.60104904 3.88225492,6.26601738 3.68776506,6.07152753 L1.70421948,4.08798194 L7.99996393,4.08798194 L7.99996393,3.04854764 L1.52245273,3.04854764 Z" id="Combined-Shape" fill="currentColor " transform="translate(3.999982, 3.477381) scale(-1, 1) translate(-3.999982, -3.477381) "></path></g>
+                    </svg>
+                    Close Session
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="Navbar-list Navbar--show-animation User-element--hide Navbar-height--44 js-User--hideConnected">
+            <li class="Navbar-item u-rspace--28">
+              <a href="/login" class="Navbar-link Navbar--no-decoration text is-semibold is-caption js-Action--NAVlogin">
+                <span>Log in</span>
+              </a>
+            </li>
+            <li class="Navbar-item">
+              <a href="/request-live-demo/" class="button button--small is-whiteOutline Navbar-button js-Action--NAVdemo"><span>Get Started</span>
+              </a>
+              <a href="/request-live-demo/" class="button button--small is-baseGreyOutline Navbar-link Navbar-buttonFixed js-Action--NAVdemo">
+                <span>Get Started</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-
-      <div class="Navbar-collapse">
-        <ul class="Navbar-list">
-          <li class="Navbar-item Dropdown js-Dropdown">
-            <a href="/products/" class="Navbar-link Navbar--no-decoration title is-regular is-small js-Dropdown-target js-Action--NAVproducts">
-              Products
-              <svg class="Navbar-icon js-navbarCaret" width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <polygon id="Chevron" fill="#FFFFFF" fill-rule="nonzero" points="1.07650484 0.292893219 0.292893219 1.12132035 3.29289323 4.29289322 6.29289322 1.12132034 5.50928159 0.292893219 3.29289323 2.63603897"></polygon>
-              </svg>
-            </a>
-            <div class="Dropdown-inner js-Dropdown-inner">
-              <ul>
-                {% for products_item in site.data.hangaralpha.navbar.products %}
-                  <li class="Dropdown-item"><a href="{{ products_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if products_item.url == page.url %}is-active{% endif %}">{{ products_item.title }}</a></li>
-                {% endfor %}
-              </ul>
-            </div>
-          </li>
-
-          <li class="Navbar-item Dropdown js-Dropdown">
-            <a href="/solutions/" class="Navbar-link Navbar--no-decoration title is-regular is-small js-Dropdown-target js-Action--NAVsolutions">
-              Solutions
-              <svg class="Navbar-icon js-navbarCaret" width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <polygon id="Chevron" fill="#FFFFFF" fill-rule="nonzero" points="1.07650484 0.292893219 0.292893219 1.12132035 3.29289323 4.29289322 6.29289322 1.12132034 5.50928159 0.292893219 3.29289323 2.63603897"></polygon>
-              </svg>
-            </a>
-            <div class="Dropdown-inner Dropdown--2columns js-Dropdown-inner">
-              <ul class="grid">
-                <li class="Dropdown-divisor text is-small grid-cell--col12"><span>Solutions by Industry</span></li>
-                {% for solutions_item in site.data.hangaralpha.navbar.solutions %}
-                  <li class="Dropdown-item grid-cell--col6"><a href="{{ solutions_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if solutions_item.url == page.url %}is-active{% endif %}">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</a></li>
-                {% endfor %}
-
-                <li class="Dropdown-divisor text is-small grid-cell--col12 u-tspace--16"><span>Solutions by Use Case</span></li>
-                {% for solutions_item in site.data.hangaralpha.navbar.solutions-extra %}
-                  <li class="Dropdown-item grid-cell--col6"><a href="{{ solutions_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if solutions_item.url == page.url %}is-active{% endif %}">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</a></li>
-                {% endfor %}
-              </ul>
-            </div>
-          </li>
-
-          <li class="Navbar-item js-Dropdown Dropdown">
-            <a href="/resources/" class="Navbar-link Navbar--no-decoration title is-regular is-small js-Dropdown-target">
-              Resources
-              <svg class="Navbar-icon js-navbarCaret" width="7px" height="5px" viewBox="0 0 7 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <polygon id="Chevron" fill="#FFFFFF" fill-rule="nonzero" points="1.07650484 0.292893219 0.292893219 1.12132035 3.29289323 4.29289322 6.29289322 1.12132034 5.50928159 0.292893219 3.29289323 2.63603897"></polygon>
-              </svg>
-            </a>
-            <div class="Dropdown-inner Dropdown--2columns js-Dropdown-inner">
-              <ul class="grid">
-                {% for resources_item in site.data.hangaralpha.navbar.resources %}
-                  <li class="Dropdown-item grid-cell--col6"><a href="{{ resources_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if resources_item.url == page.url %}is-active{% endif %}">{{ resources_item.title }}</a></li>
-                {% endfor %}
-              </ul>
-              <ul class="grid">
-                <li class="Dropdown-divisor text is-small grid-cell--col12 u-tspace--16"><span>Documentation</span></li>
-                {% for help_item in site.data.hangaralpha.navbar.help %}
-                  <li class="Dropdown-item grid-cell--col6"><a href="{{ help_item.url }}" class="Dropdown-link text is-small u-linkBlue {% if help_item.url == page.url %}is-active{% endif %}">{{ help_item.title }}</a></li>
-                {% endfor %}
-              </ul>
-            </div>
-          </li>
-
+  
+      <div class="NavbarMobile js-Navbar js-Navbar-mobile">
+        <ul class="NavbarMobile-collapse Navbar--scroll--vertical">
           <li class="Navbar-item">
-            <a href="/pricing/" class="Navbar-link Navbar--no-decoration title is-regular is-small js-Action--NAVpricing">
-              <span>Pricing</span>
+            <a href="/products/" class="Navbar-link">
+              <span class="title u-negative">Products</span>
             </a>
           </li>
-
+          <li class="Navbar-item NavbarMobile-list">
+            <ul>
+              <li class="Navbar-subitem">
+                <a href="/builder/" class="Navbar-link"><span class="text is-small">Builder</span></a>
+              </li>
+              <li class="Navbar-subitem">
+                <a href="/engine/" class="Navbar-link"><span class="text is-small">Engine</span></a>
+              </li>
+              <li class="Navbar-subitem">
+                <a href="/engine/mobile/" class="Navbar-link"><span class="text is-small">Mobile SDK</span></a>
+              </li>
+              <li class="Navbar-subitem">
+                <a href="/data-observatory/" class="Navbar-link"><span class="text">Data Observatory</span></a>
+              </li>
+            </ul>
+            </li>
           <li class="Navbar-item">
-            <a href="/blog/" class="Navbar-link Navbar--no-decoration title is-regular is-small js-Action--NAVblog">
-              <span>Blog</span>
+            <a href="/solutions/" class="Navbar-link">
+              <span class="title u-negative">Solutions</span>
             </a>
           </li>
-        </ul>
-
-        <ul class="Navbar-list Navbar--show-animation User-element--hide Navbar-height--44 js-User--showConnected">
-          <li class="Navbar-item">
-            <a class="Navbar-link Navbar--no-decoration title is-regular is-small js-Action--NAVlogin js-user-information" data-addBaselink="dashboard">
-              <span>Dashboard</span>
-            </a>
-          </li>
-          <li class="Navbar-item js-Dropdown js-Dropdown--onClick Dropdown">
-            <div class="Navbar--userAvatar js-Dropdown-target u-pointer">
-              <img class="js-user-information" data-addUserImage="avatar_url" src=""/>
-            </div>
-            <div class="Dropdown-inner Dropdown-inner--userMenu js-Dropdown-inner">
-              <ul>
-                <li class="Dropdown--loggedUser Dropdown--userInformation">
-                  <ul>
-                    <li class="is-txtBaseGrey text is-small js-user-information" data-addUserText="username"></li>
-                    <li class="is-txtTypo3 text is-small u-tspace--4 js-user-information" data-addUserText="email"></li>
-                  </ul>
-                </li>
-                <li class="Dropdown--loggedUser Dropdown--userLinks">
-                  <ul>
-                    <li class="u-flex"><a class="text is-small js-user-information" data-addBaselink="profile">Your Account</a></li>
-                    <li class="u-tspace--4 u-flex"><a class="text is-small is-txtSolutionsRed js-user-information" data-addBaselink="logout">Close Session</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-        <ul class="Navbar-list Navbar--show-animation User-element--hide Navbar-height--44 js-User--hideConnected">
-          <li class="Navbar-item">
-            <a href="/login" class="Navbar-link Navbar--no-decoration title is-regular is-small js-Action--NAVlogin">
-              <span>Log in</span>
-            </a>
-          </li>
-          <li class="Navbar-item">
-            <a href="/get-started/" class="Navbar-link Navbar--no-decoration title is-regular is-small js-Action--NAVcontact">
-              <span>Sign up</span>
-            </a>
-          </li>
-          <li class="Navbar-item">
-            <a href="/request-live-demo/" class="button button--small is-bgWhite title is-txtBaseGrey Navbar-button js-Action--NAVdemo"><span>Request a Demo</span>
-            </a>
-            <a href="/request-live-demo/" class="button button--small is-baseGreyOutline Navbar-link Navbar-buttonFixed js-Action--NAVdemo">
-              <span>Request a Demo</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="NavbarMobile js-Navbar js-Navbar-mobile">
-      <ul class="NavbarMobile-collapse Navbar--scroll--vertical">
-        <li class="Navbar-item">
-          <a href="/products/" class="Navbar-link">
-            <span class="title u-negative">Products</span>
-          </a>
-        </li>
-        <li class="Navbar-item NavbarMobile-list">
-          <ul>
-            <li class="Navbar-subitem">
-              <a href="/builder/" class="Navbar-link"><span class="text is-small">Builder</span></a>
-            </li>
-            <li class="Navbar-subitem">
-              <a href="/engine/" class="Navbar-link"><span class="text is-small">Engine</span></a>
-            </li>
-            <li class="Navbar-subitem">
-              <a href="/engine/mobile/" class="Navbar-link"><span class="text is-small">Mobile SDK</span></a>
-            </li>
-            <li class="Navbar-subitem">
-              <a href="/data-observatory/" class="Navbar-link"><span class="text">Data Observatory</span></a>
-            </li>
-          </ul>
-          </li>
-        <li class="Navbar-item">
-          <a href="/solutions/" class="Navbar-link">
-            <span class="title u-negative">Solutions</span>
-          </a>
-        </li>
-        <li class="Navbar-item NavbarMobile-list">
-          <h5 class="title is-small is-txtTypo2 u-tspace--8 u-vspace--16">Solutions by Industry</h5>
-          <ul class="NavbarMobile--tabletList">
-          {% for solutions_item in site.data.hangaralpha.navbar.solutions %}
-            <li class="Navbar-subitem">
-              <a href="{{ solutions_item.url }}" class="Navbar-link">
-                <span class="text is-small">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</span>
-              </a>
-            </li>
-          {% endfor %}
-          </ul>
-          <h5 class="title is-small is-txtTypo2 u-tspace--32 u-vspace--16">Solutions by Use Case</h5>
-          <ul class="NavbarMobile--tabletList">
-            {% for solutions_item in site.data.hangaralpha.navbar.solutions-extra %}
-            <li class="Navbar-subitem">
-              <a href="{{ solutions_item.url }}" class="Navbar-link">
-                <span class="text is-small is-semibold">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</span>
-              </a>
-            </li>
+          <li class="Navbar-item NavbarMobile-list">
+            <h5 class="title is-small is-txtTypo2 u-tspace--8 u-vspace--16">Solutions by Industry</h5>
+            <ul class="NavbarMobile--tabletList">
+            {% for solutions_item in site.data.hangaralpha.navbar.solutions %}
+              <li class="Navbar-subitem">
+                <a href="{{ solutions_item.url }}" class="Navbar-link">
+                  <span class="text is-small">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</span>
+                </a>
+              </li>
             {% endfor %}
-          </ul>
-        </li>
-        <li class="Navbar-item">
-          <a href="/resources/" class="Navbar-link">
-            <span class="title u-negative">Resources</span>
+            </ul>
+            <h5 class="title is-small is-txtTypo2 u-tspace--32 u-vspace--16">Solutions by Use Case</h5>
+            <ul class="NavbarMobile--tabletList">
+              {% for solutions_item in site.data.hangaralpha.navbar.solutions-extra %}
+              <li class="Navbar-subitem">
+                <a href="{{ solutions_item.url }}" class="Navbar-link">
+                  <span class="text is-small is-semibold">{% if solutions_item.title_short %}{{ solutions_item.title_short }}{% else %}{{ solutions_item.title }}{% endif %}</span>
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
+          <li class="Navbar-item">
+            <a href="/resources/" class="Navbar-link">
+              <span class="title u-negative">Resources</span>
+            </a>
+          </li>
+          <li class="Navbar-item">
+            <a href="/pricing/" class="Navbar-link">
+              <span class="title u-negative">Pricing</span>
+            </a>
+          </li>
+          <li class="Navbar-item">
+            <a href="/blog/" class="Navbar-link">
+              <span class="title u-negative">Blog</span>
+            </a>
+          </li>
+        </ul>
+        <div class="Navbar-item">
+          <a href="/request-live-demo/" class="button is-jade">
+            <span>Request a demo</span>
           </a>
-        </li>
-        <li class="Navbar-item">
-          <a href="/pricing/" class="Navbar-link">
-            <span class="title u-negative">Pricing</span>
-          </a>
-        </li>
-        <li class="Navbar-item">
-          <a href="/blog/" class="Navbar-link">
-            <span class="title u-negative">Blog</span>
-          </a>
-        </li>
-      </ul>
-      <div class="Navbar-item">
-        <a href="/request-live-demo/" class="button is-jade">
-          <span>Request a demo</span>
-        </a>
+        </div>
       </div>
-    </div>
-  </nav>
-</div>
+    </nav>
+  </div>
