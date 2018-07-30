@@ -1,36 +1,56 @@
 # Footer menu
-products:
-  - title: Builder
-    url: /builder/
-  - title: Engine
-    url: /engine/
-  - title: Mobile
-    url: /engine/mobile/
-  - title: Location Data Services
-    url: /location-data-services/
-  - title: Data Observatory
-    url: /data-observatory/
-  - title: Integrations
-    url: /integrations/
-  - title: Attributions
-    url: '/attribution/'
-  - title: Pricing
-    url: /pricing/
+solutions:
+  - title: Site Planning
+    url: '/solutions/site-planning/'
+  - title: Territory Management
+    url: '/solutions/territory-management/'
+  - title: Logistic Optimization
+    url: '/solutions/logistics-optimization/'
+  - title: Geomarketing
+    url: '/solutions/geomarketing/'
+  - title: Mobility Planning
+    url: '/solutions/mobility-planning/'
+platform:
+  - title: Location Data Streams
+    url: '/platform/location-data-streams/'
+  - title: Spatial Data Science & Analytics
+    url: '/platform/spatial-data-science/'
+  - title: Cartography & Web Visualization
+    url: '/platform/vector-mapping-cartography/'
+  - title: Development Platform
+    url: '/platform/development/'
+industries:
+  - title: 'Retail'
+    url: '/industries/retail/'
+  - title: 'Financial Services'
+    url: '/industries/banking-and-insurance/'
+  - title: 'Transport & Logistics'
+    url: '/industries/transport-logistics/'
+  - title: 'Telco & Utilities'
+    url: '/industries/telco-utilities/'
+  - title: 'Real Estate'
+    url: '/industries/real-estate/'
+  - title: 'Healthcare & Pharma'
+    url: '/industries/healthcare-and-pharma/'
+  - title: 'Cities & Government'
+    url: '/industries/cities-government/'
 resources:
-  - title: Webinars
+  - title: 'Location Intelligence'
+    url: '/location-intelligence/'
+  - title: 'Webinars'
     url: '/webinars/'
-  - title: Case Studies
-    url: '/resources/'
-  - title: Blog
-    url: '/blog/'
-  - title: Learn
-    url: '/learn/guides'
-  - title: Developers
+  - title: 'Testimonials'
+    url: '/resources/#testimonials'
+  - title: 'Developers'
     url: '/developers/'
-  - title: Brand
+  - title: 'Learn'
+    url: '/learn/'
+  - title: 'Community'
+    url: '/community/'
+  - title: 'Brand'
     url: '/brand/'
-  - title: Source Code
-    url: 'https://github.com/CartoDB/cartodb'
+  - title: 'Blog'
+    url: '/blog/'
 about:
   - title: Team
     url: '/team/'

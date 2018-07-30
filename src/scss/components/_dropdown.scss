@@ -16,7 +16,7 @@
   transition: all 0.3s;
   z-index: 30;
   transition: all 2s ease;
-  padding: 16px 20px;
+  padding: 24px;
 
   &:before {
     content: '';
@@ -96,6 +96,44 @@
     color: rgba($base-grey, 0.6);
     &:hover {
       color: rgba($base-grey, 0.6);
+    }
+  }
+  &:hover{
+    text-decoration: none;
+  }
+  &:hover{
+    .Dropdown-link--solutions, &.Dropdown-link--solutions{
+      color: $carto-red;
+    }
+    .Dropdown-link--data-streams, &.Dropdown-link--data-streams{
+      color: #3D2ACC;
+    }
+    .Dropdown-link--spatial-data, &.Dropdown-link--spatial-data{
+      color: #3148DC;
+    }
+    .Dropdown-link--cartography, &.Dropdown-link--cartography{
+      color: #2466EB;
+    }
+    .Dropdown-link--development, &.Dropdown-link--development{
+      color: #1785FB;
+    }
+    .Dropdown-link--industries, &.Dropdown-link--industries{
+      color: $solutions-red;
+    }
+    .Dropdown-link--resources, &.Dropdown-link--resources{
+      color: #5300CC;
+    }
+    .Dropdown-link--developers, &.Dropdown-link--developers{
+      color: #7D21F5;
+    }
+    .Dropdown-link--help, &.Dropdown-link--help{
+      color: #6E00DC;
+    }
+    .Dropdown-link--community, &.Dropdown-link--community{
+      color: #5300CC;
+    }
+    .Dropdown-link--blog, &.Dropdown-link--blog{
+      color: $emerald;
     }
   }
 }
@@ -194,13 +232,9 @@
 }
 
 .Dropdown-innerHighlight {
-  margin-bottom: -16px;
-  margin-right: -20px;
-  margin-left: -20px;
-  padding-left: 24px;
+  margin: 0px -24px -24px;
+  padding: 24px;
   border-radius: 0px 0px 4px 4px;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .Dropdown-divisor{

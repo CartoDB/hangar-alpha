@@ -83,4 +83,9 @@
 
 .is-ellipsis{
   @include ellipsis();
+  &.is-ellipsis--link{
+    display: inline-block;
+    max-width: calc(100% - 24px);
+    padding-right: 8px;
+  }
 }

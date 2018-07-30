@@ -42,8 +42,7 @@ $navbarHeight: 76px;
 
 .Navbar-item {
   margin-right: calc(12px + 1vw);
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding: 12px 0px;
   &:last-of-type {
     margin-right: 0;
   }
@@ -53,9 +52,6 @@ $navbarHeight: 76px;
   color: white;
 
   &:not(.button):hover {
-    text-decoration: underline;
-  }
-  &.Navbar--no-decoration:hover{
     text-decoration: none;
   }
 }
