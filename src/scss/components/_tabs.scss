@@ -49,6 +49,20 @@
       color: $base-grey;
     }
   }
+
+  &.is-white .tab-navigationAction {
+    color: $white;
+    border-bottom: 1px solid $white;
+    &:hover {
+      text-decoration: none;
+      border-bottom: 4px solid $white;
+    }
+    &.is-active {
+      border-bottom: 4px solid $white;
+      color: $white;
+
+    }
+  }
 }
 
 .tab-navigationItem {
