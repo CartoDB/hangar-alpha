@@ -138,7 +138,6 @@ industries:
     linkClass: 'Dropdown-link--industries'
 resources:
   - title: 'Resources'
-    description: 'Includes stuff relevant to currentnew.'
     url: '/resources/'
     linkClass: 'Dropdown-link--resources'
     svg: '<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
@@ -173,7 +172,6 @@ resources:
             </g>
           </svg>'
   - title: 'Learn'
-    description: 'Builder & Engine, Airship stuff later.'
     url: '/learn/'
     linkClass: 'Dropdown-link--help'
     svg: '<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
