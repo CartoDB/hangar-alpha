@@ -62,6 +62,18 @@
 
     }
   }
+
+  &.is-emerald .tab-navigationAction {
+    color: $emerald;
+    &:hover {
+      text-decoration: none;
+      border-bottom: 4px solid $emerald;
+    }
+    &.is-active {
+      border-bottom: 4px solid $guides-purple;
+      color: $base-grey;
+    }
+  }
 }
 
 .tab-navigationItem {
