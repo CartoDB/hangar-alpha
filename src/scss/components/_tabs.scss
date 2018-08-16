@@ -34,7 +34,9 @@
     &.is-active {
       border-bottom: 4px solid $docs-purple;
       color: $base-grey;
-
+    }
+    &.no-underline{
+      border-bottom: unset;
     }
   }
 
@@ -48,6 +50,9 @@
       border-bottom: 4px solid $solutions-red;
       color: $base-grey;
     }
+    &.no-underline{
+      border-bottom: unset;
+    }
   }
 
   &.is-white .tab-navigationAction {
@@ -59,7 +64,9 @@
     &.is-active {
       border-bottom: 4px solid $white;
       color: $white;
-
+    }
+    &.no-underline{
+      border-bottom: unset;
     }
   }
 
@@ -72,6 +79,9 @@
     &.is-active {
       border-bottom: 4px solid $guides-purple;
       color: $base-grey;
+    }
+    &.no-underline{
+      border-bottom: unset;
     }
   }
 }
