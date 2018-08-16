@@ -24,6 +24,9 @@
 .tab-navigation {
   display: flex;
   border-bottom: 1px solid rgba($base-grey, 0.16);
+  &.no-border{
+    border-bottom: none;
+  }
 
   &.is-purple .tab-navigationAction {
     color: $opal;
