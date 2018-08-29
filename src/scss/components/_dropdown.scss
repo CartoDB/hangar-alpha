@@ -55,6 +55,32 @@
       right: 14px;
     }
   }
+
+  &.Dropdown-inner--secondary{
+    right: 50%;
+    width: 188px;
+    padding-top: 16px;
+    transform: translateX(50%);
+    &::after{
+        transform: translateX(50%);
+    }
+    &::before{
+        display: none;
+    }
+  }
+  
+  &.Dropdown-inner--left{
+    right: unset;
+    left: 0;
+    transform: unset;
+    &::after{
+        transform: unset;
+        left: unset;
+    }
+    &::before{
+        left: 0;
+    }
+  }
 }
 
 .Dropdown--loggedUser{
