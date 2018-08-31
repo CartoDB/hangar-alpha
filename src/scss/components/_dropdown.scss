@@ -62,10 +62,11 @@
     padding-top: 16px;
     transform: translateX(50%);
     &::after{
-        transform: translateX(50%);
+      transform: translateX(50%);
     }
     &::before{
-        display: none;
+      margin-left: 0px;
+      transform: translateX(-50%);
     }
   }
   
@@ -74,11 +75,13 @@
     left: 0;
     transform: unset;
     &::after{
-        transform: unset;
-        left: unset;
+        left: 0;
+        margin-left: 4px;
     }
     &::before{
         left: 0;
+        transform: translateX(50%);
+        margin-left: 0;
     }
   }
 }

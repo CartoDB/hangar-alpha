@@ -2,6 +2,7 @@
 // --------------------------------------------------
 
 $navbarHeight: 76px;
+$subNavbarHeight: 64px;
 
 .Navbar {
   padding: 16px 0;
@@ -167,7 +168,6 @@ $navbarHeight: 76px;
   opacity: 0;
   transition: all 0.3s ease;
   transform: translate3d(0, 0, 0);
-
   &.is-active {
     top: 0;
     opacity: 1;
@@ -380,6 +380,10 @@ $navbarHeight: 76px;
 
 .Navbar-container{
   min-height: $navbarHeight;
+}
+
+.subNavbar-container{
+  min-height: $subNavbarHeight;
 }
 
 .Navbar--secondary {
