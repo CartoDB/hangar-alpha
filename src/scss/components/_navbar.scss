@@ -381,3 +381,43 @@ $navbarHeight: 76px;
 .Navbar-container{
   min-height: $navbarHeight;
 }
+
+.Navbar--secondary {
+  border-top: 1px solid rgba(255,255,255,0.24);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  z-index: 0;
+  .search-form {
+      margin-left: 12px;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      position: relative;
+  }
+  
+  .search-box {
+      width: 220px;
+      padding: 8px 27px 8px 12px;
+  }
+
+  .search-icon {
+      position: absolute;
+      margin: 0;
+      right: 8px;
+      top: 10px;
+      pointer-events: none;
+  }
+
+  .is-subnavbar{
+      font-size: 14px;
+  }
+
+  .Navbar-item{
+    padding-top: 0;
+    padding-bottom: 4px;
+  }
+  .Navbar-inner{
+    justify-content: space-between;
+  }
+}

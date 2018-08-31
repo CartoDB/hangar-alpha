@@ -1,0 +1,38 @@
+<nav class="Navbar Navbar--secondary">
+    <div class="Navbar-inner container">
+        <ul class="Navbar-list">
+            {% for element in include.subnavbarElement %}
+                {%if element.isLink %}
+                    <li class="Navbar-item">
+                        <a class="Navbar-link text is-subnavbar is-txtWhite is-semibold" href="{{element.url}}">{{element.name}}</a>
+                    </li>
+                {%else%}
+                    <li class="Navbar-item Dropdown js-Dropdown js-hide-on-focus">
+                        <a class="Navbar-link text is-subnavbar is-txtWhite is-semibold js-Dropdown-target u-default">{{element.name}}</a>
+                        <div class="Dropdown-inner Dropdown-inner--secondary {%if forloop.first%}Dropdown-inner--left{%endif%} js-Dropdown-inner">
+                            <ul>
+                                {%for dropdownElement in element.dropdownElements%}
+                                    <li class="Dropdown-item">
+                                        <a class="Dropdown-link text is-subnavbar {%unless forloop.last%}u-vspace--8{%endunless%}" href="{{dropdownElement.url}}">{{ dropdownElement.name }}</a>
+                                    </li>
+                                {%endfor%}
+                            </ul>
+                        </div>
+                    </li>
+                {%endif%}
+            {% endfor %}
+        </ul>
+        <div class="">
+            {%if include.searchUrl%}
+                <form action="{{include.searchUrl}}" method="get" class="search-form" _lpchecked="1">
+                    <input type="text" name="query" class="input search-box" placeholder="{{include.searchText}}">
+                    <span class="is-txtTypo3 search-icon">
+                        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.138 12.195L9.543 8.6a5.285 5.285 0 0 0 1.124-3.267 5.296 5.296 0 0 0-1.563-3.77A5.294 5.294 0 0 0 5.334 0a5.294 5.294 0 0 0-3.771 1.563A5.296 5.296 0 0 0 0 5.333c0 1.425.555 2.764 1.563 3.771a5.294 5.294 0 0 0 3.77 1.563c1.2 0 2.336-.398 3.267-1.124l3.595 3.594.943-.942zM5.333 9.333a3.973 3.973 0 0 1-2.828-1.171 3.972 3.972 0 0 1-1.172-2.829c0-1.068.416-2.072 1.172-2.828a3.97 3.97 0 0 1 2.828-1.172 3.97 3.97 0 0 1 2.828 1.172 3.972 3.972 0 0 1 1.172 2.828 3.972 3.972 0 0 1-1.172 2.829 3.973 3.973 0 0 1-2.828 1.171z" fill="currentColor" fill-rule="nonzero"></path>
+                        </svg>
+                    </span>
+                </form>
+            {%endif%}
+        </div>
+    </div>
+</nav>
