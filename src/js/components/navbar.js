@@ -7,7 +7,9 @@ module.exports = Backbone.View.extend({
   el: '.js-Navbar',
 
   events: {
-    'click .js-Navbar-button': '_openMobileMenu'
+    'click .js-Navbar-button': '_openMobileMenu',
+    'focusin .js-expand-search-box': '_expandSearch',
+    'focusout .js-expand-search-box': '_hideSearch'
   },
 
   initialize: function () {
@@ -32,10 +34,27 @@ module.exports = Backbone.View.extend({
     this._toggleViewportScrolling(!isHidden);
   },
 
+  _expandSearch: function(){
+    this.$navLogo.addClass("Logo--hide");
+    this.$navButton.addClass("open");
+    this.$navButton.addClass("js-close-search");
+    this.$navButton.addClass("u-noPointerEvents");
+  },
+
+  _hideSearch: function(){
+    this.$navLogo.removeClass("Logo--hide");
+    this.$navButton.removeClass("open");
+    this.$navButton.removeClass("js-close-search");
+    this.$navButton.removeClass("u-noPointerEvents");
+  },
+
   _openMobileMenu: function () {
-    this.$navButton.toggleClass('open');
-    this.$navLogo.toggleClass('open');
-    this._onClickNavbarButton();
+    if (!this.$navButton.hasClass("js-close-search"))
+    {
+      this.$navButton.toggleClass('open');
+      this.$navLogo.toggleClass('open');
+      this._onClickNavbarButton();
+    }
   },
 
   _toggleViewportScrolling: function (bool) {

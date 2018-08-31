@@ -22,6 +22,38 @@ $subNavbarHeight: 64px;
 
 .Navbar-header {
   display: flex;
+
+  .collapsable-search-form {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    align-items: center;
+    .collapsable-search-icon {
+      position: absolute;
+      margin: 0;
+      right: 8px;
+      pointer-events: none;
+    }
+  }
+
+  .collapsable-search-box{
+    width: 0px;
+    height: 32px;
+    background-color: transparent;
+    color: $base-grey;
+    transition: all 500ms;
+    border: 0;
+    cursor: pointer;
+    &:focus {
+      background-color: #ffffff;
+      width: calc(100vw - 70px);
+      border: 0;
+      cursor: unset;
+    }
+    &:hover {
+      border: 0;
+}
+  }
 }
 
 .Navbar-collapse {
@@ -258,6 +290,9 @@ $subNavbarHeight: 64px;
     border: 12px solid transparent;
     display: block;
     margin-right: -12px;
+    &.open{
+      z-index: $zIndex-10 + 1;
+    }
   }
 
   .Navbar-buttonMenu span {
@@ -319,6 +354,13 @@ $subNavbarHeight: 64px;
   .Logo{
     display: flex;
     align-items: center;
+    transition: all 500ms;
+    max-width: 100px;
+    &.Logo--hide{
+      max-width: 0px;
+      margin: 0;
+      opacity: 0;
+    }
   }
 }
 
