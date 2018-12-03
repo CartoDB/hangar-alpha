@@ -165,7 +165,7 @@ resources:
         url: '/resources/events/'
         linkClass: 'Dropdown-link--resources'
   - title: 'Developers'
-    description: 'Get started building LI Apps.'
+    description: 'Check FAQs and tutorials.'
     url: '/developers/'
     linkClass: 'Dropdown-link--developers'
     svg: '<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
