@@ -14,7 +14,7 @@
                         </li>
                     {%else%}
                         <li class="Navbar-item Dropdown js-Dropdown js-hide-on-focus">
-                            <a class="Navbar-link text is-subnavbar is-txtWhite is-semibold js-Dropdown-target u-default">{{element.name}}</a>
+                            <a {%if element.url%}href="{{element.url}}"{%endif%} class="Navbar-link text is-subnavbar is-txtWhite is-semibold js-Dropdown-target u-default">{{element.name}}</a>
                             <div class="Dropdown-inner Dropdown-inner--secondary {%if forloop.first%}Dropdown-inner--left{%endif%} js-Dropdown-inner">
                                 <ul>
                                     {%for dropdownElement in element.dropdownElements%}
