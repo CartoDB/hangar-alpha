@@ -38,6 +38,7 @@ module.exports = Backbone.View.extend({
     this.$navLogo.addClass("Logo--hide");
     this.$navButton.addClass("open");
     this.$navButton.addClass("js-close-search");
+    this.$navButton.addClass("search-open");
     this.$navButton.addClass("u-noPointerEvents");
   },
 
@@ -45,6 +46,7 @@ module.exports = Backbone.View.extend({
     this.$navLogo.removeClass("Logo--hide");
     this.$navButton.removeClass("open");
     this.$navButton.removeClass("js-close-search");
+    this.$navButton.removeClass("search-open");
     this.$navButton.removeClass("u-noPointerEvents");
   },
 

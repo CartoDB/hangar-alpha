@@ -29,6 +29,7 @@ $subNavbarHeight: 64px;
     position: relative;
     align-items: center;
     .collapsable-search-icon {
+      display: flex;
       position: absolute;
       margin: 0;
       right: 8px;
@@ -42,17 +43,26 @@ $subNavbarHeight: 64px;
     background-color: transparent;
     color: $base-grey;
     transition: all 500ms;
-    border: 0;
+    border: 1px solid transparent;
     cursor: pointer;
+    font-size: 14px;
+
     &:focus {
       background-color: #ffffff;
       width: calc(100vw - 70px);
-      border: 0;
+      border: 1px solid #ddd;
       cursor: unset;
+      & + .collapsable-search-icon {
+        color: transparent;
+      }
+
+      &:hover {
+        border: 1px solid #ddd;;
+      }
     }
     &:hover {
       border: 0;
-}
+    }
   }
 }
 
@@ -257,9 +267,6 @@ $subNavbarHeight: 64px;
     display: block;
   }
   @media (max-width: $layout-tablet) {
-    .Navbar-link {
-      color: $white;
-    }
     .Navbar-icon {
       polygon {
         fill: $white;
@@ -269,7 +276,7 @@ $subNavbarHeight: 64px;
       span {
         background: $base-grey;
       }
-      &.open span {
+      &.open:not(.search-open) span {
         background: $white;
       }
     }

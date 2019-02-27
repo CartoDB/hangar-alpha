@@ -165,6 +165,10 @@ $sizes: (0, 4, 8, 10, 12, 16, 20, 24, 28, 32, 36, 40, 48, 60, 64, 72, 80, 96, 10
   display: flex;
 }
 
+.u-align-center {
+  align-items: center;
+}
+
 .u-block {
   display: block;
 }
