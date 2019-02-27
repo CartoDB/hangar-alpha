@@ -63,10 +63,10 @@
 
           <li class="Navbar-item Dropdown u-rspace--28">
             <span class="Navbar-link text is-semibold is-caption u-default">
-              Industries
+              Solutions
             </span>
             <div class="Dropdown-inner Dropdown--center Dropdown--new Dropdown--industries">
-              {% assign industries =  site.data.hangaralpha.new_navbar.industries[0] %}
+              {% assign industries =  site.data.hangaralpha.new_navbar.solutions[0] %}
               <a class="title is-small is-txtSolutionsRed js-Action--NAVindustriesLanding" href="{{industries.url}}">{{industries.title}}</a>
               <ul class="grid u-vspace--24 u-tspace--24">
                 {% for element in industries.elements %}
@@ -79,7 +79,7 @@
                 {%endfor%}
               </ul>
               <div class="Dropdown-innerHighlight is-bgSoftBlue">
-                {% assign solutions =  site.data.hangaralpha.new_navbar.industries[1] %}
+                {% assign solutions =  site.data.hangaralpha.new_navbar.solutions[1] %}
                 <a class="title is-small is-txtCartoRed js-Action--NAVsolutionsLanding" href="{{solutions.url}}">{{solutions.title}}</a>
                 <ul class="grid u-tspace--24">
                     {% for element in solutions.elements %}

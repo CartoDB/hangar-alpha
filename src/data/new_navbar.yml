@@ -49,8 +49,8 @@ platform:
               </g>
             </g>
           </svg>'
-industries:
-  - title: 'INDUSTRIES'
+solutions:
+  - title: 'BY INDUSTRY'
     url: '/industries/'
     elements:
       - title: 'Retail'
@@ -126,7 +126,7 @@ industries:
                   </g>
                 </g>
               </svg>'
-  - title: 'SOLUTIONS'
+  - title: 'BY USE CASE'
     url: '/solutions/'
     elements:
       - title: 'Site Planning'
