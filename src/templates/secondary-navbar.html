@@ -9,19 +9,19 @@
                 </li>
                 {% for element in include.subnavbarElement %}
                     {%if element.isLink %}
-                        <li class="Navbar-item">
+                        <li class="Navbar-item {% if include.current_subnav == element.name%}is-active{%endif%}">
                             <a class="Navbar-link text is-subnavbar is-txtWhite is-semibold" href="{{element.url}}">{{element.name}}</a>
                         </li>
                     {%else%}
-                        <li class="Navbar-item Dropdown js-Dropdown js-hide-on-focus">
+                        <li class="Navbar-item Dropdown js-Dropdown js-hide-on-focus {% if include.current_subnav == element.name%}is-active{%endif%}">
                             <a {%if element.url%}href="{{element.url}}"{%endif%} class="Navbar-link text is-subnavbar is-txtWhite is-semibold js-Dropdown-target u-default">{{element.name}}</a>
                             <div class="Dropdown-inner Dropdown-inner--secondary {%if forloop.first%}Dropdown-inner--left{%endif%} js-Dropdown-inner">
                                 <ul>
-                                    {%for dropdownElement in element.dropdownElements%}
+                                    {% for dropdownElement in element.dropdownElements %}
                                         <li class="Dropdown-item">
                                             <a class="Dropdown-link text is-subnavbar {%unless forloop.last%}u-vspace--8{%endunless%}" href="{{dropdownElement.url}}">{{ dropdownElement.name }}</a>
                                         </li>
-                                    {%endfor%}
+                                    {% endfor %}
                                 </ul>
                             </div>
                         </li>

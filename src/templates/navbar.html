@@ -32,7 +32,7 @@
 
       <div class="Navbar-collapse">
         <ul class="Navbar-list">
-          <li class="Navbar-item Dropdown u-rspace--28">
+          <li class="Navbar-item Dropdown u-rspace--28 {% if page.url contains '/platform/'%}is-active{%endif%}">
             <span class="Navbar-link text is-semibold is-caption u-default">
               Platform
             </span>
@@ -44,7 +44,7 @@
                     <a href="{{element.url}}" class="Dropdown-link js-Action--NAVplatform u-flex">
                       {{element.svg}}
                       <div class="u-lspace--12">
-                            <p class="text is-caption is-txtBaseGrey is-semibold {{element.linkClass}}">{{element.title}}</p>
+                          <p class="text is-caption is-txtBaseGrey is-semibold {{element.linkClass}}">{{element.title}}</p>
                           <p class="text is-small is-txtBaseGrey">{{element.description}}</p>
                       </div>
                     </a>
@@ -61,7 +61,7 @@
             </div>
           </li>
 
-          <li class="Navbar-item Dropdown u-rspace--28">
+          <li class="Navbar-item Dropdown u-rspace--28 {% if page.url contains '/solutions/' or  page.url contains '/industries/'%}is-active{%endif%}">
             <span class="Navbar-link text is-semibold is-caption u-default">
               Solutions
             </span>
@@ -92,7 +92,7 @@
             </div>
           </li>
 
-          <li class="Navbar-item Dropdown u-rspace--28">
+          <li class="Navbar-item Dropdown u-rspace--28 {% if page.url contains '/resources/' %}is-active{%endif%}">
             <span class="Navbar-link text is-semibold is-caption u-default">
               Resources
             </span>
@@ -137,13 +137,13 @@
             </div>
           </li>
 
-          <li class="Navbar-item">
+          <li class="Navbar-item {% if page.url == '/pricing/index.html' %}is-active{%endif%}">
             <a href="/pricing/" class="Navbar-link text is-semibold is-caption js-Action--NAVpricing">
               <span>Pricing</span>
             </a>
           </li>
 
-          <li class="Navbar-item">
+          <li class="Navbar-item {% if site.baseurl == '/blog' %}is-active{%endif%}">
             <a href="/blog/" class="Navbar-link text is-semibold is-caption js-Action--NAVblog">
               <span>Blog</span>
             </a>
