@@ -19,10 +19,17 @@
                                 <ul>
                                     {% for dropdownElement in element.dropdownElements %}
                                         <li class="Dropdown-item">
-                                            <a class="Dropdown-link text is-subnavbar {%unless forloop.last%}u-vspace--8{%endunless%}" href="{{dropdownElement.url}}">{{ dropdownElement.name }}</a>
+                                            <a class="Dropdown-link text is-subnavbar {%unless forloop.last and element.include_dropdown_link==false%}u-vspace--8{%endunless%}" href="{{dropdownElement.url}}">{{ dropdownElement.name }}</a>
                                         </li>
                                     {% endfor %}
                                 </ul>
+                                {%if element.include_dropdown_link%}
+                                    <div class="Dropdown-innerHighlight is-bgSoftBlue u-tspace--8">
+                                        <a href="{{element.url}}" class="buttonLink is-txtBuilderBlue">
+                                            View all {{element.name}}
+                                        </a>
+                                    </div>
+                                {%endif%}
                             </div>
                         </li>
                     {%endif%}

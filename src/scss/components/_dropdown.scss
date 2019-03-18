@@ -58,7 +58,7 @@
 
   &.Dropdown-inner--secondary{
     right: 50%;
-    width: 188px;
+    width: 240px;
     padding-top: 16px;
     transform: translateX(50%);
     &::after{
@@ -280,5 +280,11 @@
     height: 6px;
     border-top: 1px solid rgba($typo3, 0.24);
     z-index: -1;
+  }
+}
+
+.subnavbar {
+  .Dropdown-innerHighlight {
+    padding: 16px 24px;
   }
 }
