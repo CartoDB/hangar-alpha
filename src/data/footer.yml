@@ -1,15 +1,15 @@
 # Footer menu
 solutions:
-  - title: Site Planning
-    url: '/solutions/site-planning/'
-  - title: Territory Management
-    url: '/solutions/territory-management/'
-  - title: Logistics Optimization
-    url: '/solutions/logistics-optimization/'
-  - title: Geomarketing
-    url: '/solutions/geomarketing/'
-  - title: Mobility Planning
-    url: '/solutions/mobility-planning/'
+  - title: 'Data Ingestion & Management'
+    url: '/platform/data-ingestion-management/'
+  - title: 'Data Enrichment'
+    url: '/platform/data-enrichment/'
+  - title: 'Analysis'
+    url: '/platform/analysis/'
+  - title: 'Solutions & Visualization'
+    url: '/platform/solutions-visualization/'
+  - title: 'Integration'
+    url: '/platform/integration/'
 platform:
   - title: Location Data Streams
     url: '/platform/location-data-streams/'
