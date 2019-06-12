@@ -7,7 +7,11 @@
             {% include hangaralpha/logos/logo_carto_negative.svg %}
           </div>
           <div class="Logo--positive">
-            {% include hangaralpha/logos/logo_carto_positive.svg %}
+            {%if include.custom_logo_positive%}
+              {{include.custom_logo_positive}}
+            {%else%}
+              {% include hangaralpha/logos/logo_carto_positive.svg %}
+            {%endif%}
           </div>
         </a>
         <div class="tablet--flex">
