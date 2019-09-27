@@ -47,8 +47,6 @@ resources:
     url: '/developers/'
   - title: 'Help'
     url: '/help/'
-  - title: 'Community'
-    url: '/community/'
   - title: 'Brand'
     url: '/brand/'
   - title: 'Blog'
