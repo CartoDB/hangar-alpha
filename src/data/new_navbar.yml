@@ -200,7 +200,7 @@ solutions:
         description: 'Reduce traffic congestion in cities.'
         url: '/solutions/mobility-planning/'
         linkClass: 'Dropdown-link--solutions'
-      - title: 'Indoor'
+      - title: 'Indoor Mapping'
         description: ''
         url: '/solutions/indoor-maps-analytics/'
         linkClass: 'Dropdown-link--solutions'
