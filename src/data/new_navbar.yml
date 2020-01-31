@@ -132,7 +132,7 @@ solutions:
                 </g>
               </svg>'
       - title: 'Financial Services'
-        url: '/industries/banking-and-insurance/'
+        url: '/industries/financial-services/'
         linkClass: 'Dropdown-link--industries'
         svg: '<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
                 <g fill="none" fill-rule="evenodd">
