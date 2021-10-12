@@ -182,7 +182,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dev', devTasks);
   grunt.registerTask('build', baseTasks);
   grunt.registerTask('default', baseTasks);
-  grunt.registerTask('publish', ['eslint', 'build', 'gh-pages']);
+  grunt.registerTask('publish', ['build', 'gh-pages']);
   grunt.registerTask('test', ['karma']);
   grunt.registerTask('lint', ['eslint']);
 };

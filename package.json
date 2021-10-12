@@ -14,8 +14,12 @@
   },
   "scripts": {
     "styleguide": "styleguide",
-    "release": "grunt publish && np",
-    "test": "karma start karma.config.js --single-run"
+    "release": "npx grunt publish && np",
+    "test": "karma start karma.config.js --single-run",
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "resolutions": {
+    "graceful-fs": "4.2.3"
   },
   "files": [
     "dist",
