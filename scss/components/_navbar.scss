@@ -1,6 +1,9 @@
 // Navbar
 // --------------------------------------------------
 
+$navbarHeight: 76px;
+$subNavbarHeight: 64px;
+
 .Navbar {
   padding: 16px 0;
   z-index: 300;
@@ -19,12 +22,55 @@
 
 .Navbar-header {
   display: flex;
+
+  .collapsable-search-form {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    align-items: center;
+    .collapsable-search-icon {
+      display: flex;
+      position: absolute;
+      margin: 0;
+      right: 8px;
+      pointer-events: none;
+    }
+  }
+
+  .collapsable-search-box{
+    width: 0px;
+    height: 32px;
+    background-color: transparent;
+    color: $base-grey;
+    transition: all 500ms;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 14px;
+
+    &:focus {
+      background-color: #ffffff;
+      width: calc(100vw - 70px);
+      border: 1px solid #ddd;
+      cursor: unset;
+      & + .collapsable-search-icon {
+        color: transparent;
+      }
+
+      &:hover {
+        border: 1px solid #ddd;;
+      }
+    }
+    &:hover {
+      border: 0;
+    }
+  }
 }
 
 .Navbar-collapse {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  position: relative;
 }
 
 .Navbar-collapseStatic {
@@ -39,8 +85,7 @@
 
 .Navbar-item {
   margin-right: calc(12px + 1vw);
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding: 12px 0px;
   &:last-of-type {
     margin-right: 0;
   }
@@ -50,9 +95,6 @@
   color: white;
 
   &:not(.button):hover {
-    text-decoration: underline;
-  }
-  &.Navbar--no-decoration:hover{
     text-decoration: none;
   }
 }
@@ -81,7 +123,7 @@
   bottom: 0;
   left: 0;
   background-color: rgba($base-grey, 0.96);
-  z-index: 1;
+  z-index: $zIndex-10;
   text-align: center;
   display: none;
   @media (max-width: $layout-tablet) {
@@ -168,7 +210,6 @@
   opacity: 0;
   transition: all 0.3s ease;
   transform: translate3d(0, 0, 0);
-
   &.is-active {
     top: 0;
     opacity: 1;
@@ -226,9 +267,6 @@
     display: block;
   }
   @media (max-width: $layout-tablet) {
-    .Navbar-link {
-      color: $white;
-    }
     .Navbar-icon {
       polygon {
         fill: $white;
@@ -238,7 +276,7 @@
       span {
         background: $base-grey;
       }
-      &.open span {
+      &.open:not(.search-open) span {
         background: $white;
       }
     }
@@ -259,6 +297,9 @@
     border: 12px solid transparent;
     display: block;
     margin-right: -12px;
+    &.open{
+      z-index: $zIndex-10 + 1;
+    }
   }
 
   .Navbar-buttonMenu span {
@@ -316,6 +357,20 @@
 
 //Navbar Logo
 
+.Navbar-header{
+  .Logo{
+    display: flex;
+    align-items: center;
+    transition: all 500ms;
+    max-width: 100px;
+    &.Logo--hide{
+      max-width: 0px;
+      margin: 0;
+      opacity: 0;
+    }
+  }
+}
+
 .Navbar {
   .Logo--negative {
     display: flex;
@@ -339,4 +394,83 @@
 .Navbar--scroll--vertical{
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
+}
+
+.Navbar--userAvatar{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.08);
+  img{
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+}
+
+.Navbar-height--44{
+  height: 44px;
+}
+
+.Navbar--show-animation{
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 300ms;
+}
+
+.User-element--hide{ //To use with position: absolute elements
+  opacity: 0;
+  pointer-events: none;
+}
+
+.Navbar-container{
+  min-height: $navbarHeight;
+}
+
+.subNavbar-container{
+  min-height: $subNavbarHeight;
+}
+
+.Navbar--secondary {
+  border-top: 1px solid rgba(255,255,255,0.24);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  z-index: 0;
+  .search-form {
+      margin-left: 12px;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      position: relative;
+  }
+  
+  .search-box {
+      width: 220px;
+      padding: 8px 27px 8px 12px;
+  }
+
+  .search-icon {
+      position: absolute;
+      margin: 0;
+      right: 8px;
+      top: 10px;
+      pointer-events: none;
+  }
+
+  .is-subnavbar{
+      font-size: 14px;
+  }
+
+  .Navbar-item{
+    padding-top: 0;
+    padding-bottom: 4px;
+  }
+  .Navbar-inner{
+    justify-content: space-between;
+  }
 }

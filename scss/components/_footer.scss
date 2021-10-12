@@ -6,7 +6,6 @@
   background-color: $white;
 
   .FooterElement {
-    line-height: 1;
     margin-bottom: 8px;
 
     &:last-child {
@@ -19,7 +18,7 @@
     transition: color 0.2s ease;
 
     &:hover {
-      color: $typo0;
+      color: $typo1;
       text-decoration: underline;
     }
   }

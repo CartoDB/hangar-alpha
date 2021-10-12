@@ -89,7 +89,7 @@
   line-height: 48px;
   @media (max-width: $layout-mobile) {
     font-size: 20px;
-    line-height: 24px;
+    line-height: 32px;
     &.is-subheader--mobile {
       @include is-subheader--mobile();
     }

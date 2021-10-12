@@ -24,17 +24,25 @@
 .tab-navigation {
   display: flex;
   border-bottom: 1px solid rgba($base-grey, 0.16);
+  &.no-border{
+    border-bottom: none;
+  }
+  &.border-white{
+    border-bottom: 1px solid rgba($white, 0.48);
+  }
 
   &.is-purple .tab-navigationAction {
-    color: $orange;
+    color: $opal;
     &:hover {
       text-decoration: none;
-      border-bottom: 4px solid $orange;
+      border-bottom: 4px solid $opal;
     }
     &.is-active {
       border-bottom: 4px solid $docs-purple;
       color: $base-grey;
-
+    }
+    &.no-underline{
+      border-bottom: unset;
     }
   }
 
@@ -47,6 +55,39 @@
     &.is-active {
       border-bottom: 4px solid $solutions-red;
       color: $base-grey;
+    }
+    &.no-underline{
+      border-bottom: unset;
+    }
+  }
+
+  &.is-white .tab-navigationAction {
+    color: $white;
+    &:hover {
+      text-decoration: none;
+      border-bottom: 4px solid $white;
+    }
+    &.is-active {
+      border-bottom: 4px solid $white;
+      color: $white;
+    }
+    &.no-underline{
+      border-bottom: unset;
+    }
+  }
+
+  &.is-emerald .tab-navigationAction {
+    color: $emerald;
+    &:hover {
+      text-decoration: none;
+      border-bottom: 4px solid $emerald;
+    }
+    &.is-active {
+      border-bottom: 4px solid $guides-purple;
+      color: $base-grey;
+    }
+    &.no-underline{
+      border-bottom: unset;
     }
   }
 }

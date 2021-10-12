@@ -43,6 +43,8 @@ solutions-extra:
     url: '/solutions/salesquest/'
   - title: Traffic Management
     url: '/solutions/traffico/'
+  - title: Site Planning
+    url: '/solutions/reveal/'
 community:
   - title: Map Gallery
     url: '/gallery/'
@@ -51,20 +53,14 @@ community:
   - title: Ambassadors
     url: '/ambassadors/'
 resources:
-  - title: Community
-    url: '/community/'
-  - title: Downloads
-    url: '/resources/'
   - title: Location Intelligence
     url: '/location-intelligence/'
   - title: Webinars
     url: '/webinars/'
-  - title: Blog
-    url: '/blog/'
-  - title: Learn
-    url: '/learn/'
-  - title: Documentation
-    url: '/docs/'
+  - title: Downloads
+    url: '/resources/'
+  - title: Community
+    url: '/community/'
 
 about:
   - title: Team
@@ -86,7 +82,7 @@ about:
     url: '/request-live-demo/'
   - title: Terms of Service
     url: '/legal/'
-  - title: Privacy Policy
+  - title: Privacy Notice
     url: '/privacy/'
 integrations:
   - title: Box
@@ -109,3 +105,9 @@ integrations:
     url: '/integrations/splunk/'
   - title: Alteryx
     url: '/integrations/alteryx/'
+help:
+  - title: Builder Guides
+    url: '/learn/guides/'
+  - title: Developer Center
+    url: '/developers/'
+

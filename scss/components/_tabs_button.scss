@@ -44,6 +44,11 @@
   &:hover {
     text-decoration: none;
   }
+  @media (max-width: $layout-mobile) {
+    &.button-groupAction--mobile{
+      padding: 12px;
+    }
+  }
 }
 .button-groupItem {
   flex: 1;
