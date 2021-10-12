@@ -1,7 +1,7 @@
 {
   "name": "hangar-alpha",
   "description": "Share frontend assets between different web repositories",
-  "version": "0.1.39",
+  "version": "0.1.40",
   "repository": {
     "type": "git",
     "url": "https://github.com/CartoDB/hangar-alpha.git"
@@ -15,8 +15,7 @@
   "scripts": {
     "styleguide": "styleguide",
     "release": "npx grunt publish && np",
-    "test": "karma start karma.config.js --single-run",
-    "preinstall": "npx npm-force-resolutions"
+    "test": "karma start karma.config.js --single-run"
   },
   "resolutions": {
     "graceful-fs": "4.2.3"
