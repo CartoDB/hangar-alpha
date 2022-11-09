@@ -70,6 +70,6 @@
     "perfect-scrollbar": "git://github.com/CartoDB/perfect-scrollbar.git#master",
     "uglifyjs-webpack-plugin": "^1.1.8",
     "underscore": "^1.8.3",
-    "webpack": "^2.7.0"
+    "webpack": "^5.75.0"
   }
 }
